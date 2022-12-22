@@ -1,0 +1,63 @@
+=================
+AND precedence test 1
+=================
+
+cf.edge.server_port eq 80 or cf.edge.server_port == 443 and ssl == true
+
+---
+
+(source_file
+  (compound_expression
+    (simple_expression
+      (number_field)
+      (comparison_operator)
+      (number)
+    )
+    (or_operator)
+    (compound_expression
+      (simple_expression
+        (number_field)
+        (comparison_operator)
+        (number)
+      )
+      (and_operator)
+      (simple_expression
+        (boolean_field)
+        (comparison_operator)
+        (boolean)
+      )
+    )
+  )
+)
+
+=================
+AND precedence test 2
+=================
+
+cf.edge.server_port == 443 and ssl == true or cf.edge.server_port eq 80
+
+---
+
+(source_file
+  (compound_expression
+    (compound_expression
+      (simple_expression
+        (number_field)
+        (comparison_operator)
+        (number)
+      )
+      (and_operator)
+      (simple_expression
+        (boolean_field)
+        (comparison_operator)
+        (boolean)
+      )
+    )
+    (or_operator)
+    (simple_expression
+      (number_field)
+      (comparison_operator)
+      (number)
+    )
+  )
+)
