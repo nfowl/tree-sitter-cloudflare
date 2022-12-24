@@ -1,0 +1,44 @@
+================================================================================
+Complex expr
+================================================================================
+(
+  (http.host eq "api.example.com" and http.request.uri.path eq "/api/v2/auth")
+  or (http.host matches "^(www|store|blog)\.example.com" and http.request.uri.path contains "wp-login.php")
+  or ip.geoip.country in {"CN" "TH" "US" "ID" "KR" "MY" "IT" "SG" "GB"}
+  or ip.geoip.asnum in {12345 54321 11111}
+) and not ip.src in {11.22.33.0/24}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (group
+    (compound_expression
+      (group
+        (simple_expression
+          (string_field)
+          (string)))
+      (group
+        (simple_expression
+          (string_field)
+          (string))))
+    (ERROR
+      (string_field)
+      (UNEXPECTED 'n')
+      (string)
+      (UNEXPECTED '}')
+      (number_field)
+      (UNEXPECTED 'n')
+      (number)
+      (number)
+      (number)
+      (UNEXPECTED '}')))
+  (ERROR
+    (not_operator)
+    (ip_field)
+    (UNEXPECTED 'n')
+    (ip)
+    (UNEXPECTED '.')
+    (ip)
+    (UNEXPECTED '/')
+    (number)
+    (UNEXPECTED '}')))

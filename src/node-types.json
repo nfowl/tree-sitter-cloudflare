@@ -1,10 +1,5 @@
 [
   {
-    "type": "and_operator",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "boolean",
     "named": true,
     "fields": {}
@@ -22,40 +17,97 @@
   {
     "type": "compound_expression",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "and_operator",
-          "named": true
-        },
-        {
-          "type": "compound_expression",
-          "named": true
-        },
-        {
-          "type": "group",
-          "named": true
-        },
-        {
-          "type": "not_expression",
-          "named": true
-        },
-        {
-          "type": "or_operator",
-          "named": true
-        },
-        {
-          "type": "simple_expression",
-          "named": true
-        },
-        {
-          "type": "xor_operator",
-          "named": true
-        }
-      ]
+    "fields": {
+      "left": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "boolean_field",
+            "named": true
+          },
+          {
+            "type": "compound_expression",
+            "named": true
+          },
+          {
+            "type": "group",
+            "named": true
+          },
+          {
+            "type": "in_expression",
+            "named": true
+          },
+          {
+            "type": "not_expression",
+            "named": true
+          },
+          {
+            "type": "simple_expression",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "&&",
+            "named": false
+          },
+          {
+            "type": "^^",
+            "named": false
+          },
+          {
+            "type": "and",
+            "named": false
+          },
+          {
+            "type": "or",
+            "named": false
+          },
+          {
+            "type": "xor",
+            "named": false
+          },
+          {
+            "type": "||",
+            "named": false
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "boolean_field",
+            "named": true
+          },
+          {
+            "type": "compound_expression",
+            "named": true
+          },
+          {
+            "type": "group",
+            "named": true
+          },
+          {
+            "type": "in_expression",
+            "named": true
+          },
+          {
+            "type": "not_expression",
+            "named": true
+          },
+          {
+            "type": "simple_expression",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -67,6 +119,10 @@
       "required": true,
       "types": [
         {
+          "type": "boolean_field",
+          "named": true
+        },
+        {
           "type": "compound_expression",
           "named": true
         },
@@ -75,11 +131,91 @@
           "named": true
         },
         {
+          "type": "in_expression",
+          "named": true
+        },
+        {
           "type": "not_expression",
           "named": true
         },
         {
           "type": "simple_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "in_expression",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ip_field",
+            "named": true
+          },
+          {
+            "type": "number_field",
+            "named": true
+          },
+          {
+            "type": "string_field",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "in",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ip_set",
+            "named": true
+          },
+          {
+            "type": "number_set",
+            "named": true
+          },
+          {
+            "type": "string_set",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "ip_field",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "ip_set",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ip_range",
+          "named": true
+        },
+        {
+          "type": "ipv4",
           "named": true
         }
       ]
@@ -94,11 +230,19 @@
       "required": true,
       "types": [
         {
+          "type": "boolean_field",
+          "named": true
+        },
+        {
           "type": "compound_expression",
           "named": true
         },
         {
           "type": "group",
+          "named": true
+        },
+        {
+          "type": "in_expression",
           "named": true
         },
         {
@@ -127,12 +271,7 @@
     "fields": {}
   },
   {
-    "type": "or_operator",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "simple_expression",
+    "type": "number_set",
     "named": true,
     "fields": {},
     "children": {
@@ -140,30 +279,130 @@
       "required": true,
       "types": [
         {
-          "type": "boolean",
-          "named": true
-        },
-        {
-          "type": "boolean_field",
-          "named": true
-        },
-        {
-          "type": "comparison_operator",
-          "named": true
-        },
-        {
           "type": "number",
-          "named": true
-        },
-        {
-          "type": "number_field",
-          "named": true
-        },
-        {
-          "type": "string_field",
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "simple_expression",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "boolean_field",
+            "named": true
+          },
+          {
+            "type": "ip_field",
+            "named": true
+          },
+          {
+            "type": "number_field",
+            "named": true
+          },
+          {
+            "type": "string_field",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": "contains",
+            "named": false
+          },
+          {
+            "type": "eq",
+            "named": false
+          },
+          {
+            "type": "ge",
+            "named": false
+          },
+          {
+            "type": "gt",
+            "named": false
+          },
+          {
+            "type": "le",
+            "named": false
+          },
+          {
+            "type": "lt",
+            "named": false
+          },
+          {
+            "type": "matches",
+            "named": false
+          },
+          {
+            "type": "ne",
+            "named": false
+          },
+          {
+            "type": "~",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "ip_range",
+            "named": true
+          },
+          {
+            "type": "ipv4",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -175,11 +414,19 @@
       "required": false,
       "types": [
         {
+          "type": "boolean_field",
+          "named": true
+        },
+        {
           "type": "compound_expression",
           "named": true
         },
         {
           "type": "group",
+          "named": true
+        },
+        {
+          "type": "in_expression",
           "named": true
         },
         {
@@ -199,12 +446,26 @@
     "fields": {}
   },
   {
-    "type": "xor_operator",
+    "type": "string_set",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "!",
+    "named": false
+  },
+  {
+    "type": "!=",
     "named": false
   },
   {
@@ -220,7 +481,23 @@
     "named": false
   },
   {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "<=",
+    "named": false
+  },
+  {
     "type": "==",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
     "named": false
   },
   {
@@ -236,11 +513,71 @@
     "named": false
   },
   {
+    "type": "cf.bot_management.js_detection.passed",
+    "named": false
+  },
+  {
+    "type": "cf.bot_management.score",
+    "named": false
+  },
+  {
+    "type": "cf.bot_management.verified_bot",
+    "named": false
+  },
+  {
+    "type": "cf.client.bot",
+    "named": false
+  },
+  {
+    "type": "cf.edge.server_ip",
+    "named": false
+  },
+  {
     "type": "cf.edge.server_port",
     "named": false
   },
   {
+    "type": "cf.hostname.metadata",
+    "named": false
+  },
+  {
+    "type": "cf.random_seed",
+    "named": false
+  },
+  {
+    "type": "cf.threat_score",
+    "named": false
+  },
+  {
+    "type": "cf.tls_client_auth.cert_revoked",
+    "named": false
+  },
+  {
+    "type": "cf.tls_client_auth.cert_verified",
+    "named": false
+  },
+  {
     "type": "cf.waf.score",
+    "named": false
+  },
+  {
+    "type": "cf.waf.score.rce",
+    "named": false
+  },
+  {
+    "type": "cf.waf.score.sqli",
+    "named": false
+  },
+  {
+    "type": "cf.waf.score.xss",
+    "named": false
+  },
+  {
+    "type": "cf.worker.upstream_zone",
+    "named": false
+  },
+  {
+    "type": "contains",
     "named": false
   },
   {
@@ -249,6 +586,146 @@
   },
   {
     "type": "false",
+    "named": false
+  },
+  {
+    "type": "ge",
+    "named": false
+  },
+  {
+    "type": "gt",
+    "named": false
+  },
+  {
+    "type": "http.cookie",
+    "named": false
+  },
+  {
+    "type": "http.host",
+    "named": false
+  },
+  {
+    "type": "http.referer",
+    "named": false
+  },
+  {
+    "type": "http.request.cookies",
+    "named": false
+  },
+  {
+    "type": "http.request.full_uri",
+    "named": false
+  },
+  {
+    "type": "http.request.method",
+    "named": false
+  },
+  {
+    "type": "http.request.timestamp.msec",
+    "named": false
+  },
+  {
+    "type": "http.request.timestamp.sec",
+    "named": false
+  },
+  {
+    "type": "http.request.uri",
+    "named": false
+  },
+  {
+    "type": "http.request.uri.path",
+    "named": false
+  },
+  {
+    "type": "http.request.uri.query",
+    "named": false
+  },
+  {
+    "type": "http.request.version",
+    "named": false
+  },
+  {
+    "type": "http.user_agent",
+    "named": false
+  },
+  {
+    "type": "http.x_forwarded_for",
+    "named": false
+  },
+  {
+    "type": "in",
+    "named": false
+  },
+  {
+    "type": "ip.geoip.asnum",
+    "named": false
+  },
+  {
+    "type": "ip.geoip.continent",
+    "named": false
+  },
+  {
+    "type": "ip.geoip.country",
+    "named": false
+  },
+  {
+    "type": "ip.geoip.is_in_european_union",
+    "named": false
+  },
+  {
+    "type": "ip.geoip.subdivision_1_iso_code",
+    "named": false
+  },
+  {
+    "type": "ip.geoip.subdivision_2_iso_code",
+    "named": false
+  },
+  {
+    "type": "ip.src",
+    "named": false
+  },
+  {
+    "type": "ip.src.city",
+    "named": false
+  },
+  {
+    "type": "ip.src.lat",
+    "named": false
+  },
+  {
+    "type": "ip.src.lon",
+    "named": false
+  },
+  {
+    "type": "ip.src.metro_code",
+    "named": false
+  },
+  {
+    "type": "ip.src.postal_code",
+    "named": false
+  },
+  {
+    "type": "ip_range",
+    "named": true
+  },
+  {
+    "type": "ipv4",
+    "named": true
+  },
+  {
+    "type": "le",
+    "named": false
+  },
+  {
+    "type": "lt",
+    "named": false
+  },
+  {
+    "type": "matches",
+    "named": false
+  },
+  {
+    "type": "ne",
     "named": false
   },
   {
@@ -264,8 +741,28 @@
     "named": false
   },
   {
+    "type": "raw.http.request.full_uri",
+    "named": false
+  },
+  {
+    "type": "raw.http.request.uri",
+    "named": false
+  },
+  {
+    "type": "raw.http.request.uri.path",
+    "named": false
+  },
+  {
+    "type": "raw.http.request.uri.query",
+    "named": false
+  },
+  {
     "type": "ssl",
     "named": false
+  },
+  {
+    "type": "string",
+    "named": true
   },
   {
     "type": "true",
@@ -276,7 +773,19 @@
     "named": false
   },
   {
+    "type": "{",
+    "named": false
+  },
+  {
     "type": "||",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  },
+  {
+    "type": "~",
     "named": false
   }
 ]

@@ -10,59 +10,102 @@ module.exports = grammar({
       $.compound_expression,
       $.group,
       $.simple_expression,
+      $.boolean_field,
+      $.in_expression,
     ),
 
     not_expression: $ => prec(4,seq(
       $.not_operator,
-      // choice('not','!'),
       $._expression,
     )),
 
-    compound_expression: $ => choice(
-      prec(3,$._and_expression),
-      prec(2,$._xor_expression),
-      prec(1,$._or_expression),
+    in_expression: $ => choice(
+      seq(
+        field('field', $.ip_field),
+        field('operator','in'),
+        field('value',$.ip_set),
+      ),
+      seq(
+        field('field', $.string_field),
+        field('operator','in'),
+        field('value',$.string_set),
+      ),
+      seq(
+        field('field', $.number_field),
+        field('operator','in'),
+        field('value',$.number_set),
+      ),
     ),
 
-    _and_expression: $ => prec.left(3,seq(
-      $._expression,
-      $.and_operator,
-      $._expression,
-    )),
+    compound_expression: $ => {
+      const precs = [
+        ['&&',3],
+        ['and',3],
+        ['xor',2],
+        ['^^',2],
+        ['or',1],
+        ['||',1],
+      ];
 
-    _xor_expression: $ => prec.left(2,seq(
-      $._expression,
-      $.xor_operator,
-      $._expression,
-    )),
+      return choice(...precs.map(([operator,precedence]) => prec.left(
+        precedence,seq(
+          field('left', $._expression),
+          field('operator', operator),
+          field('right', $._expression)
+        )
+      )));
+    },
 
-    _or_expression: $ => prec.left(1,seq(
-      $._expression,
-      $.or_operator,
-      $._expression,
-    )),
-
-    not_operator: $ => choice(
-      'not', '!'
+    _simple_expression: $ => seq(
+      field('field', $._field),
+      field('operator',$.comparison_operator),
+      field('value', $._value)
     ),
 
-    and_operator: $ => choice(
-      'and','&&'
+    ip_set: $ => seq(
+      "{",
+      repeat1($._ip),
+      "}"
     ),
 
-    xor_operator: $ => choice(
-      'xor','^^'
+    string_set: $ => seq(
+      "{",
+      repeat1($.string),
+      "}"
     ),
 
-    or_operator: $ => choice(
-      'or','||'
+    number_set: $ => seq(
+      "{",
+      repeat1($.number),
+      "}"
     ),
 
-    simple_expression: $ => seq(
-      $._field,
-      $.comparison_operator,
-      $._value
-    ),
+    simple_expression: $ => {
+        const comps = [[
+          [
+            'eq','ne','lt','le','gt','ge',
+            '==','!=','<','<=','>','>=',
+            'contains','matches','~',
+          ],$.string_field,$.string],
+          [[
+            'eq','ne','lt','le','gt','ge',
+            '==','!=','<','<=','>','>='
+          ],$.number_field,$.number],
+          [[
+            'eq','ne','==','!='
+          ],$.ip_field,$._ip],
+          [[
+            'eq','ne','==','!='
+          ],$.boolean_field,$.boolean],
+        ];
+
+      return choice(
+      ...comps.map(([operators,f,type]) => seq(
+        field('field',f),
+        field('operator',choice(...operators)),
+        field('value',type)
+      )));
+    },
 
     _field: $ => choice(
       $.string_field,
@@ -84,11 +127,20 @@ module.exports = grammar({
     ),
 
     number: $ => /\d+/,
+    string: $ => /\".*\"/,
 
     boolean: $ => choice(
       'true',
       'false',
     ),
+
+    _ip: $ => choice(
+      $.ipv4,
+      $.ip_range,
+      //TODO(nfowl): Add ipv6
+    ),
+    ipv4: $ => /(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}/,
+    ip_range: $ => /(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}(\/(?:3[0-2]|[0-2]?[0-9]))/,
 
     logical_operator: $ => choice(
       prec(4, choice('not','!')),
@@ -102,16 +154,74 @@ module.exports = grammar({
       'eq',
     ),
 
+    not_operator: $ => choice('not','!'),
+
     number_field: $ => choice(
+      'http.request.timestamp.sec',
+      'http.request.timestamp.msec',
+      'ip.geoip.asnum',
+      'cf.bot_management.score',
       'cf.edge.server_port',
+      'cf.threat_score',
       'cf.waf.score',
+      'cf.waf.score.sqli',
+      'cf.waf.score.xss',
+      'cf.waf.score.rce',
+    ),
+
+    ip_field: $ => choice(
+      'ip.src',
+      'cf.edge.server_ip'
     ),
 
     string_field: $ => choice(
-      'cf.bot_management.ja3_hash'
+      'http.cookie',
+      'http.host',
+      'http.referer',
+      'http.request.full_uri',
+      'http.request.method',
+      'http.request.cookies',
+      'http.request.uri',
+      'http.request.uri.path',
+      'http.request.uri.query',
+      'http.user_agent',
+      'http.request.version',
+      'http.x_forwarded_for',
+      'ip.src.lat',
+      'ip.src.lon',
+      'ip.src.city',
+      'ip.src.postal_code',
+      'ip.src.metro_code',
+      'ip.geoip.continent',
+      'ip.geoip.country',
+      'ip.geoip.subdivision_1_iso_code',
+      'ip.geoip.subdivision_2_iso_code',
+      'raw.http.request.full_uri',
+      'raw.http.request.uri',
+      'raw.http.request.uri.path',
+      'raw.http.request.uri.query',
+      'cf.bot_management.ja3_hash',
+      'cf.hostname.metadata',
+      'cf.worker.upstream_zone',
     ),
+
+    bytes_field: $ => choice(
+      'cf.random_seed',
+    ),
+    
+    map_string_array_field: $ => choice(
+      'http.request.cookies',
+    ),
+
+
     boolean_field: $ => choice(
+      'ip.geoip.is_in_european_union',
       'ssl',
+      'cf.bot_management.verified_bot',
+      'cf.bot_management.js_detection.passed',
+      'cf.client.bot',
+      'cf.tls_client_auth.cert_revoked',
+      'cf.tls_client_auth.cert_verified',
     ),
   }
 })
