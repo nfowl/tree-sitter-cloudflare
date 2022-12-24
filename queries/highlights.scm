@@ -13,7 +13,6 @@
  (boolean_field)
 ] @type
 
-
 [
   "not"
   "!"

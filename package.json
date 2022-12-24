@@ -25,7 +25,7 @@
     {
       "scope": "source.cloudflare",
       "file-types": [
-        "cf.txt"
+        "cftxt"
       ]
     }
   ]
