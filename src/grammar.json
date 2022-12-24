@@ -80,8 +80,17 @@
               "type": "FIELD",
               "name": "value",
               "content": {
-                "type": "SYMBOL",
-                "name": "ip_set"
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "ip_set"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "ip_list"
+                  }
+                ]
               }
             }
           ]
@@ -145,6 +154,22 @@
           ]
         }
       ]
+    },
+    "ip_list": {
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "$"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[a-z\\d_]*"
+          }
+        ]
+      }
     },
     "compound_expression": {
       "type": "CHOICE",

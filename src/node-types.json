@@ -177,6 +177,10 @@
         "required": true,
         "types": [
           {
+            "type": "ip_list",
+            "named": true
+          },
+          {
             "type": "ip_set",
             "named": true
           },
@@ -722,6 +726,10 @@
   {
     "type": "ip.src.postal_code",
     "named": false
+  },
+  {
+    "type": "ip_list",
+    "named": true
   },
   {
     "type": "ipv4",

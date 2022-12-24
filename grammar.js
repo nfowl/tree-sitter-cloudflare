@@ -27,7 +27,7 @@ module.exports = grammar({
       seq(
         field('field', $.ip_field),
         field('operator','in'),
-        field('value',$.ip_set),
+        field('value',choice($.ip_set,$.ip_list)),
       ),
       seq(
         field('field', $.string_field),
@@ -40,6 +40,8 @@ module.exports = grammar({
         field('value',$.number_set),
       ),
     ),
+
+    ip_list: $ => token(seq("$",/[a-z\d_]*/)),
 
     compound_expression: $ => {
       const precs = [
