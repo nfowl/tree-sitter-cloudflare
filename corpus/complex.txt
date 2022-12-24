@@ -11,34 +11,48 @@ Complex expr
 --------------------------------------------------------------------------------
 
 (source_file
-  (group
-    (compound_expression
-      (group
-        (simple_expression
-          (string_field)
-          (string)))
-      (group
-        (simple_expression
-          (string_field)
-          (string))))
-    (ERROR
-      (string_field)
-      (UNEXPECTED 'n')
-      (string)
-      (UNEXPECTED '}')
-      (number_field)
-      (UNEXPECTED 'n')
-      (number)
-      (number)
-      (number)
-      (UNEXPECTED '}')))
-  (ERROR
-    (not_operator)
-    (ip_field)
-    (UNEXPECTED 'n')
-    (ip)
-    (UNEXPECTED '.')
-    (ip)
-    (UNEXPECTED '/')
-    (number)
-    (UNEXPECTED '}')))
+  (compound_expression
+    (group
+      (compound_expression
+        (compound_expression
+          (compound_expression
+            (group
+              (compound_expression
+                (simple_expression
+                  (string_field)
+                  (string))
+                (simple_expression
+                  (string_field)
+                  (string))))
+            (group
+              (compound_expression
+                (simple_expression
+                  (string_field)
+                  (string))
+                (simple_expression
+                  (string_field)
+                  (string)))))
+          (in_expression
+            (string_field)
+            (string_set
+              (string)
+              (string)
+              (string)
+              (string)
+              (string)
+              (string)
+              (string)
+              (string)
+              (string))))
+        (in_expression
+          (number_field)
+          (number_set
+            (number)
+            (number)
+            (number)))))
+    (not_expression
+      (not_operator)
+      (in_expression
+        (ip_field)
+        (ip_set
+          (ip_range))))))

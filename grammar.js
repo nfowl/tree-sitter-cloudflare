@@ -2,7 +2,6 @@ module.exports = grammar({
   name: 'cloudflare',
 
   rules: {
-    //TODO AAAAAAAAAAAAAAAAA
     source_file: $ => repeat($._expression),
 
     _expression: $ => choice(
@@ -18,7 +17,8 @@ module.exports = grammar({
       $.not_operator,
       $._expression,
     )),
-
+    
+    //TODO(nfowl): Make this cleaner
     in_expression: $ => choice(
       seq(
         field('field', $.ip_field),
@@ -127,7 +127,14 @@ module.exports = grammar({
     ),
 
     number: $ => /\d+/,
-    string: $ => /\".*\"/,
+    
+    //TODO(nfowl): Get this working with escaped characters
+    string: $ => /"([^"]*)"/,
+
+    // _escape_sequence: $ => token(prec(1, seq(
+    //   '\\',
+    //   /["\\]/,
+    // ))),
 
     boolean: $ => choice(
       'true',

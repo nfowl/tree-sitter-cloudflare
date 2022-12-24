@@ -754,6 +754,43 @@
       "type": "PATTERN",
       "value": "\\d+"
     },
+    "string": {
+      "type": "PATTERN",
+      "value": "\"([^\"]*)\""
+    },
+    "_escape_sequence": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 1,
+        "content": {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "\\"
+            },
+            {
+              "type": "PATTERN",
+              "value": "[\"\\\\]"
+            }
+          ]
+        }
+      }
+    },
+    "boolean": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "true"
+        },
+        {
+          "type": "STRING",
+          "value": "false"
+        }
+      ]
+    },
     "_ip": {
       "type": "CHOICE",
       "members": [
@@ -774,23 +811,6 @@
     "ip_range": {
       "type": "PATTERN",
       "value": "(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}(\\/(?:3[0-2]|[0-2]?[0-9]))"
-    },
-    "string": {
-      "type": "PATTERN",
-      "value": "\\\".*\\\""
-    },
-    "boolean": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "true"
-        },
-        {
-          "type": "STRING",
-          "value": "false"
-        }
-      ]
     },
     "logical_operator": {
       "type": "CHOICE",
