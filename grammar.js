@@ -2,7 +2,7 @@ module.exports = grammar({
   name: 'cloudflare',
 
   extras: $ => [
-    $.comment
+    $.comment, /\s/
   ],
 
   rules: {
@@ -78,7 +78,7 @@ module.exports = grammar({
       "}"
     ),
 
-    comment: $ => token(seq("#",/.*\n/)),
+    comment: $ => token(seq("#",/.*/)),
 
     number_set: $ => seq(
       "{",
