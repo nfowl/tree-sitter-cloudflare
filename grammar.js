@@ -56,11 +56,11 @@ module.exports = grammar({
       )));
     },
 
-    _simple_expression: $ => seq(
-      field('field', $._field),
-      field('operator',$.comparison_operator),
-      field('value', $._value)
-    ),
+    // _simple_expression: $ => seq(
+    //   field('field', $._field),
+    //   field('operator',$.comparison_operator),
+    //   field('value', $._value)
+    // ),
 
     ip_set: $ => seq(
       "{",
@@ -107,13 +107,13 @@ module.exports = grammar({
       )));
     },
 
-    _field: $ => choice(
-      $.string_field,
-      $.number_field,
-      $.boolean_field,
-      // $.list_field,
-      // $.map_field
-    ),
+    // _field: $ => choice(
+    //   $.string_field,
+    //   $.number_field,
+    //   $.boolean_field,
+    //   // $.list_field,
+    //   // $.map_field
+    // ),
 
     group: $ => seq(
       '(',
@@ -121,14 +121,14 @@ module.exports = grammar({
       ')',
     ),
 
-    _value: $ => choice(
-      $.number,
-      $.boolean,
-    ),
+    // _value: $ => choice(
+    //   $.number,
+    //   $.boolean,
+    // ),
 
     number: $ => /\d+/,
     
-    //TODO(nfowl): Get this working with escaped characters
+    //TODO(nfowl): Get this working with escaped characters and fix hacky mess
     string: $ => /"([^"]*)"/,
 
     // _escape_sequence: $ => token(prec(1, seq(
@@ -147,19 +147,17 @@ module.exports = grammar({
       //TODO(nfowl): Add ipv6
     ),
     ipv4: $ => /(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}/,
-    ip_range: $ => /(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}(\/(?:3[0-2]|[0-2]?[0-9]))/,
 
-    logical_operator: $ => choice(
-      prec(4, choice('not','!')),
-      prec(3, choice('and','&&')),
-      prec(2, choice('xor','^^')),
-      prec(1, choice('or','||')),
+    ip_range: $ => seq(
+      field('ip',$.ipv4),
+      '/',
+      field('mask',/(?:3[0-2]|[0-2]?[0-9])/),
     ),
 
-    comparison_operator: $ => choice(
-      '==',
-      'eq',
-    ),
+    // comparison_operator: $ => choice(
+    //   '==',
+    //   'eq',
+    // ),
 
     not_operator: $ => choice('not','!'),
 

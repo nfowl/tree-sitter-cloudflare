@@ -349,35 +349,6 @@
         }
       ]
     },
-    "_simple_expression": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "FIELD",
-          "name": "field",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_field"
-          }
-        },
-        {
-          "type": "FIELD",
-          "name": "operator",
-          "content": {
-            "type": "SYMBOL",
-            "name": "comparison_operator"
-          }
-        },
-        {
-          "type": "FIELD",
-          "name": "value",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_value"
-          }
-        }
-      ]
-    },
     "ip_set": {
       "type": "SEQ",
       "members": [
@@ -703,23 +674,6 @@
         }
       ]
     },
-    "_field": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "string_field"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "number_field"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "boolean_field"
-        }
-      ]
-    },
     "group": {
       "type": "SEQ",
       "members": [
@@ -737,19 +691,6 @@
         }
       ]
     },
-    "_value": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "number"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "boolean"
-        }
-      ]
-    },
     "number": {
       "type": "PATTERN",
       "value": "\\d+"
@@ -757,26 +698,6 @@
     "string": {
       "type": "PATTERN",
       "value": "\"([^\"]*)\""
-    },
-    "_escape_sequence": {
-      "type": "TOKEN",
-      "content": {
-        "type": "PREC",
-        "value": 1,
-        "content": {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "\\"
-            },
-            {
-              "type": "PATTERN",
-              "value": "[\"\\\\]"
-            }
-          ]
-        }
-      }
     },
     "boolean": {
       "type": "CHOICE",
@@ -809,92 +730,27 @@
       "value": "(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}"
     },
     "ip_range": {
-      "type": "PATTERN",
-      "value": "(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(?:\\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}(\\/(?:3[0-2]|[0-2]?[0-9]))"
-    },
-    "logical_operator": {
-      "type": "CHOICE",
+      "type": "SEQ",
       "members": [
         {
-          "type": "PREC",
-          "value": 4,
+          "type": "FIELD",
+          "name": "ip",
           "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "not"
-              },
-              {
-                "type": "STRING",
-                "value": "!"
-              }
-            ]
+            "type": "SYMBOL",
+            "name": "ipv4"
           }
-        },
-        {
-          "type": "PREC",
-          "value": 3,
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "and"
-              },
-              {
-                "type": "STRING",
-                "value": "&&"
-              }
-            ]
-          }
-        },
-        {
-          "type": "PREC",
-          "value": 2,
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "xor"
-              },
-              {
-                "type": "STRING",
-                "value": "^^"
-              }
-            ]
-          }
-        },
-        {
-          "type": "PREC",
-          "value": 1,
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "or"
-              },
-              {
-                "type": "STRING",
-                "value": "||"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    "comparison_operator": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "=="
         },
         {
           "type": "STRING",
-          "value": "eq"
+          "value": "/"
+        },
+        {
+          "type": "FIELD",
+          "name": "mask",
+          "content": {
+            "type": "PATTERN",
+            "value": "(?:3[0-2]|[0-2]?[0-9])"
+          }
         }
       ]
     },

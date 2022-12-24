@@ -10,11 +10,6 @@
     "fields": {}
   },
   {
-    "type": "comparison_operator",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "compound_expression",
     "named": true,
     "fields": {
@@ -201,6 +196,22 @@
     "type": "ip_field",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "ip_range",
+    "named": true,
+    "fields": {
+      "ip": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ipv4",
+            "named": true
+          }
+        ]
+      }
+    }
   },
   {
     "type": "ip_set",
@@ -481,6 +492,10 @@
     "named": false
   },
   {
+    "type": "/",
+    "named": false
+  },
+  {
     "type": "<",
     "named": false
   },
@@ -703,10 +718,6 @@
   {
     "type": "ip.src.postal_code",
     "named": false
-  },
-  {
-    "type": "ip_range",
-    "named": true
   },
   {
     "type": "ipv4",

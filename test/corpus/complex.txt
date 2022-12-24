@@ -55,4 +55,5 @@ Complex expr
       (in_expression
         (ip_field)
         (ip_set
-          (ip_range))))))
+          (ip_range
+            (ipv4)))))))
