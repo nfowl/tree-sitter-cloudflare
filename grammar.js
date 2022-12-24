@@ -1,6 +1,10 @@
 module.exports = grammar({
   name: 'cloudflare',
 
+  extras: $ => [
+    $.comment
+  ],
+
   rules: {
     source_file: $ => repeat($._expression),
 
@@ -73,6 +77,8 @@ module.exports = grammar({
       repeat1($.string),
       "}"
     ),
+
+    comment: $ => token(seq("#",/.*\n/)),
 
     number_set: $ => seq(
       "{",

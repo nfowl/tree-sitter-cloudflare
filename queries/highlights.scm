@@ -1,6 +1,8 @@
 (string) @string
 (number) @number
 (boolean) @constant.builtin
+(comment) @comment
+
 [
   (ip_range)
   (ipv4)
