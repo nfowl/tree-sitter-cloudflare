@@ -2,6 +2,7 @@
 (number) @number
 (boolean) @constant.builtin
 (comment) @comment
+(ERROR) @error
 
 [
   (ip_range)
