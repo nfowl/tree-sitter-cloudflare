@@ -7,6 +7,7 @@
 [
   (ip_range)
   (ipv4)
+  (ip_list)
 ] @variable
 
 [
