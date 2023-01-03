@@ -5,6 +5,12 @@
 (ERROR) @error
 
 [
+  (string_func)
+  (bool_func)
+  (number_func)
+] @function
+
+[
   (ip_range)
   (ipv4)
   (ip_list)
