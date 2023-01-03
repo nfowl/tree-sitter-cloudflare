@@ -1,5 +1,24 @@
 [
   {
+    "type": "bool_func",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "ends_with_func",
+          "named": true
+        },
+        {
+          "type": "starts_with_func",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "boolean",
     "named": true,
     "fields": {}
@@ -10,13 +29,22 @@
     "fields": {}
   },
   {
+    "type": "bytes_field",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "compound_expression",
     "named": true,
     "fields": {
-      "left": {
+      "lhs": {
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "bool_func",
+            "named": true
+          },
           {
             "type": "boolean_field",
             "named": true
@@ -73,10 +101,14 @@
           }
         ]
       },
-      "right": {
+      "rhs": {
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "bool_func",
+            "named": true
+          },
           {
             "type": "boolean_field",
             "named": true
@@ -106,6 +138,51 @@
     }
   },
   {
+    "type": "concat_func",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ends_with_func",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string_field",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "group",
     "named": true,
     "fields": {},
@@ -113,6 +190,10 @@
       "multiple": false,
       "required": true,
       "types": [
+        {
+          "type": "bool_func",
+          "named": true
+        },
         {
           "type": "boolean_field",
           "named": true
@@ -144,7 +225,7 @@
     "type": "in_expression",
     "named": true,
     "fields": {
-      "field": {
+      "lhs": {
         "multiple": false,
         "required": true,
         "types": [
@@ -157,7 +238,15 @@
             "named": true
           },
           {
+            "type": "number_func",
+            "named": true
+          },
+          {
             "type": "string_field",
+            "named": true
+          },
+          {
+            "type": "string_func",
             "named": true
           }
         ]
@@ -172,7 +261,7 @@
           }
         ]
       },
-      "value": {
+      "rhs": {
         "multiple": false,
         "required": true,
         "types": [
@@ -237,6 +326,76 @@
     }
   },
   {
+    "type": "len_func",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bytes_field",
+            "named": true
+          },
+          {
+            "type": "string_field",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "lookup_func",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string_field",
+            "named": true
+          }
+        ]
+      },
+      "keys": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "lower_func",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string_field",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "not_expression",
     "named": true,
     "fields": {},
@@ -244,6 +403,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "bool_func",
+          "named": true
+        },
         {
           "type": "boolean_field",
           "named": true
@@ -286,6 +449,21 @@
     "fields": {}
   },
   {
+    "type": "number_func",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "len_func",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "number_set",
     "named": true,
     "fields": {},
@@ -301,13 +479,87 @@
     }
   },
   {
-    "type": "simple_expression",
+    "type": "regex_replace_func",
+    "named": true,
+    "fields": {
+      "regex": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "replacement": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "source": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "string_field",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "remove_bytes_func",
     "named": true,
     "fields": {
       "field": {
         "multiple": false,
         "required": true,
         "types": [
+          {
+            "type": "bytes_field",
+            "named": true
+          },
+          {
+            "type": "string_field",
+            "named": true
+          }
+        ]
+      },
+      "replacement": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "simple_expression",
+    "named": true,
+    "fields": {
+      "lhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bool_func",
+            "named": true
+          },
           {
             "type": "boolean_field",
             "named": true
@@ -321,7 +573,15 @@
             "named": true
           },
           {
+            "type": "number_func",
+            "named": true
+          },
+          {
             "type": "string_field",
+            "named": true
+          },
+          {
+            "type": "string_func",
             "named": true
           }
         ]
@@ -392,7 +652,7 @@
           }
         ]
       },
-      "value": {
+      "rhs": {
         "multiple": false,
         "required": true,
         "types": [
@@ -429,6 +689,10 @@
       "required": false,
       "types": [
         {
+          "type": "bool_func",
+          "named": true
+        },
+        {
           "type": "boolean_field",
           "named": true
         },
@@ -456,9 +720,82 @@
     }
   },
   {
+    "type": "starts_with_func",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string_field",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "string_field",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "string_func",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "concat_func",
+          "named": true
+        },
+        {
+          "type": "lookup_func",
+          "named": true
+        },
+        {
+          "type": "lower_func",
+          "named": true
+        },
+        {
+          "type": "regex_replace_func",
+          "named": true
+        },
+        {
+          "type": "remove_bytes_func",
+          "named": true
+        },
+        {
+          "type": "to_string_func",
+          "named": true
+        },
+        {
+          "type": "upper_func",
+          "named": true
+        },
+        {
+          "type": "url_decode_func",
+          "named": true
+        },
+        {
+          "type": "uuid_func",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "string_set",
@@ -473,6 +810,78 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "to_string_func",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "boolean_field",
+            "named": true
+          },
+          {
+            "type": "ip_field",
+            "named": true
+          },
+          {
+            "type": "number_field",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "upper_func",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string_field",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "url_decode_func",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string_field",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "uuid_func",
+    "named": true,
+    "fields": {
+      "seed": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "bytes_field",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -493,6 +902,10 @@
   },
   {
     "type": ")",
+    "named": false
+  },
+  {
+    "type": ",",
     "named": false
   },
   {
@@ -600,7 +1013,15 @@
     "named": true
   },
   {
+    "type": "concat",
+    "named": false
+  },
+  {
     "type": "contains",
+    "named": false
+  },
+  {
+    "type": "ends_with",
     "named": false
   },
   {
@@ -740,6 +1161,18 @@
     "named": false
   },
   {
+    "type": "len",
+    "named": false
+  },
+  {
+    "type": "lookup_json_string",
+    "named": false
+  },
+  {
+    "type": "lower",
+    "named": false
+  },
+  {
     "type": "lt",
     "named": false
   },
@@ -780,7 +1213,19 @@
     "named": false
   },
   {
+    "type": "regex_replace",
+    "named": false
+  },
+  {
+    "type": "remove_bytes",
+    "named": false
+  },
+  {
     "type": "ssl",
+    "named": false
+  },
+  {
+    "type": "starts_with",
     "named": false
   },
   {
@@ -788,7 +1233,23 @@
     "named": true
   },
   {
+    "type": "to_string",
+    "named": false
+  },
+  {
     "type": "true",
+    "named": false
+  },
+  {
+    "type": "upper",
+    "named": false
+  },
+  {
+    "type": "url_decode",
+    "named": false
+  },
+  {
+    "type": "uuidv4",
     "named": false
   },
   {

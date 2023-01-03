@@ -13,7 +13,7 @@ module.exports = grammar({
       $.compound_expression,
       $.group,
       $.simple_expression,
-      $.boolean_field,
+      $._bool_lhs,
       $.in_expression,
     ),
 
@@ -22,26 +22,20 @@ module.exports = grammar({
       $._expression,
     )),
     
-    //TODO(nfowl): Make this cleaner
-    in_expression: $ => choice(
-      seq(
-        field('field', $.ip_field),
-        field('operator','in'),
-        field('value',choice($.ip_set,$.ip_list)),
-      ),
-      seq(
-        field('field', $.string_field),
-        field('operator','in'),
-        field('value',$.string_set),
-      ),
-      seq(
-        field('field', $.number_field),
-        field('operator','in'),
-        field('value',$.number_set),
-      ),
-    ),
+    in_expression: $ => {
+      const in_options = [
+        [$.ip_field, choice($.ip_set,$.ip_list)],
+        [$._string_lhs,$.string_set],
+        [$._number_lhs,$.number_set],
+      ];
 
-    ip_list: $ => token(seq("$",/[a-z\d_]*/)),
+      return choice(...in_options.map(([field_type,target]) => seq(
+        field('lhs', field_type),
+        field('operator','in'),
+        field('rhs',target),
+      )));
+    },
+
 
     compound_expression: $ => {
       const precs = [
@@ -55,9 +49,9 @@ module.exports = grammar({
 
       return choice(...precs.map(([operator,precedence]) => prec.left(
         precedence,seq(
-          field('left', $._expression),
+          field('lhs', $._expression),
           field('operator', operator),
-          field('right', $._expression)
+          field('rhs', $._expression)
         )
       )));
     },
@@ -94,26 +88,184 @@ module.exports = grammar({
             'eq','ne','lt','le','gt','ge',
             '==','!=','<','<=','>','>=',
             'contains','matches','~',
-          ],$.string_field,$.string],
+          ],$._string_lhs,$.string],
           [[
             'eq','ne','lt','le','gt','ge',
             '==','!=','<','<=','>','>='
-          ],$.number_field,$.number],
+          ],$._number_lhs,$.number],
           [[
             'eq','ne','==','!='
           ],$.ip_field,$._ip],
           [[
             'eq','ne','==','!='
-          ],$.boolean_field,$.boolean],
+          ],$._bool_lhs,$.boolean],
         ];
 
       return choice(
       ...comps.map(([operators,f,type]) => seq(
-        field('field',f),
+        field('lhs',f),
         field('operator',choice(...operators)),
-        field('value',type)
+        field('rhs',type)
       )));
     },
+
+    _bool_lhs: $ => choice(
+      $.boolean_field,
+      $.bool_func,
+    ),
+
+    _number_lhs: $ => choice(
+      $.number_field,
+      $.number_func
+    ),
+
+    _string_lhs: $ => choice(
+      $.string_field,
+      $.string_func,
+    ),
+    
+    // functions grouped by return type for use in expressions
+    string_func: $ => choice(
+      $.concat_func,
+      $.lookup_func,
+      $.lower_func,
+      $.regex_replace_func,
+      $.remove_bytes_func,
+      $.to_string_func,
+      $.upper_func,
+      $.url_decode_func,
+      $.uuid_func
+    ),
+
+    number_func: $ => choice(
+      $.len_func
+    ),
+
+    bool_func: $ => choice(
+      // $.any_func,
+      // $.all_func
+      $.ends_with_func,
+      $.starts_with_func,
+    ),
+
+// Cloudflare ruleset functions
+// https://developers.cloudflare.com/ruleset-engine/rules-language/functions/
+// TODO(nfowl): Verify if functions can take raw values as well
+
+    //TODO(nfowl): Implement these
+    // all_func: $ => seq(),
+    // any_func: $ => seq(),
+    // bit_slice_func: $ => seq(),
+    // is_timed_hmac_valid_v0: $ => seq(),
+    
+    // Caveats discovered via validation:
+    // - Concat takes minimum 2 args
+    // - Concat does not support numbers (TODO: chase this up)
+    concat_func: $ => {
+      const arg_type = choice(
+        $.string,
+        $.string_field,
+        // $.number,
+        // $.number_field,
+      )
+
+      return seq(
+        "concat",
+        "(",
+        arg_type,
+        ',',
+        repeat1(seq(arg_type,optional(','))),
+        ")",
+      )
+    },
+
+    ends_with_func: $ => seq(
+      "ends_with",
+      "(",
+      field('field',$.string_field),
+      ',',
+      field('value',$.string),
+      ')',
+    ),
+
+    len_func: $ => seq(
+      "len",
+      "(",
+      field('field', choice($.string_field,$.bytes_field)),
+      ')',
+    ),
+
+    lookup_func: $ => seq(
+      'lookup_json_string',
+      '(',
+      field('field',$.string_field),
+      field('keys',repeat1(seq(choice($.string,$.number),optional(',')))),
+      ')',
+    ),
+
+    lower_func: $ => seq(
+      'lower',
+      '(',
+      field('field',$.string_field),
+      ')'
+    ),
+
+    regex_replace_func: $ => seq(
+      'regex_replace',
+      '(',
+      field('source',choice($.string_field,$.string)),
+      ',',
+      field('regex',$.string),
+      ',',
+      field('replacement',$.string),
+      ')',
+    ),
+
+    remove_bytes_func: $ => seq(
+      'remove_bytes',
+      '(',
+      field('field',choice($.string_field,$.bytes_field)),
+      ',',
+      field('replacement',$.string),
+      ')',
+    ),
+
+    starts_with_func: $ => seq(
+      "starts_with",
+      "(",
+      field('field',$.string_field),
+      ',',
+      field('value',$.string),
+      ')',
+    ),
+
+    to_string_func: $ => seq(
+      'to_string',
+      '(',
+      field('field',choice($.number_field,$.ip_field,$.boolean_field)),
+      ')',
+    ),
+
+    upper_func: $ => seq(
+      'upper',
+      '(',
+      field('field',$.string_field),
+      ')'
+    ),
+
+    url_decode_func: $ => seq(
+      'url_decode',
+      '(',
+      field('field',$.string_field),
+      ')',
+    ),
+
+    uuid_func: $ => seq(
+      'uuidv4',
+      '(',
+      field('seed',$.bytes_field),
+      ')'
+    ),
 
     // _field: $ => choice(
     //   $.string_field,
@@ -162,6 +314,7 @@ module.exports = grammar({
       field('mask',/(?:3[0-2]|[0-2]?[0-9])/),
     ),
 
+    ip_list: $ => token(seq("$",/[a-z\d_]*/)),
     // comparison_operator: $ => choice(
     //   '==',
     //   'eq',
@@ -169,6 +322,8 @@ module.exports = grammar({
 
     not_operator: $ => choice('not','!'),
 
+// Cloudflare Ruleset Fields
+// see: https://developers.cloudflare.com/ruleset-engine/rules-language/fields/
     number_field: $ => choice(
       'http.request.timestamp.sec',
       'http.request.timestamp.msec',

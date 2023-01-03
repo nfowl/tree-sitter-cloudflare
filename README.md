@@ -1,6 +1,6 @@
 # tree-sitter-cloudflare
 
-Tree Sitter parser for cloudflare rules
+Tree Sitter parser for [cloudflare rules](https://developers.cloudflare.com/ruleset-engine/rules-language/)
 
 # TODO List
 - Add support for functions
