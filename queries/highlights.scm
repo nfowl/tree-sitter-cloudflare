@@ -20,7 +20,7 @@
  (number_field)
  (ip_field)
  (string_field)
- (boolean_field)
+ (bool_field)
 ] @type
 
 [

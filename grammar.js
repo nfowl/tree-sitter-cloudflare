@@ -110,7 +110,7 @@ module.exports = grammar({
     },
 
     _bool_lhs: $ => choice(
-      $.boolean_field,
+      $.bool_field,
       $.bool_func,
     ),
 
@@ -242,7 +242,7 @@ module.exports = grammar({
     to_string_func: $ => seq(
       'to_string',
       '(',
-      field('field',choice($.number_field,$.ip_field,$.boolean_field)),
+      field('field',choice($.number_field,$.ip_field,$.bool_field)),
       ')',
     ),
 
@@ -267,24 +267,11 @@ module.exports = grammar({
       ')'
     ),
 
-    // _field: $ => choice(
-    //   $.string_field,
-    //   $.number_field,
-    //   $.boolean_field,
-    //   // $.list_field,
-    //   // $.map_field
-    // ),
-
     group: $ => seq(
       '(',
       $._expression,
       ')',
     ),
-
-    // _value: $ => choice(
-    //   $.number,
-    //   $.boolean,
-    // ),
 
     number: $ => /\d+/,
     
@@ -315,10 +302,6 @@ module.exports = grammar({
     ),
 
     ip_list: $ => token(seq("$",/[a-z\d_]*/)),
-    // comparison_operator: $ => choice(
-    //   '==',
-    //   'eq',
-    // ),
 
     not_operator: $ => choice('not','!'),
 
@@ -382,7 +365,7 @@ module.exports = grammar({
     ),
 
 
-    boolean_field: $ => choice(
+    bool_field: $ => choice(
       'ip.geoip.is_in_european_union',
       'ssl',
       'cf.bot_management.verified_bot',

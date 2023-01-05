@@ -16,7 +16,7 @@ cf.edge.server_port eq 80 or cf.edge.server_port == 443 and ssl == true
         (number_field)
         (number))
       (simple_expression
-        (boolean_field)
+        (bool_field)
         (boolean)))))
 
 ================================================================================
@@ -34,7 +34,7 @@ cf.edge.server_port == 443 and ssl == true or cf.edge.server_port eq 80
         (number_field)
         (number))
       (simple_expression
-        (boolean_field)
+        (bool_field)
         (boolean)))
     (simple_expression
       (number_field)

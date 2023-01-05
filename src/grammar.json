@@ -704,7 +704,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "boolean_field"
+          "name": "bool_field"
         },
         {
           "type": "SYMBOL",
@@ -1194,7 +1194,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "boolean_field"
+                "name": "bool_field"
               }
             ]
           }
@@ -1582,7 +1582,7 @@
         }
       ]
     },
-    "boolean_field": {
+    "bool_field": {
       "type": "CHOICE",
       "members": [
         {

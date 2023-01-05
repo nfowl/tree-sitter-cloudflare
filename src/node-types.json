@@ -1,5 +1,10 @@
 [
   {
+    "type": "bool_field",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "bool_func",
     "named": true,
     "fields": {},
@@ -24,11 +29,6 @@
     "fields": {}
   },
   {
-    "type": "boolean_field",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "bytes_field",
     "named": true,
     "fields": {}
@@ -42,11 +42,11 @@
         "required": true,
         "types": [
           {
-            "type": "bool_func",
+            "type": "bool_field",
             "named": true
           },
           {
-            "type": "boolean_field",
+            "type": "bool_func",
             "named": true
           },
           {
@@ -106,11 +106,11 @@
         "required": true,
         "types": [
           {
-            "type": "bool_func",
+            "type": "bool_field",
             "named": true
           },
           {
-            "type": "boolean_field",
+            "type": "bool_func",
             "named": true
           },
           {
@@ -191,11 +191,11 @@
       "required": true,
       "types": [
         {
-          "type": "bool_func",
+          "type": "bool_field",
           "named": true
         },
         {
-          "type": "boolean_field",
+          "type": "bool_func",
           "named": true
         },
         {
@@ -404,11 +404,11 @@
       "required": true,
       "types": [
         {
-          "type": "bool_func",
+          "type": "bool_field",
           "named": true
         },
         {
-          "type": "boolean_field",
+          "type": "bool_func",
           "named": true
         },
         {
@@ -557,11 +557,11 @@
         "required": true,
         "types": [
           {
-            "type": "bool_func",
+            "type": "bool_field",
             "named": true
           },
           {
-            "type": "boolean_field",
+            "type": "bool_func",
             "named": true
           },
           {
@@ -689,11 +689,11 @@
       "required": false,
       "types": [
         {
-          "type": "bool_func",
+          "type": "bool_field",
           "named": true
         },
         {
-          "type": "boolean_field",
+          "type": "bool_func",
           "named": true
         },
         {
@@ -821,7 +821,7 @@
         "required": true,
         "types": [
           {
-            "type": "boolean_field",
+            "type": "bool_field",
             "named": true
           },
           {
