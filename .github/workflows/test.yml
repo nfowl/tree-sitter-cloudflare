@@ -1,5 +1,7 @@
 name: Run tests
 on: [push]
+env:
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CF_READ_TOKEN }}
 jobs:
   validation-tests:
     runs-on: ubuntu-22.04
@@ -17,6 +19,6 @@ jobs:
           github_access_token: ${{ secrets.GITHUB_TOKEN }} 
       - uses: workflow/nix-shell-action@v3
         with:
-          packages: tree-sitter-cli,nodejs-18_x
+          packages: tree-sitter,nodejs-18_x
           script: |
             tree-sitter test
