@@ -1,0 +1,22 @@
+name: Run tests
+on: [push]
+jobs:
+  validation-tests:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+      - run: cd test/validations
+      - run: go test
+  corpus-tests:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cachix/install-nix-action@v18
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+      - uses: workflow/nix-shell-action@v3
+        with:
+          packages: tree-sitter-cli,nodejs-18_x
+          script: |
+            tree-sitter test
