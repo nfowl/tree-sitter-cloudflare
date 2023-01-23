@@ -269,7 +269,7 @@ module.exports = grammar({
 
     group: $ => seq(
       '(',
-      $._expression,
+      field('inner',$._expression),
       ')',
     ),
 

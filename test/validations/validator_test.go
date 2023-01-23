@@ -23,3 +23,20 @@ func TestConcat(t *testing.T) {
 		t.Fatal(err)
 	}
 }
+
+func TestLen(t *testing.T) {
+	// Takes bytes field
+	expr := "len(cf.random_seed) == 10"
+	err := Validate(expr)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	//Doesn't take raw value
+
+	expr = "len(\"ten\") == 3"
+	err = Validate(expr)
+	if err == nil {
+		t.Fatal("Values shouldn't be supported")
+	}
+}
