@@ -301,7 +301,17 @@ module.exports = grammar({
       field('mask',/(?:3[0-2]|[0-2]?[0-9])/),
     ),
 
-    ip_list: $ => token(seq("$",/[a-z\d_]*/)),
+    ip_list: $ => token(seq(
+      "$",
+      choice(
+        /[a-z\d_]*/,
+        'cf.open_proxies',
+        'cf.anonymizer',
+        'cf.vpn',
+        'cf.malware',
+        'cf.botnetcc',
+      )
+    )),
 
     not_operator: $ => choice('not','!'),
 

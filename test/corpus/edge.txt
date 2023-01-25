@@ -34,3 +34,20 @@ ip.src in $my_ips
   (in_expression
     (ip_field)
     (ip_list)))
+
+================================================================================
+managed ip lists
+================================================================================
+
+ip.src in $cf.botnetcc or ip.src in $cf.open_proxies
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (compound_expression
+    (in_expression
+      (ip_field)
+      (ip_list))
+    (in_expression
+      (ip_field)
+      (ip_list))))

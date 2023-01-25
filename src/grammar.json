@@ -1288,8 +1288,12 @@
           "value": "("
         },
         {
-          "type": "SYMBOL",
-          "name": "_expression"
+          "type": "FIELD",
+          "name": "inner",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_expression"
+          }
         },
         {
           "type": "STRING",
@@ -1370,8 +1374,33 @@
             "value": "$"
           },
           {
-            "type": "PATTERN",
-            "value": "[a-z\\d_]*"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "[a-z\\d_]*"
+              },
+              {
+                "type": "STRING",
+                "value": "cf.open_proxies"
+              },
+              {
+                "type": "STRING",
+                "value": "cf.anonymizer"
+              },
+              {
+                "type": "STRING",
+                "value": "cf.vpn"
+              },
+              {
+                "type": "STRING",
+                "value": "cf.malware"
+              },
+              {
+                "type": "STRING",
+                "value": "cf.botnetcc"
+              }
+            ]
           }
         ]
       }
