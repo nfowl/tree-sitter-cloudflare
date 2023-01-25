@@ -1,5 +1,10 @@
 [
   {
+    "type": "array_string_field",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "bool_field",
     "named": true,
     "fields": {}
@@ -226,12 +231,52 @@
     "type": "in_expression",
     "named": true,
     "fields": {
-      "lhs": {
+      "index": {
         "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      },
+      "key": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "lhs": {
+        "multiple": true,
         "required": true,
         "types": [
           {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "array_string_field",
+            "named": true
+          },
+          {
             "type": "ip_field",
+            "named": true
+          },
+          {
+            "type": "map_string_array_field",
+            "named": true
+          },
+          {
+            "type": "number",
             "named": true
           },
           {
@@ -240,6 +285,10 @@
           },
           {
             "type": "number_func",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           },
           {
@@ -395,6 +444,11 @@
         ]
       }
     }
+  },
+  {
+    "type": "map_string_array_field",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "not_expression",
@@ -553,10 +607,42 @@
     "type": "simple_expression",
     "named": true,
     "fields": {
-      "lhs": {
+      "index": {
         "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      },
+      "key": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "lhs": {
+        "multiple": true,
         "required": true,
         "types": [
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "array_string_field",
+            "named": true
+          },
           {
             "type": "bool_field",
             "named": true
@@ -570,11 +656,23 @@
             "named": true
           },
           {
+            "type": "map_string_array_field",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
             "type": "number_field",
             "named": true
           },
           {
             "type": "number_func",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           },
           {
@@ -934,6 +1032,14 @@
     "named": false
   },
   {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
     "type": "^^",
     "named": false
   },
@@ -1054,11 +1160,31 @@
     "named": false
   },
   {
+    "type": "http.request.accepted_languages",
+    "named": false
+  },
+  {
     "type": "http.request.cookies",
     "named": false
   },
   {
     "type": "http.request.full_uri",
+    "named": false
+  },
+  {
+    "type": "http.request.headers",
+    "named": false
+  },
+  {
+    "type": "http.request.headers.names",
+    "named": false
+  },
+  {
+    "type": "http.request.headers.truncated",
+    "named": false
+  },
+  {
+    "type": "http.request.headers.values",
     "named": false
   },
   {

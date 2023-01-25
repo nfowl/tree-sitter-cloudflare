@@ -730,7 +730,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "string_field"
+          "name": "_stringlike_field"
         },
         {
           "type": "SYMBOL",
@@ -1418,6 +1418,81 @@
         }
       ]
     },
+    "_stringlike_field": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "string_field"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "map_string_array_field"
+            },
+            {
+              "type": "STRING",
+              "value": "["
+            },
+            {
+              "type": "FIELD",
+              "name": "key",
+              "content": {
+                "type": "SYMBOL",
+                "name": "string"
+              }
+            },
+            {
+              "type": "STRING",
+              "value": "]"
+            },
+            {
+              "type": "STRING",
+              "value": "["
+            },
+            {
+              "type": "FIELD",
+              "name": "index",
+              "content": {
+                "type": "SYMBOL",
+                "name": "number"
+              }
+            },
+            {
+              "type": "STRING",
+              "value": "]"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "array_string_field"
+            },
+            {
+              "type": "STRING",
+              "value": "["
+            },
+            {
+              "type": "FIELD",
+              "name": "index",
+              "content": {
+                "type": "SYMBOL",
+                "name": "number"
+              }
+            },
+            {
+              "type": "STRING",
+              "value": "]"
+            }
+          ]
+        }
+      ]
+    },
     "number_field": {
       "type": "CHOICE",
       "members": [
@@ -1498,10 +1573,6 @@
         {
           "type": "STRING",
           "value": "http.request.method"
-        },
-        {
-          "type": "STRING",
-          "value": "http.request.cookies"
         },
         {
           "type": "STRING",
@@ -1608,6 +1679,27 @@
         {
           "type": "STRING",
           "value": "http.request.cookies"
+        },
+        {
+          "type": "STRING",
+          "value": "http.request.headers"
+        }
+      ]
+    },
+    "array_string_field": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "http.request.headers.names"
+        },
+        {
+          "type": "STRING",
+          "value": "http.request.headers.values"
+        },
+        {
+          "type": "STRING",
+          "value": "http.request.accepted_languages"
         }
       ]
     },
@@ -1641,6 +1733,10 @@
         {
           "type": "STRING",
           "value": "cf.tls_client_auth.cert_verified"
+        },
+        {
+          "type": "STRING",
+          "value": "http.request.headers.truncated"
         }
       ]
     }

@@ -120,7 +120,7 @@ module.exports = grammar({
     ),
 
     _string_lhs: $ => choice(
-      $.string_field,
+      $._stringlike_field,
       $.string_func,
     ),
     
@@ -315,8 +315,33 @@ module.exports = grammar({
 
     not_operator: $ => choice('not','!'),
 
+    _stringlike_field: $ => choice(
+      $.string_field,
+      seq(
+        $.map_string_array_field,
+        '[',
+        field('key',$.string),
+        ']',
+        '[',
+        field('index',$.number),
+        ']',
+      ),
+      seq(
+        $.array_string_field,
+        '[',
+        field('index',$.number),
+        ']',
+      ),
+    ),
+
 // Cloudflare Ruleset Fields
 // see: https://developers.cloudflare.com/ruleset-engine/rules-language/fields/
+// TODO(nfowl):
+//    - Magic Firewall
+//    - URI argument
+//    - request body
+//    - response
+
     number_field: $ => choice(
       'http.request.timestamp.sec',
       'http.request.timestamp.msec',
@@ -341,7 +366,6 @@ module.exports = grammar({
       'http.referer',
       'http.request.full_uri',
       'http.request.method',
-      'http.request.cookies',
       'http.request.uri',
       'http.request.uri.path',
       'http.request.uri.query',
@@ -372,6 +396,13 @@ module.exports = grammar({
     
     map_string_array_field: $ => choice(
       'http.request.cookies',
+      'http.request.headers',
+    ),
+
+    array_string_field: $ => choice(
+      'http.request.headers.names',
+      'http.request.headers.values',
+      'http.request.accepted_languages',
     ),
 
 
@@ -383,6 +414,7 @@ module.exports = grammar({
       'cf.client.bot',
       'cf.tls_client_auth.cert_revoked',
       'cf.tls_client_auth.cert_verified',
+      'http.request.headers.truncated',
     ),
   }
 })
