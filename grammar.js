@@ -56,12 +56,6 @@ module.exports = grammar({
       )));
     },
 
-    // _simple_expression: $ => seq(
-    //   field('field', $._field),
-    //   field('operator',$.comparison_operator),
-    //   field('value', $._value)
-    // ),
-
     ip_set: $ => seq(
       "{",
       repeat1($._ip),
@@ -124,33 +118,28 @@ module.exports = grammar({
     
     // functions grouped by return type for use in expressions
     string_func: $ => choice(
-      field('concat',concatFunc(choice($.string,$._stringlike_field),choice($.string,$._stringlike_field))),
-      // $.concat_func(choice($.string,$._stringlike_field)),
-      $.lookup_func,
-      $.lower_func,
-      $.regex_replace_func,
-      $.remove_bytes_func,
-      $.to_string_func,
-      $.upper_func,
-      $.url_decode_func,
-      $.uuid_func
+      concatFunc(choice($.string,$._stringlike_field),choice($.string,$._stringlike_field)),
+      lookupFunc($._stringlike_field,choice($.string,$.number)),
+      lowerFunc($._stringlike_field),
+      regexReplaceFunc($._stringlike_field,$.string),
+      removeBytesFunc(choice($._stringlike_field,$.bytes_field),$.string),
+      toStringFunc(choice($.number_field,$.ip_field,$.bool_field)),
+      upperFunc($._stringlike_field),
+      urlDecodeFunc($._stringlike_field),
+      uuidv4Func($._stringlike_field),
     ),
 
     number_func: $ => choice(
       lenFunc(choice($._stringlike_field,$.bytes_field)),
-      // $.len_func
     ),
 
     bool_func: $ => choice(
       // $.any_func,
       // $.all_func
-      $.ends_with_func,
-      $.starts_with_func,
+      endsWithFunc($._stringlike_field,$.string),
+      startsWithFunc($._stringlike_field,$.string),
     ),
 
-// Cloudflare ruleset functions
-// https://developers.cloudflare.com/ruleset-engine/rules-language/functions/
-// TODO(nfowl): Verify if functions can take raw values as well
 
     //TODO(nfowl): Implement these
     // all_func: $ => seq(),
@@ -158,116 +147,6 @@ module.exports = grammar({
     // bit_slice_func: $ => seq(),
     // is_timed_hmac_valid_v0: $ => seq(),
     
-    // Caveats discovered via validation:
-    // - Concat takes minimum 2 args
-    // - Concat does not support numbers (TODO: chase this up)
-    //
-    // concat_func: $ => {
-    //   const arg_type = choice(
-    //     $.string,
-    //     $._stringlike_field,
-    //     // $.number,
-    //     // $.number_field,
-    //   )
-    //
-    //   return seq(
-    //     "concat",
-    //     "(",
-    //     arg_type,
-    //     ',',
-    //     repeat1(seq(arg_type,optional(','))),
-    //     ")",
-    //   )
-    // },
-
-    ends_with_func: $ => seq(
-      "ends_with",
-      "(",
-      field('field',$._stringlike_field),
-      ',',
-      field('value',$.string),
-      ')',
-    ),
-
-    // len_func: $ => seq(
-    //   "len",
-    //   "(",
-    //   field('field', choice($._stringlike_field,$.bytes_field)),
-    //   ')',
-    // ),
-
-    lookup_func: $ => seq(
-      'lookup_json_string',
-      '(',
-      field('field',$._stringlike_field),
-      field('keys',repeat1(seq(choice($.string,$.number),optional(',')))),
-      ')',
-    ),
-
-    lower_func: $ => seq(
-      'lower',
-      '(',
-      field('field',$._stringlike_field),
-      ')'
-    ),
-
-    regex_replace_func: $ => seq(
-      'regex_replace',
-      '(',
-      field('source',$._stringlike_field),
-      ',',
-      field('regex',$.string),
-      ',',
-      field('replacement',$.string),
-      ')',
-    ),
-
-    remove_bytes_func: $ => seq(
-      'remove_bytes',
-      '(',
-      field('field',choice($._stringlike_field,$.bytes_field)),
-      ',',
-      field('replacement',$.string),
-      ')',
-    ),
-
-    starts_with_func: $ => seq(
-      "starts_with",
-      "(",
-      field('field',$._stringlike_field),
-      ',',
-      field('value',$.string),
-      ')',
-    ),
-
-    to_string_func: $ => seq(
-      'to_string',
-      '(',
-      field('field',choice($.number_field,$.ip_field,$.bool_field)),
-      ')',
-    ),
-
-    upper_func: $ => seq(
-      'upper',
-      '(',
-      field('field',$._stringlike_field),
-      ')'
-    ),
-
-    url_decode_func: $ => seq(
-      'url_decode',
-      '(',
-      field('field',$._stringlike_field),
-      ')',
-    ),
-
-    uuid_func: $ => seq(
-      'uuidv4',
-      '(',
-      field('seed',$.bytes_field),
-      ')'
-    ),
-
     group: $ => seq(
       '(',
       field('inner',$._expression),
@@ -325,13 +204,22 @@ module.exports = grammar({
         ']',
       ),
       concatFunc($.array_field_expansion,choice($.string,$._stringlike_field)),
+      endsWithFunc($.array_field_expansion,$.string),
       lenFunc($.array_field_expansion),
-    ),
-    ),
+      lookupFunc($.array_field_expansion,choice($.string,$.number)),
+      lowerFunc($.array_field_expansion),
+      regexReplaceFunc($.array_field_expansion,$.string),
+      removeBytesFunc($.array_field_expansion,$.string),
+      startsWithFunc($.array_field_expansion,$.string),
+      toStringFunc($.array_field_expansion),
+      upperFunc($.array_field_expansion),
+      urlDecodeFunc($.array_field_expansion),
+      uuidv4Func($.array_field_expansion),
+    )),
 
     array_field_expansion: $ => seq(choice(
-      $.array_string_field,
-      seq($.map_string_array_field,'[',field('key',choice($.string,'*')),']')
+      seq($.map_string_array_field,'[',field('key','*'),']'),
+      $._array_lhs
     ),
     '[*]'
     ),
@@ -339,21 +227,6 @@ module.exports = grammar({
     _stringlike_field: $ => choice(
       $.string_field,
       seq($._array_lhs,'[',field('index',$.number),']')
-      // seq(
-      //   $.map_string_array_field,
-      //   '[',
-      //   field('key',$.string),
-      //   ']',
-      //   '[',
-      //   field('index',$.number),
-      //   ']',
-      // ),
-      // seq(
-      //   $.array_string_field,
-      //   '[',
-      //   field('index',$.number),
-      //   ']',
-      // ),
     ),
 
 // Cloudflare Ruleset Fields
@@ -441,6 +314,14 @@ module.exports = grammar({
   }
 });
 
+// Cloudflare ruleset functions
+// https://developers.cloudflare.com/ruleset-engine/rules-language/functions/
+// TODO(nfowl): Verify if functions can take raw values as well
+
+
+// Caveats discovered via validation:
+// - Concat takes minimum 2 args
+// - Concat does not support numbers (TODO: chase this up)
 function concatFunc(rule,args) {
     return seq(
       field('func','concat'),
@@ -452,6 +333,17 @@ function concatFunc(rule,args) {
     )
 }
 
+function endsWithFunc(rule,value) {
+    return seq(
+      field('func',"ends_with"),
+      "(",
+      field('field',rule),
+      ',',
+      field('value',value),
+      ')',
+    )
+}
+
 function lenFunc(rule) {
     return seq(
       field('func','len'),
@@ -460,3 +352,94 @@ function lenFunc(rule) {
       ')',
     )
 }
+
+function lookupFunc(rule,args) {
+    return seq(
+      field('func','lookup_json_string'),
+      '(',
+      field('field',rule),
+      field('keys',repeat1(seq(args,optional(',')))),
+      ')',
+    )
+}
+
+function lowerFunc(rule) {
+    return seq(
+      field('func','lower'),
+      '(',
+      field('field',rule),
+      ')'
+    )
+}
+
+function regexReplaceFunc(rule,value) {
+    return seq(
+      field('func','regex_replace'),
+      '(',
+      field('source',rule),
+      ',',
+      field('regex',value),
+      ',',
+      field('replacement',value),
+      ')',
+    )
+}
+
+function removeBytesFunc(rule,value) {
+    return seq(
+      field('func','remove_bytes'),
+      '(',
+      field('field',rule),
+      ',',
+      field('replacement',value),
+      ')',
+    )
+}
+
+function startsWithFunc(rule,value) {
+    return seq(
+      field('func','starts_with'),
+      "(",
+      field('field',rule),
+      ',',
+      field('value',value),
+      ')',
+    )
+}
+
+function toStringFunc(rule) {
+    return seq(
+      field('func','to_string'),
+      '(',
+      field('field',rule),
+      ')',
+    )
+}
+
+function upperFunc(rule) {
+    return seq(
+      field('func','upper'),
+      '(',
+      field('field',rule),
+      ')'
+    )
+}
+
+function urlDecodeFunc(rule) {
+    return seq(
+      field('func','url_decode'),
+      '(',
+      field('field',rule),
+      ')',
+    )
+}
+
+function uuidv4Func(rule) {
+    return seq(
+      field('func','uuidv4'),
+      '(',
+      field('seed',rule),
+      ')'
+    )
+}
+

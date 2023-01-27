@@ -14,15 +14,15 @@
 #endif
 
 #define LANGUAGE_VERSION 14
-#define STATE_COUNT 195
+#define STATE_COUNT 245
 #define LARGE_STATE_COUNT 44
-#define SYMBOL_COUNT 154
+#define SYMBOL_COUNT 144
 #define ALIAS_COUNT 0
 #define TOKEN_COUNT 108
 #define EXTERNAL_TOKEN_COUNT 0
-#define FIELD_COUNT 17
+#define FIELD_COUNT 16
 #define MAX_ALIAS_SEQUENCE_LENGTH 8
-#define PRODUCTION_ID_COUNT 22
+#define PRODUCTION_ID_COUNT 23
 
 enum {
   anon_sym_in = 1,
@@ -54,17 +54,17 @@ enum {
   anon_sym_LPAREN = 27,
   anon_sym_COMMA = 28,
   anon_sym_RPAREN = 29,
-  anon_sym_len = 30,
-  anon_sym_ends_with = 31,
-  anon_sym_lookup_json_string = 32,
-  anon_sym_lower = 33,
-  anon_sym_regex_replace = 34,
-  anon_sym_remove_bytes = 35,
-  anon_sym_starts_with = 36,
-  anon_sym_to_string = 37,
-  anon_sym_upper = 38,
-  anon_sym_url_decode = 39,
-  anon_sym_uuidv4 = 40,
+  anon_sym_lookup_json_string = 30,
+  anon_sym_lower = 31,
+  anon_sym_regex_replace = 32,
+  anon_sym_remove_bytes = 33,
+  anon_sym_to_string = 34,
+  anon_sym_upper = 35,
+  anon_sym_url_decode = 36,
+  anon_sym_uuidv4 = 37,
+  anon_sym_len = 38,
+  anon_sym_ends_with = 39,
+  anon_sym_starts_with = 40,
   sym_number = 41,
   sym_string = 42,
   anon_sym_true = 43,
@@ -147,37 +147,27 @@ enum {
   sym_string_func = 120,
   sym_number_func = 121,
   sym_bool_func = 122,
-  sym_ends_with_func = 123,
-  sym_lookup_func = 124,
-  sym_lower_func = 125,
-  sym_regex_replace_func = 126,
-  sym_remove_bytes_func = 127,
-  sym_starts_with_func = 128,
-  sym_to_string_func = 129,
-  sym_upper_func = 130,
-  sym_url_decode_func = 131,
-  sym_uuid_func = 132,
-  sym_group = 133,
-  sym_boolean = 134,
-  sym__ip = 135,
-  sym_ip_range = 136,
-  sym_not_operator = 137,
-  sym__array_lhs = 138,
-  sym_array_field_expansion = 139,
-  sym__stringlike_field = 140,
-  sym_number_field = 141,
-  sym_ip_field = 142,
-  sym_string_field = 143,
-  sym_bytes_field = 144,
-  sym_map_string_array_field = 145,
-  sym_array_string_field = 146,
-  sym_bool_field = 147,
-  aux_sym_source_file_repeat1 = 148,
-  aux_sym_ip_set_repeat1 = 149,
-  aux_sym_string_set_repeat1 = 150,
-  aux_sym_number_set_repeat1 = 151,
-  aux_sym_string_func_repeat1 = 152,
-  aux_sym_lookup_func_repeat1 = 153,
+  sym_group = 123,
+  sym_boolean = 124,
+  sym__ip = 125,
+  sym_ip_range = 126,
+  sym_not_operator = 127,
+  sym__array_lhs = 128,
+  sym_array_field_expansion = 129,
+  sym__stringlike_field = 130,
+  sym_number_field = 131,
+  sym_ip_field = 132,
+  sym_string_field = 133,
+  sym_bytes_field = 134,
+  sym_map_string_array_field = 135,
+  sym_array_string_field = 136,
+  sym_bool_field = 137,
+  aux_sym_source_file_repeat1 = 138,
+  aux_sym_ip_set_repeat1 = 139,
+  aux_sym_string_set_repeat1 = 140,
+  aux_sym_number_set_repeat1 = 141,
+  aux_sym_string_func_repeat1 = 142,
+  aux_sym_string_func_repeat2 = 143,
 };
 
 static const char * const ts_symbol_names[] = {
@@ -211,17 +201,17 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_LPAREN] = "(",
   [anon_sym_COMMA] = ",",
   [anon_sym_RPAREN] = ")",
-  [anon_sym_len] = "len",
-  [anon_sym_ends_with] = "ends_with",
   [anon_sym_lookup_json_string] = "lookup_json_string",
   [anon_sym_lower] = "lower",
   [anon_sym_regex_replace] = "regex_replace",
   [anon_sym_remove_bytes] = "remove_bytes",
-  [anon_sym_starts_with] = "starts_with",
   [anon_sym_to_string] = "to_string",
   [anon_sym_upper] = "upper",
   [anon_sym_url_decode] = "url_decode",
   [anon_sym_uuidv4] = "uuidv4",
+  [anon_sym_len] = "len",
+  [anon_sym_ends_with] = "ends_with",
+  [anon_sym_starts_with] = "starts_with",
   [sym_number] = "number",
   [sym_string] = "string",
   [anon_sym_true] = "true",
@@ -304,16 +294,6 @@ static const char * const ts_symbol_names[] = {
   [sym_string_func] = "string_func",
   [sym_number_func] = "number_func",
   [sym_bool_func] = "bool_func",
-  [sym_ends_with_func] = "ends_with_func",
-  [sym_lookup_func] = "lookup_func",
-  [sym_lower_func] = "lower_func",
-  [sym_regex_replace_func] = "regex_replace_func",
-  [sym_remove_bytes_func] = "remove_bytes_func",
-  [sym_starts_with_func] = "starts_with_func",
-  [sym_to_string_func] = "to_string_func",
-  [sym_upper_func] = "upper_func",
-  [sym_url_decode_func] = "url_decode_func",
-  [sym_uuid_func] = "uuid_func",
   [sym_group] = "group",
   [sym_boolean] = "boolean",
   [sym__ip] = "_ip",
@@ -334,7 +314,7 @@ static const char * const ts_symbol_names[] = {
   [aux_sym_string_set_repeat1] = "string_set_repeat1",
   [aux_sym_number_set_repeat1] = "number_set_repeat1",
   [aux_sym_string_func_repeat1] = "string_func_repeat1",
-  [aux_sym_lookup_func_repeat1] = "lookup_func_repeat1",
+  [aux_sym_string_func_repeat2] = "string_func_repeat2",
 };
 
 static const TSSymbol ts_symbol_map[] = {
@@ -368,17 +348,17 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_LPAREN] = anon_sym_LPAREN,
   [anon_sym_COMMA] = anon_sym_COMMA,
   [anon_sym_RPAREN] = anon_sym_RPAREN,
-  [anon_sym_len] = anon_sym_len,
-  [anon_sym_ends_with] = anon_sym_ends_with,
   [anon_sym_lookup_json_string] = anon_sym_lookup_json_string,
   [anon_sym_lower] = anon_sym_lower,
   [anon_sym_regex_replace] = anon_sym_regex_replace,
   [anon_sym_remove_bytes] = anon_sym_remove_bytes,
-  [anon_sym_starts_with] = anon_sym_starts_with,
   [anon_sym_to_string] = anon_sym_to_string,
   [anon_sym_upper] = anon_sym_upper,
   [anon_sym_url_decode] = anon_sym_url_decode,
   [anon_sym_uuidv4] = anon_sym_uuidv4,
+  [anon_sym_len] = anon_sym_len,
+  [anon_sym_ends_with] = anon_sym_ends_with,
+  [anon_sym_starts_with] = anon_sym_starts_with,
   [sym_number] = sym_number,
   [sym_string] = sym_string,
   [anon_sym_true] = anon_sym_true,
@@ -461,16 +441,6 @@ static const TSSymbol ts_symbol_map[] = {
   [sym_string_func] = sym_string_func,
   [sym_number_func] = sym_number_func,
   [sym_bool_func] = sym_bool_func,
-  [sym_ends_with_func] = sym_ends_with_func,
-  [sym_lookup_func] = sym_lookup_func,
-  [sym_lower_func] = sym_lower_func,
-  [sym_regex_replace_func] = sym_regex_replace_func,
-  [sym_remove_bytes_func] = sym_remove_bytes_func,
-  [sym_starts_with_func] = sym_starts_with_func,
-  [sym_to_string_func] = sym_to_string_func,
-  [sym_upper_func] = sym_upper_func,
-  [sym_url_decode_func] = sym_url_decode_func,
-  [sym_uuid_func] = sym_uuid_func,
   [sym_group] = sym_group,
   [sym_boolean] = sym_boolean,
   [sym__ip] = sym__ip,
@@ -491,7 +461,7 @@ static const TSSymbol ts_symbol_map[] = {
   [aux_sym_string_set_repeat1] = aux_sym_string_set_repeat1,
   [aux_sym_number_set_repeat1] = aux_sym_number_set_repeat1,
   [aux_sym_string_func_repeat1] = aux_sym_string_func_repeat1,
-  [aux_sym_lookup_func_repeat1] = aux_sym_lookup_func_repeat1,
+  [aux_sym_string_func_repeat2] = aux_sym_string_func_repeat2,
 };
 
 static const TSSymbolMetadata ts_symbol_metadata[] = {
@@ -615,14 +585,6 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = false,
   },
-  [anon_sym_len] = {
-    .visible = true,
-    .named = false,
-  },
-  [anon_sym_ends_with] = {
-    .visible = true,
-    .named = false,
-  },
   [anon_sym_lookup_json_string] = {
     .visible = true,
     .named = false,
@@ -639,10 +601,6 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = false,
   },
-  [anon_sym_starts_with] = {
-    .visible = true,
-    .named = false,
-  },
   [anon_sym_to_string] = {
     .visible = true,
     .named = false,
@@ -656,6 +614,18 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = false,
   },
   [anon_sym_uuidv4] = {
+    .visible = true,
+    .named = false,
+  },
+  [anon_sym_len] = {
+    .visible = true,
+    .named = false,
+  },
+  [anon_sym_ends_with] = {
+    .visible = true,
+    .named = false,
+  },
+  [anon_sym_starts_with] = {
     .visible = true,
     .named = false,
   },
@@ -987,46 +957,6 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
-  [sym_ends_with_func] = {
-    .visible = true,
-    .named = true,
-  },
-  [sym_lookup_func] = {
-    .visible = true,
-    .named = true,
-  },
-  [sym_lower_func] = {
-    .visible = true,
-    .named = true,
-  },
-  [sym_regex_replace_func] = {
-    .visible = true,
-    .named = true,
-  },
-  [sym_remove_bytes_func] = {
-    .visible = true,
-    .named = true,
-  },
-  [sym_starts_with_func] = {
-    .visible = true,
-    .named = true,
-  },
-  [sym_to_string_func] = {
-    .visible = true,
-    .named = true,
-  },
-  [sym_upper_func] = {
-    .visible = true,
-    .named = true,
-  },
-  [sym_url_decode_func] = {
-    .visible = true,
-    .named = true,
-  },
-  [sym_uuid_func] = {
-    .visible = true,
-    .named = true,
-  },
   [sym_group] = {
     .visible = true,
     .named = true,
@@ -1107,35 +1037,33 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = false,
     .named = false,
   },
-  [aux_sym_lookup_func_repeat1] = {
+  [aux_sym_string_func_repeat2] = {
     .visible = false,
     .named = false,
   },
 };
 
 enum {
-  field_concat = 1,
-  field_field = 2,
-  field_func = 3,
-  field_index = 4,
-  field_inner = 5,
-  field_ip = 6,
-  field_key = 7,
-  field_keys = 8,
-  field_lhs = 9,
-  field_mask = 10,
-  field_operator = 11,
-  field_regex = 12,
-  field_replacement = 13,
-  field_rhs = 14,
-  field_seed = 15,
-  field_source = 16,
-  field_value = 17,
+  field_field = 1,
+  field_func = 2,
+  field_index = 3,
+  field_inner = 4,
+  field_ip = 5,
+  field_key = 6,
+  field_keys = 7,
+  field_lhs = 8,
+  field_mask = 9,
+  field_operator = 10,
+  field_regex = 11,
+  field_replacement = 12,
+  field_rhs = 13,
+  field_seed = 14,
+  field_source = 15,
+  field_value = 16,
 };
 
 static const char * const ts_field_names[] = {
   [0] = NULL,
-  [field_concat] = "concat",
   [field_field] = "field",
   [field_func] = "func",
   [field_index] = "index",
@@ -1155,27 +1083,28 @@ static const char * const ts_field_names[] = {
 };
 
 static const TSFieldMapSlice ts_field_map_slices[PRODUCTION_ID_COUNT] = {
-  [1] = {.index = 0, .length = 4},
-  [2] = {.index = 4, .length = 1},
-  [3] = {.index = 5, .length = 3},
-  [4] = {.index = 8, .length = 7},
-  [5] = {.index = 15, .length = 2},
-  [6] = {.index = 17, .length = 6},
-  [7] = {.index = 23, .length = 5},
-  [8] = {.index = 28, .length = 1},
-  [9] = {.index = 29, .length = 1},
-  [10] = {.index = 30, .length = 5},
-  [11] = {.index = 35, .length = 1},
-  [12] = {.index = 36, .length = 6},
-  [13] = {.index = 42, .length = 2},
-  [14] = {.index = 44, .length = 10},
-  [15] = {.index = 54, .length = 8},
-  [16] = {.index = 62, .length = 5},
-  [17] = {.index = 67, .length = 14},
-  [18] = {.index = 81, .length = 6},
-  [19] = {.index = 87, .length = 6},
-  [20] = {.index = 93, .length = 2},
-  [21] = {.index = 95, .length = 7},
+  [1] = {.index = 0, .length = 10},
+  [2] = {.index = 10, .length = 1},
+  [3] = {.index = 11, .length = 3},
+  [4] = {.index = 14, .length = 13},
+  [5] = {.index = 27, .length = 2},
+  [6] = {.index = 29, .length = 12},
+  [7] = {.index = 41, .length = 2},
+  [8] = {.index = 43, .length = 12},
+  [9] = {.index = 55, .length = 11},
+  [10] = {.index = 66, .length = 1},
+  [11] = {.index = 67, .length = 3},
+  [12] = {.index = 70, .length = 13},
+  [13] = {.index = 83, .length = 2},
+  [14] = {.index = 85, .length = 11},
+  [15] = {.index = 96, .length = 20},
+  [16] = {.index = 116, .length = 21},
+  [17] = {.index = 137, .length = 3},
+  [18] = {.index = 140, .length = 13},
+  [19] = {.index = 153, .length = 3},
+  [20] = {.index = 156, .length = 13},
+  [21] = {.index = 169, .length = 4},
+  [22] = {.index = 173, .length = 14},
 };
 
 static const TSFieldMapEntry ts_field_map_entries[] = {
@@ -1184,70 +1113,112 @@ static const TSFieldMapEntry ts_field_map_entries[] = {
     {field_func, 0, .inherited = true},
     {field_index, 0, .inherited = true},
     {field_key, 0, .inherited = true},
-  [4] =
+    {field_keys, 0, .inherited = true},
+    {field_regex, 0, .inherited = true},
+    {field_replacement, 0, .inherited = true},
+    {field_seed, 0, .inherited = true},
+    {field_source, 0, .inherited = true},
+    {field_value, 0, .inherited = true},
+  [10] =
     {field_inner, 1},
-  [5] =
+  [11] =
     {field_lhs, 0},
     {field_operator, 1},
     {field_rhs, 2},
-  [8] =
+  [14] =
     {field_field, 0, .inherited = true},
     {field_func, 0, .inherited = true},
     {field_index, 0, .inherited = true},
     {field_key, 0, .inherited = true},
+    {field_keys, 0, .inherited = true},
     {field_lhs, 0},
     {field_operator, 1},
+    {field_regex, 0, .inherited = true},
+    {field_replacement, 0, .inherited = true},
     {field_rhs, 2},
-  [15] =
+    {field_seed, 0, .inherited = true},
+    {field_source, 0, .inherited = true},
+    {field_value, 0, .inherited = true},
+  [27] =
     {field_field, 2},
     {field_func, 0},
-  [17] =
-    {field_field, 2},
-    {field_field, 2, .inherited = true},
-    {field_func, 0},
-    {field_func, 2, .inherited = true},
-    {field_index, 2, .inherited = true},
-    {field_key, 2, .inherited = true},
-  [23] =
-    {field_field, 2},
-    {field_field, 2, .inherited = true},
-    {field_func, 2, .inherited = true},
-    {field_index, 2, .inherited = true},
-    {field_key, 2, .inherited = true},
-  [28] =
-    {field_field, 2},
   [29] =
+    {field_field, 2},
+    {field_field, 2, .inherited = true},
+    {field_func, 0},
+    {field_func, 2, .inherited = true},
+    {field_index, 2, .inherited = true},
+    {field_key, 2, .inherited = true},
+    {field_keys, 2, .inherited = true},
+    {field_regex, 2, .inherited = true},
+    {field_replacement, 2, .inherited = true},
+    {field_seed, 2, .inherited = true},
+    {field_source, 2, .inherited = true},
+    {field_value, 2, .inherited = true},
+  [41] =
+    {field_func, 0},
     {field_seed, 2},
-  [30] =
+  [43] =
+    {field_field, 2, .inherited = true},
+    {field_func, 0},
+    {field_func, 2, .inherited = true},
+    {field_index, 2, .inherited = true},
+    {field_key, 2, .inherited = true},
+    {field_keys, 2, .inherited = true},
+    {field_regex, 2, .inherited = true},
+    {field_replacement, 2, .inherited = true},
+    {field_seed, 2},
+    {field_seed, 2, .inherited = true},
+    {field_source, 2, .inherited = true},
+    {field_value, 2, .inherited = true},
+  [55] =
     {field_field, 0, .inherited = true},
     {field_func, 0, .inherited = true},
     {field_index, 0, .inherited = true},
     {field_index, 2},
     {field_key, 0, .inherited = true},
-  [35] =
+    {field_keys, 0, .inherited = true},
+    {field_regex, 0, .inherited = true},
+    {field_replacement, 0, .inherited = true},
+    {field_seed, 0, .inherited = true},
+    {field_source, 0, .inherited = true},
+    {field_value, 0, .inherited = true},
+  [66] =
     {field_key, 2},
-  [36] =
+  [67] =
+    {field_field, 2},
+    {field_func, 0},
+    {field_keys, 3},
+  [70] =
     {field_field, 2},
     {field_field, 2, .inherited = true},
+    {field_func, 0},
     {field_func, 2, .inherited = true},
     {field_index, 2, .inherited = true},
     {field_key, 2, .inherited = true},
+    {field_keys, 2, .inherited = true},
     {field_keys, 3},
-  [42] =
+    {field_regex, 2, .inherited = true},
+    {field_replacement, 2, .inherited = true},
+    {field_seed, 2, .inherited = true},
+    {field_source, 2, .inherited = true},
+    {field_value, 2, .inherited = true},
+  [83] =
     {field_ip, 0},
     {field_mask, 2},
-  [44] =
-    {field_concat, 1},
-    {field_concat, 2},
-    {field_concat, 3},
-    {field_concat, 4},
-    {field_concat, 5},
+  [85] =
     {field_field, 4, .inherited = true},
     {field_func, 0},
     {field_func, 4, .inherited = true},
     {field_index, 4, .inherited = true},
     {field_key, 4, .inherited = true},
-  [54] =
+    {field_keys, 4, .inherited = true},
+    {field_regex, 4, .inherited = true},
+    {field_replacement, 4, .inherited = true},
+    {field_seed, 4, .inherited = true},
+    {field_source, 4, .inherited = true},
+    {field_value, 4, .inherited = true},
+  [96] =
     {field_field, 0, .inherited = true},
     {field_field, 1, .inherited = true},
     {field_func, 0, .inherited = true},
@@ -1256,18 +1227,19 @@ static const TSFieldMapEntry ts_field_map_entries[] = {
     {field_index, 1, .inherited = true},
     {field_key, 0, .inherited = true},
     {field_key, 1, .inherited = true},
-  [62] =
-    {field_field, 4, .inherited = true},
-    {field_func, 0},
-    {field_func, 4, .inherited = true},
-    {field_index, 4, .inherited = true},
-    {field_key, 4, .inherited = true},
-  [67] =
-    {field_concat, 1},
-    {field_concat, 2},
-    {field_concat, 3},
-    {field_concat, 4},
-    {field_concat, 5},
+    {field_keys, 0, .inherited = true},
+    {field_keys, 1, .inherited = true},
+    {field_regex, 0, .inherited = true},
+    {field_regex, 1, .inherited = true},
+    {field_replacement, 0, .inherited = true},
+    {field_replacement, 1, .inherited = true},
+    {field_seed, 0, .inherited = true},
+    {field_seed, 1, .inherited = true},
+    {field_source, 0, .inherited = true},
+    {field_source, 1, .inherited = true},
+    {field_value, 0, .inherited = true},
+    {field_value, 1, .inherited = true},
+  [116] =
     {field_field, 2, .inherited = true},
     {field_field, 4, .inherited = true},
     {field_func, 0},
@@ -1277,31 +1249,74 @@ static const TSFieldMapEntry ts_field_map_entries[] = {
     {field_index, 4, .inherited = true},
     {field_key, 2, .inherited = true},
     {field_key, 4, .inherited = true},
-  [81] =
+    {field_keys, 2, .inherited = true},
+    {field_keys, 4, .inherited = true},
+    {field_regex, 2, .inherited = true},
+    {field_regex, 4, .inherited = true},
+    {field_replacement, 2, .inherited = true},
+    {field_replacement, 4, .inherited = true},
+    {field_seed, 2, .inherited = true},
+    {field_seed, 4, .inherited = true},
+    {field_source, 2, .inherited = true},
+    {field_source, 4, .inherited = true},
+    {field_value, 2, .inherited = true},
+    {field_value, 4, .inherited = true},
+  [137] =
+    {field_field, 2},
+    {field_func, 0},
+    {field_replacement, 4},
+  [140] =
     {field_field, 2},
     {field_field, 2, .inherited = true},
+    {field_func, 0},
     {field_func, 2, .inherited = true},
     {field_index, 2, .inherited = true},
     {field_key, 2, .inherited = true},
+    {field_keys, 2, .inherited = true},
+    {field_regex, 2, .inherited = true},
+    {field_replacement, 2, .inherited = true},
+    {field_replacement, 4},
+    {field_seed, 2, .inherited = true},
+    {field_source, 2, .inherited = true},
+    {field_value, 2, .inherited = true},
+  [153] =
+    {field_field, 2},
+    {field_func, 0},
     {field_value, 4},
-  [87] =
+  [156] =
     {field_field, 2},
     {field_field, 2, .inherited = true},
+    {field_func, 0},
     {field_func, 2, .inherited = true},
     {field_index, 2, .inherited = true},
     {field_key, 2, .inherited = true},
-    {field_replacement, 4},
-  [93] =
-    {field_field, 2},
-    {field_replacement, 4},
-  [95] =
-    {field_field, 2, .inherited = true},
-    {field_func, 2, .inherited = true},
-    {field_index, 2, .inherited = true},
-    {field_key, 2, .inherited = true},
+    {field_keys, 2, .inherited = true},
+    {field_regex, 2, .inherited = true},
+    {field_replacement, 2, .inherited = true},
+    {field_seed, 2, .inherited = true},
+    {field_source, 2, .inherited = true},
+    {field_value, 2, .inherited = true},
+    {field_value, 4},
+  [169] =
+    {field_func, 0},
     {field_regex, 4},
     {field_replacement, 6},
     {field_source, 2},
+  [173] =
+    {field_field, 2, .inherited = true},
+    {field_func, 0},
+    {field_func, 2, .inherited = true},
+    {field_index, 2, .inherited = true},
+    {field_key, 2, .inherited = true},
+    {field_keys, 2, .inherited = true},
+    {field_regex, 2, .inherited = true},
+    {field_regex, 4},
+    {field_replacement, 2, .inherited = true},
+    {field_replacement, 6},
+    {field_seed, 2, .inherited = true},
+    {field_source, 2},
+    {field_source, 2, .inherited = true},
+    {field_value, 2, .inherited = true},
 };
 
 static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE_LENGTH] = {
@@ -1362,12 +1377,12 @@ static const TSStateId ts_primary_state_ids[STATE_COUNT] = {
   [46] = 46,
   [47] = 47,
   [48] = 48,
-  [49] = 49,
+  [49] = 47,
   [50] = 50,
   [51] = 51,
   [52] = 52,
   [53] = 53,
-  [54] = 54,
+  [54] = 52,
   [55] = 55,
   [56] = 56,
   [57] = 57,
@@ -1383,16 +1398,16 @@ static const TSStateId ts_primary_state_ids[STATE_COUNT] = {
   [67] = 67,
   [68] = 68,
   [69] = 69,
-  [70] = 70,
+  [70] = 68,
   [71] = 71,
-  [72] = 72,
-  [73] = 73,
+  [72] = 69,
+  [73] = 67,
   [74] = 74,
   [75] = 75,
-  [76] = 76,
-  [77] = 77,
-  [78] = 78,
-  [79] = 79,
+  [76] = 75,
+  [77] = 66,
+  [78] = 71,
+  [79] = 74,
   [80] = 80,
   [81] = 81,
   [82] = 82,
@@ -1418,13 +1433,13 @@ static const TSStateId ts_primary_state_ids[STATE_COUNT] = {
   [102] = 102,
   [103] = 103,
   [104] = 104,
-  [105] = 105,
+  [105] = 101,
   [106] = 106,
   [107] = 107,
   [108] = 108,
   [109] = 109,
   [110] = 110,
-  [111] = 111,
+  [111] = 109,
   [112] = 112,
   [113] = 113,
   [114] = 114,
@@ -1457,22 +1472,22 @@ static const TSStateId ts_primary_state_ids[STATE_COUNT] = {
   [141] = 141,
   [142] = 142,
   [143] = 143,
-  [144] = 144,
+  [144] = 126,
   [145] = 145,
   [146] = 146,
   [147] = 147,
   [148] = 148,
-  [149] = 108,
+  [149] = 149,
   [150] = 150,
   [151] = 151,
-  [152] = 152,
+  [152] = 125,
   [153] = 153,
   [154] = 154,
   [155] = 155,
   [156] = 156,
   [157] = 157,
   [158] = 158,
-  [159] = 159,
+  [159] = 124,
   [160] = 160,
   [161] = 161,
   [162] = 162,
@@ -1480,7 +1495,7 @@ static const TSStateId ts_primary_state_ids[STATE_COUNT] = {
   [164] = 164,
   [165] = 165,
   [166] = 166,
-  [167] = 167,
+  [167] = 123,
   [168] = 168,
   [169] = 169,
   [170] = 170,
@@ -1499,15 +1514,65 @@ static const TSStateId ts_primary_state_ids[STATE_COUNT] = {
   [183] = 183,
   [184] = 184,
   [185] = 185,
-  [186] = 186,
+  [186] = 134,
   [187] = 187,
-  [188] = 188,
+  [188] = 122,
   [189] = 189,
   [190] = 190,
   [191] = 191,
   [192] = 192,
-  [193] = 193,
+  [193] = 118,
   [194] = 194,
+  [195] = 195,
+  [196] = 121,
+  [197] = 197,
+  [198] = 198,
+  [199] = 199,
+  [200] = 200,
+  [201] = 120,
+  [202] = 127,
+  [203] = 203,
+  [204] = 204,
+  [205] = 205,
+  [206] = 206,
+  [207] = 207,
+  [208] = 208,
+  [209] = 209,
+  [210] = 210,
+  [211] = 211,
+  [212] = 166,
+  [213] = 210,
+  [214] = 214,
+  [215] = 215,
+  [216] = 216,
+  [217] = 217,
+  [218] = 218,
+  [219] = 172,
+  [220] = 175,
+  [221] = 199,
+  [222] = 142,
+  [223] = 139,
+  [224] = 224,
+  [225] = 225,
+  [226] = 226,
+  [227] = 148,
+  [228] = 154,
+  [229] = 191,
+  [230] = 143,
+  [231] = 136,
+  [232] = 178,
+  [233] = 205,
+  [234] = 234,
+  [235] = 235,
+  [236] = 236,
+  [237] = 170,
+  [238] = 145,
+  [239] = 140,
+  [240] = 138,
+  [241] = 146,
+  [242] = 217,
+  [243] = 243,
+  [244] = 141,
 };
 
 static bool ts_lex(TSLexer *lexer, TSStateId state) {
@@ -1533,22 +1598,22 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '[') ADVANCE(769);
       if (lookahead == ']') ADVANCE(770);
       if (lookahead == '^') ADVANCE(53);
-      if (lookahead == 'a') ADVANCE(399);
-      if (lookahead == 'c') ADVANCE(293);
-      if (lookahead == 'e') ADVANCE(411);
+      if (lookahead == 'a') ADVANCE(397);
+      if (lookahead == 'c') ADVANCE(291);
+      if (lookahead == 'e') ADVANCE(409);
       if (lookahead == 'f') ADVANCE(91);
-      if (lookahead == 'g') ADVANCE(198);
-      if (lookahead == 'h') ADVANCE(618);
-      if (lookahead == 'i') ADVANCE(401);
-      if (lookahead == 'l') ADVANCE(199);
-      if (lookahead == 'm') ADVANCE(99);
-      if (lookahead == 'n') ADVANCE(202);
-      if (lookahead == 'o') ADVANCE(517);
-      if (lookahead == 'r') ADVANCE(93);
-      if (lookahead == 's') ADVANCE(575);
-      if (lookahead == 't') ADVANCE(445);
-      if (lookahead == 'u') ADVANCE(493);
-      if (lookahead == 'x') ADVANCE(449);
+      if (lookahead == 'g') ADVANCE(197);
+      if (lookahead == 'h') ADVANCE(617);
+      if (lookahead == 'i') ADVANCE(399);
+      if (lookahead == 'l') ADVANCE(198);
+      if (lookahead == 'm') ADVANCE(98);
+      if (lookahead == 'n') ADVANCE(200);
+      if (lookahead == 'o') ADVANCE(516);
+      if (lookahead == 'r') ADVANCE(92);
+      if (lookahead == 's') ADVANCE(574);
+      if (lookahead == 't') ADVANCE(444);
+      if (lookahead == 'u') ADVANCE(492);
+      if (lookahead == 'x') ADVANCE(448);
       if (lookahead == '{') ADVANCE(712);
       if (lookahead == '|') ADVANCE(702);
       if (lookahead == '}') ADVANCE(713);
@@ -1569,15 +1634,18 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '<') ADVANCE(724);
       if (lookahead == '=') ADVANCE(51);
       if (lookahead == '>') ADVANCE(726);
-      if (lookahead == 'c') ADVANCE(296);
-      if (lookahead == 'e') ADVANCE(514);
-      if (lookahead == 'g') ADVANCE(198);
+      if (lookahead == 'c') ADVANCE(294);
+      if (lookahead == 'e') ADVANCE(409);
+      if (lookahead == 'g') ADVANCE(197);
       if (lookahead == 'h') ADVANCE(660);
-      if (lookahead == 'i') ADVANCE(402);
-      if (lookahead == 'l') ADVANCE(200);
-      if (lookahead == 'm') ADVANCE(99);
-      if (lookahead == 'n') ADVANCE(201);
+      if (lookahead == 'i') ADVANCE(400);
+      if (lookahead == 'l') ADVANCE(198);
+      if (lookahead == 'm') ADVANCE(98);
+      if (lookahead == 'n') ADVANCE(199);
       if (lookahead == 'r') ADVANCE(92);
+      if (lookahead == 's') ADVANCE(619);
+      if (lookahead == 't') ADVANCE(443);
+      if (lookahead == 'u') ADVANCE(492);
       if (lookahead == '}') ADVANCE(713);
       if (lookahead == '~') ADVANCE(730);
       if (lookahead == '\t' ||
@@ -1594,13 +1662,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '<') ADVANCE(724);
       if (lookahead == '=') ADVANCE(51);
       if (lookahead == '>') ADVANCE(726);
-      if (lookahead == 'c') ADVANCE(484);
-      if (lookahead == 'e') ADVANCE(514);
-      if (lookahead == 'g') ADVANCE(198);
-      if (lookahead == 'i') ADVANCE(400);
-      if (lookahead == 'l') ADVANCE(221);
-      if (lookahead == 'm') ADVANCE(99);
-      if (lookahead == 'n') ADVANCE(201);
+      if (lookahead == 'c') ADVANCE(483);
+      if (lookahead == 'e') ADVANCE(513);
+      if (lookahead == 'g') ADVANCE(197);
+      if (lookahead == 'i') ADVANCE(398);
+      if (lookahead == 'l') ADVANCE(219);
+      if (lookahead == 'm') ADVANCE(98);
+      if (lookahead == 'n') ADVANCE(199);
       if (lookahead == '~') ADVANCE(730);
       if (('0' <= lookahead && lookahead <= '2')) ADVANCE(759);
       if (lookahead == '\t' ||
@@ -1617,31 +1685,31 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '&') ADVANCE(706);
       END_STATE();
     case 5:
-      if (lookahead == '.') ADVANCE(138);
+      if (lookahead == '.') ADVANCE(137);
       END_STATE();
     case 6:
-      if (lookahead == '.') ADVANCE(307);
+      if (lookahead == '.') ADVANCE(305);
       END_STATE();
     case 7:
-      if (lookahead == '.') ADVANCE(148);
+      if (lookahead == '.') ADVANCE(147);
       END_STATE();
     case 8:
-      if (lookahead == '.') ADVANCE(160);
+      if (lookahead == '.') ADVANCE(159);
       END_STATE();
     case 9:
-      if (lookahead == '.') ADVANCE(110);
+      if (lookahead == '.') ADVANCE(109);
       END_STATE();
     case 10:
-      if (lookahead == '.') ADVANCE(126);
+      if (lookahead == '.') ADVANCE(125);
       END_STATE();
     case 11:
-      if (lookahead == '.') ADVANCE(303);
+      if (lookahead == '.') ADVANCE(301);
       END_STATE();
     case 12:
-      if (lookahead == '.') ADVANCE(362);
+      if (lookahead == '.') ADVANCE(360);
       END_STATE();
     case 13:
-      if (lookahead == '.') ADVANCE(393);
+      if (lookahead == '.') ADVANCE(391);
       END_STATE();
     case 14:
       if (lookahead == '.') ADVANCE(47);
@@ -1665,22 +1733,22 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(14);
       END_STATE();
     case 19:
-      if (lookahead == '.') ADVANCE(142);
+      if (lookahead == '.') ADVANCE(141);
       END_STATE();
     case 20:
-      if (lookahead == '.') ADVANCE(152);
+      if (lookahead == '.') ADVANCE(151);
       END_STATE();
     case 21:
-      if (lookahead == '.') ADVANCE(127);
+      if (lookahead == '.') ADVANCE(126);
       END_STATE();
     case 22:
-      if (lookahead == '.') ADVANCE(325);
+      if (lookahead == '.') ADVANCE(323);
       END_STATE();
     case 23:
-      if (lookahead == '.') ADVANCE(364);
+      if (lookahead == '.') ADVANCE(362);
       END_STATE();
     case 24:
-      if (lookahead == '.') ADVANCE(140);
+      if (lookahead == '.') ADVANCE(139);
       END_STATE();
     case 25:
       if (lookahead == '.') ADVANCE(45);
@@ -1704,16 +1772,16 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (('0' <= lookahead && lookahead <= '9')) ADVANCE(25);
       END_STATE();
     case 30:
-      if (lookahead == '.') ADVANCE(579);
+      if (lookahead == '.') ADVANCE(578);
       END_STATE();
     case 31:
-      if (lookahead == '.') ADVANCE(164);
+      if (lookahead == '.') ADVANCE(163);
       END_STATE();
     case 32:
-      if (lookahead == '.') ADVANCE(508);
+      if (lookahead == '.') ADVANCE(507);
       END_STATE();
     case 33:
-      if (lookahead == '.') ADVANCE(313);
+      if (lookahead == '.') ADVANCE(311);
       END_STATE();
     case 34:
       if (lookahead == '.') ADVANCE(46);
@@ -1740,16 +1808,16 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '.') ADVANCE(666);
       END_STATE();
     case 40:
-      if (lookahead == '.') ADVANCE(390);
+      if (lookahead == '.') ADVANCE(388);
       END_STATE();
     case 41:
-      if (lookahead == '.') ADVANCE(549);
+      if (lookahead == '.') ADVANCE(548);
       END_STATE();
     case 42:
-      if (lookahead == '.') ADVANCE(602);
+      if (lookahead == '.') ADVANCE(601);
       END_STATE();
     case 43:
-      if (lookahead == '.') ADVANCE(149);
+      if (lookahead == '.') ADVANCE(148);
       END_STATE();
     case 44:
       if (lookahead == '1') ADVANCE(70);
@@ -1777,7 +1845,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '3') ADVANCE(67);
       END_STATE();
     case 49:
-      if (lookahead == '4') ADVANCE(745);
+      if (lookahead == '4') ADVANCE(742);
       END_STATE();
     case 50:
       if (lookahead == '=') ADVANCE(723);
@@ -1792,64 +1860,64 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '^') ADVANCE(709);
       END_STATE();
     case 54:
-      if (lookahead == '_') ADVANCE(386);
+      if (lookahead == '_') ADVANCE(384);
       END_STATE();
     case 55:
-      if (lookahead == '_') ADVANCE(363);
+      if (lookahead == '_') ADVANCE(361);
       END_STATE();
     case 56:
-      if (lookahead == '_') ADVANCE(137);
+      if (lookahead == '_') ADVANCE(136);
       END_STATE();
     case 57:
-      if (lookahead == '_') ADVANCE(336);
+      if (lookahead == '_') ADVANCE(334);
       END_STATE();
     case 58:
       if (lookahead == '_') ADVANCE(44);
       END_STATE();
     case 59:
-      if (lookahead == '_') ADVANCE(557);
+      if (lookahead == '_') ADVANCE(556);
       END_STATE();
     case 60:
       if (lookahead == '_') ADVANCE(688);
       END_STATE();
     case 61:
-      if (lookahead == '_') ADVANCE(297);
+      if (lookahead == '_') ADVANCE(295);
       END_STATE();
     case 62:
       if (lookahead == '_') ADVANCE(700);
       END_STATE();
     case 63:
-      if (lookahead == '_') ADVANCE(580);
+      if (lookahead == '_') ADVANCE(579);
       END_STATE();
     case 64:
-      if (lookahead == '_') ADVANCE(165);
+      if (lookahead == '_') ADVANCE(164);
       END_STATE();
     case 65:
-      if (lookahead == '_') ADVANCE(184);
+      if (lookahead == '_') ADVANCE(183);
       END_STATE();
     case 66:
-      if (lookahead == '_') ADVANCE(503);
+      if (lookahead == '_') ADVANCE(502);
       END_STATE();
     case 67:
-      if (lookahead == '_') ADVANCE(324);
+      if (lookahead == '_') ADVANCE(322);
       END_STATE();
     case 68:
-      if (lookahead == '_') ADVANCE(104);
+      if (lookahead == '_') ADVANCE(103);
       END_STATE();
     case 69:
-      if (lookahead == '_') ADVANCE(379);
+      if (lookahead == '_') ADVANCE(377);
       END_STATE();
     case 70:
-      if (lookahead == '_') ADVANCE(352);
+      if (lookahead == '_') ADVANCE(350);
       END_STATE();
     case 71:
-      if (lookahead == '_') ADVANCE(230);
+      if (lookahead == '_') ADVANCE(228);
       END_STATE();
     case 72:
-      if (lookahead == '_') ADVANCE(593);
+      if (lookahead == '_') ADVANCE(592);
       END_STATE();
     case 73:
-      if (lookahead == '_') ADVANCE(540);
+      if (lookahead == '_') ADVANCE(539);
       END_STATE();
     case 74:
       if (lookahead == '_') ADVANCE(672);
@@ -1858,898 +1926,897 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '_') ADVANCE(670);
       END_STATE();
     case 76:
-      if (lookahead == '_') ADVANCE(351);
+      if (lookahead == '_') ADVANCE(349);
       END_STATE();
     case 77:
       if (lookahead == '_') ADVANCE(674);
       END_STATE();
     case 78:
-      if (lookahead == '_') ADVANCE(191);
+      if (lookahead == '_') ADVANCE(190);
       END_STATE();
     case 79:
       if (lookahead == '_') ADVANCE(691);
       END_STATE();
     case 80:
-      if (lookahead == '_') ADVANCE(298);
+      if (lookahead == '_') ADVANCE(296);
       END_STATE();
     case 81:
-      if (lookahead == '_') ADVANCE(141);
+      if (lookahead == '_') ADVANCE(140);
       END_STATE();
     case 82:
-      if (lookahead == '_') ADVANCE(128);
+      if (lookahead == '_') ADVANCE(127);
       END_STATE();
     case 83:
-      if (lookahead == '_') ADVANCE(166);
+      if (lookahead == '_') ADVANCE(165);
       END_STATE();
     case 84:
-      if (lookahead == '_') ADVANCE(604);
+      if (lookahead == '_') ADVANCE(603);
       END_STATE();
     case 85:
-      if (lookahead == '_') ADVANCE(168);
+      if (lookahead == '_') ADVANCE(167);
       END_STATE();
     case 86:
-      if (lookahead == '_') ADVANCE(170);
+      if (lookahead == '_') ADVANCE(169);
       END_STATE();
     case 87:
-      if (lookahead == '_') ADVANCE(171);
+      if (lookahead == '_') ADVANCE(170);
       END_STATE();
     case 88:
-      if (lookahead == '_') ADVANCE(605);
+      if (lookahead == '_') ADVANCE(604);
       END_STATE();
     case 89:
-      if (lookahead == '_') ADVANCE(398);
+      if (lookahead == '_') ADVANCE(396);
       END_STATE();
     case 90:
-      if (lookahead == '_') ADVANCE(361);
+      if (lookahead == '_') ADVANCE(359);
       END_STATE();
     case 91:
-      if (lookahead == 'a') ADVANCE(373);
+      if (lookahead == 'a') ADVANCE(371);
       END_STATE();
     case 92:
       if (lookahead == 'a') ADVANCE(687);
+      if (lookahead == 'e') ADVANCE(304);
       END_STATE();
     case 93:
-      if (lookahead == 'a') ADVANCE(687);
-      if (lookahead == 'e') ADVANCE(306);
+      if (lookahead == 'a') ADVANCE(293);
+      if (lookahead == 'o') ADVANCE(523);
       END_STATE();
     case 94:
-      if (lookahead == 'a') ADVANCE(295);
-      if (lookahead == 'o') ADVANCE(524);
+      if (lookahead == 'a') ADVANCE(48);
       END_STATE();
     case 95:
       if (lookahead == 'a') ADVANCE(48);
-      END_STATE();
-    case 96:
-      if (lookahead == 'a') ADVANCE(48);
       if (lookahead == 's') ADVANCE(78);
       END_STATE();
-    case 97:
+    case 96:
       if (lookahead == 'a') ADVANCE(810);
       END_STATE();
+    case 97:
+      if (lookahead == 'a') ADVANCE(414);
+      if (lookahead == 'b') ADVANCE(458);
+      if (lookahead == 'm') ADVANCE(102);
+      if (lookahead == 'o') ADVANCE(501);
+      if (lookahead == 'v') ADVANCE(495);
+      END_STATE();
     case 98:
-      if (lookahead == 'a') ADVANCE(416);
-      if (lookahead == 'b') ADVANCE(459);
-      if (lookahead == 'm') ADVANCE(103);
-      if (lookahead == 'o') ADVANCE(502);
-      if (lookahead == 'v') ADVANCE(496);
+      if (lookahead == 'a') ADVANCE(607);
       END_STATE();
     case 99:
-      if (lookahead == 'a') ADVANCE(608);
+      if (lookahead == 'a') ADVANCE(527);
       END_STATE();
     case 100:
-      if (lookahead == 'a') ADVANCE(528);
+      if (lookahead == 'a') ADVANCE(333);
       END_STATE();
     case 101:
-      if (lookahead == 'a') ADVANCE(335);
+      if (lookahead == 'a') ADVANCE(387);
       END_STATE();
     case 102:
-      if (lookahead == 'a') ADVANCE(389);
+      if (lookahead == 'a') ADVANCE(372);
       END_STATE();
     case 103:
-      if (lookahead == 'a') ADVANCE(374);
-      END_STATE();
-    case 104:
       if (lookahead == 'a') ADVANCE(673);
       END_STATE();
+    case 104:
+      if (lookahead == 'a') ADVANCE(386);
+      END_STATE();
     case 105:
-      if (lookahead == 'a') ADVANCE(388);
+      if (lookahead == 'a') ADVANCE(382);
       END_STATE();
     case 106:
-      if (lookahead == 'a') ADVANCE(384);
+      if (lookahead == 'a') ADVANCE(392);
       END_STATE();
     case 107:
-      if (lookahead == 'a') ADVANCE(394);
+      if (lookahead == 'a') ADVANCE(609);
       END_STATE();
     case 108:
-      if (lookahead == 'a') ADVANCE(610);
+      if (lookahead == 'a') ADVANCE(153);
       END_STATE();
     case 109:
-      if (lookahead == 'a') ADVANCE(154);
+      if (lookahead == 'a') ADVANCE(589);
+      if (lookahead == 'c') ADVANCE(447);
+      if (lookahead == 'i') ADVANCE(584);
+      if (lookahead == 's') ADVANCE(663);
       END_STATE();
     case 110:
-      if (lookahead == 'a') ADVANCE(590);
-      if (lookahead == 'c') ADVANCE(448);
-      if (lookahead == 'i') ADVANCE(585);
-      if (lookahead == 's') ADVANCE(663);
+      if (lookahead == 'a') ADVANCE(193);
       END_STATE();
     case 111:
       if (lookahead == 'a') ADVANCE(194);
       END_STATE();
     case 112:
-      if (lookahead == 'a') ADVANCE(195);
+      if (lookahead == 'a') ADVANCE(378);
       END_STATE();
     case 113:
-      if (lookahead == 'a') ADVANCE(380);
+      if (lookahead == 'a') ADVANCE(418);
       END_STATE();
     case 114:
-      if (lookahead == 'a') ADVANCE(420);
-      END_STATE();
-    case 115:
       if (lookahead == 'a') ADVANCE(651);
       END_STATE();
+    case 115:
+      if (lookahead == 'a') ADVANCE(611);
+      if (lookahead == 'o') ADVANCE(405);
+      END_STATE();
     case 116:
-      if (lookahead == 'a') ADVANCE(612);
-      if (lookahead == 'o') ADVANCE(407);
+      if (lookahead == 'a') ADVANCE(559);
       END_STATE();
     case 117:
-      if (lookahead == 'a') ADVANCE(560);
+      if (lookahead == 'a') ADVANCE(582);
       END_STATE();
     case 118:
-      if (lookahead == 'a') ADVANCE(583);
+      if (lookahead == 'a') ADVANCE(413);
       END_STATE();
     case 119:
-      if (lookahead == 'a') ADVANCE(415);
+      if (lookahead == 'a') ADVANCE(600);
       END_STATE();
     case 120:
-      if (lookahead == 'a') ADVANCE(601);
-      END_STATE();
-    case 121:
       if (lookahead == 'a') ADVANCE(637);
       END_STATE();
-    case 122:
+    case 121:
       if (lookahead == 'a') ADVANCE(629);
       END_STATE();
-    case 123:
+    case 122:
       if (lookahead == 'a') ADVANCE(632);
       END_STATE();
+    case 123:
+      if (lookahead == 'a') ADVANCE(415);
+      END_STATE();
     case 124:
-      if (lookahead == 'a') ADVANCE(417);
+      if (lookahead == 'a') ADVANCE(308);
       END_STATE();
     case 125:
-      if (lookahead == 'a') ADVANCE(310);
+      if (lookahead == 'a') ADVANCE(161);
+      if (lookahead == 'c') ADVANCE(488);
+      if (lookahead == 'f') ADVANCE(667);
+      if (lookahead == 'h') ADVANCE(240);
+      if (lookahead == 'm') ADVANCE(263);
+      if (lookahead == 't') ADVANCE(355);
+      if (lookahead == 'u') ADVANCE(531);
+      if (lookahead == 'v') ADVANCE(259);
       END_STATE();
     case 126:
-      if (lookahead == 'a') ADVANCE(162);
-      if (lookahead == 'c') ADVANCE(489);
+      if (lookahead == 'a') ADVANCE(161);
+      if (lookahead == 'c') ADVANCE(488);
       if (lookahead == 'f') ADVANCE(667);
-      if (lookahead == 'h') ADVANCE(242);
-      if (lookahead == 'm') ADVANCE(265);
-      if (lookahead == 't') ADVANCE(357);
-      if (lookahead == 'u') ADVANCE(532);
-      if (lookahead == 'v') ADVANCE(261);
+      if (lookahead == 'h') ADVANCE(286);
+      if (lookahead == 'm') ADVANCE(263);
+      if (lookahead == 'u') ADVANCE(531);
+      if (lookahead == 'v') ADVANCE(259);
       END_STATE();
     case 127:
-      if (lookahead == 'a') ADVANCE(162);
-      if (lookahead == 'c') ADVANCE(489);
-      if (lookahead == 'f') ADVANCE(667);
-      if (lookahead == 'h') ADVANCE(288);
-      if (lookahead == 'm') ADVANCE(265);
-      if (lookahead == 'u') ADVANCE(532);
-      if (lookahead == 'v') ADVANCE(261);
+      if (lookahead == 'a') ADVANCE(310);
       END_STATE();
     case 128:
-      if (lookahead == 'a') ADVANCE(312);
+      if (lookahead == 'a') ADVANCE(547);
       END_STATE();
     case 129:
-      if (lookahead == 'a') ADVANCE(548);
+      if (lookahead == 'a') ADVANCE(309);
       END_STATE();
     case 130:
-      if (lookahead == 'a') ADVANCE(311);
+      if (lookahead == 'a') ADVANCE(428);
       END_STATE();
     case 131:
-      if (lookahead == 'a') ADVANCE(430);
-      END_STATE();
-    case 132:
       if (lookahead == 'a') ADVANCE(649);
       END_STATE();
+    case 132:
+      if (lookahead == 'a') ADVANCE(389);
+      END_STATE();
     case 133:
-      if (lookahead == 'a') ADVANCE(391);
+      if (lookahead == 'a') ADVANCE(195);
       END_STATE();
     case 134:
-      if (lookahead == 'a') ADVANCE(196);
+      if (lookahead == 'a') ADVANCE(312);
       END_STATE();
     case 135:
-      if (lookahead == 'a') ADVANCE(314);
+      if (lookahead == 'a') ADVANCE(441);
       END_STATE();
     case 136:
-      if (lookahead == 'a') ADVANCE(443);
-      END_STATE();
-    case 137:
       if (lookahead == 'b') ADVANCE(699);
       END_STATE();
+    case 137:
+      if (lookahead == 'b') ADVANCE(456);
+      if (lookahead == 'c') ADVANCE(370);
+      if (lookahead == 'e') ADVANCE(173);
+      if (lookahead == 'h') ADVANCE(471);
+      if (lookahead == 'r') ADVANCE(123);
+      if (lookahead == 't') ADVANCE(319);
+      if (lookahead == 'w') ADVANCE(93);
+      END_STATE();
     case 138:
-      if (lookahead == 'b') ADVANCE(457);
-      if (lookahead == 'c') ADVANCE(372);
-      if (lookahead == 'e') ADVANCE(174);
-      if (lookahead == 'h') ADVANCE(472);
-      if (lookahead == 'r') ADVANCE(124);
-      if (lookahead == 't') ADVANCE(321);
-      if (lookahead == 'w') ADVANCE(94);
+      if (lookahead == 'b') ADVANCE(181);
       END_STATE();
     case 139:
-      if (lookahead == 'b') ADVANCE(182);
+      if (lookahead == 'b') ADVANCE(466);
       END_STATE();
     case 140:
-      if (lookahead == 'b') ADVANCE(467);
+      if (lookahead == 'b') ADVANCE(469);
       END_STATE();
     case 141:
-      if (lookahead == 'b') ADVANCE(470);
+      if (lookahead == 'b') ADVANCE(491);
+      if (lookahead == 'h') ADVANCE(471);
+      if (lookahead == 'w') ADVANCE(457);
       END_STATE();
     case 142:
-      if (lookahead == 'b') ADVANCE(492);
-      if (lookahead == 'h') ADVANCE(472);
-      if (lookahead == 'w') ADVANCE(458);
+      if (lookahead == 'c') ADVANCE(318);
       END_STATE();
     case 143:
-      if (lookahead == 'c') ADVANCE(320);
-      END_STATE();
-    case 144:
       if (lookahead == 'c') ADVANCE(783);
       END_STATE();
-    case 145:
+    case 144:
       if (lookahead == 'c') ADVANCE(760);
       END_STATE();
-    case 146:
+    case 145:
       if (lookahead == 'c') ADVANCE(773);
       END_STATE();
-    case 147:
+    case 146:
       if (lookahead == 'c') ADVANCE(774);
       END_STATE();
+    case 147:
+      if (lookahead == 'c') ADVANCE(459);
+      if (lookahead == 'h') ADVANCE(474);
+      if (lookahead == 'r') ADVANCE(205);
+      if (lookahead == 'u') ADVANCE(599);
+      if (lookahead == 'x') ADVANCE(61);
+      END_STATE();
     case 148:
-      if (lookahead == 'c') ADVANCE(460);
-      if (lookahead == 'h') ADVANCE(475);
-      if (lookahead == 'r') ADVANCE(207);
-      if (lookahead == 'u') ADVANCE(600);
+      if (lookahead == 'c') ADVANCE(459);
+      if (lookahead == 'h') ADVANCE(474);
+      if (lookahead == 'r') ADVANCE(289);
+      if (lookahead == 'u') ADVANCE(599);
       if (lookahead == 'x') ADVANCE(61);
       END_STATE();
     case 149:
-      if (lookahead == 'c') ADVANCE(460);
-      if (lookahead == 'h') ADVANCE(475);
-      if (lookahead == 'r') ADVANCE(291);
-      if (lookahead == 'u') ADVANCE(600);
-      if (lookahead == 'x') ADVANCE(61);
+      if (lookahead == 'c') ADVANCE(144);
       END_STATE();
     case 150:
-      if (lookahead == 'c') ADVANCE(145);
+      if (lookahead == 'c') ADVANCE(472);
       END_STATE();
     case 151:
-      if (lookahead == 'c') ADVANCE(473);
-      END_STATE();
-    case 152:
-      if (lookahead == 'c') ADVANCE(448);
+      if (lookahead == 'c') ADVANCE(447);
       if (lookahead == 's') ADVANCE(663);
       END_STATE();
-    case 153:
+    case 152:
       if (lookahead == 'c') ADVANCE(8);
+      END_STATE();
+    case 153:
+      if (lookahead == 'c') ADVANCE(210);
       END_STATE();
     case 154:
       if (lookahead == 'c') ADVANCE(212);
       END_STATE();
     case 155:
-      if (lookahead == 'c') ADVANCE(214);
-      END_STATE();
-    case 156:
       if (lookahead == 'c') ADVANCE(657);
       END_STATE();
+    case 156:
+      if (lookahead == 'c') ADVANCE(234);
+      END_STATE();
     case 157:
-      if (lookahead == 'c') ADVANCE(236);
+      if (lookahead == 'c') ADVANCE(107);
       END_STATE();
     case 158:
-      if (lookahead == 'c') ADVANCE(108);
+      if (lookahead == 'c') ADVANCE(107);
+      if (lookahead == 't') ADVANCE(100);
       END_STATE();
     case 159:
-      if (lookahead == 'c') ADVANCE(108);
-      if (lookahead == 't') ADVANCE(101);
+      if (lookahead == 'c') ADVANCE(339);
+      if (lookahead == 'l') ADVANCE(115);
+      if (lookahead == 'm') ADVANCE(270);
+      if (lookahead == 'p') ADVANCE(477);
       END_STATE();
     case 160:
-      if (lookahead == 'c') ADVANCE(341);
-      if (lookahead == 'l') ADVANCE(116);
-      if (lookahead == 'm') ADVANCE(272);
-      if (lookahead == 'p') ADVANCE(478);
-      END_STATE();
-    case 161:
-      if (lookahead == 'c') ADVANCE(481);
-      END_STATE();
-    case 162:
-      if (lookahead == 'c') ADVANCE(157);
-      END_STATE();
-    case 163:
-      if (lookahead == 'c') ADVANCE(132);
-      END_STATE();
-    case 164:
-      if (lookahead == 'c') ADVANCE(277);
-      END_STATE();
-    case 165:
-      if (lookahead == 'c') ADVANCE(381);
-      END_STATE();
-    case 166:
-      if (lookahead == 'c') ADVANCE(479);
-      END_STATE();
-    case 167:
-      if (lookahead == 'c') ADVANCE(482);
-      END_STATE();
-    case 168:
       if (lookahead == 'c') ADVANCE(480);
       END_STATE();
-    case 169:
-      if (lookahead == 'c') ADVANCE(486);
+    case 161:
+      if (lookahead == 'c') ADVANCE(156);
       END_STATE();
-    case 170:
-      if (lookahead == 'c') ADVANCE(483);
+    case 162:
+      if (lookahead == 'c') ADVANCE(131);
       END_STATE();
-    case 171:
+    case 163:
+      if (lookahead == 'c') ADVANCE(275);
+      END_STATE();
+    case 164:
+      if (lookahead == 'c') ADVANCE(379);
+      END_STATE();
+    case 165:
+      if (lookahead == 'c') ADVANCE(478);
+      END_STATE();
+    case 166:
+      if (lookahead == 'c') ADVANCE(481);
+      END_STATE();
+    case 167:
+      if (lookahead == 'c') ADVANCE(479);
+      END_STATE();
+    case 168:
       if (lookahead == 'c') ADVANCE(485);
       END_STATE();
-    case 172:
+    case 169:
+      if (lookahead == 'c') ADVANCE(482);
+      END_STATE();
+    case 170:
+      if (lookahead == 'c') ADVANCE(484);
+      END_STATE();
+    case 171:
       if (lookahead == 'd') ADVANCE(707);
       END_STATE();
+    case 172:
+      if (lookahead == 'd') ADVANCE(576);
+      END_STATE();
     case 173:
-      if (lookahead == 'd') ADVANCE(577);
+      if (lookahead == 'd') ADVANCE(307);
       END_STATE();
     case 174:
-      if (lookahead == 'd') ADVANCE(309);
-      END_STATE();
-    case 175:
       if (lookahead == 'd') ADVANCE(812);
       END_STATE();
-    case 176:
+    case 175:
       if (lookahead == 'd') ADVANCE(789);
       END_STATE();
-    case 177:
+    case 176:
       if (lookahead == 'd') ADVANCE(826);
       END_STATE();
-    case 178:
+    case 177:
       if (lookahead == 'd') ADVANCE(824);
       END_STATE();
-    case 179:
+    case 178:
       if (lookahead == 'd') ADVANCE(825);
       END_STATE();
-    case 180:
+    case 179:
       if (lookahead == 'd') ADVANCE(822);
       END_STATE();
-    case 181:
+    case 180:
       if (lookahead == 'd') ADVANCE(682);
       END_STATE();
+    case 181:
+      if (lookahead == 'd') ADVANCE(332);
+      END_STATE();
     case 182:
-      if (lookahead == 'd') ADVANCE(334);
+      if (lookahead == 'd') ADVANCE(450);
       END_STATE();
     case 183:
-      if (lookahead == 'd') ADVANCE(451);
-      END_STATE();
-    case 184:
-      if (lookahead == 'd') ADVANCE(222);
-      END_STATE();
-    case 185:
-      if (lookahead == 'd') ADVANCE(208);
-      END_STATE();
-    case 186:
-      if (lookahead == 'd') ADVANCE(69);
-      END_STATE();
-    case 187:
-      if (lookahead == 'd') ADVANCE(81);
-      END_STATE();
-    case 188:
-      if (lookahead == 'd') ADVANCE(234);
-      END_STATE();
-    case 189:
-      if (lookahead == 'd') ADVANCE(215);
-      END_STATE();
-    case 190:
-      if (lookahead == 'd') ADVANCE(216);
-      END_STATE();
-    case 191:
-      if (lookahead == 'd') ADVANCE(280);
-      END_STATE();
-    case 192:
-      if (lookahead == 'd') ADVANCE(219);
-      END_STATE();
-    case 193:
       if (lookahead == 'd') ADVANCE(220);
       END_STATE();
+    case 184:
+      if (lookahead == 'd') ADVANCE(206);
+      END_STATE();
+    case 185:
+      if (lookahead == 'd') ADVANCE(69);
+      END_STATE();
+    case 186:
+      if (lookahead == 'd') ADVANCE(81);
+      END_STATE();
+    case 187:
+      if (lookahead == 'd') ADVANCE(232);
+      END_STATE();
+    case 188:
+      if (lookahead == 'd') ADVANCE(213);
+      END_STATE();
+    case 189:
+      if (lookahead == 'd') ADVANCE(214);
+      END_STATE();
+    case 190:
+      if (lookahead == 'd') ADVANCE(278);
+      END_STATE();
+    case 191:
+      if (lookahead == 'd') ADVANCE(217);
+      END_STATE();
+    case 192:
+      if (lookahead == 'd') ADVANCE(218);
+      END_STATE();
+    case 193:
+      if (lookahead == 'd') ADVANCE(120);
+      END_STATE();
     case 194:
-      if (lookahead == 'd') ADVANCE(121);
+      if (lookahead == 'd') ADVANCE(261);
       END_STATE();
     case 195:
-      if (lookahead == 'd') ADVANCE(263);
+      if (lookahead == 'd') ADVANCE(268);
       END_STATE();
     case 196:
-      if (lookahead == 'd') ADVANCE(270);
-      END_STATE();
-    case 197:
       if (lookahead == 'd') ADVANCE(80);
       END_STATE();
-    case 198:
+    case 197:
       if (lookahead == 'e') ADVANCE(721);
       if (lookahead == 't') ADVANCE(720);
       END_STATE();
-    case 199:
+    case 198:
       if (lookahead == 'e') ADVANCE(719);
-      if (lookahead == 'o') ADVANCE(446);
+      if (lookahead == 'o') ADVANCE(445);
       if (lookahead == 't') ADVANCE(717);
+      END_STATE();
+    case 199:
+      if (lookahead == 'e') ADVANCE(716);
       END_STATE();
     case 200:
-      if (lookahead == 'e') ADVANCE(719);
-      if (lookahead == 't') ADVANCE(717);
+      if (lookahead == 'e') ADVANCE(716);
+      if (lookahead == 'o') ADVANCE(608);
       END_STATE();
     case 201:
-      if (lookahead == 'e') ADVANCE(716);
-      END_STATE();
-    case 202:
-      if (lookahead == 'e') ADVANCE(716);
-      if (lookahead == 'o') ADVANCE(609);
-      END_STATE();
-    case 203:
       if (lookahead == 'e') ADVANCE(692);
       END_STATE();
-    case 204:
+    case 202:
       if (lookahead == 'e') ADVANCE(749);
       END_STATE();
-    case 205:
+    case 203:
       if (lookahead == 'e') ADVANCE(750);
       END_STATE();
-    case 206:
+    case 204:
       if (lookahead == 'e') ADVANCE(760);
       END_STATE();
+    case 205:
+      if (lookahead == 'e') ADVANCE(297);
+      END_STATE();
+    case 206:
+      if (lookahead == 'e') ADVANCE(741);
+      END_STATE();
     case 207:
-      if (lookahead == 'e') ADVANCE(299);
-      END_STATE();
-    case 208:
-      if (lookahead == 'e') ADVANCE(744);
-      END_STATE();
-    case 209:
       if (lookahead == 'e') ADVANCE(785);
       END_STATE();
-    case 210:
-      if (lookahead == 'e') ADVANCE(516);
+    case 208:
+      if (lookahead == 'e') ADVANCE(515);
       END_STATE();
-    case 211:
+    case 209:
       if (lookahead == 'e') ADVANCE(779);
       END_STATE();
-    case 212:
-      if (lookahead == 'e') ADVANCE(739);
+    case 210:
+      if (lookahead == 'e') ADVANCE(737);
       END_STATE();
-    case 213:
+    case 211:
       if (lookahead == 'e') ADVANCE(778);
       END_STATE();
-    case 214:
+    case 212:
       if (lookahead == 'e') ADVANCE(782);
       END_STATE();
-    case 215:
+    case 213:
       if (lookahead == 'e') ADVANCE(800);
       END_STATE();
-    case 216:
+    case 214:
       if (lookahead == 'e') ADVANCE(799);
       END_STATE();
-    case 217:
+    case 215:
       if (lookahead == 'e') ADVANCE(776);
       END_STATE();
-    case 218:
+    case 216:
       if (lookahead == 'e') ADVANCE(811);
       END_STATE();
-    case 219:
+    case 217:
       if (lookahead == 'e') ADVANCE(803);
       END_STATE();
-    case 220:
+    case 218:
       if (lookahead == 'e') ADVANCE(804);
       END_STATE();
-    case 221:
+    case 219:
       if (lookahead == 'e') ADVANCE(718);
       if (lookahead == 't') ADVANCE(717);
       END_STATE();
+    case 220:
+      if (lookahead == 'e') ADVANCE(150);
+      END_STATE();
+    case 221:
+      if (lookahead == 'e') ADVANCE(518);
+      END_STATE();
     case 222:
-      if (lookahead == 'e') ADVANCE(151);
+      if (lookahead == 'e') ADVANCE(454);
       END_STATE();
     case 223:
-      if (lookahead == 'e') ADVANCE(519);
+      if (lookahead == 'e') ADVANCE(497);
       END_STATE();
     case 224:
-      if (lookahead == 'e') ADVANCE(455);
+      if (lookahead == 'e') ADVANCE(565);
       END_STATE();
     case 225:
-      if (lookahead == 'e') ADVANCE(498);
-      END_STATE();
-    case 226:
-      if (lookahead == 'e') ADVANCE(566);
-      END_STATE();
-    case 227:
       if (lookahead == 'e') ADVANCE(685);
       END_STATE();
-    case 228:
-      if (lookahead == 'e') ADVANCE(520);
+    case 226:
+      if (lookahead == 'e') ADVANCE(519);
       END_STATE();
-    case 229:
+    case 227:
       if (lookahead == 'e') ADVANCE(42);
       END_STATE();
-    case 230:
+    case 228:
       if (lookahead == 'e') ADVANCE(671);
+      END_STATE();
+    case 229:
+      if (lookahead == 'e') ADVANCE(419);
+      END_STATE();
+    case 230:
+      if (lookahead == 'e') ADVANCE(174);
       END_STATE();
     case 231:
       if (lookahead == 'e') ADVANCE(421);
       END_STATE();
     case 232:
-      if (lookahead == 'e') ADVANCE(175);
+      if (lookahead == 'e') ADVANCE(196);
       END_STATE();
     case 233:
-      if (lookahead == 'e') ADVANCE(423);
-      END_STATE();
-    case 234:
-      if (lookahead == 'e') ADVANCE(197);
-      END_STATE();
-    case 235:
       if (lookahead == 'e') ADVANCE(56);
       END_STATE();
+    case 234:
+      if (lookahead == 'e') ADVANCE(508);
+      END_STATE();
+    case 235:
+      if (lookahead == 'e') ADVANCE(532);
+      END_STATE();
     case 236:
-      if (lookahead == 'e') ADVANCE(509);
+      if (lookahead == 'e') ADVANCE(567);
       END_STATE();
     case 237:
-      if (lookahead == 'e') ADVANCE(533);
+      if (lookahead == 'e') ADVANCE(155);
       END_STATE();
     case 238:
-      if (lookahead == 'e') ADVANCE(568);
+      if (lookahead == 'e') ADVANCE(533);
       END_STATE();
     case 239:
-      if (lookahead == 'e') ADVANCE(156);
-      END_STATE();
-    case 240:
-      if (lookahead == 'e') ADVANCE(534);
-      END_STATE();
-    case 241:
       if (lookahead == 'e') ADVANCE(40);
       END_STATE();
+    case 240:
+      if (lookahead == 'e') ADVANCE(111);
+      END_STATE();
+    case 241:
+      if (lookahead == 'e') ADVANCE(561);
+      END_STATE();
     case 242:
-      if (lookahead == 'e') ADVANCE(112);
+      if (lookahead == 'e') ADVANCE(564);
       END_STATE();
     case 243:
-      if (lookahead == 'e') ADVANCE(562);
+      if (lookahead == 'e') ADVANCE(145);
       END_STATE();
     case 244:
-      if (lookahead == 'e') ADVANCE(565);
+      if (lookahead == 'e') ADVANCE(104);
       END_STATE();
     case 245:
-      if (lookahead == 'e') ADVANCE(146);
+      if (lookahead == 'e') ADVANCE(185);
       END_STATE();
     case 246:
-      if (lookahead == 'e') ADVANCE(105);
+      if (lookahead == 'e') ADVANCE(146);
       END_STATE();
     case 247:
-      if (lookahead == 'e') ADVANCE(186);
+      if (lookahead == 'e') ADVANCE(176);
       END_STATE();
     case 248:
-      if (lookahead == 'e') ADVANCE(147);
-      END_STATE();
-    case 249:
-      if (lookahead == 'e') ADVANCE(177);
-      END_STATE();
-    case 250:
       if (lookahead == 'e') ADVANCE(626);
       END_STATE();
-    case 251:
-      if (lookahead == 'e') ADVANCE(526);
+    case 249:
+      if (lookahead == 'e') ADVANCE(525);
       END_STATE();
-    case 252:
+    case 250:
+      if (lookahead == 'e') ADVANCE(177);
+      END_STATE();
+    case 251:
       if (lookahead == 'e') ADVANCE(178);
       END_STATE();
+    case 252:
+      if (lookahead == 'e') ADVANCE(569);
+      END_STATE();
     case 253:
-      if (lookahead == 'e') ADVANCE(179);
-      END_STATE();
-    case 254:
-      if (lookahead == 'e') ADVANCE(570);
-      END_STATE();
-    case 255:
-      if (lookahead == 'e') ADVANCE(522);
-      END_STATE();
-    case 256:
-      if (lookahead == 'e') ADVANCE(180);
-      END_STATE();
-    case 257:
       if (lookahead == 'e') ADVANCE(521);
       END_STATE();
-    case 258:
+    case 254:
+      if (lookahead == 'e') ADVANCE(179);
+      END_STATE();
+    case 255:
+      if (lookahead == 'e') ADVANCE(520);
+      END_STATE();
+    case 256:
+      if (lookahead == 'e') ADVANCE(571);
+      END_STATE();
+    case 257:
       if (lookahead == 'e') ADVANCE(572);
       END_STATE();
-    case 259:
+    case 258:
       if (lookahead == 'e') ADVANCE(573);
       END_STATE();
+    case 259:
+      if (lookahead == 'e') ADVANCE(538);
+      END_STATE();
     case 260:
-      if (lookahead == 'e') ADVANCE(574);
+      if (lookahead == 'e') ADVANCE(402);
+      if (lookahead == 'o') ADVANCE(445);
       END_STATE();
     case 261:
-      if (lookahead == 'e') ADVANCE(539);
-      END_STATE();
-    case 262:
-      if (lookahead == 'e') ADVANCE(404);
-      if (lookahead == 'o') ADVANCE(446);
-      END_STATE();
-    case 263:
-      if (lookahead == 'e') ADVANCE(546);
-      END_STATE();
-    case 264:
-      if (lookahead == 'e') ADVANCE(634);
-      END_STATE();
-    case 265:
-      if (lookahead == 'e') ADVANCE(625);
-      END_STATE();
-    case 266:
-      if (lookahead == 'e') ADVANCE(232);
-      END_STATE();
-    case 267:
       if (lookahead == 'e') ADVANCE(545);
       END_STATE();
-    case 268:
+    case 262:
+      if (lookahead == 'e') ADVANCE(634);
+      END_STATE();
+    case 263:
+      if (lookahead == 'e') ADVANCE(625);
+      END_STATE();
+    case 264:
+      if (lookahead == 'e') ADVANCE(230);
+      END_STATE();
+    case 265:
+      if (lookahead == 'e') ADVANCE(544);
+      END_STATE();
+    case 266:
+      if (lookahead == 'e') ADVANCE(528);
+      END_STATE();
+    case 267:
       if (lookahead == 'e') ADVANCE(529);
       END_STATE();
+    case 268:
+      if (lookahead == 'e') ADVANCE(549);
+      END_STATE();
     case 269:
-      if (lookahead == 'e') ADVANCE(530);
+      if (lookahead == 'e') ADVANCE(130);
       END_STATE();
     case 270:
-      if (lookahead == 'e') ADVANCE(550);
-      END_STATE();
-    case 271:
-      if (lookahead == 'e') ADVANCE(131);
-      END_STATE();
-    case 272:
       if (lookahead == 'e') ADVANCE(641);
       END_STATE();
+    case 271:
+      if (lookahead == 'e') ADVANCE(426);
+      END_STATE();
+    case 272:
+      if (lookahead == 'e') ADVANCE(541);
+      END_STATE();
     case 273:
-      if (lookahead == 'e') ADVANCE(428);
+      if (lookahead == 'e') ADVANCE(186);
       END_STATE();
     case 274:
-      if (lookahead == 'e') ADVANCE(542);
+      if (lookahead == 'e') ADVANCE(114);
       END_STATE();
     case 275:
-      if (lookahead == 'e') ADVANCE(187);
+      if (lookahead == 'e') ADVANCE(553);
       END_STATE();
     case 276:
-      if (lookahead == 'e') ADVANCE(115);
+      if (lookahead == 'e') ADVANCE(393);
       END_STATE();
     case 277:
-      if (lookahead == 'e') ADVANCE(554);
+      if (lookahead == 'e') ADVANCE(429);
       END_STATE();
     case 278:
-      if (lookahead == 'e') ADVANCE(395);
-      END_STATE();
-    case 279:
-      if (lookahead == 'e') ADVANCE(431);
-      END_STATE();
-    case 280:
       if (lookahead == 'e') ADVANCE(648);
       END_STATE();
+    case 279:
+      if (lookahead == 'e') ADVANCE(430);
+      END_STATE();
+    case 280:
+      if (lookahead == 'e') ADVANCE(591);
+      END_STATE();
     case 281:
-      if (lookahead == 'e') ADVANCE(432);
+      if (lookahead == 'e') ADVANCE(431);
       END_STATE();
     case 282:
-      if (lookahead == 'e') ADVANCE(592);
+      if (lookahead == 'e') ADVANCE(593);
       END_STATE();
     case 283:
-      if (lookahead == 'e') ADVANCE(433);
+      if (lookahead == 'e') ADVANCE(432);
       END_STATE();
     case 284:
       if (lookahead == 'e') ADVANCE(594);
       END_STATE();
     case 285:
-      if (lookahead == 'e') ADVANCE(434);
-      END_STATE();
-    case 286:
       if (lookahead == 'e') ADVANCE(595);
       END_STATE();
+    case 286:
+      if (lookahead == 'e') ADVANCE(133);
+      END_STATE();
     case 287:
-      if (lookahead == 'e') ADVANCE(596);
+      if (lookahead == 'e') ADVANCE(563);
       END_STATE();
     case 288:
-      if (lookahead == 'e') ADVANCE(134);
+      if (lookahead == 'e') ADVANCE(394);
       END_STATE();
     case 289:
-      if (lookahead == 'e') ADVANCE(564);
+      if (lookahead == 'e') ADVANCE(298);
       END_STATE();
     case 290:
-      if (lookahead == 'e') ADVANCE(396);
+      if (lookahead == 'e') ADVANCE(487);
       END_STATE();
     case 291:
-      if (lookahead == 'e') ADVANCE(300);
+      if (lookahead == 'f') ADVANCE(5);
+      if (lookahead == 'o') ADVANCE(401);
       END_STATE();
     case 292:
-      if (lookahead == 'e') ADVANCE(488);
+      if (lookahead == 'f') ADVANCE(5);
+      if (lookahead == 'o') ADVANCE(439);
       END_STATE();
     case 293:
-      if (lookahead == 'f') ADVANCE(5);
-      if (lookahead == 'o') ADVANCE(403);
-      END_STATE();
-    case 294:
-      if (lookahead == 'f') ADVANCE(5);
-      if (lookahead == 'o') ADVANCE(441);
-      END_STATE();
-    case 295:
       if (lookahead == 'f') ADVANCE(30);
       END_STATE();
-    case 296:
+    case 294:
       if (lookahead == 'f') ADVANCE(19);
-      if (lookahead == 'o') ADVANCE(403);
+      if (lookahead == 'o') ADVANCE(401);
+      END_STATE();
+    case 295:
+      if (lookahead == 'f') ADVANCE(461);
+      END_STATE();
+    case 296:
+      if (lookahead == 'f') ADVANCE(468);
       END_STATE();
     case 297:
-      if (lookahead == 'f') ADVANCE(462);
-      END_STATE();
-    case 298:
-      if (lookahead == 'f') ADVANCE(469);
-      END_STATE();
-    case 299:
-      if (lookahead == 'f') ADVANCE(243);
+      if (lookahead == 'f') ADVANCE(241);
       if (lookahead == 'q') ADVANCE(668);
       END_STATE();
-    case 300:
-      if (lookahead == 'f') ADVANCE(243);
+    case 298:
+      if (lookahead == 'f') ADVANCE(241);
       if (lookahead == 'q') ADVANCE(680);
       END_STATE();
+    case 299:
+      if (lookahead == 'f') ADVANCE(353);
+      END_STATE();
+    case 300:
+      if (lookahead == 'f') ADVANCE(346);
+      END_STATE();
     case 301:
-      if (lookahead == 'f') ADVANCE(355);
+      if (lookahead == 'f') ADVANCE(681);
+      if (lookahead == 'u') ADVANCE(537);
       END_STATE();
     case 302:
-      if (lookahead == 'f') ADVANCE(348);
+      if (lookahead == 'g') ADVANCE(739);
       END_STATE();
     case 303:
-      if (lookahead == 'f') ADVANCE(681);
-      if (lookahead == 'u') ADVANCE(538);
+      if (lookahead == 'g') ADVANCE(735);
       END_STATE();
     case 304:
-      if (lookahead == 'g') ADVANCE(742);
+      if (lookahead == 'g') ADVANCE(201);
+      if (lookahead == 'm') ADVANCE(446);
       END_STATE();
     case 305:
-      if (lookahead == 'g') ADVANCE(737);
+      if (lookahead == 'g') ADVANCE(222);
+      if (lookahead == 's') ADVANCE(524);
       END_STATE();
     case 306:
-      if (lookahead == 'g') ADVANCE(203);
-      if (lookahead == 'm') ADVANCE(447);
-      END_STATE();
-    case 307:
-      if (lookahead == 'g') ADVANCE(224);
-      if (lookahead == 's') ADVANCE(525);
-      END_STATE();
-    case 308:
       if (lookahead == 'g') ADVANCE(679);
       END_STATE();
+    case 307:
+      if (lookahead == 'g') ADVANCE(227);
+      END_STATE();
+    case 308:
+      if (lookahead == 'g') ADVANCE(276);
+      END_STATE();
     case 309:
-      if (lookahead == 'g') ADVANCE(229);
+      if (lookahead == 'g') ADVANCE(258);
       END_STATE();
     case 310:
-      if (lookahead == 'g') ADVANCE(278);
+      if (lookahead == 'g') ADVANCE(277);
       END_STATE();
     case 311:
-      if (lookahead == 'g') ADVANCE(260);
+      if (lookahead == 'g') ADVANCE(290);
+      if (lookahead == 's') ADVANCE(540);
       END_STATE();
     case 312:
-      if (lookahead == 'g') ADVANCE(279);
+      if (lookahead == 'g') ADVANCE(288);
       END_STATE();
     case 313:
-      if (lookahead == 'g') ADVANCE(292);
-      if (lookahead == 's') ADVANCE(541);
+      if (lookahead == 'h') ADVANCE(744);
       END_STATE();
     case 314:
-      if (lookahead == 'g') ADVANCE(290);
+      if (lookahead == 'h') ADVANCE(745);
       END_STATE();
     case 315:
-      if (lookahead == 'h') ADVANCE(736);
-      END_STATE();
-    case 316:
-      if (lookahead == 'h') ADVANCE(741);
-      END_STATE();
-    case 317:
       if (lookahead == 'h') ADVANCE(791);
       END_STATE();
-    case 318:
+    case 316:
       if (lookahead == 'h') ADVANCE(807);
       END_STATE();
-    case 319:
+    case 317:
       if (lookahead == 'h') ADVANCE(809);
       END_STATE();
+    case 318:
+      if (lookahead == 'h') ADVANCE(224);
+      END_STATE();
+    case 319:
+      if (lookahead == 'h') ADVANCE(534);
+      if (lookahead == 'l') ADVANCE(580);
+      END_STATE();
     case 320:
-      if (lookahead == 'h') ADVANCE(226);
+      if (lookahead == 'h') ADVANCE(460);
       END_STATE();
     case 321:
-      if (lookahead == 'h') ADVANCE(535);
-      if (lookahead == 'l') ADVANCE(581);
-      END_STATE();
-    case 322:
-      if (lookahead == 'h') ADVANCE(461);
-      END_STATE();
-    case 323:
       if (lookahead == 'h') ADVANCE(31);
       END_STATE();
-    case 324:
-      if (lookahead == 'h') ADVANCE(118);
+    case 322:
+      if (lookahead == 'h') ADVANCE(117);
       END_STATE();
-    case 325:
+    case 323:
       if (lookahead == 'h') ADVANCE(655);
       END_STATE();
-    case 326:
+    case 324:
       if (lookahead == 'i') ADVANCE(701);
       END_STATE();
-    case 327:
+    case 325:
       if (lookahead == 'i') ADVANCE(790);
       END_STATE();
-    case 328:
+    case 326:
       if (lookahead == 'i') ADVANCE(780);
       END_STATE();
-    case 329:
+    case 327:
       if (lookahead == 'i') ADVANCE(806);
       END_STATE();
-    case 330:
+    case 328:
       if (lookahead == 'i') ADVANCE(788);
       END_STATE();
-    case 331:
+    case 329:
       if (lookahead == 'i') ADVANCE(805);
       END_STATE();
+    case 330:
+      if (lookahead == 'i') ADVANCE(180);
+      END_STATE();
+    case 331:
+      if (lookahead == 'i') ADVANCE(299);
+      END_STATE();
     case 332:
-      if (lookahead == 'i') ADVANCE(181);
-      END_STATE();
-    case 333:
-      if (lookahead == 'i') ADVANCE(301);
-      END_STATE();
-    case 334:
       if (lookahead == 'i') ADVANCE(684);
       END_STATE();
+    case 333:
+      if (lookahead == 'i') ADVANCE(417);
+      END_STATE();
+    case 334:
+      if (lookahead == 'i') ADVANCE(493);
+      if (lookahead == 'p') ADVANCE(470);
+      END_STATE();
     case 335:
-      if (lookahead == 'i') ADVANCE(419);
+      if (lookahead == 'i') ADVANCE(231);
       END_STATE();
     case 336:
-      if (lookahead == 'i') ADVANCE(494);
-      if (lookahead == 'p') ADVANCE(471);
+      if (lookahead == 'i') ADVANCE(410);
       END_STATE();
     case 337:
-      if (lookahead == 'i') ADVANCE(233);
-      END_STATE();
-    case 338:
-      if (lookahead == 'i') ADVANCE(412);
-      END_STATE();
-    case 339:
       if (lookahead == 'i') ADVANCE(620);
       END_STATE();
-    case 340:
-      if (lookahead == 'i') ADVANCE(587);
+    case 338:
+      if (lookahead == 'i') ADVANCE(586);
       END_STATE();
-    case 341:
+    case 339:
       if (lookahead == 'i') ADVANCE(621);
       END_STATE();
+    case 340:
+      if (lookahead == 'i') ADVANCE(411);
+      END_STATE();
+    case 341:
+      if (lookahead == 'i') ADVANCE(476);
+      END_STATE();
     case 342:
-      if (lookahead == 'i') ADVANCE(413);
-      END_STATE();
-    case 343:
-      if (lookahead == 'i') ADVANCE(477);
-      END_STATE();
-    case 344:
       if (lookahead == 'i') ADVANCE(622);
       END_STATE();
+    case 343:
+      if (lookahead == 'i') ADVANCE(207);
+      END_STATE();
+    case 344:
+      if (lookahead == 'i') ADVANCE(242);
+      END_STATE();
     case 345:
-      if (lookahead == 'i') ADVANCE(209);
+      if (lookahead == 'i') ADVANCE(252);
       END_STATE();
     case 346:
-      if (lookahead == 'i') ADVANCE(244);
+      if (lookahead == 'i') ADVANCE(251);
       END_STATE();
     case 347:
-      if (lookahead == 'i') ADVANCE(254);
+      if (lookahead == 'i') ADVANCE(498);
       END_STATE();
     case 348:
-      if (lookahead == 'i') ADVANCE(253);
+      if (lookahead == 'i') ADVANCE(438);
       END_STATE();
     case 349:
-      if (lookahead == 'i') ADVANCE(499);
+      if (lookahead == 'i') ADVANCE(423);
       END_STATE();
     case 350:
-      if (lookahead == 'i') ADVANCE(440);
+      if (lookahead == 'i') ADVANCE(605);
       END_STATE();
     case 351:
-      if (lookahead == 'i') ADVANCE(425);
+      if (lookahead == 'i') ADVANCE(271);
       END_STATE();
     case 352:
-      if (lookahead == 'i') ADVANCE(606);
+      if (lookahead == 'i') ADVANCE(464);
       END_STATE();
     case 353:
       if (lookahead == 'i') ADVANCE(273);
@@ -2758,864 +2825,864 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'i') ADVANCE(465);
       END_STATE();
     case 355:
-      if (lookahead == 'i') ADVANCE(275);
+      if (lookahead == 'i') ADVANCE(395);
       END_STATE();
     case 356:
-      if (lookahead == 'i') ADVANCE(466);
+      if (lookahead == 'i') ADVANCE(467);
       END_STATE();
     case 357:
-      if (lookahead == 'i') ADVANCE(397);
+      if (lookahead == 'i') ADVANCE(504);
       END_STATE();
     case 358:
-      if (lookahead == 'i') ADVANCE(468);
+      if (lookahead == 'i') ADVANCE(300);
       END_STATE();
     case 359:
-      if (lookahead == 'i') ADVANCE(505);
+      if (lookahead == 'i') ADVANCE(606);
       END_STATE();
     case 360:
-      if (lookahead == 'i') ADVANCE(302);
+      if (lookahead == 'j') ADVANCE(95);
+      if (lookahead == 's') ADVANCE(168);
+      if (lookahead == 'v') ADVANCE(265);
       END_STATE();
     case 361:
-      if (lookahead == 'i') ADVANCE(607);
+      if (lookahead == 'j') ADVANCE(583);
       END_STATE();
     case 362:
-      if (lookahead == 'j') ADVANCE(96);
-      if (lookahead == 's') ADVANCE(169);
-      if (lookahead == 'v') ADVANCE(267);
+      if (lookahead == 'j') ADVANCE(94);
       END_STATE();
     case 363:
-      if (lookahead == 'j') ADVANCE(584);
-      END_STATE();
-    case 364:
-      if (lookahead == 'j') ADVANCE(95);
-      END_STATE();
-    case 365:
       if (lookahead == 'k') ADVANCE(664);
       END_STATE();
+    case 364:
+      if (lookahead == 'k') ADVANCE(250);
+      END_STATE();
+    case 365:
+      if (lookahead == 'k') ADVANCE(343);
+      END_STATE();
     case 366:
-      if (lookahead == 'k') ADVANCE(252);
+      if (lookahead == 'k') ADVANCE(235);
       END_STATE();
     case 367:
       if (lookahead == 'k') ADVANCE(345);
       END_STATE();
     case 368:
-      if (lookahead == 'k') ADVANCE(237);
-      END_STATE();
-    case 369:
-      if (lookahead == 'k') ADVANCE(347);
-      END_STATE();
-    case 370:
       if (lookahead == 'l') ADVANCE(820);
       END_STATE();
-    case 371:
+    case 369:
       if (lookahead == 'l') ADVANCE(65);
       END_STATE();
+    case 370:
+      if (lookahead == 'l') ADVANCE(335);
+      END_STATE();
+    case 371:
+      if (lookahead == 'l') ADVANCE(577);
+      END_STATE();
     case 372:
-      if (lookahead == 'l') ADVANCE(337);
-      END_STATE();
-    case 373:
-      if (lookahead == 'l') ADVANCE(578);
-      END_STATE();
-    case 374:
       if (lookahead == 'l') ADVANCE(689);
       END_STATE();
+    case 373:
+      if (lookahead == 'l') ADVANCE(108);
+      END_STATE();
+    case 374:
+      if (lookahead == 'l') ADVANCE(326);
+      END_STATE();
     case 375:
-      if (lookahead == 'l') ADVANCE(109);
-      END_STATE();
-    case 376:
-      if (lookahead == 'l') ADVANCE(328);
-      END_STATE();
-    case 377:
       if (lookahead == 'l') ADVANCE(74);
       END_STATE();
+    case 376:
+      if (lookahead == 'l') ADVANCE(375);
+      END_STATE();
+    case 377:
+      if (lookahead == 'l') ADVANCE(118);
+      END_STATE();
     case 378:
-      if (lookahead == 'l') ADVANCE(377);
-      END_STATE();
-    case 379:
-      if (lookahead == 'l') ADVANCE(119);
-      END_STATE();
-    case 380:
       if (lookahead == 'l') ADVANCE(675);
       END_STATE();
-    case 381:
-      if (lookahead == 'l') ADVANCE(353);
+    case 379:
+      if (lookahead == 'l') ADVANCE(351);
       END_STATE();
-    case 382:
+    case 380:
       if (lookahead == 'l') ADVANCE(77);
       END_STATE();
-    case 383:
-      if (lookahead == 'l') ADVANCE(382);
+    case 381:
+      if (lookahead == 'l') ADVANCE(380);
       END_STATE();
-    case 384:
+    case 382:
       if (lookahead == 'l') ADVANCE(85);
       END_STATE();
-    case 385:
+    case 383:
       if (lookahead == 'm') ADVANCE(775);
       END_STATE();
+    case 384:
+      if (lookahead == 'm') ADVANCE(113);
+      END_STATE();
+    case 385:
+      if (lookahead == 'm') ADVANCE(324);
+      END_STATE();
     case 386:
-      if (lookahead == 'm') ADVANCE(114);
-      END_STATE();
-    case 387:
-      if (lookahead == 'm') ADVANCE(326);
-      END_STATE();
-    case 388:
       if (lookahead == 'm') ADVANCE(62);
       END_STATE();
+    case 387:
+      if (lookahead == 'm') ADVANCE(239);
+      END_STATE();
+    case 388:
+      if (lookahead == 'm') ADVANCE(262);
+      END_STATE();
     case 389:
-      if (lookahead == 'm') ADVANCE(241);
+      if (lookahead == 'm') ADVANCE(256);
       END_STATE();
     case 390:
-      if (lookahead == 'm') ADVANCE(264);
-      END_STATE();
-    case 391:
-      if (lookahead == 'm') ADVANCE(258);
-      END_STATE();
-    case 392:
       if (lookahead == 'm') ADVANCE(72);
       END_STATE();
+    case 391:
+      if (lookahead == 'm') ADVANCE(596);
+      if (lookahead == 's') ADVANCE(243);
+      END_STATE();
+    case 392:
+      if (lookahead == 'm') ADVANCE(503);
+      END_STATE();
     case 393:
-      if (lookahead == 'm') ADVANCE(597);
-      if (lookahead == 's') ADVANCE(245);
+      if (lookahead == 'm') ADVANCE(279);
       END_STATE();
     case 394:
-      if (lookahead == 'm') ADVANCE(504);
+      if (lookahead == 'm') ADVANCE(283);
       END_STATE();
     case 395:
-      if (lookahead == 'm') ADVANCE(281);
+      if (lookahead == 'm') ADVANCE(284);
       END_STATE();
     case 396:
-      if (lookahead == 'm') ADVANCE(285);
+      if (lookahead == 'm') ADVANCE(135);
       END_STATE();
     case 397:
-      if (lookahead == 'm') ADVANCE(286);
+      if (lookahead == 'n') ADVANCE(171);
       END_STATE();
     case 398:
-      if (lookahead == 'm') ADVANCE(136);
-      END_STATE();
-    case 399:
-      if (lookahead == 'n') ADVANCE(172);
-      END_STATE();
-    case 400:
       if (lookahead == 'n') ADVANCE(705);
       END_STATE();
-    case 401:
+    case 399:
       if (lookahead == 'n') ADVANCE(705);
       if (lookahead == 'p') ADVANCE(6);
       END_STATE();
-    case 402:
+    case 400:
       if (lookahead == 'n') ADVANCE(705);
       if (lookahead == 'p') ADVANCE(33);
       END_STATE();
+    case 401:
+      if (lookahead == 'n') ADVANCE(158);
+      END_STATE();
+    case 402:
+      if (lookahead == 'n') ADVANCE(743);
+      END_STATE();
     case 403:
-      if (lookahead == 'n') ADVANCE(159);
-      END_STATE();
-    case 404:
-      if (lookahead == 'n') ADVANCE(735);
-      END_STATE();
-    case 405:
       if (lookahead == 'n') ADVANCE(760);
       END_STATE();
-    case 406:
+    case 404:
       if (lookahead == 'n') ADVANCE(698);
       END_STATE();
-    case 407:
+    case 405:
       if (lookahead == 'n') ADVANCE(797);
       END_STATE();
-    case 408:
+    case 406:
       if (lookahead == 'n') ADVANCE(794);
       END_STATE();
-    case 409:
+    case 407:
       if (lookahead == 'n') ADVANCE(819);
       END_STATE();
-    case 410:
-      if (lookahead == 'n') ADVANCE(173);
+    case 408:
+      if (lookahead == 'n') ADVANCE(172);
       END_STATE();
-    case 411:
-      if (lookahead == 'n') ADVANCE(173);
+    case 409:
+      if (lookahead == 'n') ADVANCE(172);
       if (lookahead == 'q') ADVANCE(715);
       END_STATE();
+    case 410:
+      if (lookahead == 'n') ADVANCE(302);
+      END_STATE();
+    case 411:
+      if (lookahead == 'n') ADVANCE(303);
+      END_STATE();
     case 412:
-      if (lookahead == 'n') ADVANCE(304);
-      END_STATE();
-    case 413:
-      if (lookahead == 'n') ADVANCE(305);
-      END_STATE();
-    case 414:
       if (lookahead == 'n') ADVANCE(665);
       END_STATE();
+    case 413:
+      if (lookahead == 'n') ADVANCE(306);
+      END_STATE();
+    case 414:
+      if (lookahead == 'n') ADVANCE(455);
+      END_STATE();
     case 415:
-      if (lookahead == 'n') ADVANCE(308);
+      if (lookahead == 'n') ADVANCE(182);
       END_STATE();
     case 416:
-      if (lookahead == 'n') ADVANCE(456);
+      if (lookahead == 'n') ADVANCE(101);
       END_STATE();
     case 417:
-      if (lookahead == 'n') ADVANCE(183);
+      if (lookahead == 'n') ADVANCE(566);
       END_STATE();
     case 418:
-      if (lookahead == 'n') ADVANCE(102);
+      if (lookahead == 'n') ADVANCE(124);
       END_STATE();
     case 419:
-      if (lookahead == 'n') ADVANCE(567);
-      END_STATE();
-    case 420:
-      if (lookahead == 'n') ADVANCE(125);
-      END_STATE();
-    case 421:
       if (lookahead == 'n') ADVANCE(66);
       END_STATE();
-    case 422:
-      if (lookahead == 'n') ADVANCE(163);
+    case 420:
+      if (lookahead == 'n') ADVANCE(162);
       END_STATE();
-    case 423:
+    case 421:
       if (lookahead == 'n') ADVANCE(631);
       END_STATE();
-    case 424:
-      if (lookahead == 'n') ADVANCE(250);
+    case 422:
+      if (lookahead == 'n') ADVANCE(248);
       END_STATE();
-    case 425:
+    case 423:
       if (lookahead == 'n') ADVANCE(71);
       END_STATE();
-    case 426:
+    case 424:
       if (lookahead == 'n') ADVANCE(32);
       END_STATE();
-    case 427:
+    case 425:
       if (lookahead == 'n') ADVANCE(58);
       END_STATE();
-    case 428:
+    case 426:
       if (lookahead == 'n') ADVANCE(639);
       END_STATE();
-    case 429:
+    case 427:
       if (lookahead == 'n') ADVANCE(653);
-      if (lookahead == 'u') ADVANCE(439);
+      if (lookahead == 'u') ADVANCE(437);
+      END_STATE();
+    case 428:
+      if (lookahead == 'n') ADVANCE(75);
+      END_STATE();
+    case 429:
+      if (lookahead == 'n') ADVANCE(613);
       END_STATE();
     case 430:
-      if (lookahead == 'n') ADVANCE(75);
+      if (lookahead == 'n') ADVANCE(638);
       END_STATE();
     case 431:
       if (lookahead == 'n') ADVANCE(614);
       END_STATE();
     case 432:
-      if (lookahead == 'n') ADVANCE(638);
-      END_STATE();
-    case 433:
-      if (lookahead == 'n') ADVANCE(615);
-      END_STATE();
-    case 434:
       if (lookahead == 'n') ADVANCE(646);
       END_STATE();
-    case 435:
+    case 433:
       if (lookahead == 'n') ADVANCE(623);
       END_STATE();
+    case 434:
+      if (lookahead == 'n') ADVANCE(216);
+      END_STATE();
+    case 435:
+      if (lookahead == 'n') ADVANCE(132);
+      if (lookahead == 't') ADVANCE(530);
+      if (lookahead == 'v') ADVANCE(112);
+      END_STATE();
     case 436:
-      if (lookahead == 'n') ADVANCE(218);
+      if (lookahead == 'n') ADVANCE(132);
+      if (lookahead == 'v') ADVANCE(112);
       END_STATE();
     case 437:
-      if (lookahead == 'n') ADVANCE(133);
-      if (lookahead == 't') ADVANCE(531);
-      if (lookahead == 'v') ADVANCE(113);
-      END_STATE();
-    case 438:
-      if (lookahead == 'n') ADVANCE(133);
-      if (lookahead == 'v') ADVANCE(113);
-      END_STATE();
-    case 439:
       if (lookahead == 'n') ADVANCE(642);
       END_STATE();
+    case 438:
+      if (lookahead == 'n') ADVANCE(281);
+      END_STATE();
+    case 439:
+      if (lookahead == 'n') ADVANCE(157);
+      END_STATE();
     case 440:
-      if (lookahead == 'n') ADVANCE(283);
+      if (lookahead == 'n') ADVANCE(354);
       END_STATE();
     case 441:
-      if (lookahead == 'n') ADVANCE(158);
+      if (lookahead == 'n') ADVANCE(134);
       END_STATE();
     case 442:
-      if (lookahead == 'n') ADVANCE(356);
-      END_STATE();
-    case 443:
-      if (lookahead == 'n') ADVANCE(135);
-      END_STATE();
-    case 444:
       if (lookahead == 'n') ADVANCE(88);
       END_STATE();
-    case 445:
+    case 443:
+      if (lookahead == 'o') ADVANCE(63);
+      END_STATE();
+    case 444:
       if (lookahead == 'o') ADVANCE(63);
       if (lookahead == 'r') ADVANCE(662);
       END_STATE();
-    case 446:
-      if (lookahead == 'o') ADVANCE(365);
-      if (lookahead == 'w') ADVANCE(223);
+    case 445:
+      if (lookahead == 'o') ADVANCE(363);
+      if (lookahead == 'w') ADVANCE(221);
       END_STATE();
-    case 447:
+    case 446:
       if (lookahead == 'o') ADVANCE(683);
       END_STATE();
-    case 448:
-      if (lookahead == 'o') ADVANCE(429);
-      END_STATE();
-    case 449:
-      if (lookahead == 'o') ADVANCE(518);
-      END_STATE();
-    case 450:
-      if (lookahead == 'o') ADVANCE(693);
-      END_STATE();
-    case 451:
-      if (lookahead == 'o') ADVANCE(392);
-      END_STATE();
-    case 452:
-      if (lookahead == 'o') ADVANCE(367);
-      END_STATE();
-    case 453:
-      if (lookahead == 'o') ADVANCE(609);
-      END_STATE();
-    case 454:
-      if (lookahead == 'o') ADVANCE(366);
-      END_STATE();
-    case 455:
-      if (lookahead == 'o') ADVANCE(349);
-      END_STATE();
-    case 456:
-      if (lookahead == 'o') ADVANCE(406);
-      END_STATE();
-    case 457:
-      if (lookahead == 'o') ADVANCE(624);
-      END_STATE();
-    case 458:
-      if (lookahead == 'o') ADVANCE(524);
-      END_STATE();
-    case 459:
-      if (lookahead == 'o') ADVANCE(628);
-      END_STATE();
-    case 460:
-      if (lookahead == 'o') ADVANCE(452);
-      END_STATE();
-    case 461:
-      if (lookahead == 'o') ADVANCE(176);
-      END_STATE();
-    case 462:
-      if (lookahead == 'o') ADVANCE(563);
-      END_STATE();
-    case 463:
-      if (lookahead == 'o') ADVANCE(83);
-      END_STATE();
-    case 464:
-      if (lookahead == 'o') ADVANCE(444);
-      END_STATE();
-    case 465:
-      if (lookahead == 'o') ADVANCE(408);
-      END_STATE();
-    case 466:
-      if (lookahead == 'o') ADVANCE(409);
-      END_STATE();
-    case 467:
-      if (lookahead == 'o') ADVANCE(613);
-      END_STATE();
-    case 468:
-      if (lookahead == 'o') ADVANCE(426);
-      END_STATE();
-    case 469:
-      if (lookahead == 'o') ADVANCE(523);
-      END_STATE();
-    case 470:
-      if (lookahead == 'o') ADVANCE(617);
-      END_STATE();
-    case 471:
-      if (lookahead == 'o') ADVANCE(553);
-      END_STATE();
-    case 472:
-      if (lookahead == 'o') ADVANCE(582);
-      END_STATE();
-    case 473:
-      if (lookahead == 'o') ADVANCE(185);
-      END_STATE();
-    case 474:
-      if (lookahead == 'o') ADVANCE(506);
-      END_STATE();
-    case 475:
-      if (lookahead == 'o') ADVANCE(589);
-      END_STATE();
-    case 476:
-      if (lookahead == 'o') ADVANCE(436);
-      END_STATE();
-    case 477:
+    case 447:
       if (lookahead == 'o') ADVANCE(427);
       END_STATE();
+    case 448:
+      if (lookahead == 'o') ADVANCE(517);
+      END_STATE();
+    case 449:
+      if (lookahead == 'o') ADVANCE(693);
+      END_STATE();
+    case 450:
+      if (lookahead == 'o') ADVANCE(390);
+      END_STATE();
+    case 451:
+      if (lookahead == 'o') ADVANCE(365);
+      END_STATE();
+    case 452:
+      if (lookahead == 'o') ADVANCE(608);
+      END_STATE();
+    case 453:
+      if (lookahead == 'o') ADVANCE(364);
+      END_STATE();
+    case 454:
+      if (lookahead == 'o') ADVANCE(347);
+      END_STATE();
+    case 455:
+      if (lookahead == 'o') ADVANCE(404);
+      END_STATE();
+    case 456:
+      if (lookahead == 'o') ADVANCE(624);
+      END_STATE();
+    case 457:
+      if (lookahead == 'o') ADVANCE(523);
+      END_STATE();
+    case 458:
+      if (lookahead == 'o') ADVANCE(628);
+      END_STATE();
+    case 459:
+      if (lookahead == 'o') ADVANCE(451);
+      END_STATE();
+    case 460:
+      if (lookahead == 'o') ADVANCE(175);
+      END_STATE();
+    case 461:
+      if (lookahead == 'o') ADVANCE(562);
+      END_STATE();
+    case 462:
+      if (lookahead == 'o') ADVANCE(83);
+      END_STATE();
+    case 463:
+      if (lookahead == 'o') ADVANCE(442);
+      END_STATE();
+    case 464:
+      if (lookahead == 'o') ADVANCE(406);
+      END_STATE();
+    case 465:
+      if (lookahead == 'o') ADVANCE(407);
+      END_STATE();
+    case 466:
+      if (lookahead == 'o') ADVANCE(612);
+      END_STATE();
+    case 467:
+      if (lookahead == 'o') ADVANCE(424);
+      END_STATE();
+    case 468:
+      if (lookahead == 'o') ADVANCE(522);
+      END_STATE();
+    case 469:
+      if (lookahead == 'o') ADVANCE(616);
+      END_STATE();
+    case 470:
+      if (lookahead == 'o') ADVANCE(552);
+      END_STATE();
+    case 471:
+      if (lookahead == 'o') ADVANCE(581);
+      END_STATE();
+    case 472:
+      if (lookahead == 'o') ADVANCE(184);
+      END_STATE();
+    case 473:
+      if (lookahead == 'o') ADVANCE(505);
+      END_STATE();
+    case 474:
+      if (lookahead == 'o') ADVANCE(588);
+      END_STATE();
+    case 475:
+      if (lookahead == 'o') ADVANCE(434);
+      END_STATE();
+    case 476:
+      if (lookahead == 'o') ADVANCE(425);
+      END_STATE();
+    case 477:
+      if (lookahead == 'o') ADVANCE(590);
+      END_STATE();
     case 478:
-      if (lookahead == 'o') ADVANCE(591);
+      if (lookahead == 'o') ADVANCE(188);
       END_STATE();
     case 479:
       if (lookahead == 'o') ADVANCE(189);
       END_STATE();
     case 480:
-      if (lookahead == 'o') ADVANCE(190);
+      if (lookahead == 'o') ADVANCE(550);
       END_STATE();
     case 481:
       if (lookahead == 'o') ADVANCE(551);
       END_STATE();
     case 482:
-      if (lookahead == 'o') ADVANCE(552);
+      if (lookahead == 'o') ADVANCE(191);
       END_STATE();
     case 483:
-      if (lookahead == 'o') ADVANCE(192);
+      if (lookahead == 'o') ADVANCE(433);
       END_STATE();
     case 484:
-      if (lookahead == 'o') ADVANCE(435);
+      if (lookahead == 'o') ADVANCE(192);
       END_STATE();
     case 485:
-      if (lookahead == 'o') ADVANCE(193);
+      if (lookahead == 'o') ADVANCE(555);
       END_STATE();
     case 486:
-      if (lookahead == 'o') ADVANCE(556);
+      if (lookahead == 'o') ADVANCE(367);
       END_STATE();
     case 487:
-      if (lookahead == 'o') ADVANCE(369);
+      if (lookahead == 'o') ADVANCE(357);
       END_STATE();
     case 488:
-      if (lookahead == 'o') ADVANCE(359);
+      if (lookahead == 'o') ADVANCE(486);
       END_STATE();
     case 489:
-      if (lookahead == 'o') ADVANCE(487);
-      END_STATE();
-    case 490:
       if (lookahead == 'o') ADVANCE(86);
       END_STATE();
-    case 491:
+    case 490:
       if (lookahead == 'o') ADVANCE(87);
       END_STATE();
-    case 492:
+    case 491:
       if (lookahead == 'o') ADVANCE(661);
       END_STATE();
-    case 493:
-      if (lookahead == 'p') ADVANCE(507);
-      if (lookahead == 'r') ADVANCE(371);
-      if (lookahead == 'u') ADVANCE(332);
+    case 492:
+      if (lookahead == 'p') ADVANCE(506);
+      if (lookahead == 'r') ADVANCE(369);
+      if (lookahead == 'u') ADVANCE(330);
       END_STATE();
-    case 494:
+    case 493:
       if (lookahead == 'p') ADVANCE(784);
       END_STATE();
-    case 495:
+    case 494:
       if (lookahead == 'p') ADVANCE(6);
       END_STATE();
-    case 496:
-      if (lookahead == 'p') ADVANCE(405);
+    case 495:
+      if (lookahead == 'p') ADVANCE(403);
       END_STATE();
-    case 497:
+    case 496:
       if (lookahead == 'p') ADVANCE(7);
       END_STATE();
-    case 498:
-      if (lookahead == 'p') ADVANCE(375);
+    case 497:
+      if (lookahead == 'p') ADVANCE(373);
       END_STATE();
-    case 499:
+    case 498:
       if (lookahead == 'p') ADVANCE(9);
       END_STATE();
-    case 500:
+    case 499:
       if (lookahead == 'p') ADVANCE(41);
       END_STATE();
-    case 501:
+    case 500:
       if (lookahead == 'p') ADVANCE(55);
       END_STATE();
+    case 501:
+      if (lookahead == 'p') ADVANCE(229);
+      END_STATE();
     case 502:
-      if (lookahead == 'p') ADVANCE(231);
+      if (lookahead == 'p') ADVANCE(535);
       END_STATE();
     case 503:
-      if (lookahead == 'p') ADVANCE(536);
-      END_STATE();
-    case 504:
       if (lookahead == 'p') ADVANCE(13);
       END_STATE();
-    case 505:
+    case 504:
       if (lookahead == 'p') ADVANCE(20);
       END_STATE();
+    case 505:
+      if (lookahead == 'p') ADVANCE(269);
+      END_STATE();
     case 506:
-      if (lookahead == 'p') ADVANCE(271);
+      if (lookahead == 'p') ADVANCE(226);
       END_STATE();
     case 507:
-      if (lookahead == 'p') ADVANCE(228);
+      if (lookahead == 'p') ADVANCE(119);
       END_STATE();
     case 508:
-      if (lookahead == 'p') ADVANCE(120);
+      if (lookahead == 'p') ADVANCE(647);
       END_STATE();
     case 509:
-      if (lookahead == 'p') ADVANCE(647);
+      if (lookahead == 'p') ADVANCE(121);
+      if (lookahead == 'q') ADVANCE(676);
       END_STATE();
     case 510:
       if (lookahead == 'p') ADVANCE(122);
-      if (lookahead == 'q') ADVANCE(676);
-      END_STATE();
-    case 511:
-      if (lookahead == 'p') ADVANCE(123);
       if (lookahead == 'q') ADVANCE(677);
       END_STATE();
-    case 512:
-      if (lookahead == 'p') ADVANCE(599);
+    case 511:
+      if (lookahead == 'p') ADVANCE(598);
       END_STATE();
-    case 513:
+    case 512:
       if (lookahead == 'p') ADVANCE(43);
       END_STATE();
-    case 514:
+    case 513:
       if (lookahead == 'q') ADVANCE(715);
       END_STATE();
-    case 515:
-      if (lookahead == 'q') ADVANCE(376);
+    case 514:
+      if (lookahead == 'q') ADVANCE(374);
       END_STATE();
-    case 516:
+    case 515:
       if (lookahead == 'q') ADVANCE(678);
       END_STATE();
-    case 517:
+    case 516:
       if (lookahead == 'r') ADVANCE(710);
       END_STATE();
-    case 518:
+    case 517:
       if (lookahead == 'r') ADVANCE(708);
       END_STATE();
+    case 518:
+      if (lookahead == 'r') ADVANCE(736);
+      END_STATE();
     case 519:
-      if (lookahead == 'r') ADVANCE(738);
+      if (lookahead == 'r') ADVANCE(740);
       END_STATE();
     case 520:
-      if (lookahead == 'r') ADVANCE(743);
-      END_STATE();
-    case 521:
       if (lookahead == 'r') ADVANCE(760);
       END_STATE();
-    case 522:
+    case 521:
       if (lookahead == 'r') ADVANCE(787);
       END_STATE();
-    case 523:
+    case 522:
       if (lookahead == 'r') ADVANCE(795);
       END_STATE();
+    case 523:
+      if (lookahead == 'r') ADVANCE(366);
+      END_STATE();
     case 524:
-      if (lookahead == 'r') ADVANCE(368);
+      if (lookahead == 'r') ADVANCE(143);
       END_STATE();
     case 525:
-      if (lookahead == 'r') ADVANCE(144);
-      END_STATE();
-    case 526:
       if (lookahead == 'r') ADVANCE(686);
       END_STATE();
-    case 527:
+    case 526:
       if (lookahead == 'r') ADVANCE(695);
       END_STATE();
-    case 528:
+    case 527:
       if (lookahead == 'r') ADVANCE(658);
       END_STATE();
-    case 529:
+    case 528:
       if (lookahead == 'r') ADVANCE(696);
       END_STATE();
-    case 530:
+    case 529:
       if (lookahead == 'r') ADVANCE(697);
       END_STATE();
-    case 531:
+    case 530:
       if (lookahead == 'r') ADVANCE(669);
       END_STATE();
-    case 532:
-      if (lookahead == 'r') ADVANCE(327);
+    case 531:
+      if (lookahead == 'r') ADVANCE(325);
       END_STATE();
-    case 533:
+    case 532:
       if (lookahead == 'r') ADVANCE(39);
       END_STATE();
-    case 534:
+    case 533:
       if (lookahead == 'r') ADVANCE(82);
       END_STATE();
+    case 534:
+      if (lookahead == 'r') ADVANCE(274);
+      END_STATE();
     case 535:
-      if (lookahead == 'r') ADVANCE(276);
+      if (lookahead == 'r') ADVANCE(449);
       END_STATE();
     case 536:
-      if (lookahead == 'r') ADVANCE(450);
+      if (lookahead == 'r') ADVANCE(462);
       END_STATE();
     case 537:
-      if (lookahead == 'r') ADVANCE(463);
+      if (lookahead == 'r') ADVANCE(327);
       END_STATE();
     case 538:
-      if (lookahead == 'r') ADVANCE(329);
+      if (lookahead == 'r') ADVANCE(585);
       END_STATE();
     case 539:
-      if (lookahead == 'r') ADVANCE(586);
+      if (lookahead == 'r') ADVANCE(223);
       END_STATE();
     case 540:
-      if (lookahead == 'r') ADVANCE(225);
+      if (lookahead == 'r') ADVANCE(152);
       END_STATE();
     case 541:
-      if (lookahead == 'r') ADVANCE(153);
-      END_STATE();
-    case 542:
       if (lookahead == 'r') ADVANCE(57);
       END_STATE();
+    case 542:
+      if (lookahead == 'r') ADVANCE(328);
+      END_STATE();
     case 543:
-      if (lookahead == 'r') ADVANCE(330);
+      if (lookahead == 'r') ADVANCE(473);
       END_STATE();
     case 544:
-      if (lookahead == 'r') ADVANCE(474);
-      END_STATE();
-    case 545:
-      if (lookahead == 'r') ADVANCE(333);
-      END_STATE();
-    case 546:
-      if (lookahead == 'r') ADVANCE(571);
-      END_STATE();
-    case 547:
       if (lookahead == 'r') ADVANCE(331);
       END_STATE();
+    case 545:
+      if (lookahead == 'r') ADVANCE(570);
+      END_STATE();
+    case 546:
+      if (lookahead == 'r') ADVANCE(329);
+      END_STATE();
+    case 547:
+      if (lookahead == 'r') ADVANCE(204);
+      END_STATE();
     case 548:
-      if (lookahead == 'r') ADVANCE(206);
+      if (lookahead == 'r') ADVANCE(208);
       END_STATE();
     case 549:
-      if (lookahead == 'r') ADVANCE(210);
+      if (lookahead == 'r') ADVANCE(575);
       END_STATE();
     case 550:
-      if (lookahead == 'r') ADVANCE(576);
+      if (lookahead == 'r') ADVANCE(209);
       END_STATE();
     case 551:
       if (lookahead == 'r') ADVANCE(211);
       END_STATE();
     case 552:
-      if (lookahead == 'r') ADVANCE(213);
+      if (lookahead == 'r') ADVANCE(615);
       END_STATE();
     case 553:
-      if (lookahead == 'r') ADVANCE(616);
-      END_STATE();
-    case 554:
       if (lookahead == 'r') ADVANCE(644);
       END_STATE();
+    case 554:
+      if (lookahead == 'r') ADVANCE(244);
+      END_STATE();
     case 555:
-      if (lookahead == 'r') ADVANCE(246);
+      if (lookahead == 'r') ADVANCE(215);
       END_STATE();
     case 556:
-      if (lookahead == 'r') ADVANCE(217);
+      if (lookahead == 'r') ADVANCE(225);
+      if (lookahead == 'v') ADVANCE(287);
       END_STATE();
     case 557:
-      if (lookahead == 'r') ADVANCE(227);
-      if (lookahead == 'v') ADVANCE(289);
+      if (lookahead == 'r') ADVANCE(336);
       END_STATE();
     case 558:
-      if (lookahead == 'r') ADVANCE(338);
+      if (lookahead == 'r') ADVANCE(154);
+      if (lookahead == 's') ADVANCE(514);
+      if (lookahead == 'x') ADVANCE(587);
       END_STATE();
     case 559:
-      if (lookahead == 'r') ADVANCE(155);
-      if (lookahead == 's') ADVANCE(515);
-      if (lookahead == 'x') ADVANCE(588);
+      if (lookahead == 'r') ADVANCE(187);
       END_STATE();
     case 560:
-      if (lookahead == 'r') ADVANCE(188);
+      if (lookahead == 'r') ADVANCE(340);
       END_STATE();
     case 561:
-      if (lookahead == 'r') ADVANCE(342);
+      if (lookahead == 'r') ADVANCE(253);
       END_STATE();
     case 562:
-      if (lookahead == 'r') ADVANCE(255);
-      END_STATE();
-    case 563:
       if (lookahead == 'r') ADVANCE(690);
       END_STATE();
-    case 564:
-      if (lookahead == 'r') ADVANCE(360);
+    case 563:
+      if (lookahead == 'r') ADVANCE(358);
       END_STATE();
-    case 565:
+    case 564:
       if (lookahead == 's') ADVANCE(760);
       END_STATE();
-    case 566:
+    case 565:
       if (lookahead == 's') ADVANCE(729);
       END_STATE();
-    case 567:
+    case 566:
       if (lookahead == 's') ADVANCE(728);
       END_STATE();
-    case 568:
-      if (lookahead == 's') ADVANCE(740);
+    case 567:
+      if (lookahead == 's') ADVANCE(738);
       END_STATE();
-    case 569:
+    case 568:
       if (lookahead == 's') ADVANCE(781);
       END_STATE();
-    case 570:
+    case 569:
       if (lookahead == 's') ADVANCE(813);
       END_STATE();
-    case 571:
+    case 570:
       if (lookahead == 's') ADVANCE(814);
       END_STATE();
-    case 572:
+    case 571:
       if (lookahead == 's') ADVANCE(816);
       END_STATE();
-    case 573:
+    case 572:
       if (lookahead == 's') ADVANCE(817);
       END_STATE();
-    case 574:
+    case 573:
       if (lookahead == 's') ADVANCE(818);
       END_STATE();
-    case 575:
-      if (lookahead == 's') ADVANCE(370);
-      if (lookahead == 't') ADVANCE(100);
+    case 574:
+      if (lookahead == 's') ADVANCE(368);
+      if (lookahead == 't') ADVANCE(99);
       END_STATE();
-    case 576:
+    case 575:
       if (lookahead == 's') ADVANCE(815);
       END_STATE();
-    case 577:
+    case 576:
       if (lookahead == 's') ADVANCE(60);
       END_STATE();
+    case 577:
+      if (lookahead == 's') ADVANCE(203);
+      END_STATE();
     case 578:
-      if (lookahead == 's') ADVANCE(205);
+      if (lookahead == 's') ADVANCE(160);
       END_STATE();
     case 579:
-      if (lookahead == 's') ADVANCE(161);
-      END_STATE();
-    case 580:
       if (lookahead == 's') ADVANCE(630);
       END_STATE();
-    case 581:
+    case 580:
       if (lookahead == 's') ADVANCE(64);
       END_STATE();
-    case 582:
+    case 581:
       if (lookahead == 's') ADVANCE(633);
       END_STATE();
+    case 582:
+      if (lookahead == 's') ADVANCE(317);
+      END_STATE();
     case 583:
-      if (lookahead == 's') ADVANCE(319);
+      if (lookahead == 's') ADVANCE(463);
       END_STATE();
     case 584:
-      if (lookahead == 's') ADVANCE(464);
-      END_STATE();
-    case 585:
       if (lookahead == 's') ADVANCE(76);
       END_STATE();
+    case 585:
+      if (lookahead == 's') ADVANCE(352);
+      END_STATE();
     case 586:
-      if (lookahead == 's') ADVANCE(354);
+      if (lookahead == 's') ADVANCE(341);
       END_STATE();
     case 587:
-      if (lookahead == 's') ADVANCE(343);
+      if (lookahead == 's') ADVANCE(568);
       END_STATE();
     case 588:
-      if (lookahead == 's') ADVANCE(569);
+      if (lookahead == 's') ADVANCE(610);
       END_STATE();
     case 589:
-      if (lookahead == 's') ADVANCE(611);
+      if (lookahead == 's') ADVANCE(412);
       END_STATE();
     case 590:
-      if (lookahead == 's') ADVANCE(414);
-      END_STATE();
-    case 591:
       if (lookahead == 's') ADVANCE(650);
       END_STATE();
-    case 592:
+    case 591:
       if (lookahead == 's') ADVANCE(635);
       END_STATE();
-    case 593:
-      if (lookahead == 's') ADVANCE(266);
+    case 592:
+      if (lookahead == 's') ADVANCE(264);
       END_STATE();
-    case 594:
+    case 593:
       if (lookahead == 's') ADVANCE(636);
       END_STATE();
-    case 595:
+    case 594:
       if (lookahead == 's') ADVANCE(640);
       END_STATE();
-    case 596:
+    case 595:
       if (lookahead == 's') ADVANCE(643);
       END_STATE();
+    case 596:
+      if (lookahead == 's') ADVANCE(246);
+      END_STATE();
     case 597:
-      if (lookahead == 's') ADVANCE(248);
+      if (lookahead == 's') ADVANCE(254);
       END_STATE();
     case 598:
-      if (lookahead == 's') ADVANCE(256);
-      END_STATE();
-    case 599:
       if (lookahead == 's') ADVANCE(654);
       END_STATE();
+    case 599:
+      if (lookahead == 's') ADVANCE(238);
+      END_STATE();
     case 600:
-      if (lookahead == 's') ADVANCE(240);
+      if (lookahead == 's') ADVANCE(597);
       END_STATE();
     case 601:
-      if (lookahead == 's') ADVANCE(598);
+      if (lookahead == 's') ADVANCE(249);
       END_STATE();
     case 602:
-      if (lookahead == 's') ADVANCE(251);
-      END_STATE();
-    case 603:
       if (lookahead == 's') ADVANCE(79);
       END_STATE();
+    case 603:
+      if (lookahead == 's') ADVANCE(166);
+      END_STATE();
     case 604:
-      if (lookahead == 's') ADVANCE(167);
+      if (lookahead == 's') ADVANCE(656);
       END_STATE();
     case 605:
-      if (lookahead == 's') ADVANCE(656);
+      if (lookahead == 's') ADVANCE(489);
       END_STATE();
     case 606:
       if (lookahead == 's') ADVANCE(490);
       END_STATE();
     case 607:
-      if (lookahead == 's') ADVANCE(491);
+      if (lookahead == 't') ADVANCE(142);
       END_STATE();
     case 608:
-      if (lookahead == 't') ADVANCE(143);
-      END_STATE();
-    case 609:
       if (lookahead == 't') ADVANCE(765);
       END_STATE();
-    case 610:
+    case 609:
       if (lookahead == 't') ADVANCE(731);
       END_STATE();
-    case 611:
+    case 610:
       if (lookahead == 't') ADVANCE(786);
       END_STATE();
-    case 612:
+    case 611:
       if (lookahead == 't') ADVANCE(796);
       END_STATE();
-    case 613:
+    case 612:
       if (lookahead == 't') ADVANCE(823);
       END_STATE();
-    case 614:
+    case 613:
       if (lookahead == 't') ADVANCE(793);
       END_STATE();
-    case 615:
+    case 614:
       if (lookahead == 't') ADVANCE(801);
       END_STATE();
-    case 616:
+    case 615:
       if (lookahead == 't') ADVANCE(777);
       END_STATE();
-    case 617:
+    case 616:
       if (lookahead == 't') ADVANCE(821);
       END_STATE();
+    case 617:
+      if (lookahead == 't') ADVANCE(618);
+      END_STATE();
     case 618:
-      if (lookahead == 't') ADVANCE(619);
+      if (lookahead == 't') ADVANCE(496);
       END_STATE();
     case 619:
-      if (lookahead == 't') ADVANCE(497);
+      if (lookahead == 't') ADVANCE(99);
       END_STATE();
     case 620:
-      if (lookahead == 't') ADVANCE(315);
+      if (lookahead == 't') ADVANCE(313);
       END_STATE();
     case 621:
       if (lookahead == 't') ADVANCE(694);
       END_STATE();
     case 622:
-      if (lookahead == 't') ADVANCE(316);
+      if (lookahead == 't') ADVANCE(314);
       END_STATE();
     case 623:
-      if (lookahead == 't') ADVANCE(101);
+      if (lookahead == 't') ADVANCE(100);
       END_STATE();
     case 624:
       if (lookahead == 't') ADVANCE(54);
       END_STATE();
     case 625:
-      if (lookahead == 't') ADVANCE(322);
+      if (lookahead == 't') ADVANCE(320);
       END_STATE();
     case 626:
-      if (lookahead == 't') ADVANCE(150);
+      if (lookahead == 't') ADVANCE(149);
       END_STATE();
     case 627:
-      if (lookahead == 't') ADVANCE(323);
+      if (lookahead == 't') ADVANCE(321);
       END_STATE();
     case 628:
-      if (lookahead == 't') ADVANCE(424);
+      if (lookahead == 't') ADVANCE(422);
       END_STATE();
     case 629:
-      if (lookahead == 't') ADVANCE(317);
+      if (lookahead == 't') ADVANCE(315);
       END_STATE();
     case 630:
-      if (lookahead == 't') ADVANCE(558);
+      if (lookahead == 't') ADVANCE(557);
       END_STATE();
     case 631:
       if (lookahead == 't') ADVANCE(24);
       END_STATE();
     case 632:
-      if (lookahead == 't') ADVANCE(318);
+      if (lookahead == 't') ADVANCE(316);
       END_STATE();
     case 633:
-      if (lookahead == 't') ADVANCE(418);
+      if (lookahead == 't') ADVANCE(416);
       END_STATE();
     case 634:
-      if (lookahead == 't') ADVANCE(111);
+      if (lookahead == 't') ADVANCE(110);
       END_STATE();
     case 635:
       if (lookahead == 't') ADVANCE(10);
@@ -3624,7 +3691,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 't') ADVANCE(11);
       END_STATE();
     case 637:
-      if (lookahead == 't') ADVANCE(97);
+      if (lookahead == 't') ADVANCE(96);
       END_STATE();
     case 638:
       if (lookahead == 't') ADVANCE(12);
@@ -3633,13 +3700,13 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 't') ADVANCE(68);
       END_STATE();
     case 640:
-      if (lookahead == 't') ADVANCE(107);
+      if (lookahead == 't') ADVANCE(106);
       END_STATE();
     case 641:
-      if (lookahead == 't') ADVANCE(537);
+      if (lookahead == 't') ADVANCE(536);
       END_STATE();
     case 642:
-      if (lookahead == 't') ADVANCE(527);
+      if (lookahead == 't') ADVANCE(526);
       END_STATE();
     case 643:
       if (lookahead == 't') ADVANCE(21);
@@ -3648,49 +3715,49 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 't') ADVANCE(59);
       END_STATE();
     case 645:
-      if (lookahead == 't') ADVANCE(238);
+      if (lookahead == 't') ADVANCE(236);
       END_STATE();
     case 646:
       if (lookahead == 't') ADVANCE(23);
       END_STATE();
     case 647:
-      if (lookahead == 't') ADVANCE(247);
+      if (lookahead == 't') ADVANCE(245);
       END_STATE();
     case 648:
-      if (lookahead == 't') ADVANCE(239);
+      if (lookahead == 't') ADVANCE(237);
       END_STATE();
     case 649:
-      if (lookahead == 't') ADVANCE(249);
+      if (lookahead == 't') ADVANCE(247);
       END_STATE();
     case 650:
-      if (lookahead == 't') ADVANCE(106);
+      if (lookahead == 't') ADVANCE(105);
       END_STATE();
     case 651:
       if (lookahead == 't') ADVANCE(84);
       END_STATE();
     case 652:
-      if (lookahead == 't') ADVANCE(500);
+      if (lookahead == 't') ADVANCE(499);
       END_STATE();
     case 653:
-      if (lookahead == 't') ADVANCE(350);
+      if (lookahead == 't') ADVANCE(348);
       END_STATE();
     case 654:
-      if (lookahead == 't') ADVANCE(555);
+      if (lookahead == 't') ADVANCE(554);
       END_STATE();
     case 655:
       if (lookahead == 't') ADVANCE(652);
       END_STATE();
     case 656:
-      if (lookahead == 't') ADVANCE(561);
+      if (lookahead == 't') ADVANCE(560);
       END_STATE();
     case 657:
-      if (lookahead == 't') ADVANCE(358);
+      if (lookahead == 't') ADVANCE(356);
       END_STATE();
     case 658:
-      if (lookahead == 't') ADVANCE(603);
+      if (lookahead == 't') ADVANCE(602);
       END_STATE();
     case 659:
-      if (lookahead == 't') ADVANCE(513);
+      if (lookahead == 't') ADVANCE(512);
       END_STATE();
     case 660:
       if (lookahead == 't') ADVANCE(659);
@@ -3699,100 +3766,100 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 't') ADVANCE(89);
       END_STATE();
     case 662:
-      if (lookahead == 'u') ADVANCE(204);
+      if (lookahead == 'u') ADVANCE(202);
       END_STATE();
     case 663:
-      if (lookahead == 'u') ADVANCE(139);
+      if (lookahead == 'u') ADVANCE(138);
       END_STATE();
     case 664:
-      if (lookahead == 'u') ADVANCE(501);
+      if (lookahead == 'u') ADVANCE(500);
       END_STATE();
     case 665:
-      if (lookahead == 'u') ADVANCE(385);
+      if (lookahead == 'u') ADVANCE(383);
       END_STATE();
     case 666:
-      if (lookahead == 'u') ADVANCE(512);
+      if (lookahead == 'u') ADVANCE(511);
       END_STATE();
     case 667:
-      if (lookahead == 'u') ADVANCE(378);
+      if (lookahead == 'u') ADVANCE(376);
       END_STATE();
     case 668:
-      if (lookahead == 'u') ADVANCE(282);
+      if (lookahead == 'u') ADVANCE(280);
       END_STATE();
     case 669:
-      if (lookahead == 'u') ADVANCE(422);
+      if (lookahead == 'u') ADVANCE(420);
       END_STATE();
     case 670:
-      if (lookahead == 'u') ADVANCE(442);
+      if (lookahead == 'u') ADVANCE(440);
       END_STATE();
     case 671:
-      if (lookahead == 'u') ADVANCE(544);
+      if (lookahead == 'u') ADVANCE(543);
       END_STATE();
     case 672:
-      if (lookahead == 'u') ADVANCE(543);
+      if (lookahead == 'u') ADVANCE(542);
       END_STATE();
     case 673:
       if (lookahead == 'u') ADVANCE(627);
       END_STATE();
     case 674:
-      if (lookahead == 'u') ADVANCE(547);
+      if (lookahead == 'u') ADVANCE(546);
       END_STATE();
     case 675:
-      if (lookahead == 'u') ADVANCE(259);
+      if (lookahead == 'u') ADVANCE(257);
       END_STATE();
     case 676:
-      if (lookahead == 'u') ADVANCE(268);
+      if (lookahead == 'u') ADVANCE(266);
       END_STATE();
     case 677:
-      if (lookahead == 'u') ADVANCE(269);
+      if (lookahead == 'u') ADVANCE(267);
       END_STATE();
     case 678:
-      if (lookahead == 'u') ADVANCE(284);
+      if (lookahead == 'u') ADVANCE(282);
       END_STATE();
     case 679:
-      if (lookahead == 'u') ADVANCE(130);
+      if (lookahead == 'u') ADVANCE(129);
       END_STATE();
     case 680:
-      if (lookahead == 'u') ADVANCE(287);
+      if (lookahead == 'u') ADVANCE(285);
       END_STATE();
     case 681:
-      if (lookahead == 'u') ADVANCE(383);
+      if (lookahead == 'u') ADVANCE(381);
       END_STATE();
     case 682:
       if (lookahead == 'v') ADVANCE(49);
       END_STATE();
     case 683:
-      if (lookahead == 'v') ADVANCE(235);
+      if (lookahead == 'v') ADVANCE(233);
       END_STATE();
     case 684:
-      if (lookahead == 'v') ADVANCE(340);
+      if (lookahead == 'v') ADVANCE(338);
       END_STATE();
     case 685:
-      if (lookahead == 'v') ADVANCE(454);
+      if (lookahead == 'v') ADVANCE(453);
       END_STATE();
     case 686:
-      if (lookahead == 'v') ADVANCE(274);
+      if (lookahead == 'v') ADVANCE(272);
       END_STATE();
     case 687:
       if (lookahead == 'w') ADVANCE(22);
       END_STATE();
     case 688:
-      if (lookahead == 'w') ADVANCE(339);
+      if (lookahead == 'w') ADVANCE(337);
       END_STATE();
     case 689:
-      if (lookahead == 'w') ADVANCE(129);
+      if (lookahead == 'w') ADVANCE(128);
       END_STATE();
     case 690:
-      if (lookahead == 'w') ADVANCE(117);
+      if (lookahead == 'w') ADVANCE(116);
       END_STATE();
     case 691:
-      if (lookahead == 'w') ADVANCE(344);
+      if (lookahead == 'w') ADVANCE(342);
       END_STATE();
     case 692:
       if (lookahead == 'x') ADVANCE(73);
       END_STATE();
     case 693:
-      if (lookahead == 'x') ADVANCE(346);
+      if (lookahead == 'x') ADVANCE(344);
       END_STATE();
     case 694:
       if (lookahead == 'y') ADVANCE(798);
@@ -3807,16 +3874,16 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'y') ADVANCE(808);
       END_STATE();
     case 698:
-      if (lookahead == 'y') ADVANCE(387);
+      if (lookahead == 'y') ADVANCE(385);
       END_STATE();
     case 699:
       if (lookahead == 'y') ADVANCE(645);
       END_STATE();
     case 700:
-      if (lookahead == 'z') ADVANCE(476);
+      if (lookahead == 'z') ADVANCE(475);
       END_STATE();
     case 701:
-      if (lookahead == 'z') ADVANCE(257);
+      if (lookahead == 'z') ADVANCE(255);
       END_STATE();
     case 702:
       if (lookahead == '|') ADVANCE(711);
@@ -3834,20 +3901,20 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '2') ADVANCE(15);
       if (lookahead == '[') ADVANCE(768);
       if (lookahead == '^') ADVANCE(53);
-      if (lookahead == 'a') ADVANCE(399);
-      if (lookahead == 'c') ADVANCE(294);
-      if (lookahead == 'e') ADVANCE(410);
+      if (lookahead == 'a') ADVANCE(397);
+      if (lookahead == 'c') ADVANCE(292);
+      if (lookahead == 'e') ADVANCE(408);
       if (lookahead == 'f') ADVANCE(91);
-      if (lookahead == 'h') ADVANCE(618);
-      if (lookahead == 'i') ADVANCE(495);
-      if (lookahead == 'l') ADVANCE(262);
-      if (lookahead == 'n') ADVANCE(453);
-      if (lookahead == 'o') ADVANCE(517);
-      if (lookahead == 'r') ADVANCE(93);
-      if (lookahead == 's') ADVANCE(575);
-      if (lookahead == 't') ADVANCE(445);
-      if (lookahead == 'u') ADVANCE(493);
-      if (lookahead == 'x') ADVANCE(449);
+      if (lookahead == 'h') ADVANCE(617);
+      if (lookahead == 'i') ADVANCE(494);
+      if (lookahead == 'l') ADVANCE(260);
+      if (lookahead == 'n') ADVANCE(452);
+      if (lookahead == 'o') ADVANCE(516);
+      if (lookahead == 'r') ADVANCE(92);
+      if (lookahead == 's') ADVANCE(574);
+      if (lookahead == 't') ADVANCE(444);
+      if (lookahead == 'u') ADVANCE(492);
+      if (lookahead == 'x') ADVANCE(448);
       if (lookahead == '|') ADVANCE(702);
       if (lookahead == '}') ADVANCE(713);
       if (lookahead == '0' ||
@@ -3907,7 +3974,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 719:
       ACCEPT_TOKEN(anon_sym_le);
-      if (lookahead == 'n') ADVANCE(735);
+      if (lookahead == 'n') ADVANCE(743);
       END_STATE();
     case 720:
       ACCEPT_TOKEN(anon_sym_gt);
@@ -3957,37 +4024,37 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(anon_sym_RPAREN);
       END_STATE();
     case 735:
-      ACCEPT_TOKEN(anon_sym_len);
-      END_STATE();
-    case 736:
-      ACCEPT_TOKEN(anon_sym_ends_with);
-      END_STATE();
-    case 737:
       ACCEPT_TOKEN(anon_sym_lookup_json_string);
       END_STATE();
-    case 738:
+    case 736:
       ACCEPT_TOKEN(anon_sym_lower);
       END_STATE();
-    case 739:
+    case 737:
       ACCEPT_TOKEN(anon_sym_regex_replace);
       END_STATE();
-    case 740:
+    case 738:
       ACCEPT_TOKEN(anon_sym_remove_bytes);
       END_STATE();
-    case 741:
-      ACCEPT_TOKEN(anon_sym_starts_with);
-      END_STATE();
-    case 742:
+    case 739:
       ACCEPT_TOKEN(anon_sym_to_string);
       END_STATE();
-    case 743:
+    case 740:
       ACCEPT_TOKEN(anon_sym_upper);
       END_STATE();
-    case 744:
+    case 741:
       ACCEPT_TOKEN(anon_sym_url_decode);
       END_STATE();
-    case 745:
+    case 742:
       ACCEPT_TOKEN(anon_sym_uuidv4);
+      END_STATE();
+    case 743:
+      ACCEPT_TOKEN(anon_sym_len);
+      END_STATE();
+    case 744:
+      ACCEPT_TOKEN(anon_sym_ends_with);
+      END_STATE();
+    case 745:
+      ACCEPT_TOKEN(anon_sym_starts_with);
       END_STATE();
     case 746:
       ACCEPT_TOKEN(sym_number);
@@ -4047,7 +4114,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 761:
       ACCEPT_TOKEN(sym_ip_list);
-      if (lookahead == '.') ADVANCE(98);
+      if (lookahead == '.') ADVANCE(97);
       if (('0' <= lookahead && lookahead <= '9') ||
           lookahead == '_' ||
           ('a' <= lookahead && lookahead <= 'z')) ADVANCE(764);
@@ -4118,7 +4185,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 779:
       ACCEPT_TOKEN(anon_sym_cf_DOTwaf_DOTscore);
-      if (lookahead == '.') ADVANCE(559);
+      if (lookahead == '.') ADVANCE(558);
       END_STATE();
     case 780:
       ACCEPT_TOKEN(anon_sym_cf_DOTwaf_DOTscore_DOTsqli);
@@ -4131,7 +4198,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 783:
       ACCEPT_TOKEN(anon_sym_ip_DOTsrc);
-      if (lookahead == '.') ADVANCE(160);
+      if (lookahead == '.') ADVANCE(159);
       END_STATE();
     case 784:
       ACCEPT_TOKEN(anon_sym_cf_DOTedge_DOTserver_ip);
@@ -4153,7 +4220,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 790:
       ACCEPT_TOKEN(anon_sym_http_DOTrequest_DOTuri);
-      if (lookahead == '.') ADVANCE(510);
+      if (lookahead == '.') ADVANCE(509);
       END_STATE();
     case 791:
       ACCEPT_TOKEN(anon_sym_http_DOTrequest_DOTuri_DOTpath);
@@ -4202,7 +4269,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 806:
       ACCEPT_TOKEN(anon_sym_raw_DOThttp_DOTrequest_DOTuri);
-      if (lookahead == '.') ADVANCE(511);
+      if (lookahead == '.') ADVANCE(510);
       END_STATE();
     case 807:
       ACCEPT_TOKEN(anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath);
@@ -4227,11 +4294,11 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 814:
       ACCEPT_TOKEN(anon_sym_http_DOTrequest_DOTheaders);
-      if (lookahead == '.') ADVANCE(437);
+      if (lookahead == '.') ADVANCE(435);
       END_STATE();
     case 815:
       ACCEPT_TOKEN(anon_sym_http_DOTrequest_DOTheaders);
-      if (lookahead == '.') ADVANCE(438);
+      if (lookahead == '.') ADVANCE(436);
       END_STATE();
     case 816:
       ACCEPT_TOKEN(anon_sym_http_DOTrequest_DOTheaders_DOTnames);
@@ -4314,10 +4381,10 @@ static const TSLexMode ts_lex_modes[STATE_COUNT] = {
   [39] = {.lex_state = 703},
   [40] = {.lex_state = 703},
   [41] = {.lex_state = 703},
-  [42] = {.lex_state = 703},
-  [43] = {.lex_state = 703},
-  [44] = {.lex_state = 1},
-  [45] = {.lex_state = 1},
+  [42] = {.lex_state = 1},
+  [43] = {.lex_state = 1},
+  [44] = {.lex_state = 703},
+  [45] = {.lex_state = 703},
   [46] = {.lex_state = 703},
   [47] = {.lex_state = 703},
   [48] = {.lex_state = 703},
@@ -4339,57 +4406,57 @@ static const TSLexMode ts_lex_modes[STATE_COUNT] = {
   [64] = {.lex_state = 703},
   [65] = {.lex_state = 703},
   [66] = {.lex_state = 703},
-  [67] = {.lex_state = 0},
-  [68] = {.lex_state = 2},
-  [69] = {.lex_state = 2},
-  [70] = {.lex_state = 2},
-  [71] = {.lex_state = 2},
-  [72] = {.lex_state = 2},
-  [73] = {.lex_state = 2},
-  [74] = {.lex_state = 2},
-  [75] = {.lex_state = 2},
-  [76] = {.lex_state = 2},
-  [77] = {.lex_state = 2},
-  [78] = {.lex_state = 2},
-  [79] = {.lex_state = 2},
+  [67] = {.lex_state = 703},
+  [68] = {.lex_state = 703},
+  [69] = {.lex_state = 703},
+  [70] = {.lex_state = 703},
+  [71] = {.lex_state = 703},
+  [72] = {.lex_state = 703},
+  [73] = {.lex_state = 703},
+  [74] = {.lex_state = 703},
+  [75] = {.lex_state = 703},
+  [76] = {.lex_state = 703},
+  [77] = {.lex_state = 703},
+  [78] = {.lex_state = 703},
+  [79] = {.lex_state = 703},
   [80] = {.lex_state = 2},
   [81] = {.lex_state = 2},
   [82] = {.lex_state = 2},
   [83] = {.lex_state = 2},
   [84] = {.lex_state = 2},
   [85] = {.lex_state = 2},
-  [86] = {.lex_state = 0},
-  [87] = {.lex_state = 0},
-  [88] = {.lex_state = 0},
-  [89] = {.lex_state = 1},
-  [90] = {.lex_state = 1},
-  [91] = {.lex_state = 703},
-  [92] = {.lex_state = 703},
-  [93] = {.lex_state = 1},
-  [94] = {.lex_state = 1},
-  [95] = {.lex_state = 1},
-  [96] = {.lex_state = 703},
-  [97] = {.lex_state = 0},
+  [86] = {.lex_state = 2},
+  [87] = {.lex_state = 2},
+  [88] = {.lex_state = 2},
+  [89] = {.lex_state = 2},
+  [90] = {.lex_state = 2},
+  [91] = {.lex_state = 2},
+  [92] = {.lex_state = 2},
+  [93] = {.lex_state = 2},
+  [94] = {.lex_state = 2},
+  [95] = {.lex_state = 0},
+  [96] = {.lex_state = 1},
+  [97] = {.lex_state = 703},
   [98] = {.lex_state = 1},
-  [99] = {.lex_state = 0},
-  [100] = {.lex_state = 1},
+  [99] = {.lex_state = 703},
+  [100] = {.lex_state = 703},
   [101] = {.lex_state = 1},
-  [102] = {.lex_state = 703},
-  [103] = {.lex_state = 0},
+  [102] = {.lex_state = 1},
+  [103] = {.lex_state = 1},
   [104] = {.lex_state = 1},
-  [105] = {.lex_state = 0},
-  [106] = {.lex_state = 0},
-  [107] = {.lex_state = 0},
-  [108] = {.lex_state = 0},
-  [109] = {.lex_state = 0},
-  [110] = {.lex_state = 0},
-  [111] = {.lex_state = 0},
+  [105] = {.lex_state = 1},
+  [106] = {.lex_state = 1},
+  [107] = {.lex_state = 1},
+  [108] = {.lex_state = 703},
+  [109] = {.lex_state = 1},
+  [110] = {.lex_state = 1},
+  [111] = {.lex_state = 1},
   [112] = {.lex_state = 0},
-  [113] = {.lex_state = 0},
+  [113] = {.lex_state = 1},
   [114] = {.lex_state = 1},
   [115] = {.lex_state = 0},
   [116] = {.lex_state = 0},
-  [117] = {.lex_state = 0},
+  [117] = {.lex_state = 1},
   [118] = {.lex_state = 0},
   [119] = {.lex_state = 0},
   [120] = {.lex_state = 0},
@@ -4399,12 +4466,12 @@ static const TSLexMode ts_lex_modes[STATE_COUNT] = {
   [124] = {.lex_state = 0},
   [125] = {.lex_state = 0},
   [126] = {.lex_state = 0},
-  [127] = {.lex_state = 1},
-  [128] = {.lex_state = 703},
+  [127] = {.lex_state = 0},
+  [128] = {.lex_state = 1},
   [129] = {.lex_state = 0},
-  [130] = {.lex_state = 703},
+  [130] = {.lex_state = 0},
   [131] = {.lex_state = 0},
-  [132] = {.lex_state = 703},
+  [132] = {.lex_state = 0},
   [133] = {.lex_state = 0},
   [134] = {.lex_state = 0},
   [135] = {.lex_state = 0},
@@ -4416,22 +4483,22 @@ static const TSLexMode ts_lex_modes[STATE_COUNT] = {
   [141] = {.lex_state = 0},
   [142] = {.lex_state = 0},
   [143] = {.lex_state = 0},
-  [144] = {.lex_state = 0},
+  [144] = {.lex_state = 703},
   [145] = {.lex_state = 0},
   [146] = {.lex_state = 0},
   [147] = {.lex_state = 0},
   [148] = {.lex_state = 0},
-  [149] = {.lex_state = 703},
+  [149] = {.lex_state = 0},
   [150] = {.lex_state = 0},
-  [151] = {.lex_state = 2},
+  [151] = {.lex_state = 0},
   [152] = {.lex_state = 703},
-  [153] = {.lex_state = 703},
+  [153] = {.lex_state = 1},
   [154] = {.lex_state = 0},
-  [155] = {.lex_state = 703},
+  [155] = {.lex_state = 0},
   [156] = {.lex_state = 0},
   [157] = {.lex_state = 0},
-  [158] = {.lex_state = 0},
-  [159] = {.lex_state = 0},
+  [158] = {.lex_state = 2},
+  [159] = {.lex_state = 703},
   [160] = {.lex_state = 0},
   [161] = {.lex_state = 0},
   [162] = {.lex_state = 0},
@@ -4439,7 +4506,7 @@ static const TSLexMode ts_lex_modes[STATE_COUNT] = {
   [164] = {.lex_state = 0},
   [165] = {.lex_state = 0},
   [166] = {.lex_state = 0},
-  [167] = {.lex_state = 0},
+  [167] = {.lex_state = 703},
   [168] = {.lex_state = 0},
   [169] = {.lex_state = 0},
   [170] = {.lex_state = 0},
@@ -4449,24 +4516,74 @@ static const TSLexMode ts_lex_modes[STATE_COUNT] = {
   [174] = {.lex_state = 0},
   [175] = {.lex_state = 0},
   [176] = {.lex_state = 0},
-  [177] = {.lex_state = 703},
+  [177] = {.lex_state = 0},
   [178] = {.lex_state = 0},
   [179] = {.lex_state = 0},
   [180] = {.lex_state = 0},
   [181] = {.lex_state = 0},
-  [182] = {.lex_state = 703},
+  [182] = {.lex_state = 0},
   [183] = {.lex_state = 0},
   [184] = {.lex_state = 0},
   [185] = {.lex_state = 0},
   [186] = {.lex_state = 0},
-  [187] = {.lex_state = 0},
-  [188] = {.lex_state = 0},
+  [187] = {.lex_state = 1},
+  [188] = {.lex_state = 703},
   [189] = {.lex_state = 0},
   [190] = {.lex_state = 0},
   [191] = {.lex_state = 0},
   [192] = {.lex_state = 0},
-  [193] = {.lex_state = 1},
-  [194] = {.lex_state = 0},
+  [193] = {.lex_state = 703},
+  [194] = {.lex_state = 703},
+  [195] = {.lex_state = 703},
+  [196] = {.lex_state = 703},
+  [197] = {.lex_state = 0},
+  [198] = {.lex_state = 0},
+  [199] = {.lex_state = 0},
+  [200] = {.lex_state = 0},
+  [201] = {.lex_state = 703},
+  [202] = {.lex_state = 703},
+  [203] = {.lex_state = 0},
+  [204] = {.lex_state = 0},
+  [205] = {.lex_state = 0},
+  [206] = {.lex_state = 0},
+  [207] = {.lex_state = 0},
+  [208] = {.lex_state = 0},
+  [209] = {.lex_state = 703},
+  [210] = {.lex_state = 0},
+  [211] = {.lex_state = 0},
+  [212] = {.lex_state = 0},
+  [213] = {.lex_state = 0},
+  [214] = {.lex_state = 0},
+  [215] = {.lex_state = 703},
+  [216] = {.lex_state = 0},
+  [217] = {.lex_state = 0},
+  [218] = {.lex_state = 0},
+  [219] = {.lex_state = 0},
+  [220] = {.lex_state = 0},
+  [221] = {.lex_state = 0},
+  [222] = {.lex_state = 0},
+  [223] = {.lex_state = 0},
+  [224] = {.lex_state = 0},
+  [225] = {.lex_state = 0},
+  [226] = {.lex_state = 0},
+  [227] = {.lex_state = 0},
+  [228] = {.lex_state = 0},
+  [229] = {.lex_state = 0},
+  [230] = {.lex_state = 0},
+  [231] = {.lex_state = 0},
+  [232] = {.lex_state = 0},
+  [233] = {.lex_state = 0},
+  [234] = {.lex_state = 0},
+  [235] = {.lex_state = 0},
+  [236] = {.lex_state = 0},
+  [237] = {.lex_state = 0},
+  [238] = {.lex_state = 0},
+  [239] = {.lex_state = 0},
+  [240] = {.lex_state = 0},
+  [241] = {.lex_state = 0},
+  [242] = {.lex_state = 0},
+  [243] = {.lex_state = 0},
+  [244] = {.lex_state = 0},
 };
 
 static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
@@ -4501,17 +4618,17 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_LPAREN] = ACTIONS(1),
     [anon_sym_COMMA] = ACTIONS(1),
     [anon_sym_RPAREN] = ACTIONS(1),
-    [anon_sym_len] = ACTIONS(1),
-    [anon_sym_ends_with] = ACTIONS(1),
     [anon_sym_lookup_json_string] = ACTIONS(1),
     [anon_sym_lower] = ACTIONS(1),
     [anon_sym_regex_replace] = ACTIONS(1),
     [anon_sym_remove_bytes] = ACTIONS(1),
-    [anon_sym_starts_with] = ACTIONS(1),
     [anon_sym_to_string] = ACTIONS(1),
     [anon_sym_upper] = ACTIONS(1),
     [anon_sym_url_decode] = ACTIONS(1),
     [anon_sym_uuidv4] = ACTIONS(1),
+    [anon_sym_len] = ACTIONS(1),
+    [anon_sym_ends_with] = ACTIONS(1),
+    [anon_sym_starts_with] = ACTIONS(1),
     [sym_number] = ACTIONS(1),
     [sym_string] = ACTIONS(1),
     [anon_sym_true] = ACTIONS(1),
@@ -4580,209 +4697,1000 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(1),
   },
   [1] = {
-    [sym_source_file] = STATE(144),
-    [sym__expression] = STATE(42),
-    [sym_not_expression] = STATE(42),
-    [sym_in_expression] = STATE(42),
-    [sym_compound_expression] = STATE(42),
-    [sym_simple_expression] = STATE(42),
-    [sym__bool_lhs] = STATE(42),
-    [sym__number_lhs] = STATE(85),
-    [sym__string_lhs] = STATE(81),
-    [sym_string_func] = STATE(81),
-    [sym_number_func] = STATE(85),
-    [sym_bool_func] = STATE(42),
-    [sym_ends_with_func] = STATE(30),
-    [sym_lookup_func] = STATE(72),
-    [sym_lower_func] = STATE(72),
-    [sym_regex_replace_func] = STATE(72),
-    [sym_remove_bytes_func] = STATE(72),
-    [sym_starts_with_func] = STATE(30),
-    [sym_to_string_func] = STATE(72),
-    [sym_upper_func] = STATE(72),
-    [sym_url_decode_func] = STATE(72),
-    [sym_uuid_func] = STATE(72),
-    [sym_group] = STATE(42),
-    [sym_boolean] = STATE(42),
-    [sym_not_operator] = STATE(4),
-    [sym__array_lhs] = STATE(130),
-    [sym__stringlike_field] = STATE(80),
-    [sym_number_field] = STATE(85),
-    [sym_ip_field] = STATE(90),
-    [sym_string_field] = STATE(80),
-    [sym_map_string_array_field] = STATE(128),
-    [sym_array_string_field] = STATE(130),
-    [sym_bool_field] = STATE(42),
+    [sym_source_file] = STATE(197),
+    [sym__expression] = STATE(40),
+    [sym_not_expression] = STATE(40),
+    [sym_in_expression] = STATE(40),
+    [sym_compound_expression] = STATE(40),
+    [sym_simple_expression] = STATE(40),
+    [sym__bool_lhs] = STATE(40),
+    [sym__number_lhs] = STATE(92),
+    [sym__string_lhs] = STATE(85),
+    [sym_string_func] = STATE(85),
+    [sym_number_func] = STATE(92),
+    [sym_bool_func] = STATE(40),
+    [sym_group] = STATE(40),
+    [sym_boolean] = STATE(40),
+    [sym_not_operator] = STATE(8),
+    [sym__array_lhs] = STATE(195),
+    [sym__stringlike_field] = STATE(83),
+    [sym_number_field] = STATE(92),
+    [sym_ip_field] = STATE(98),
+    [sym_string_field] = STATE(83),
+    [sym_map_string_array_field] = STATE(194),
+    [sym_array_string_field] = STATE(195),
+    [sym_bool_field] = STATE(40),
     [aux_sym_source_file_repeat1] = STATE(3),
     [ts_builtin_sym_end] = ACTIONS(5),
     [sym_comment] = ACTIONS(3),
     [anon_sym_concat] = ACTIONS(7),
     [anon_sym_LPAREN] = ACTIONS(9),
-    [anon_sym_len] = ACTIONS(11),
-    [anon_sym_ends_with] = ACTIONS(13),
-    [anon_sym_lookup_json_string] = ACTIONS(15),
-    [anon_sym_lower] = ACTIONS(17),
-    [anon_sym_regex_replace] = ACTIONS(19),
-    [anon_sym_remove_bytes] = ACTIONS(21),
-    [anon_sym_starts_with] = ACTIONS(23),
-    [anon_sym_to_string] = ACTIONS(25),
-    [anon_sym_upper] = ACTIONS(27),
-    [anon_sym_url_decode] = ACTIONS(29),
-    [anon_sym_uuidv4] = ACTIONS(31),
-    [anon_sym_true] = ACTIONS(33),
-    [anon_sym_false] = ACTIONS(33),
-    [anon_sym_not] = ACTIONS(35),
-    [anon_sym_BANG] = ACTIONS(35),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(37),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(37),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(37),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(37),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(37),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(39),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(37),
-    [anon_sym_ip_DOTsrc] = ACTIONS(41),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(43),
-    [anon_sym_http_DOTcookie] = ACTIONS(45),
-    [anon_sym_http_DOThost] = ACTIONS(45),
-    [anon_sym_http_DOTreferer] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(47),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(45),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(45),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(47),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(45),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(45),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(45),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(49),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(51),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(53),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(53),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(53),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(55),
-    [anon_sym_ssl] = ACTIONS(55),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(55),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(55),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(55),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(55),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(55),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(55),
+    [anon_sym_lookup_json_string] = ACTIONS(11),
+    [anon_sym_lower] = ACTIONS(13),
+    [anon_sym_regex_replace] = ACTIONS(15),
+    [anon_sym_remove_bytes] = ACTIONS(17),
+    [anon_sym_to_string] = ACTIONS(19),
+    [anon_sym_upper] = ACTIONS(13),
+    [anon_sym_url_decode] = ACTIONS(13),
+    [anon_sym_uuidv4] = ACTIONS(21),
+    [anon_sym_len] = ACTIONS(23),
+    [anon_sym_ends_with] = ACTIONS(25),
+    [anon_sym_starts_with] = ACTIONS(25),
+    [anon_sym_true] = ACTIONS(27),
+    [anon_sym_false] = ACTIONS(27),
+    [anon_sym_not] = ACTIONS(29),
+    [anon_sym_BANG] = ACTIONS(29),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(31),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(31),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(31),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(31),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(31),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(33),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(31),
+    [anon_sym_ip_DOTsrc] = ACTIONS(35),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(37),
+    [anon_sym_http_DOTcookie] = ACTIONS(39),
+    [anon_sym_http_DOThost] = ACTIONS(39),
+    [anon_sym_http_DOTreferer] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(41),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(39),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(39),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(41),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(39),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(39),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(39),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(43),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(45),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(47),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(47),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(47),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(49),
+    [anon_sym_ssl] = ACTIONS(49),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(49),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(49),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(49),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(49),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(49),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(49),
   },
   [2] = {
-    [sym__expression] = STATE(42),
-    [sym_not_expression] = STATE(42),
-    [sym_in_expression] = STATE(42),
-    [sym_compound_expression] = STATE(42),
-    [sym_simple_expression] = STATE(42),
-    [sym__bool_lhs] = STATE(42),
-    [sym__number_lhs] = STATE(85),
-    [sym__string_lhs] = STATE(81),
-    [sym_string_func] = STATE(81),
-    [sym_number_func] = STATE(85),
-    [sym_bool_func] = STATE(42),
-    [sym_ends_with_func] = STATE(30),
-    [sym_lookup_func] = STATE(72),
-    [sym_lower_func] = STATE(72),
-    [sym_regex_replace_func] = STATE(72),
-    [sym_remove_bytes_func] = STATE(72),
-    [sym_starts_with_func] = STATE(30),
-    [sym_to_string_func] = STATE(72),
-    [sym_upper_func] = STATE(72),
-    [sym_url_decode_func] = STATE(72),
-    [sym_uuid_func] = STATE(72),
-    [sym_group] = STATE(42),
-    [sym_boolean] = STATE(42),
-    [sym_not_operator] = STATE(4),
-    [sym__array_lhs] = STATE(130),
-    [sym__stringlike_field] = STATE(80),
-    [sym_number_field] = STATE(85),
-    [sym_ip_field] = STATE(90),
-    [sym_string_field] = STATE(80),
-    [sym_map_string_array_field] = STATE(128),
-    [sym_array_string_field] = STATE(130),
-    [sym_bool_field] = STATE(42),
+    [sym__expression] = STATE(40),
+    [sym_not_expression] = STATE(40),
+    [sym_in_expression] = STATE(40),
+    [sym_compound_expression] = STATE(40),
+    [sym_simple_expression] = STATE(40),
+    [sym__bool_lhs] = STATE(40),
+    [sym__number_lhs] = STATE(92),
+    [sym__string_lhs] = STATE(85),
+    [sym_string_func] = STATE(85),
+    [sym_number_func] = STATE(92),
+    [sym_bool_func] = STATE(40),
+    [sym_group] = STATE(40),
+    [sym_boolean] = STATE(40),
+    [sym_not_operator] = STATE(8),
+    [sym__array_lhs] = STATE(195),
+    [sym__stringlike_field] = STATE(83),
+    [sym_number_field] = STATE(92),
+    [sym_ip_field] = STATE(98),
+    [sym_string_field] = STATE(83),
+    [sym_map_string_array_field] = STATE(194),
+    [sym_array_string_field] = STATE(195),
+    [sym_bool_field] = STATE(40),
     [aux_sym_source_file_repeat1] = STATE(2),
-    [ts_builtin_sym_end] = ACTIONS(57),
+    [ts_builtin_sym_end] = ACTIONS(51),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(59),
-    [anon_sym_LPAREN] = ACTIONS(62),
-    [anon_sym_len] = ACTIONS(65),
-    [anon_sym_ends_with] = ACTIONS(68),
-    [anon_sym_lookup_json_string] = ACTIONS(71),
-    [anon_sym_lower] = ACTIONS(74),
-    [anon_sym_regex_replace] = ACTIONS(77),
-    [anon_sym_remove_bytes] = ACTIONS(80),
-    [anon_sym_starts_with] = ACTIONS(83),
-    [anon_sym_to_string] = ACTIONS(86),
-    [anon_sym_upper] = ACTIONS(89),
-    [anon_sym_url_decode] = ACTIONS(92),
-    [anon_sym_uuidv4] = ACTIONS(95),
-    [anon_sym_true] = ACTIONS(98),
-    [anon_sym_false] = ACTIONS(98),
-    [anon_sym_not] = ACTIONS(101),
-    [anon_sym_BANG] = ACTIONS(101),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(104),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(104),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(104),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(104),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(104),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(104),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(107),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(104),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(104),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(104),
-    [anon_sym_ip_DOTsrc] = ACTIONS(110),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(113),
-    [anon_sym_http_DOTcookie] = ACTIONS(116),
-    [anon_sym_http_DOThost] = ACTIONS(116),
-    [anon_sym_http_DOTreferer] = ACTIONS(116),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(116),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(116),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(119),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(116),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(116),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(116),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(116),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(116),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(116),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(116),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(116),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(116),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(116),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(116),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(116),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(116),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(116),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(116),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(119),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(116),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(116),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(116),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(116),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(116),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(122),
+    [anon_sym_concat] = ACTIONS(53),
+    [anon_sym_LPAREN] = ACTIONS(56),
+    [anon_sym_lookup_json_string] = ACTIONS(59),
+    [anon_sym_lower] = ACTIONS(62),
+    [anon_sym_regex_replace] = ACTIONS(65),
+    [anon_sym_remove_bytes] = ACTIONS(68),
+    [anon_sym_to_string] = ACTIONS(71),
+    [anon_sym_upper] = ACTIONS(62),
+    [anon_sym_url_decode] = ACTIONS(62),
+    [anon_sym_uuidv4] = ACTIONS(74),
+    [anon_sym_len] = ACTIONS(77),
+    [anon_sym_ends_with] = ACTIONS(80),
+    [anon_sym_starts_with] = ACTIONS(80),
+    [anon_sym_true] = ACTIONS(83),
+    [anon_sym_false] = ACTIONS(83),
+    [anon_sym_not] = ACTIONS(86),
+    [anon_sym_BANG] = ACTIONS(86),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(89),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(89),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(89),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(89),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(89),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(89),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(92),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(89),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(89),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(89),
+    [anon_sym_ip_DOTsrc] = ACTIONS(95),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(98),
+    [anon_sym_http_DOTcookie] = ACTIONS(101),
+    [anon_sym_http_DOThost] = ACTIONS(101),
+    [anon_sym_http_DOTreferer] = ACTIONS(101),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(101),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(101),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(104),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(101),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(101),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(101),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(101),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(101),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(101),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(101),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(101),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(101),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(101),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(101),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(101),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(101),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(101),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(101),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(104),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(101),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(101),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(101),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(101),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(101),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(107),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(110),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(113),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(113),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(113),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(116),
+    [anon_sym_ssl] = ACTIONS(116),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(116),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(116),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(116),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(116),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(116),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(116),
+  },
+  [3] = {
+    [sym__expression] = STATE(40),
+    [sym_not_expression] = STATE(40),
+    [sym_in_expression] = STATE(40),
+    [sym_compound_expression] = STATE(40),
+    [sym_simple_expression] = STATE(40),
+    [sym__bool_lhs] = STATE(40),
+    [sym__number_lhs] = STATE(92),
+    [sym__string_lhs] = STATE(85),
+    [sym_string_func] = STATE(85),
+    [sym_number_func] = STATE(92),
+    [sym_bool_func] = STATE(40),
+    [sym_group] = STATE(40),
+    [sym_boolean] = STATE(40),
+    [sym_not_operator] = STATE(8),
+    [sym__array_lhs] = STATE(195),
+    [sym__stringlike_field] = STATE(83),
+    [sym_number_field] = STATE(92),
+    [sym_ip_field] = STATE(98),
+    [sym_string_field] = STATE(83),
+    [sym_map_string_array_field] = STATE(194),
+    [sym_array_string_field] = STATE(195),
+    [sym_bool_field] = STATE(40),
+    [aux_sym_source_file_repeat1] = STATE(2),
+    [ts_builtin_sym_end] = ACTIONS(119),
+    [sym_comment] = ACTIONS(3),
+    [anon_sym_concat] = ACTIONS(7),
+    [anon_sym_LPAREN] = ACTIONS(9),
+    [anon_sym_lookup_json_string] = ACTIONS(11),
+    [anon_sym_lower] = ACTIONS(13),
+    [anon_sym_regex_replace] = ACTIONS(15),
+    [anon_sym_remove_bytes] = ACTIONS(17),
+    [anon_sym_to_string] = ACTIONS(19),
+    [anon_sym_upper] = ACTIONS(13),
+    [anon_sym_url_decode] = ACTIONS(13),
+    [anon_sym_uuidv4] = ACTIONS(21),
+    [anon_sym_len] = ACTIONS(23),
+    [anon_sym_ends_with] = ACTIONS(25),
+    [anon_sym_starts_with] = ACTIONS(25),
+    [anon_sym_true] = ACTIONS(27),
+    [anon_sym_false] = ACTIONS(27),
+    [anon_sym_not] = ACTIONS(29),
+    [anon_sym_BANG] = ACTIONS(29),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(31),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(31),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(31),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(31),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(31),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(33),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(31),
+    [anon_sym_ip_DOTsrc] = ACTIONS(35),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(37),
+    [anon_sym_http_DOTcookie] = ACTIONS(39),
+    [anon_sym_http_DOThost] = ACTIONS(39),
+    [anon_sym_http_DOTreferer] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(41),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(39),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(39),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(41),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(39),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(39),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(39),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(43),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(45),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(47),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(47),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(47),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(49),
+    [anon_sym_ssl] = ACTIONS(49),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(49),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(49),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(49),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(49),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(49),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(49),
+  },
+  [4] = {
+    [sym__expression] = STATE(95),
+    [sym_not_expression] = STATE(95),
+    [sym_in_expression] = STATE(95),
+    [sym_compound_expression] = STATE(95),
+    [sym_simple_expression] = STATE(95),
+    [sym__bool_lhs] = STATE(95),
+    [sym__number_lhs] = STATE(92),
+    [sym__string_lhs] = STATE(85),
+    [sym_string_func] = STATE(85),
+    [sym_number_func] = STATE(92),
+    [sym_bool_func] = STATE(95),
+    [sym_group] = STATE(95),
+    [sym_boolean] = STATE(95),
+    [sym_not_operator] = STATE(8),
+    [sym__array_lhs] = STATE(195),
+    [sym__stringlike_field] = STATE(83),
+    [sym_number_field] = STATE(92),
+    [sym_ip_field] = STATE(98),
+    [sym_string_field] = STATE(83),
+    [sym_map_string_array_field] = STATE(194),
+    [sym_array_string_field] = STATE(195),
+    [sym_bool_field] = STATE(95),
+    [sym_comment] = ACTIONS(3),
+    [anon_sym_concat] = ACTIONS(7),
+    [anon_sym_LPAREN] = ACTIONS(9),
+    [anon_sym_lookup_json_string] = ACTIONS(11),
+    [anon_sym_lower] = ACTIONS(13),
+    [anon_sym_regex_replace] = ACTIONS(15),
+    [anon_sym_remove_bytes] = ACTIONS(17),
+    [anon_sym_to_string] = ACTIONS(19),
+    [anon_sym_upper] = ACTIONS(13),
+    [anon_sym_url_decode] = ACTIONS(13),
+    [anon_sym_uuidv4] = ACTIONS(21),
+    [anon_sym_len] = ACTIONS(23),
+    [anon_sym_ends_with] = ACTIONS(25),
+    [anon_sym_starts_with] = ACTIONS(25),
+    [anon_sym_true] = ACTIONS(27),
+    [anon_sym_false] = ACTIONS(27),
+    [anon_sym_not] = ACTIONS(29),
+    [anon_sym_BANG] = ACTIONS(29),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(31),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(31),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(31),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(31),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(31),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(33),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(31),
+    [anon_sym_ip_DOTsrc] = ACTIONS(35),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(37),
+    [anon_sym_http_DOTcookie] = ACTIONS(39),
+    [anon_sym_http_DOThost] = ACTIONS(39),
+    [anon_sym_http_DOTreferer] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(41),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(39),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(39),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(41),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(39),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(39),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(39),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(43),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(45),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(47),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(47),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(47),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(49),
+    [anon_sym_ssl] = ACTIONS(49),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(49),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(49),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(49),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(49),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(49),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(49),
+  },
+  [5] = {
+    [sym__expression] = STATE(24),
+    [sym_not_expression] = STATE(24),
+    [sym_in_expression] = STATE(24),
+    [sym_compound_expression] = STATE(24),
+    [sym_simple_expression] = STATE(24),
+    [sym__bool_lhs] = STATE(24),
+    [sym__number_lhs] = STATE(92),
+    [sym__string_lhs] = STATE(85),
+    [sym_string_func] = STATE(85),
+    [sym_number_func] = STATE(92),
+    [sym_bool_func] = STATE(24),
+    [sym_group] = STATE(24),
+    [sym_boolean] = STATE(24),
+    [sym_not_operator] = STATE(8),
+    [sym__array_lhs] = STATE(195),
+    [sym__stringlike_field] = STATE(83),
+    [sym_number_field] = STATE(92),
+    [sym_ip_field] = STATE(98),
+    [sym_string_field] = STATE(83),
+    [sym_map_string_array_field] = STATE(194),
+    [sym_array_string_field] = STATE(195),
+    [sym_bool_field] = STATE(24),
+    [sym_comment] = ACTIONS(3),
+    [anon_sym_concat] = ACTIONS(7),
+    [anon_sym_LPAREN] = ACTIONS(9),
+    [anon_sym_lookup_json_string] = ACTIONS(11),
+    [anon_sym_lower] = ACTIONS(13),
+    [anon_sym_regex_replace] = ACTIONS(15),
+    [anon_sym_remove_bytes] = ACTIONS(17),
+    [anon_sym_to_string] = ACTIONS(19),
+    [anon_sym_upper] = ACTIONS(13),
+    [anon_sym_url_decode] = ACTIONS(13),
+    [anon_sym_uuidv4] = ACTIONS(21),
+    [anon_sym_len] = ACTIONS(23),
+    [anon_sym_ends_with] = ACTIONS(25),
+    [anon_sym_starts_with] = ACTIONS(25),
+    [anon_sym_true] = ACTIONS(27),
+    [anon_sym_false] = ACTIONS(27),
+    [anon_sym_not] = ACTIONS(29),
+    [anon_sym_BANG] = ACTIONS(29),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(31),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(31),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(31),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(31),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(31),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(33),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(31),
+    [anon_sym_ip_DOTsrc] = ACTIONS(35),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(37),
+    [anon_sym_http_DOTcookie] = ACTIONS(39),
+    [anon_sym_http_DOThost] = ACTIONS(39),
+    [anon_sym_http_DOTreferer] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(41),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(39),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(39),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(41),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(39),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(39),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(39),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(43),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(45),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(47),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(47),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(47),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(49),
+    [anon_sym_ssl] = ACTIONS(49),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(49),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(49),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(49),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(49),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(49),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(49),
+  },
+  [6] = {
+    [sym__expression] = STATE(39),
+    [sym_not_expression] = STATE(39),
+    [sym_in_expression] = STATE(39),
+    [sym_compound_expression] = STATE(39),
+    [sym_simple_expression] = STATE(39),
+    [sym__bool_lhs] = STATE(39),
+    [sym__number_lhs] = STATE(92),
+    [sym__string_lhs] = STATE(85),
+    [sym_string_func] = STATE(85),
+    [sym_number_func] = STATE(92),
+    [sym_bool_func] = STATE(39),
+    [sym_group] = STATE(39),
+    [sym_boolean] = STATE(39),
+    [sym_not_operator] = STATE(8),
+    [sym__array_lhs] = STATE(195),
+    [sym__stringlike_field] = STATE(83),
+    [sym_number_field] = STATE(92),
+    [sym_ip_field] = STATE(98),
+    [sym_string_field] = STATE(83),
+    [sym_map_string_array_field] = STATE(194),
+    [sym_array_string_field] = STATE(195),
+    [sym_bool_field] = STATE(39),
+    [sym_comment] = ACTIONS(3),
+    [anon_sym_concat] = ACTIONS(7),
+    [anon_sym_LPAREN] = ACTIONS(9),
+    [anon_sym_lookup_json_string] = ACTIONS(11),
+    [anon_sym_lower] = ACTIONS(13),
+    [anon_sym_regex_replace] = ACTIONS(15),
+    [anon_sym_remove_bytes] = ACTIONS(17),
+    [anon_sym_to_string] = ACTIONS(19),
+    [anon_sym_upper] = ACTIONS(13),
+    [anon_sym_url_decode] = ACTIONS(13),
+    [anon_sym_uuidv4] = ACTIONS(21),
+    [anon_sym_len] = ACTIONS(23),
+    [anon_sym_ends_with] = ACTIONS(25),
+    [anon_sym_starts_with] = ACTIONS(25),
+    [anon_sym_true] = ACTIONS(27),
+    [anon_sym_false] = ACTIONS(27),
+    [anon_sym_not] = ACTIONS(29),
+    [anon_sym_BANG] = ACTIONS(29),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(31),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(31),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(31),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(31),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(31),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(33),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(31),
+    [anon_sym_ip_DOTsrc] = ACTIONS(35),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(37),
+    [anon_sym_http_DOTcookie] = ACTIONS(39),
+    [anon_sym_http_DOThost] = ACTIONS(39),
+    [anon_sym_http_DOTreferer] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(41),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(39),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(39),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(41),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(39),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(39),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(39),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(43),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(45),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(47),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(47),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(47),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(49),
+    [anon_sym_ssl] = ACTIONS(49),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(49),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(49),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(49),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(49),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(49),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(49),
+  },
+  [7] = {
+    [sym__expression] = STATE(19),
+    [sym_not_expression] = STATE(19),
+    [sym_in_expression] = STATE(19),
+    [sym_compound_expression] = STATE(19),
+    [sym_simple_expression] = STATE(19),
+    [sym__bool_lhs] = STATE(19),
+    [sym__number_lhs] = STATE(92),
+    [sym__string_lhs] = STATE(85),
+    [sym_string_func] = STATE(85),
+    [sym_number_func] = STATE(92),
+    [sym_bool_func] = STATE(19),
+    [sym_group] = STATE(19),
+    [sym_boolean] = STATE(19),
+    [sym_not_operator] = STATE(8),
+    [sym__array_lhs] = STATE(195),
+    [sym__stringlike_field] = STATE(83),
+    [sym_number_field] = STATE(92),
+    [sym_ip_field] = STATE(98),
+    [sym_string_field] = STATE(83),
+    [sym_map_string_array_field] = STATE(194),
+    [sym_array_string_field] = STATE(195),
+    [sym_bool_field] = STATE(19),
+    [sym_comment] = ACTIONS(3),
+    [anon_sym_concat] = ACTIONS(7),
+    [anon_sym_LPAREN] = ACTIONS(9),
+    [anon_sym_lookup_json_string] = ACTIONS(11),
+    [anon_sym_lower] = ACTIONS(13),
+    [anon_sym_regex_replace] = ACTIONS(15),
+    [anon_sym_remove_bytes] = ACTIONS(17),
+    [anon_sym_to_string] = ACTIONS(19),
+    [anon_sym_upper] = ACTIONS(13),
+    [anon_sym_url_decode] = ACTIONS(13),
+    [anon_sym_uuidv4] = ACTIONS(21),
+    [anon_sym_len] = ACTIONS(23),
+    [anon_sym_ends_with] = ACTIONS(25),
+    [anon_sym_starts_with] = ACTIONS(25),
+    [anon_sym_true] = ACTIONS(27),
+    [anon_sym_false] = ACTIONS(27),
+    [anon_sym_not] = ACTIONS(29),
+    [anon_sym_BANG] = ACTIONS(29),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(31),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(31),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(31),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(31),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(31),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(33),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(31),
+    [anon_sym_ip_DOTsrc] = ACTIONS(35),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(37),
+    [anon_sym_http_DOTcookie] = ACTIONS(39),
+    [anon_sym_http_DOThost] = ACTIONS(39),
+    [anon_sym_http_DOTreferer] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(41),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(39),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(39),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(41),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(39),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(39),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(39),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(43),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(45),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(47),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(47),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(47),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(49),
+    [anon_sym_ssl] = ACTIONS(49),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(49),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(49),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(49),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(49),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(49),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(49),
+  },
+  [8] = {
+    [sym__expression] = STATE(32),
+    [sym_not_expression] = STATE(32),
+    [sym_in_expression] = STATE(32),
+    [sym_compound_expression] = STATE(32),
+    [sym_simple_expression] = STATE(32),
+    [sym__bool_lhs] = STATE(32),
+    [sym__number_lhs] = STATE(92),
+    [sym__string_lhs] = STATE(85),
+    [sym_string_func] = STATE(85),
+    [sym_number_func] = STATE(92),
+    [sym_bool_func] = STATE(32),
+    [sym_group] = STATE(32),
+    [sym_boolean] = STATE(32),
+    [sym_not_operator] = STATE(8),
+    [sym__array_lhs] = STATE(195),
+    [sym__stringlike_field] = STATE(83),
+    [sym_number_field] = STATE(92),
+    [sym_ip_field] = STATE(98),
+    [sym_string_field] = STATE(83),
+    [sym_map_string_array_field] = STATE(194),
+    [sym_array_string_field] = STATE(195),
+    [sym_bool_field] = STATE(32),
+    [sym_comment] = ACTIONS(3),
+    [anon_sym_concat] = ACTIONS(7),
+    [anon_sym_LPAREN] = ACTIONS(9),
+    [anon_sym_lookup_json_string] = ACTIONS(11),
+    [anon_sym_lower] = ACTIONS(13),
+    [anon_sym_regex_replace] = ACTIONS(15),
+    [anon_sym_remove_bytes] = ACTIONS(17),
+    [anon_sym_to_string] = ACTIONS(19),
+    [anon_sym_upper] = ACTIONS(13),
+    [anon_sym_url_decode] = ACTIONS(13),
+    [anon_sym_uuidv4] = ACTIONS(21),
+    [anon_sym_len] = ACTIONS(23),
+    [anon_sym_ends_with] = ACTIONS(25),
+    [anon_sym_starts_with] = ACTIONS(25),
+    [anon_sym_true] = ACTIONS(27),
+    [anon_sym_false] = ACTIONS(27),
+    [anon_sym_not] = ACTIONS(29),
+    [anon_sym_BANG] = ACTIONS(29),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(31),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(31),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(31),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(31),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(31),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(33),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(31),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(31),
+    [anon_sym_ip_DOTsrc] = ACTIONS(35),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(37),
+    [anon_sym_http_DOTcookie] = ACTIONS(39),
+    [anon_sym_http_DOThost] = ACTIONS(39),
+    [anon_sym_http_DOTreferer] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(41),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(39),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(39),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(39),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(39),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(41),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(39),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(39),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(39),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(39),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(39),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(43),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(45),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(47),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(47),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(47),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(49),
+    [anon_sym_ssl] = ACTIONS(49),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(49),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(49),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(49),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(49),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(49),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(49),
+  },
+  [9] = {
+    [ts_builtin_sym_end] = ACTIONS(121),
+    [anon_sym_AMP_AMP] = ACTIONS(121),
+    [anon_sym_and] = ACTIONS(121),
+    [anon_sym_xor] = ACTIONS(121),
+    [anon_sym_CARET_CARET] = ACTIONS(121),
+    [anon_sym_or] = ACTIONS(121),
+    [anon_sym_PIPE_PIPE] = ACTIONS(121),
+    [anon_sym_RBRACE] = ACTIONS(121),
+    [sym_comment] = ACTIONS(3),
+    [anon_sym_concat] = ACTIONS(121),
+    [anon_sym_LPAREN] = ACTIONS(121),
+    [anon_sym_RPAREN] = ACTIONS(121),
+    [anon_sym_lookup_json_string] = ACTIONS(121),
+    [anon_sym_lower] = ACTIONS(121),
+    [anon_sym_regex_replace] = ACTIONS(121),
+    [anon_sym_remove_bytes] = ACTIONS(121),
+    [anon_sym_to_string] = ACTIONS(121),
+    [anon_sym_upper] = ACTIONS(121),
+    [anon_sym_url_decode] = ACTIONS(121),
+    [anon_sym_uuidv4] = ACTIONS(121),
+    [anon_sym_len] = ACTIONS(121),
+    [anon_sym_ends_with] = ACTIONS(121),
+    [anon_sym_starts_with] = ACTIONS(121),
+    [anon_sym_true] = ACTIONS(121),
+    [anon_sym_false] = ACTIONS(121),
+    [sym_ipv4] = ACTIONS(121),
+    [anon_sym_SLASH] = ACTIONS(123),
+    [anon_sym_not] = ACTIONS(121),
+    [anon_sym_BANG] = ACTIONS(121),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(121),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(121),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(121),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(121),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(121),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(121),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(125),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(121),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(121),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(121),
+    [anon_sym_ip_DOTsrc] = ACTIONS(125),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(121),
+    [anon_sym_http_DOTcookie] = ACTIONS(121),
+    [anon_sym_http_DOThost] = ACTIONS(121),
+    [anon_sym_http_DOTreferer] = ACTIONS(121),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(121),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(121),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(125),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(121),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(121),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(121),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(121),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(121),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(121),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(121),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(121),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(121),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(121),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(121),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(121),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(121),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(121),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(121),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(125),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(121),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(121),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(121),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(121),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(121),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(121),
     [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(125),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(128),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(128),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(128),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(121),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(121),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(121),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(121),
+    [anon_sym_ssl] = ACTIONS(121),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(121),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(121),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(121),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(121),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(121),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(121),
+  },
+  [10] = {
+    [ts_builtin_sym_end] = ACTIONS(127),
+    [anon_sym_AMP_AMP] = ACTIONS(127),
+    [anon_sym_and] = ACTIONS(127),
+    [anon_sym_xor] = ACTIONS(127),
+    [anon_sym_CARET_CARET] = ACTIONS(127),
+    [anon_sym_or] = ACTIONS(127),
+    [anon_sym_PIPE_PIPE] = ACTIONS(127),
+    [anon_sym_RBRACE] = ACTIONS(127),
+    [sym_comment] = ACTIONS(3),
+    [anon_sym_concat] = ACTIONS(127),
+    [anon_sym_LPAREN] = ACTIONS(127),
+    [anon_sym_RPAREN] = ACTIONS(127),
+    [anon_sym_lookup_json_string] = ACTIONS(127),
+    [anon_sym_lower] = ACTIONS(127),
+    [anon_sym_regex_replace] = ACTIONS(127),
+    [anon_sym_remove_bytes] = ACTIONS(127),
+    [anon_sym_to_string] = ACTIONS(127),
+    [anon_sym_upper] = ACTIONS(127),
+    [anon_sym_url_decode] = ACTIONS(127),
+    [anon_sym_uuidv4] = ACTIONS(127),
+    [anon_sym_len] = ACTIONS(127),
+    [anon_sym_ends_with] = ACTIONS(127),
+    [anon_sym_starts_with] = ACTIONS(127),
+    [anon_sym_true] = ACTIONS(127),
+    [anon_sym_false] = ACTIONS(127),
+    [sym_ipv4] = ACTIONS(127),
+    [anon_sym_not] = ACTIONS(127),
+    [anon_sym_BANG] = ACTIONS(127),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(127),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(127),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(127),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(127),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(127),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(127),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(129),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(127),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(127),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(127),
+    [anon_sym_ip_DOTsrc] = ACTIONS(129),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(127),
+    [anon_sym_http_DOTcookie] = ACTIONS(127),
+    [anon_sym_http_DOThost] = ACTIONS(127),
+    [anon_sym_http_DOTreferer] = ACTIONS(127),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(127),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(127),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(129),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(127),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(127),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(127),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(127),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(127),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(127),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(127),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(127),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(127),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(127),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(127),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(127),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(127),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(127),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(127),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(129),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(127),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(127),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(127),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(127),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(127),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(127),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(129),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(127),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(127),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(127),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(127),
+    [anon_sym_ssl] = ACTIONS(127),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(127),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(127),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(127),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(127),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(127),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(127),
+  },
+  [11] = {
+    [ts_builtin_sym_end] = ACTIONS(131),
+    [anon_sym_AMP_AMP] = ACTIONS(131),
+    [anon_sym_and] = ACTIONS(131),
+    [anon_sym_xor] = ACTIONS(131),
+    [anon_sym_CARET_CARET] = ACTIONS(131),
+    [anon_sym_or] = ACTIONS(131),
+    [anon_sym_PIPE_PIPE] = ACTIONS(131),
+    [sym_comment] = ACTIONS(3),
+    [anon_sym_concat] = ACTIONS(131),
+    [anon_sym_LPAREN] = ACTIONS(131),
+    [anon_sym_RPAREN] = ACTIONS(131),
+    [anon_sym_lookup_json_string] = ACTIONS(131),
+    [anon_sym_lower] = ACTIONS(131),
+    [anon_sym_regex_replace] = ACTIONS(131),
+    [anon_sym_remove_bytes] = ACTIONS(131),
+    [anon_sym_to_string] = ACTIONS(131),
+    [anon_sym_upper] = ACTIONS(131),
+    [anon_sym_url_decode] = ACTIONS(131),
+    [anon_sym_uuidv4] = ACTIONS(131),
+    [anon_sym_len] = ACTIONS(131),
+    [anon_sym_ends_with] = ACTIONS(131),
+    [anon_sym_starts_with] = ACTIONS(131),
+    [anon_sym_true] = ACTIONS(131),
+    [anon_sym_false] = ACTIONS(131),
+    [anon_sym_not] = ACTIONS(131),
+    [anon_sym_BANG] = ACTIONS(131),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(131),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(131),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(131),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(131),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(131),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(131),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(133),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(131),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(131),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(131),
+    [anon_sym_ip_DOTsrc] = ACTIONS(133),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(131),
+    [anon_sym_http_DOTcookie] = ACTIONS(131),
+    [anon_sym_http_DOThost] = ACTIONS(131),
+    [anon_sym_http_DOTreferer] = ACTIONS(131),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(131),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(131),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(133),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(131),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(131),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(131),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(131),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(131),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(131),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(131),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(131),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(131),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(131),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(131),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(131),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(131),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(131),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(131),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(133),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(131),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(131),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(131),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(131),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(131),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(131),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(133),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(131),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(131),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(131),
     [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(131),
     [anon_sym_ssl] = ACTIONS(131),
     [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(131),
@@ -4792,3641 +5700,2582 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(131),
     [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(131),
   },
-  [3] = {
-    [sym__expression] = STATE(42),
-    [sym_not_expression] = STATE(42),
-    [sym_in_expression] = STATE(42),
-    [sym_compound_expression] = STATE(42),
-    [sym_simple_expression] = STATE(42),
-    [sym__bool_lhs] = STATE(42),
-    [sym__number_lhs] = STATE(85),
-    [sym__string_lhs] = STATE(81),
-    [sym_string_func] = STATE(81),
-    [sym_number_func] = STATE(85),
-    [sym_bool_func] = STATE(42),
-    [sym_ends_with_func] = STATE(30),
-    [sym_lookup_func] = STATE(72),
-    [sym_lower_func] = STATE(72),
-    [sym_regex_replace_func] = STATE(72),
-    [sym_remove_bytes_func] = STATE(72),
-    [sym_starts_with_func] = STATE(30),
-    [sym_to_string_func] = STATE(72),
-    [sym_upper_func] = STATE(72),
-    [sym_url_decode_func] = STATE(72),
-    [sym_uuid_func] = STATE(72),
-    [sym_group] = STATE(42),
-    [sym_boolean] = STATE(42),
-    [sym_not_operator] = STATE(4),
-    [sym__array_lhs] = STATE(130),
-    [sym__stringlike_field] = STATE(80),
-    [sym_number_field] = STATE(85),
-    [sym_ip_field] = STATE(90),
-    [sym_string_field] = STATE(80),
-    [sym_map_string_array_field] = STATE(128),
-    [sym_array_string_field] = STATE(130),
-    [sym_bool_field] = STATE(42),
-    [aux_sym_source_file_repeat1] = STATE(2),
-    [ts_builtin_sym_end] = ACTIONS(134),
-    [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(7),
-    [anon_sym_LPAREN] = ACTIONS(9),
-    [anon_sym_len] = ACTIONS(11),
-    [anon_sym_ends_with] = ACTIONS(13),
-    [anon_sym_lookup_json_string] = ACTIONS(15),
-    [anon_sym_lower] = ACTIONS(17),
-    [anon_sym_regex_replace] = ACTIONS(19),
-    [anon_sym_remove_bytes] = ACTIONS(21),
-    [anon_sym_starts_with] = ACTIONS(23),
-    [anon_sym_to_string] = ACTIONS(25),
-    [anon_sym_upper] = ACTIONS(27),
-    [anon_sym_url_decode] = ACTIONS(29),
-    [anon_sym_uuidv4] = ACTIONS(31),
-    [anon_sym_true] = ACTIONS(33),
-    [anon_sym_false] = ACTIONS(33),
-    [anon_sym_not] = ACTIONS(35),
-    [anon_sym_BANG] = ACTIONS(35),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(37),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(37),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(37),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(37),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(37),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(39),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(37),
-    [anon_sym_ip_DOTsrc] = ACTIONS(41),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(43),
-    [anon_sym_http_DOTcookie] = ACTIONS(45),
-    [anon_sym_http_DOThost] = ACTIONS(45),
-    [anon_sym_http_DOTreferer] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(47),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(45),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(45),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(47),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(45),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(45),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(45),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(49),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(51),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(53),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(53),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(53),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(55),
-    [anon_sym_ssl] = ACTIONS(55),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(55),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(55),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(55),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(55),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(55),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(55),
-  },
-  [4] = {
-    [sym__expression] = STATE(17),
-    [sym_not_expression] = STATE(17),
-    [sym_in_expression] = STATE(17),
-    [sym_compound_expression] = STATE(17),
-    [sym_simple_expression] = STATE(17),
-    [sym__bool_lhs] = STATE(17),
-    [sym__number_lhs] = STATE(85),
-    [sym__string_lhs] = STATE(81),
-    [sym_string_func] = STATE(81),
-    [sym_number_func] = STATE(85),
-    [sym_bool_func] = STATE(17),
-    [sym_ends_with_func] = STATE(30),
-    [sym_lookup_func] = STATE(72),
-    [sym_lower_func] = STATE(72),
-    [sym_regex_replace_func] = STATE(72),
-    [sym_remove_bytes_func] = STATE(72),
-    [sym_starts_with_func] = STATE(30),
-    [sym_to_string_func] = STATE(72),
-    [sym_upper_func] = STATE(72),
-    [sym_url_decode_func] = STATE(72),
-    [sym_uuid_func] = STATE(72),
-    [sym_group] = STATE(17),
-    [sym_boolean] = STATE(17),
-    [sym_not_operator] = STATE(4),
-    [sym__array_lhs] = STATE(130),
-    [sym__stringlike_field] = STATE(80),
-    [sym_number_field] = STATE(85),
-    [sym_ip_field] = STATE(90),
-    [sym_string_field] = STATE(80),
-    [sym_map_string_array_field] = STATE(128),
-    [sym_array_string_field] = STATE(130),
-    [sym_bool_field] = STATE(17),
-    [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(7),
-    [anon_sym_LPAREN] = ACTIONS(9),
-    [anon_sym_len] = ACTIONS(11),
-    [anon_sym_ends_with] = ACTIONS(13),
-    [anon_sym_lookup_json_string] = ACTIONS(15),
-    [anon_sym_lower] = ACTIONS(17),
-    [anon_sym_regex_replace] = ACTIONS(19),
-    [anon_sym_remove_bytes] = ACTIONS(21),
-    [anon_sym_starts_with] = ACTIONS(23),
-    [anon_sym_to_string] = ACTIONS(25),
-    [anon_sym_upper] = ACTIONS(27),
-    [anon_sym_url_decode] = ACTIONS(29),
-    [anon_sym_uuidv4] = ACTIONS(31),
-    [anon_sym_true] = ACTIONS(33),
-    [anon_sym_false] = ACTIONS(33),
-    [anon_sym_not] = ACTIONS(35),
-    [anon_sym_BANG] = ACTIONS(35),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(37),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(37),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(37),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(37),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(37),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(39),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(37),
-    [anon_sym_ip_DOTsrc] = ACTIONS(41),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(43),
-    [anon_sym_http_DOTcookie] = ACTIONS(45),
-    [anon_sym_http_DOThost] = ACTIONS(45),
-    [anon_sym_http_DOTreferer] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(47),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(45),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(45),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(47),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(45),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(45),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(45),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(49),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(51),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(53),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(53),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(53),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(55),
-    [anon_sym_ssl] = ACTIONS(55),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(55),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(55),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(55),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(55),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(55),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(55),
-  },
-  [5] = {
-    [sym__expression] = STATE(88),
-    [sym_not_expression] = STATE(88),
-    [sym_in_expression] = STATE(88),
-    [sym_compound_expression] = STATE(88),
-    [sym_simple_expression] = STATE(88),
-    [sym__bool_lhs] = STATE(88),
-    [sym__number_lhs] = STATE(85),
-    [sym__string_lhs] = STATE(81),
-    [sym_string_func] = STATE(81),
-    [sym_number_func] = STATE(85),
-    [sym_bool_func] = STATE(88),
-    [sym_ends_with_func] = STATE(30),
-    [sym_lookup_func] = STATE(72),
-    [sym_lower_func] = STATE(72),
-    [sym_regex_replace_func] = STATE(72),
-    [sym_remove_bytes_func] = STATE(72),
-    [sym_starts_with_func] = STATE(30),
-    [sym_to_string_func] = STATE(72),
-    [sym_upper_func] = STATE(72),
-    [sym_url_decode_func] = STATE(72),
-    [sym_uuid_func] = STATE(72),
-    [sym_group] = STATE(88),
-    [sym_boolean] = STATE(88),
-    [sym_not_operator] = STATE(4),
-    [sym__array_lhs] = STATE(130),
-    [sym__stringlike_field] = STATE(80),
-    [sym_number_field] = STATE(85),
-    [sym_ip_field] = STATE(90),
-    [sym_string_field] = STATE(80),
-    [sym_map_string_array_field] = STATE(128),
-    [sym_array_string_field] = STATE(130),
-    [sym_bool_field] = STATE(88),
-    [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(7),
-    [anon_sym_LPAREN] = ACTIONS(9),
-    [anon_sym_len] = ACTIONS(11),
-    [anon_sym_ends_with] = ACTIONS(13),
-    [anon_sym_lookup_json_string] = ACTIONS(15),
-    [anon_sym_lower] = ACTIONS(17),
-    [anon_sym_regex_replace] = ACTIONS(19),
-    [anon_sym_remove_bytes] = ACTIONS(21),
-    [anon_sym_starts_with] = ACTIONS(23),
-    [anon_sym_to_string] = ACTIONS(25),
-    [anon_sym_upper] = ACTIONS(27),
-    [anon_sym_url_decode] = ACTIONS(29),
-    [anon_sym_uuidv4] = ACTIONS(31),
-    [anon_sym_true] = ACTIONS(33),
-    [anon_sym_false] = ACTIONS(33),
-    [anon_sym_not] = ACTIONS(35),
-    [anon_sym_BANG] = ACTIONS(35),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(37),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(37),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(37),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(37),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(37),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(39),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(37),
-    [anon_sym_ip_DOTsrc] = ACTIONS(41),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(43),
-    [anon_sym_http_DOTcookie] = ACTIONS(45),
-    [anon_sym_http_DOThost] = ACTIONS(45),
-    [anon_sym_http_DOTreferer] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(47),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(45),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(45),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(47),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(45),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(45),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(45),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(49),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(51),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(53),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(53),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(53),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(55),
-    [anon_sym_ssl] = ACTIONS(55),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(55),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(55),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(55),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(55),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(55),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(55),
-  },
-  [6] = {
-    [sym__expression] = STATE(21),
-    [sym_not_expression] = STATE(21),
-    [sym_in_expression] = STATE(21),
-    [sym_compound_expression] = STATE(21),
-    [sym_simple_expression] = STATE(21),
-    [sym__bool_lhs] = STATE(21),
-    [sym__number_lhs] = STATE(85),
-    [sym__string_lhs] = STATE(81),
-    [sym_string_func] = STATE(81),
-    [sym_number_func] = STATE(85),
-    [sym_bool_func] = STATE(21),
-    [sym_ends_with_func] = STATE(30),
-    [sym_lookup_func] = STATE(72),
-    [sym_lower_func] = STATE(72),
-    [sym_regex_replace_func] = STATE(72),
-    [sym_remove_bytes_func] = STATE(72),
-    [sym_starts_with_func] = STATE(30),
-    [sym_to_string_func] = STATE(72),
-    [sym_upper_func] = STATE(72),
-    [sym_url_decode_func] = STATE(72),
-    [sym_uuid_func] = STATE(72),
-    [sym_group] = STATE(21),
-    [sym_boolean] = STATE(21),
-    [sym_not_operator] = STATE(4),
-    [sym__array_lhs] = STATE(130),
-    [sym__stringlike_field] = STATE(80),
-    [sym_number_field] = STATE(85),
-    [sym_ip_field] = STATE(90),
-    [sym_string_field] = STATE(80),
-    [sym_map_string_array_field] = STATE(128),
-    [sym_array_string_field] = STATE(130),
-    [sym_bool_field] = STATE(21),
-    [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(7),
-    [anon_sym_LPAREN] = ACTIONS(9),
-    [anon_sym_len] = ACTIONS(11),
-    [anon_sym_ends_with] = ACTIONS(13),
-    [anon_sym_lookup_json_string] = ACTIONS(15),
-    [anon_sym_lower] = ACTIONS(17),
-    [anon_sym_regex_replace] = ACTIONS(19),
-    [anon_sym_remove_bytes] = ACTIONS(21),
-    [anon_sym_starts_with] = ACTIONS(23),
-    [anon_sym_to_string] = ACTIONS(25),
-    [anon_sym_upper] = ACTIONS(27),
-    [anon_sym_url_decode] = ACTIONS(29),
-    [anon_sym_uuidv4] = ACTIONS(31),
-    [anon_sym_true] = ACTIONS(33),
-    [anon_sym_false] = ACTIONS(33),
-    [anon_sym_not] = ACTIONS(35),
-    [anon_sym_BANG] = ACTIONS(35),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(37),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(37),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(37),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(37),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(37),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(39),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(37),
-    [anon_sym_ip_DOTsrc] = ACTIONS(41),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(43),
-    [anon_sym_http_DOTcookie] = ACTIONS(45),
-    [anon_sym_http_DOThost] = ACTIONS(45),
-    [anon_sym_http_DOTreferer] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(47),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(45),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(45),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(47),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(45),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(45),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(45),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(49),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(51),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(53),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(53),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(53),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(55),
-    [anon_sym_ssl] = ACTIONS(55),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(55),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(55),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(55),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(55),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(55),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(55),
-  },
-  [7] = {
-    [sym__expression] = STATE(20),
-    [sym_not_expression] = STATE(20),
-    [sym_in_expression] = STATE(20),
-    [sym_compound_expression] = STATE(20),
-    [sym_simple_expression] = STATE(20),
-    [sym__bool_lhs] = STATE(20),
-    [sym__number_lhs] = STATE(85),
-    [sym__string_lhs] = STATE(81),
-    [sym_string_func] = STATE(81),
-    [sym_number_func] = STATE(85),
-    [sym_bool_func] = STATE(20),
-    [sym_ends_with_func] = STATE(30),
-    [sym_lookup_func] = STATE(72),
-    [sym_lower_func] = STATE(72),
-    [sym_regex_replace_func] = STATE(72),
-    [sym_remove_bytes_func] = STATE(72),
-    [sym_starts_with_func] = STATE(30),
-    [sym_to_string_func] = STATE(72),
-    [sym_upper_func] = STATE(72),
-    [sym_url_decode_func] = STATE(72),
-    [sym_uuid_func] = STATE(72),
-    [sym_group] = STATE(20),
-    [sym_boolean] = STATE(20),
-    [sym_not_operator] = STATE(4),
-    [sym__array_lhs] = STATE(130),
-    [sym__stringlike_field] = STATE(80),
-    [sym_number_field] = STATE(85),
-    [sym_ip_field] = STATE(90),
-    [sym_string_field] = STATE(80),
-    [sym_map_string_array_field] = STATE(128),
-    [sym_array_string_field] = STATE(130),
-    [sym_bool_field] = STATE(20),
-    [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(7),
-    [anon_sym_LPAREN] = ACTIONS(9),
-    [anon_sym_len] = ACTIONS(11),
-    [anon_sym_ends_with] = ACTIONS(13),
-    [anon_sym_lookup_json_string] = ACTIONS(15),
-    [anon_sym_lower] = ACTIONS(17),
-    [anon_sym_regex_replace] = ACTIONS(19),
-    [anon_sym_remove_bytes] = ACTIONS(21),
-    [anon_sym_starts_with] = ACTIONS(23),
-    [anon_sym_to_string] = ACTIONS(25),
-    [anon_sym_upper] = ACTIONS(27),
-    [anon_sym_url_decode] = ACTIONS(29),
-    [anon_sym_uuidv4] = ACTIONS(31),
-    [anon_sym_true] = ACTIONS(33),
-    [anon_sym_false] = ACTIONS(33),
-    [anon_sym_not] = ACTIONS(35),
-    [anon_sym_BANG] = ACTIONS(35),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(37),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(37),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(37),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(37),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(37),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(39),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(37),
-    [anon_sym_ip_DOTsrc] = ACTIONS(41),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(43),
-    [anon_sym_http_DOTcookie] = ACTIONS(45),
-    [anon_sym_http_DOThost] = ACTIONS(45),
-    [anon_sym_http_DOTreferer] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(47),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(45),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(45),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(47),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(45),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(45),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(45),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(49),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(51),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(53),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(53),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(53),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(55),
-    [anon_sym_ssl] = ACTIONS(55),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(55),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(55),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(55),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(55),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(55),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(55),
-  },
-  [8] = {
-    [sym__expression] = STATE(18),
-    [sym_not_expression] = STATE(18),
-    [sym_in_expression] = STATE(18),
-    [sym_compound_expression] = STATE(18),
-    [sym_simple_expression] = STATE(18),
-    [sym__bool_lhs] = STATE(18),
-    [sym__number_lhs] = STATE(85),
-    [sym__string_lhs] = STATE(81),
-    [sym_string_func] = STATE(81),
-    [sym_number_func] = STATE(85),
-    [sym_bool_func] = STATE(18),
-    [sym_ends_with_func] = STATE(30),
-    [sym_lookup_func] = STATE(72),
-    [sym_lower_func] = STATE(72),
-    [sym_regex_replace_func] = STATE(72),
-    [sym_remove_bytes_func] = STATE(72),
-    [sym_starts_with_func] = STATE(30),
-    [sym_to_string_func] = STATE(72),
-    [sym_upper_func] = STATE(72),
-    [sym_url_decode_func] = STATE(72),
-    [sym_uuid_func] = STATE(72),
-    [sym_group] = STATE(18),
-    [sym_boolean] = STATE(18),
-    [sym_not_operator] = STATE(4),
-    [sym__array_lhs] = STATE(130),
-    [sym__stringlike_field] = STATE(80),
-    [sym_number_field] = STATE(85),
-    [sym_ip_field] = STATE(90),
-    [sym_string_field] = STATE(80),
-    [sym_map_string_array_field] = STATE(128),
-    [sym_array_string_field] = STATE(130),
-    [sym_bool_field] = STATE(18),
-    [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(7),
-    [anon_sym_LPAREN] = ACTIONS(9),
-    [anon_sym_len] = ACTIONS(11),
-    [anon_sym_ends_with] = ACTIONS(13),
-    [anon_sym_lookup_json_string] = ACTIONS(15),
-    [anon_sym_lower] = ACTIONS(17),
-    [anon_sym_regex_replace] = ACTIONS(19),
-    [anon_sym_remove_bytes] = ACTIONS(21),
-    [anon_sym_starts_with] = ACTIONS(23),
-    [anon_sym_to_string] = ACTIONS(25),
-    [anon_sym_upper] = ACTIONS(27),
-    [anon_sym_url_decode] = ACTIONS(29),
-    [anon_sym_uuidv4] = ACTIONS(31),
-    [anon_sym_true] = ACTIONS(33),
-    [anon_sym_false] = ACTIONS(33),
-    [anon_sym_not] = ACTIONS(35),
-    [anon_sym_BANG] = ACTIONS(35),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(37),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(37),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(37),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(37),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(37),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(39),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(37),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(37),
-    [anon_sym_ip_DOTsrc] = ACTIONS(41),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(43),
-    [anon_sym_http_DOTcookie] = ACTIONS(45),
-    [anon_sym_http_DOThost] = ACTIONS(45),
-    [anon_sym_http_DOTreferer] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(47),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(45),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(45),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(45),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(45),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(47),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(45),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(45),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(45),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(45),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(45),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(49),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(51),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(53),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(53),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(53),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(55),
-    [anon_sym_ssl] = ACTIONS(55),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(55),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(55),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(55),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(55),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(55),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(55),
-  },
-  [9] = {
-    [ts_builtin_sym_end] = ACTIONS(136),
-    [anon_sym_AMP_AMP] = ACTIONS(136),
-    [anon_sym_and] = ACTIONS(136),
-    [anon_sym_xor] = ACTIONS(136),
-    [anon_sym_CARET_CARET] = ACTIONS(136),
-    [anon_sym_or] = ACTIONS(136),
-    [anon_sym_PIPE_PIPE] = ACTIONS(136),
-    [anon_sym_RBRACE] = ACTIONS(136),
-    [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(136),
-    [anon_sym_LPAREN] = ACTIONS(136),
-    [anon_sym_RPAREN] = ACTIONS(136),
-    [anon_sym_len] = ACTIONS(136),
-    [anon_sym_ends_with] = ACTIONS(136),
-    [anon_sym_lookup_json_string] = ACTIONS(136),
-    [anon_sym_lower] = ACTIONS(136),
-    [anon_sym_regex_replace] = ACTIONS(136),
-    [anon_sym_remove_bytes] = ACTIONS(136),
-    [anon_sym_starts_with] = ACTIONS(136),
-    [anon_sym_to_string] = ACTIONS(136),
-    [anon_sym_upper] = ACTIONS(136),
-    [anon_sym_url_decode] = ACTIONS(136),
-    [anon_sym_uuidv4] = ACTIONS(136),
-    [anon_sym_true] = ACTIONS(136),
-    [anon_sym_false] = ACTIONS(136),
-    [sym_ipv4] = ACTIONS(136),
-    [anon_sym_SLASH] = ACTIONS(138),
-    [anon_sym_not] = ACTIONS(136),
-    [anon_sym_BANG] = ACTIONS(136),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(136),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(136),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(136),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(136),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(136),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(136),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(140),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(136),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(136),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(136),
-    [anon_sym_ip_DOTsrc] = ACTIONS(140),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(136),
-    [anon_sym_http_DOTcookie] = ACTIONS(136),
-    [anon_sym_http_DOThost] = ACTIONS(136),
-    [anon_sym_http_DOTreferer] = ACTIONS(136),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(136),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(136),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(140),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(136),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(136),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(136),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(136),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(136),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(136),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(136),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(136),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(136),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(136),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(136),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(136),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(136),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(136),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(136),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(140),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(136),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(136),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(136),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(136),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(136),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(136),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(140),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(136),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(136),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(136),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(136),
-    [anon_sym_ssl] = ACTIONS(136),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(136),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(136),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(136),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(136),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(136),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(136),
-  },
-  [10] = {
-    [ts_builtin_sym_end] = ACTIONS(142),
-    [anon_sym_AMP_AMP] = ACTIONS(142),
-    [anon_sym_and] = ACTIONS(142),
-    [anon_sym_xor] = ACTIONS(142),
-    [anon_sym_CARET_CARET] = ACTIONS(142),
-    [anon_sym_or] = ACTIONS(142),
-    [anon_sym_PIPE_PIPE] = ACTIONS(142),
-    [anon_sym_RBRACE] = ACTIONS(142),
-    [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(142),
-    [anon_sym_LPAREN] = ACTIONS(142),
-    [anon_sym_RPAREN] = ACTIONS(142),
-    [anon_sym_len] = ACTIONS(142),
-    [anon_sym_ends_with] = ACTIONS(142),
-    [anon_sym_lookup_json_string] = ACTIONS(142),
-    [anon_sym_lower] = ACTIONS(142),
-    [anon_sym_regex_replace] = ACTIONS(142),
-    [anon_sym_remove_bytes] = ACTIONS(142),
-    [anon_sym_starts_with] = ACTIONS(142),
-    [anon_sym_to_string] = ACTIONS(142),
-    [anon_sym_upper] = ACTIONS(142),
-    [anon_sym_url_decode] = ACTIONS(142),
-    [anon_sym_uuidv4] = ACTIONS(142),
-    [anon_sym_true] = ACTIONS(142),
-    [anon_sym_false] = ACTIONS(142),
-    [sym_ipv4] = ACTIONS(142),
-    [anon_sym_not] = ACTIONS(142),
-    [anon_sym_BANG] = ACTIONS(142),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(142),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(142),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(142),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(142),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(142),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(142),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(144),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(142),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(142),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(142),
-    [anon_sym_ip_DOTsrc] = ACTIONS(144),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(142),
-    [anon_sym_http_DOTcookie] = ACTIONS(142),
-    [anon_sym_http_DOThost] = ACTIONS(142),
-    [anon_sym_http_DOTreferer] = ACTIONS(142),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(142),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(142),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(144),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(142),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(142),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(142),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(142),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(142),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(142),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(142),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(142),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(142),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(142),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(142),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(142),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(142),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(142),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(142),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(144),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(142),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(142),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(142),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(142),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(142),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(142),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(144),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(142),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(142),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(142),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(142),
-    [anon_sym_ssl] = ACTIONS(142),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(142),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(142),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(142),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(142),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(142),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(142),
-  },
-  [11] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
-    [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
-  },
   [12] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
+    [ts_builtin_sym_end] = ACTIONS(135),
+    [anon_sym_AMP_AMP] = ACTIONS(135),
+    [anon_sym_and] = ACTIONS(135),
+    [anon_sym_xor] = ACTIONS(135),
+    [anon_sym_CARET_CARET] = ACTIONS(135),
+    [anon_sym_or] = ACTIONS(135),
+    [anon_sym_PIPE_PIPE] = ACTIONS(135),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
+    [anon_sym_concat] = ACTIONS(135),
+    [anon_sym_LPAREN] = ACTIONS(135),
+    [anon_sym_RPAREN] = ACTIONS(135),
+    [anon_sym_lookup_json_string] = ACTIONS(135),
+    [anon_sym_lower] = ACTIONS(135),
+    [anon_sym_regex_replace] = ACTIONS(135),
+    [anon_sym_remove_bytes] = ACTIONS(135),
+    [anon_sym_to_string] = ACTIONS(135),
+    [anon_sym_upper] = ACTIONS(135),
+    [anon_sym_url_decode] = ACTIONS(135),
+    [anon_sym_uuidv4] = ACTIONS(135),
+    [anon_sym_len] = ACTIONS(135),
+    [anon_sym_ends_with] = ACTIONS(135),
+    [anon_sym_starts_with] = ACTIONS(135),
+    [anon_sym_true] = ACTIONS(135),
+    [anon_sym_false] = ACTIONS(135),
+    [anon_sym_not] = ACTIONS(135),
+    [anon_sym_BANG] = ACTIONS(135),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(135),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(135),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(135),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(135),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(135),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(135),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(137),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(135),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(135),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(135),
+    [anon_sym_ip_DOTsrc] = ACTIONS(137),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(135),
+    [anon_sym_http_DOTcookie] = ACTIONS(135),
+    [anon_sym_http_DOThost] = ACTIONS(135),
+    [anon_sym_http_DOTreferer] = ACTIONS(135),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(135),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(135),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(137),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(135),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(135),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(135),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(135),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(135),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(135),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(135),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(135),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(135),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(135),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(135),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(135),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(135),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(135),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(135),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(137),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(135),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(135),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(135),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(135),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(135),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(135),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(137),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(135),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(135),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(135),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(135),
+    [anon_sym_ssl] = ACTIONS(135),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(135),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(135),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(135),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(135),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(135),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(135),
   },
   [13] = {
-    [ts_builtin_sym_end] = ACTIONS(150),
-    [anon_sym_AMP_AMP] = ACTIONS(150),
-    [anon_sym_and] = ACTIONS(150),
-    [anon_sym_xor] = ACTIONS(150),
-    [anon_sym_CARET_CARET] = ACTIONS(150),
-    [anon_sym_or] = ACTIONS(150),
-    [anon_sym_PIPE_PIPE] = ACTIONS(150),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(150),
-    [anon_sym_LPAREN] = ACTIONS(150),
-    [anon_sym_RPAREN] = ACTIONS(150),
-    [anon_sym_len] = ACTIONS(150),
-    [anon_sym_ends_with] = ACTIONS(150),
-    [anon_sym_lookup_json_string] = ACTIONS(150),
-    [anon_sym_lower] = ACTIONS(150),
-    [anon_sym_regex_replace] = ACTIONS(150),
-    [anon_sym_remove_bytes] = ACTIONS(150),
-    [anon_sym_starts_with] = ACTIONS(150),
-    [anon_sym_to_string] = ACTIONS(150),
-    [anon_sym_upper] = ACTIONS(150),
-    [anon_sym_url_decode] = ACTIONS(150),
-    [anon_sym_uuidv4] = ACTIONS(150),
-    [anon_sym_true] = ACTIONS(150),
-    [anon_sym_false] = ACTIONS(150),
-    [anon_sym_not] = ACTIONS(150),
-    [anon_sym_BANG] = ACTIONS(150),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(150),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(150),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(150),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(150),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(150),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(150),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(152),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(150),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(150),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(150),
-    [anon_sym_ip_DOTsrc] = ACTIONS(152),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(150),
-    [anon_sym_http_DOTcookie] = ACTIONS(150),
-    [anon_sym_http_DOThost] = ACTIONS(150),
-    [anon_sym_http_DOTreferer] = ACTIONS(150),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(150),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(150),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(152),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(150),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(150),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(150),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(150),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(150),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(150),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(150),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(150),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(150),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(150),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(150),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(150),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(150),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(150),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(150),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(152),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(150),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(150),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(150),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(150),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(150),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(150),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(152),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(150),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(150),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(150),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(150),
-    [anon_sym_ssl] = ACTIONS(150),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(150),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(150),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(150),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(150),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(150),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(150),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [14] = {
-    [ts_builtin_sym_end] = ACTIONS(154),
-    [anon_sym_AMP_AMP] = ACTIONS(154),
-    [anon_sym_and] = ACTIONS(154),
-    [anon_sym_xor] = ACTIONS(154),
-    [anon_sym_CARET_CARET] = ACTIONS(154),
-    [anon_sym_or] = ACTIONS(154),
-    [anon_sym_PIPE_PIPE] = ACTIONS(154),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(154),
-    [anon_sym_LPAREN] = ACTIONS(154),
-    [anon_sym_RPAREN] = ACTIONS(154),
-    [anon_sym_len] = ACTIONS(154),
-    [anon_sym_ends_with] = ACTIONS(154),
-    [anon_sym_lookup_json_string] = ACTIONS(154),
-    [anon_sym_lower] = ACTIONS(154),
-    [anon_sym_regex_replace] = ACTIONS(154),
-    [anon_sym_remove_bytes] = ACTIONS(154),
-    [anon_sym_starts_with] = ACTIONS(154),
-    [anon_sym_to_string] = ACTIONS(154),
-    [anon_sym_upper] = ACTIONS(154),
-    [anon_sym_url_decode] = ACTIONS(154),
-    [anon_sym_uuidv4] = ACTIONS(154),
-    [anon_sym_true] = ACTIONS(154),
-    [anon_sym_false] = ACTIONS(154),
-    [anon_sym_not] = ACTIONS(154),
-    [anon_sym_BANG] = ACTIONS(154),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(154),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(154),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(154),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(154),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(154),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(154),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(156),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(154),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(154),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(154),
-    [anon_sym_ip_DOTsrc] = ACTIONS(156),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(154),
-    [anon_sym_http_DOTcookie] = ACTIONS(154),
-    [anon_sym_http_DOThost] = ACTIONS(154),
-    [anon_sym_http_DOTreferer] = ACTIONS(154),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(154),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(154),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(156),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(154),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(154),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(154),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(154),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(154),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(154),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(154),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(154),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(154),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(154),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(154),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(154),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(154),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(154),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(154),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(156),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(154),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(154),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(154),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(154),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(154),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(154),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(156),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(154),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(154),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(154),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(154),
-    [anon_sym_ssl] = ACTIONS(154),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(154),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(154),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(154),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(154),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(154),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(154),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [15] = {
-    [ts_builtin_sym_end] = ACTIONS(158),
-    [anon_sym_AMP_AMP] = ACTIONS(158),
-    [anon_sym_and] = ACTIONS(158),
-    [anon_sym_xor] = ACTIONS(158),
-    [anon_sym_CARET_CARET] = ACTIONS(158),
-    [anon_sym_or] = ACTIONS(158),
-    [anon_sym_PIPE_PIPE] = ACTIONS(158),
+    [ts_builtin_sym_end] = ACTIONS(143),
+    [anon_sym_AMP_AMP] = ACTIONS(143),
+    [anon_sym_and] = ACTIONS(143),
+    [anon_sym_xor] = ACTIONS(143),
+    [anon_sym_CARET_CARET] = ACTIONS(143),
+    [anon_sym_or] = ACTIONS(143),
+    [anon_sym_PIPE_PIPE] = ACTIONS(143),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(158),
-    [anon_sym_LPAREN] = ACTIONS(158),
-    [anon_sym_RPAREN] = ACTIONS(158),
-    [anon_sym_len] = ACTIONS(158),
-    [anon_sym_ends_with] = ACTIONS(158),
-    [anon_sym_lookup_json_string] = ACTIONS(158),
-    [anon_sym_lower] = ACTIONS(158),
-    [anon_sym_regex_replace] = ACTIONS(158),
-    [anon_sym_remove_bytes] = ACTIONS(158),
-    [anon_sym_starts_with] = ACTIONS(158),
-    [anon_sym_to_string] = ACTIONS(158),
-    [anon_sym_upper] = ACTIONS(158),
-    [anon_sym_url_decode] = ACTIONS(158),
-    [anon_sym_uuidv4] = ACTIONS(158),
-    [anon_sym_true] = ACTIONS(158),
-    [anon_sym_false] = ACTIONS(158),
-    [anon_sym_not] = ACTIONS(158),
-    [anon_sym_BANG] = ACTIONS(158),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(158),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(158),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(158),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(158),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(158),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(158),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(160),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(158),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(158),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(158),
-    [anon_sym_ip_DOTsrc] = ACTIONS(160),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(158),
-    [anon_sym_http_DOTcookie] = ACTIONS(158),
-    [anon_sym_http_DOThost] = ACTIONS(158),
-    [anon_sym_http_DOTreferer] = ACTIONS(158),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(158),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(158),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(160),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(158),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(158),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(158),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(158),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(158),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(158),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(158),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(158),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(158),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(158),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(158),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(158),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(158),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(158),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(158),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(160),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(158),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(158),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(158),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(158),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(158),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(158),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(160),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(158),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(158),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(158),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(158),
-    [anon_sym_ssl] = ACTIONS(158),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(158),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(158),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(158),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(158),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(158),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(158),
+    [anon_sym_concat] = ACTIONS(143),
+    [anon_sym_LPAREN] = ACTIONS(143),
+    [anon_sym_RPAREN] = ACTIONS(143),
+    [anon_sym_lookup_json_string] = ACTIONS(143),
+    [anon_sym_lower] = ACTIONS(143),
+    [anon_sym_regex_replace] = ACTIONS(143),
+    [anon_sym_remove_bytes] = ACTIONS(143),
+    [anon_sym_to_string] = ACTIONS(143),
+    [anon_sym_upper] = ACTIONS(143),
+    [anon_sym_url_decode] = ACTIONS(143),
+    [anon_sym_uuidv4] = ACTIONS(143),
+    [anon_sym_len] = ACTIONS(143),
+    [anon_sym_ends_with] = ACTIONS(143),
+    [anon_sym_starts_with] = ACTIONS(143),
+    [anon_sym_true] = ACTIONS(143),
+    [anon_sym_false] = ACTIONS(143),
+    [anon_sym_not] = ACTIONS(143),
+    [anon_sym_BANG] = ACTIONS(143),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(143),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(143),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(143),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(143),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(143),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(143),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(145),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(143),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(143),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(143),
+    [anon_sym_ip_DOTsrc] = ACTIONS(145),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(143),
+    [anon_sym_http_DOTcookie] = ACTIONS(143),
+    [anon_sym_http_DOThost] = ACTIONS(143),
+    [anon_sym_http_DOTreferer] = ACTIONS(143),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(143),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(143),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(145),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(143),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(143),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(143),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(143),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(143),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(143),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(143),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(143),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(143),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(143),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(143),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(143),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(143),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(143),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(143),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(145),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(143),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(143),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(143),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(143),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(143),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(143),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(145),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(143),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(143),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(143),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(143),
+    [anon_sym_ssl] = ACTIONS(143),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(143),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(143),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(143),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(143),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(143),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(143),
   },
   [16] = {
-    [ts_builtin_sym_end] = ACTIONS(162),
-    [anon_sym_AMP_AMP] = ACTIONS(162),
-    [anon_sym_and] = ACTIONS(162),
-    [anon_sym_xor] = ACTIONS(162),
-    [anon_sym_CARET_CARET] = ACTIONS(162),
-    [anon_sym_or] = ACTIONS(162),
-    [anon_sym_PIPE_PIPE] = ACTIONS(162),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(162),
-    [anon_sym_LPAREN] = ACTIONS(162),
-    [anon_sym_RPAREN] = ACTIONS(162),
-    [anon_sym_len] = ACTIONS(162),
-    [anon_sym_ends_with] = ACTIONS(162),
-    [anon_sym_lookup_json_string] = ACTIONS(162),
-    [anon_sym_lower] = ACTIONS(162),
-    [anon_sym_regex_replace] = ACTIONS(162),
-    [anon_sym_remove_bytes] = ACTIONS(162),
-    [anon_sym_starts_with] = ACTIONS(162),
-    [anon_sym_to_string] = ACTIONS(162),
-    [anon_sym_upper] = ACTIONS(162),
-    [anon_sym_url_decode] = ACTIONS(162),
-    [anon_sym_uuidv4] = ACTIONS(162),
-    [anon_sym_true] = ACTIONS(162),
-    [anon_sym_false] = ACTIONS(162),
-    [anon_sym_not] = ACTIONS(162),
-    [anon_sym_BANG] = ACTIONS(162),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(162),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(162),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(162),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(162),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(162),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(162),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(164),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(162),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(162),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(162),
-    [anon_sym_ip_DOTsrc] = ACTIONS(164),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(162),
-    [anon_sym_http_DOTcookie] = ACTIONS(162),
-    [anon_sym_http_DOThost] = ACTIONS(162),
-    [anon_sym_http_DOTreferer] = ACTIONS(162),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(162),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(162),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(164),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(162),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(162),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(162),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(162),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(162),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(162),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(162),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(162),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(162),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(162),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(162),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(162),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(162),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(162),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(162),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(164),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(162),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(162),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(162),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(162),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(162),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(162),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(164),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(162),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(162),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(162),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(162),
-    [anon_sym_ssl] = ACTIONS(162),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(162),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(162),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(162),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(162),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(162),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(162),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [17] = {
-    [ts_builtin_sym_end] = ACTIONS(166),
-    [anon_sym_AMP_AMP] = ACTIONS(166),
-    [anon_sym_and] = ACTIONS(166),
-    [anon_sym_xor] = ACTIONS(166),
-    [anon_sym_CARET_CARET] = ACTIONS(166),
-    [anon_sym_or] = ACTIONS(166),
-    [anon_sym_PIPE_PIPE] = ACTIONS(166),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(166),
-    [anon_sym_LPAREN] = ACTIONS(166),
-    [anon_sym_RPAREN] = ACTIONS(166),
-    [anon_sym_len] = ACTIONS(166),
-    [anon_sym_ends_with] = ACTIONS(166),
-    [anon_sym_lookup_json_string] = ACTIONS(166),
-    [anon_sym_lower] = ACTIONS(166),
-    [anon_sym_regex_replace] = ACTIONS(166),
-    [anon_sym_remove_bytes] = ACTIONS(166),
-    [anon_sym_starts_with] = ACTIONS(166),
-    [anon_sym_to_string] = ACTIONS(166),
-    [anon_sym_upper] = ACTIONS(166),
-    [anon_sym_url_decode] = ACTIONS(166),
-    [anon_sym_uuidv4] = ACTIONS(166),
-    [anon_sym_true] = ACTIONS(166),
-    [anon_sym_false] = ACTIONS(166),
-    [anon_sym_not] = ACTIONS(166),
-    [anon_sym_BANG] = ACTIONS(166),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(166),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(166),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(166),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(166),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(166),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(166),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(168),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(166),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(166),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(166),
-    [anon_sym_ip_DOTsrc] = ACTIONS(168),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(166),
-    [anon_sym_http_DOTcookie] = ACTIONS(166),
-    [anon_sym_http_DOThost] = ACTIONS(166),
-    [anon_sym_http_DOTreferer] = ACTIONS(166),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(166),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(166),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(168),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(166),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(166),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(166),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(166),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(166),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(166),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(166),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(166),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(166),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(166),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(166),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(166),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(166),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(166),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(166),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(168),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(166),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(166),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(166),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(166),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(166),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(166),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(168),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(166),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(166),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(166),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(166),
-    [anon_sym_ssl] = ACTIONS(166),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(166),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(166),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(166),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(166),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(166),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(166),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [18] = {
-    [ts_builtin_sym_end] = ACTIONS(170),
-    [anon_sym_AMP_AMP] = ACTIONS(170),
-    [anon_sym_and] = ACTIONS(170),
-    [anon_sym_xor] = ACTIONS(170),
-    [anon_sym_CARET_CARET] = ACTIONS(170),
-    [anon_sym_or] = ACTIONS(170),
-    [anon_sym_PIPE_PIPE] = ACTIONS(170),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(170),
-    [anon_sym_LPAREN] = ACTIONS(170),
-    [anon_sym_RPAREN] = ACTIONS(170),
-    [anon_sym_len] = ACTIONS(170),
-    [anon_sym_ends_with] = ACTIONS(170),
-    [anon_sym_lookup_json_string] = ACTIONS(170),
-    [anon_sym_lower] = ACTIONS(170),
-    [anon_sym_regex_replace] = ACTIONS(170),
-    [anon_sym_remove_bytes] = ACTIONS(170),
-    [anon_sym_starts_with] = ACTIONS(170),
-    [anon_sym_to_string] = ACTIONS(170),
-    [anon_sym_upper] = ACTIONS(170),
-    [anon_sym_url_decode] = ACTIONS(170),
-    [anon_sym_uuidv4] = ACTIONS(170),
-    [anon_sym_true] = ACTIONS(170),
-    [anon_sym_false] = ACTIONS(170),
-    [anon_sym_not] = ACTIONS(170),
-    [anon_sym_BANG] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(170),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(170),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(170),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(170),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(172),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(170),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(170),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc] = ACTIONS(172),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(170),
-    [anon_sym_http_DOTcookie] = ACTIONS(170),
-    [anon_sym_http_DOThost] = ACTIONS(170),
-    [anon_sym_http_DOTreferer] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(172),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(170),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(170),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(170),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(170),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(172),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(170),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(170),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(170),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(170),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(172),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(170),
-    [anon_sym_ssl] = ACTIONS(170),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(170),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(170),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(170),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(170),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(170),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [19] = {
-    [ts_builtin_sym_end] = ACTIONS(174),
-    [anon_sym_AMP_AMP] = ACTIONS(174),
-    [anon_sym_and] = ACTIONS(174),
-    [anon_sym_xor] = ACTIONS(174),
-    [anon_sym_CARET_CARET] = ACTIONS(174),
-    [anon_sym_or] = ACTIONS(174),
-    [anon_sym_PIPE_PIPE] = ACTIONS(174),
+    [ts_builtin_sym_end] = ACTIONS(147),
+    [anon_sym_AMP_AMP] = ACTIONS(147),
+    [anon_sym_and] = ACTIONS(147),
+    [anon_sym_xor] = ACTIONS(147),
+    [anon_sym_CARET_CARET] = ACTIONS(147),
+    [anon_sym_or] = ACTIONS(147),
+    [anon_sym_PIPE_PIPE] = ACTIONS(147),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(174),
-    [anon_sym_LPAREN] = ACTIONS(174),
-    [anon_sym_RPAREN] = ACTIONS(174),
-    [anon_sym_len] = ACTIONS(174),
-    [anon_sym_ends_with] = ACTIONS(174),
-    [anon_sym_lookup_json_string] = ACTIONS(174),
-    [anon_sym_lower] = ACTIONS(174),
-    [anon_sym_regex_replace] = ACTIONS(174),
-    [anon_sym_remove_bytes] = ACTIONS(174),
-    [anon_sym_starts_with] = ACTIONS(174),
-    [anon_sym_to_string] = ACTIONS(174),
-    [anon_sym_upper] = ACTIONS(174),
-    [anon_sym_url_decode] = ACTIONS(174),
-    [anon_sym_uuidv4] = ACTIONS(174),
-    [anon_sym_true] = ACTIONS(174),
-    [anon_sym_false] = ACTIONS(174),
-    [anon_sym_not] = ACTIONS(174),
-    [anon_sym_BANG] = ACTIONS(174),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(174),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(174),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(174),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(174),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(174),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(174),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(176),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(174),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(174),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(174),
-    [anon_sym_ip_DOTsrc] = ACTIONS(176),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(174),
-    [anon_sym_http_DOTcookie] = ACTIONS(174),
-    [anon_sym_http_DOThost] = ACTIONS(174),
-    [anon_sym_http_DOTreferer] = ACTIONS(174),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(174),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(174),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(176),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(174),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(174),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(174),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(174),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(174),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(174),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(174),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(174),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(174),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(174),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(174),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(174),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(174),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(174),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(174),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(176),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(174),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(174),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(174),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(174),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(174),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(174),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(176),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(174),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(174),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(174),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(174),
-    [anon_sym_ssl] = ACTIONS(174),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(174),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(174),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(174),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(174),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(174),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(174),
+    [anon_sym_concat] = ACTIONS(147),
+    [anon_sym_LPAREN] = ACTIONS(147),
+    [anon_sym_RPAREN] = ACTIONS(147),
+    [anon_sym_lookup_json_string] = ACTIONS(147),
+    [anon_sym_lower] = ACTIONS(147),
+    [anon_sym_regex_replace] = ACTIONS(147),
+    [anon_sym_remove_bytes] = ACTIONS(147),
+    [anon_sym_to_string] = ACTIONS(147),
+    [anon_sym_upper] = ACTIONS(147),
+    [anon_sym_url_decode] = ACTIONS(147),
+    [anon_sym_uuidv4] = ACTIONS(147),
+    [anon_sym_len] = ACTIONS(147),
+    [anon_sym_ends_with] = ACTIONS(147),
+    [anon_sym_starts_with] = ACTIONS(147),
+    [anon_sym_true] = ACTIONS(147),
+    [anon_sym_false] = ACTIONS(147),
+    [anon_sym_not] = ACTIONS(147),
+    [anon_sym_BANG] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(147),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(147),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(147),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(147),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(149),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(147),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(147),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc] = ACTIONS(149),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(147),
+    [anon_sym_http_DOTcookie] = ACTIONS(147),
+    [anon_sym_http_DOThost] = ACTIONS(147),
+    [anon_sym_http_DOTreferer] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(149),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(147),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(147),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(147),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(147),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(149),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(147),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(147),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(147),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(147),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(149),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(147),
+    [anon_sym_ssl] = ACTIONS(147),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(147),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(147),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(147),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(147),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(147),
   },
   [20] = {
-    [ts_builtin_sym_end] = ACTIONS(170),
-    [anon_sym_AMP_AMP] = ACTIONS(178),
-    [anon_sym_and] = ACTIONS(178),
-    [anon_sym_xor] = ACTIONS(170),
-    [anon_sym_CARET_CARET] = ACTIONS(170),
-    [anon_sym_or] = ACTIONS(170),
-    [anon_sym_PIPE_PIPE] = ACTIONS(170),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(170),
-    [anon_sym_LPAREN] = ACTIONS(170),
-    [anon_sym_RPAREN] = ACTIONS(170),
-    [anon_sym_len] = ACTIONS(170),
-    [anon_sym_ends_with] = ACTIONS(170),
-    [anon_sym_lookup_json_string] = ACTIONS(170),
-    [anon_sym_lower] = ACTIONS(170),
-    [anon_sym_regex_replace] = ACTIONS(170),
-    [anon_sym_remove_bytes] = ACTIONS(170),
-    [anon_sym_starts_with] = ACTIONS(170),
-    [anon_sym_to_string] = ACTIONS(170),
-    [anon_sym_upper] = ACTIONS(170),
-    [anon_sym_url_decode] = ACTIONS(170),
-    [anon_sym_uuidv4] = ACTIONS(170),
-    [anon_sym_true] = ACTIONS(170),
-    [anon_sym_false] = ACTIONS(170),
-    [anon_sym_not] = ACTIONS(170),
-    [anon_sym_BANG] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(170),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(170),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(170),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(170),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(172),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(170),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(170),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc] = ACTIONS(172),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(170),
-    [anon_sym_http_DOTcookie] = ACTIONS(170),
-    [anon_sym_http_DOThost] = ACTIONS(170),
-    [anon_sym_http_DOTreferer] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(172),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(170),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(170),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(170),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(170),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(172),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(170),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(170),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(170),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(170),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(172),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(170),
-    [anon_sym_ssl] = ACTIONS(170),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(170),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(170),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(170),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(170),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(170),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [21] = {
-    [ts_builtin_sym_end] = ACTIONS(170),
-    [anon_sym_AMP_AMP] = ACTIONS(178),
-    [anon_sym_and] = ACTIONS(178),
-    [anon_sym_xor] = ACTIONS(180),
-    [anon_sym_CARET_CARET] = ACTIONS(180),
-    [anon_sym_or] = ACTIONS(170),
-    [anon_sym_PIPE_PIPE] = ACTIONS(170),
+    [ts_builtin_sym_end] = ACTIONS(151),
+    [anon_sym_AMP_AMP] = ACTIONS(151),
+    [anon_sym_and] = ACTIONS(151),
+    [anon_sym_xor] = ACTIONS(151),
+    [anon_sym_CARET_CARET] = ACTIONS(151),
+    [anon_sym_or] = ACTIONS(151),
+    [anon_sym_PIPE_PIPE] = ACTIONS(151),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(170),
-    [anon_sym_LPAREN] = ACTIONS(170),
-    [anon_sym_RPAREN] = ACTIONS(170),
-    [anon_sym_len] = ACTIONS(170),
-    [anon_sym_ends_with] = ACTIONS(170),
-    [anon_sym_lookup_json_string] = ACTIONS(170),
-    [anon_sym_lower] = ACTIONS(170),
-    [anon_sym_regex_replace] = ACTIONS(170),
-    [anon_sym_remove_bytes] = ACTIONS(170),
-    [anon_sym_starts_with] = ACTIONS(170),
-    [anon_sym_to_string] = ACTIONS(170),
-    [anon_sym_upper] = ACTIONS(170),
-    [anon_sym_url_decode] = ACTIONS(170),
-    [anon_sym_uuidv4] = ACTIONS(170),
-    [anon_sym_true] = ACTIONS(170),
-    [anon_sym_false] = ACTIONS(170),
-    [anon_sym_not] = ACTIONS(170),
-    [anon_sym_BANG] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(170),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(170),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(170),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(170),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(172),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(170),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(170),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc] = ACTIONS(172),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(170),
-    [anon_sym_http_DOTcookie] = ACTIONS(170),
-    [anon_sym_http_DOThost] = ACTIONS(170),
-    [anon_sym_http_DOTreferer] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(172),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(170),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(170),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(170),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(170),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(170),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(172),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(170),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(170),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(170),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(170),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(172),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(170),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(170),
-    [anon_sym_ssl] = ACTIONS(170),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(170),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(170),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(170),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(170),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(170),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(170),
+    [anon_sym_concat] = ACTIONS(151),
+    [anon_sym_LPAREN] = ACTIONS(151),
+    [anon_sym_RPAREN] = ACTIONS(151),
+    [anon_sym_lookup_json_string] = ACTIONS(151),
+    [anon_sym_lower] = ACTIONS(151),
+    [anon_sym_regex_replace] = ACTIONS(151),
+    [anon_sym_remove_bytes] = ACTIONS(151),
+    [anon_sym_to_string] = ACTIONS(151),
+    [anon_sym_upper] = ACTIONS(151),
+    [anon_sym_url_decode] = ACTIONS(151),
+    [anon_sym_uuidv4] = ACTIONS(151),
+    [anon_sym_len] = ACTIONS(151),
+    [anon_sym_ends_with] = ACTIONS(151),
+    [anon_sym_starts_with] = ACTIONS(151),
+    [anon_sym_true] = ACTIONS(151),
+    [anon_sym_false] = ACTIONS(151),
+    [anon_sym_not] = ACTIONS(151),
+    [anon_sym_BANG] = ACTIONS(151),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(151),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(151),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(151),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(151),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(151),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(151),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(153),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(151),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(151),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(151),
+    [anon_sym_ip_DOTsrc] = ACTIONS(153),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(151),
+    [anon_sym_http_DOTcookie] = ACTIONS(151),
+    [anon_sym_http_DOThost] = ACTIONS(151),
+    [anon_sym_http_DOTreferer] = ACTIONS(151),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(151),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(151),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(153),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(151),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(151),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(151),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(151),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(151),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(151),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(151),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(151),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(151),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(151),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(151),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(151),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(151),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(151),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(151),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(153),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(151),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(151),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(151),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(151),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(151),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(151),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(153),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(151),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(151),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(151),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(151),
+    [anon_sym_ssl] = ACTIONS(151),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(151),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(151),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(151),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(151),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(151),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(151),
   },
   [22] = {
-    [ts_builtin_sym_end] = ACTIONS(182),
-    [anon_sym_AMP_AMP] = ACTIONS(182),
-    [anon_sym_and] = ACTIONS(182),
-    [anon_sym_xor] = ACTIONS(182),
-    [anon_sym_CARET_CARET] = ACTIONS(182),
-    [anon_sym_or] = ACTIONS(182),
-    [anon_sym_PIPE_PIPE] = ACTIONS(182),
+    [ts_builtin_sym_end] = ACTIONS(155),
+    [anon_sym_AMP_AMP] = ACTIONS(155),
+    [anon_sym_and] = ACTIONS(155),
+    [anon_sym_xor] = ACTIONS(155),
+    [anon_sym_CARET_CARET] = ACTIONS(155),
+    [anon_sym_or] = ACTIONS(155),
+    [anon_sym_PIPE_PIPE] = ACTIONS(155),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(182),
-    [anon_sym_LPAREN] = ACTIONS(182),
-    [anon_sym_RPAREN] = ACTIONS(182),
-    [anon_sym_len] = ACTIONS(182),
-    [anon_sym_ends_with] = ACTIONS(182),
-    [anon_sym_lookup_json_string] = ACTIONS(182),
-    [anon_sym_lower] = ACTIONS(182),
-    [anon_sym_regex_replace] = ACTIONS(182),
-    [anon_sym_remove_bytes] = ACTIONS(182),
-    [anon_sym_starts_with] = ACTIONS(182),
-    [anon_sym_to_string] = ACTIONS(182),
-    [anon_sym_upper] = ACTIONS(182),
-    [anon_sym_url_decode] = ACTIONS(182),
-    [anon_sym_uuidv4] = ACTIONS(182),
-    [anon_sym_true] = ACTIONS(182),
-    [anon_sym_false] = ACTIONS(182),
-    [anon_sym_not] = ACTIONS(182),
-    [anon_sym_BANG] = ACTIONS(182),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(182),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(182),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(182),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(182),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(182),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(182),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(184),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(182),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(182),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(182),
-    [anon_sym_ip_DOTsrc] = ACTIONS(184),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(182),
-    [anon_sym_http_DOTcookie] = ACTIONS(182),
-    [anon_sym_http_DOThost] = ACTIONS(182),
-    [anon_sym_http_DOTreferer] = ACTIONS(182),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(182),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(182),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(184),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(182),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(182),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(182),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(182),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(182),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(182),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(182),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(182),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(182),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(182),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(182),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(182),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(182),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(182),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(182),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(184),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(182),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(182),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(182),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(182),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(182),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(182),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(184),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(182),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(182),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(182),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(182),
-    [anon_sym_ssl] = ACTIONS(182),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(182),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(182),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(182),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(182),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(182),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(182),
+    [anon_sym_concat] = ACTIONS(155),
+    [anon_sym_LPAREN] = ACTIONS(155),
+    [anon_sym_RPAREN] = ACTIONS(155),
+    [anon_sym_lookup_json_string] = ACTIONS(155),
+    [anon_sym_lower] = ACTIONS(155),
+    [anon_sym_regex_replace] = ACTIONS(155),
+    [anon_sym_remove_bytes] = ACTIONS(155),
+    [anon_sym_to_string] = ACTIONS(155),
+    [anon_sym_upper] = ACTIONS(155),
+    [anon_sym_url_decode] = ACTIONS(155),
+    [anon_sym_uuidv4] = ACTIONS(155),
+    [anon_sym_len] = ACTIONS(155),
+    [anon_sym_ends_with] = ACTIONS(155),
+    [anon_sym_starts_with] = ACTIONS(155),
+    [anon_sym_true] = ACTIONS(155),
+    [anon_sym_false] = ACTIONS(155),
+    [anon_sym_not] = ACTIONS(155),
+    [anon_sym_BANG] = ACTIONS(155),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(155),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(155),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(155),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(155),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(155),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(155),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(157),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(155),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(155),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(155),
+    [anon_sym_ip_DOTsrc] = ACTIONS(157),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(155),
+    [anon_sym_http_DOTcookie] = ACTIONS(155),
+    [anon_sym_http_DOThost] = ACTIONS(155),
+    [anon_sym_http_DOTreferer] = ACTIONS(155),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(155),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(155),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(157),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(155),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(155),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(155),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(155),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(155),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(155),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(155),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(155),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(155),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(155),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(155),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(155),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(155),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(155),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(155),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(157),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(155),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(155),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(155),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(155),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(155),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(155),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(157),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(155),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(155),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(155),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(155),
+    [anon_sym_ssl] = ACTIONS(155),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(155),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(155),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(155),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(155),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(155),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(155),
   },
   [23] = {
-    [ts_builtin_sym_end] = ACTIONS(186),
-    [anon_sym_AMP_AMP] = ACTIONS(186),
-    [anon_sym_and] = ACTIONS(186),
-    [anon_sym_xor] = ACTIONS(186),
-    [anon_sym_CARET_CARET] = ACTIONS(186),
-    [anon_sym_or] = ACTIONS(186),
-    [anon_sym_PIPE_PIPE] = ACTIONS(186),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(186),
-    [anon_sym_LPAREN] = ACTIONS(186),
-    [anon_sym_RPAREN] = ACTIONS(186),
-    [anon_sym_len] = ACTIONS(186),
-    [anon_sym_ends_with] = ACTIONS(186),
-    [anon_sym_lookup_json_string] = ACTIONS(186),
-    [anon_sym_lower] = ACTIONS(186),
-    [anon_sym_regex_replace] = ACTIONS(186),
-    [anon_sym_remove_bytes] = ACTIONS(186),
-    [anon_sym_starts_with] = ACTIONS(186),
-    [anon_sym_to_string] = ACTIONS(186),
-    [anon_sym_upper] = ACTIONS(186),
-    [anon_sym_url_decode] = ACTIONS(186),
-    [anon_sym_uuidv4] = ACTIONS(186),
-    [anon_sym_true] = ACTIONS(186),
-    [anon_sym_false] = ACTIONS(186),
-    [anon_sym_not] = ACTIONS(186),
-    [anon_sym_BANG] = ACTIONS(186),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(186),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(186),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(186),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(186),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(186),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(186),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(188),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(186),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(186),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(186),
-    [anon_sym_ip_DOTsrc] = ACTIONS(188),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(186),
-    [anon_sym_http_DOTcookie] = ACTIONS(186),
-    [anon_sym_http_DOThost] = ACTIONS(186),
-    [anon_sym_http_DOTreferer] = ACTIONS(186),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(186),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(186),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(188),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(186),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(186),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(186),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(186),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(186),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(186),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(186),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(186),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(186),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(186),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(186),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(186),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(186),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(186),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(186),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(188),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(186),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(186),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(186),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(186),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(186),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(186),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(188),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(186),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(186),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(186),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(186),
-    [anon_sym_ssl] = ACTIONS(186),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(186),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(186),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(186),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(186),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(186),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(186),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [24] = {
-    [ts_builtin_sym_end] = ACTIONS(190),
-    [anon_sym_AMP_AMP] = ACTIONS(190),
-    [anon_sym_and] = ACTIONS(190),
-    [anon_sym_xor] = ACTIONS(190),
-    [anon_sym_CARET_CARET] = ACTIONS(190),
-    [anon_sym_or] = ACTIONS(190),
-    [anon_sym_PIPE_PIPE] = ACTIONS(190),
+    [ts_builtin_sym_end] = ACTIONS(147),
+    [anon_sym_AMP_AMP] = ACTIONS(159),
+    [anon_sym_and] = ACTIONS(159),
+    [anon_sym_xor] = ACTIONS(161),
+    [anon_sym_CARET_CARET] = ACTIONS(161),
+    [anon_sym_or] = ACTIONS(147),
+    [anon_sym_PIPE_PIPE] = ACTIONS(147),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(190),
-    [anon_sym_LPAREN] = ACTIONS(190),
-    [anon_sym_RPAREN] = ACTIONS(190),
-    [anon_sym_len] = ACTIONS(190),
-    [anon_sym_ends_with] = ACTIONS(190),
-    [anon_sym_lookup_json_string] = ACTIONS(190),
-    [anon_sym_lower] = ACTIONS(190),
-    [anon_sym_regex_replace] = ACTIONS(190),
-    [anon_sym_remove_bytes] = ACTIONS(190),
-    [anon_sym_starts_with] = ACTIONS(190),
-    [anon_sym_to_string] = ACTIONS(190),
-    [anon_sym_upper] = ACTIONS(190),
-    [anon_sym_url_decode] = ACTIONS(190),
-    [anon_sym_uuidv4] = ACTIONS(190),
-    [anon_sym_true] = ACTIONS(190),
-    [anon_sym_false] = ACTIONS(190),
-    [anon_sym_not] = ACTIONS(190),
-    [anon_sym_BANG] = ACTIONS(190),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(190),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(190),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(190),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(190),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(190),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(190),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(192),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(190),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(190),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(190),
-    [anon_sym_ip_DOTsrc] = ACTIONS(192),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(190),
-    [anon_sym_http_DOTcookie] = ACTIONS(190),
-    [anon_sym_http_DOThost] = ACTIONS(190),
-    [anon_sym_http_DOTreferer] = ACTIONS(190),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(190),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(190),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(192),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(190),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(190),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(190),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(190),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(190),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(190),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(190),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(190),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(190),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(190),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(190),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(190),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(190),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(190),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(190),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(192),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(190),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(190),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(190),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(190),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(190),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(190),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(192),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(190),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(190),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(190),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(190),
-    [anon_sym_ssl] = ACTIONS(190),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(190),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(190),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(190),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(190),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(190),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(190),
+    [anon_sym_concat] = ACTIONS(147),
+    [anon_sym_LPAREN] = ACTIONS(147),
+    [anon_sym_RPAREN] = ACTIONS(147),
+    [anon_sym_lookup_json_string] = ACTIONS(147),
+    [anon_sym_lower] = ACTIONS(147),
+    [anon_sym_regex_replace] = ACTIONS(147),
+    [anon_sym_remove_bytes] = ACTIONS(147),
+    [anon_sym_to_string] = ACTIONS(147),
+    [anon_sym_upper] = ACTIONS(147),
+    [anon_sym_url_decode] = ACTIONS(147),
+    [anon_sym_uuidv4] = ACTIONS(147),
+    [anon_sym_len] = ACTIONS(147),
+    [anon_sym_ends_with] = ACTIONS(147),
+    [anon_sym_starts_with] = ACTIONS(147),
+    [anon_sym_true] = ACTIONS(147),
+    [anon_sym_false] = ACTIONS(147),
+    [anon_sym_not] = ACTIONS(147),
+    [anon_sym_BANG] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(147),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(147),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(147),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(147),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(149),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(147),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(147),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc] = ACTIONS(149),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(147),
+    [anon_sym_http_DOTcookie] = ACTIONS(147),
+    [anon_sym_http_DOThost] = ACTIONS(147),
+    [anon_sym_http_DOTreferer] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(149),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(147),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(147),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(147),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(147),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(149),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(147),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(147),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(147),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(147),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(149),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(147),
+    [anon_sym_ssl] = ACTIONS(147),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(147),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(147),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(147),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(147),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(147),
   },
   [25] = {
-    [ts_builtin_sym_end] = ACTIONS(194),
-    [anon_sym_AMP_AMP] = ACTIONS(194),
-    [anon_sym_and] = ACTIONS(194),
-    [anon_sym_xor] = ACTIONS(194),
-    [anon_sym_CARET_CARET] = ACTIONS(194),
-    [anon_sym_or] = ACTIONS(194),
-    [anon_sym_PIPE_PIPE] = ACTIONS(194),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(194),
-    [anon_sym_LPAREN] = ACTIONS(194),
-    [anon_sym_RPAREN] = ACTIONS(194),
-    [anon_sym_len] = ACTIONS(194),
-    [anon_sym_ends_with] = ACTIONS(194),
-    [anon_sym_lookup_json_string] = ACTIONS(194),
-    [anon_sym_lower] = ACTIONS(194),
-    [anon_sym_regex_replace] = ACTIONS(194),
-    [anon_sym_remove_bytes] = ACTIONS(194),
-    [anon_sym_starts_with] = ACTIONS(194),
-    [anon_sym_to_string] = ACTIONS(194),
-    [anon_sym_upper] = ACTIONS(194),
-    [anon_sym_url_decode] = ACTIONS(194),
-    [anon_sym_uuidv4] = ACTIONS(194),
-    [anon_sym_true] = ACTIONS(194),
-    [anon_sym_false] = ACTIONS(194),
-    [anon_sym_not] = ACTIONS(194),
-    [anon_sym_BANG] = ACTIONS(194),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(194),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(194),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(194),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(194),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(194),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(194),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(196),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(194),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(194),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(194),
-    [anon_sym_ip_DOTsrc] = ACTIONS(196),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(194),
-    [anon_sym_http_DOTcookie] = ACTIONS(194),
-    [anon_sym_http_DOThost] = ACTIONS(194),
-    [anon_sym_http_DOTreferer] = ACTIONS(194),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(194),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(194),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(196),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(194),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(194),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(194),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(194),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(194),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(194),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(194),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(194),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(194),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(194),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(194),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(194),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(194),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(194),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(194),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(196),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(194),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(194),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(194),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(194),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(194),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(194),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(196),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(194),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(194),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(194),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(194),
-    [anon_sym_ssl] = ACTIONS(194),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(194),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(194),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(194),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(194),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(194),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(194),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [26] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [27] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [28] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [29] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [30] = {
-    [ts_builtin_sym_end] = ACTIONS(198),
-    [anon_sym_AMP_AMP] = ACTIONS(198),
-    [anon_sym_and] = ACTIONS(198),
-    [anon_sym_xor] = ACTIONS(198),
-    [anon_sym_CARET_CARET] = ACTIONS(198),
-    [anon_sym_or] = ACTIONS(198),
-    [anon_sym_PIPE_PIPE] = ACTIONS(198),
+    [ts_builtin_sym_end] = ACTIONS(163),
+    [anon_sym_AMP_AMP] = ACTIONS(163),
+    [anon_sym_and] = ACTIONS(163),
+    [anon_sym_xor] = ACTIONS(163),
+    [anon_sym_CARET_CARET] = ACTIONS(163),
+    [anon_sym_or] = ACTIONS(163),
+    [anon_sym_PIPE_PIPE] = ACTIONS(163),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(198),
-    [anon_sym_LPAREN] = ACTIONS(198),
-    [anon_sym_RPAREN] = ACTIONS(198),
-    [anon_sym_len] = ACTIONS(198),
-    [anon_sym_ends_with] = ACTIONS(198),
-    [anon_sym_lookup_json_string] = ACTIONS(198),
-    [anon_sym_lower] = ACTIONS(198),
-    [anon_sym_regex_replace] = ACTIONS(198),
-    [anon_sym_remove_bytes] = ACTIONS(198),
-    [anon_sym_starts_with] = ACTIONS(198),
-    [anon_sym_to_string] = ACTIONS(198),
-    [anon_sym_upper] = ACTIONS(198),
-    [anon_sym_url_decode] = ACTIONS(198),
-    [anon_sym_uuidv4] = ACTIONS(198),
-    [anon_sym_true] = ACTIONS(198),
-    [anon_sym_false] = ACTIONS(198),
-    [anon_sym_not] = ACTIONS(198),
-    [anon_sym_BANG] = ACTIONS(198),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(198),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(198),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(198),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(198),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(198),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(198),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(200),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(198),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(198),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(198),
-    [anon_sym_ip_DOTsrc] = ACTIONS(200),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(198),
-    [anon_sym_http_DOTcookie] = ACTIONS(198),
-    [anon_sym_http_DOThost] = ACTIONS(198),
-    [anon_sym_http_DOTreferer] = ACTIONS(198),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(198),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(198),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(200),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(198),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(198),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(198),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(198),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(198),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(198),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(198),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(198),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(198),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(198),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(198),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(198),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(198),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(198),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(198),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(200),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(198),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(198),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(198),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(198),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(198),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(198),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(200),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(198),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(198),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(198),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(198),
-    [anon_sym_ssl] = ACTIONS(198),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(198),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(198),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(198),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(198),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(198),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(198),
+    [anon_sym_concat] = ACTIONS(163),
+    [anon_sym_LPAREN] = ACTIONS(163),
+    [anon_sym_RPAREN] = ACTIONS(163),
+    [anon_sym_lookup_json_string] = ACTIONS(163),
+    [anon_sym_lower] = ACTIONS(163),
+    [anon_sym_regex_replace] = ACTIONS(163),
+    [anon_sym_remove_bytes] = ACTIONS(163),
+    [anon_sym_to_string] = ACTIONS(163),
+    [anon_sym_upper] = ACTIONS(163),
+    [anon_sym_url_decode] = ACTIONS(163),
+    [anon_sym_uuidv4] = ACTIONS(163),
+    [anon_sym_len] = ACTIONS(163),
+    [anon_sym_ends_with] = ACTIONS(163),
+    [anon_sym_starts_with] = ACTIONS(163),
+    [anon_sym_true] = ACTIONS(163),
+    [anon_sym_false] = ACTIONS(163),
+    [anon_sym_not] = ACTIONS(163),
+    [anon_sym_BANG] = ACTIONS(163),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(163),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(163),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(163),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(163),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(163),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(163),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(165),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(163),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(163),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(163),
+    [anon_sym_ip_DOTsrc] = ACTIONS(165),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(163),
+    [anon_sym_http_DOTcookie] = ACTIONS(163),
+    [anon_sym_http_DOThost] = ACTIONS(163),
+    [anon_sym_http_DOTreferer] = ACTIONS(163),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(163),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(163),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(165),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(163),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(163),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(163),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(163),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(163),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(163),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(163),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(163),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(163),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(163),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(163),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(163),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(163),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(163),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(163),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(165),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(163),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(163),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(163),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(163),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(163),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(163),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(165),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(163),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(163),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(163),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(163),
+    [anon_sym_ssl] = ACTIONS(163),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(163),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(163),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(163),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(163),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(163),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(163),
   },
   [31] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [32] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
+    [ts_builtin_sym_end] = ACTIONS(167),
+    [anon_sym_AMP_AMP] = ACTIONS(167),
+    [anon_sym_and] = ACTIONS(167),
+    [anon_sym_xor] = ACTIONS(167),
+    [anon_sym_CARET_CARET] = ACTIONS(167),
+    [anon_sym_or] = ACTIONS(167),
+    [anon_sym_PIPE_PIPE] = ACTIONS(167),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
+    [anon_sym_concat] = ACTIONS(167),
+    [anon_sym_LPAREN] = ACTIONS(167),
+    [anon_sym_RPAREN] = ACTIONS(167),
+    [anon_sym_lookup_json_string] = ACTIONS(167),
+    [anon_sym_lower] = ACTIONS(167),
+    [anon_sym_regex_replace] = ACTIONS(167),
+    [anon_sym_remove_bytes] = ACTIONS(167),
+    [anon_sym_to_string] = ACTIONS(167),
+    [anon_sym_upper] = ACTIONS(167),
+    [anon_sym_url_decode] = ACTIONS(167),
+    [anon_sym_uuidv4] = ACTIONS(167),
+    [anon_sym_len] = ACTIONS(167),
+    [anon_sym_ends_with] = ACTIONS(167),
+    [anon_sym_starts_with] = ACTIONS(167),
+    [anon_sym_true] = ACTIONS(167),
+    [anon_sym_false] = ACTIONS(167),
+    [anon_sym_not] = ACTIONS(167),
+    [anon_sym_BANG] = ACTIONS(167),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(167),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(167),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(167),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(167),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(167),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(167),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(169),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(167),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(167),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(167),
+    [anon_sym_ip_DOTsrc] = ACTIONS(169),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(167),
+    [anon_sym_http_DOTcookie] = ACTIONS(167),
+    [anon_sym_http_DOThost] = ACTIONS(167),
+    [anon_sym_http_DOTreferer] = ACTIONS(167),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(167),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(167),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(169),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(167),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(167),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(167),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(167),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(167),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(167),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(167),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(167),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(167),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(167),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(167),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(167),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(167),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(167),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(167),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(169),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(167),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(167),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(167),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(167),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(167),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(167),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(169),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(167),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(167),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(167),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(167),
+    [anon_sym_ssl] = ACTIONS(167),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(167),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(167),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(167),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(167),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(167),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(167),
   },
   [33] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
+    [ts_builtin_sym_end] = ACTIONS(171),
+    [anon_sym_AMP_AMP] = ACTIONS(171),
+    [anon_sym_and] = ACTIONS(171),
+    [anon_sym_xor] = ACTIONS(171),
+    [anon_sym_CARET_CARET] = ACTIONS(171),
+    [anon_sym_or] = ACTIONS(171),
+    [anon_sym_PIPE_PIPE] = ACTIONS(171),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
+    [anon_sym_concat] = ACTIONS(171),
+    [anon_sym_LPAREN] = ACTIONS(171),
+    [anon_sym_RPAREN] = ACTIONS(171),
+    [anon_sym_lookup_json_string] = ACTIONS(171),
+    [anon_sym_lower] = ACTIONS(171),
+    [anon_sym_regex_replace] = ACTIONS(171),
+    [anon_sym_remove_bytes] = ACTIONS(171),
+    [anon_sym_to_string] = ACTIONS(171),
+    [anon_sym_upper] = ACTIONS(171),
+    [anon_sym_url_decode] = ACTIONS(171),
+    [anon_sym_uuidv4] = ACTIONS(171),
+    [anon_sym_len] = ACTIONS(171),
+    [anon_sym_ends_with] = ACTIONS(171),
+    [anon_sym_starts_with] = ACTIONS(171),
+    [anon_sym_true] = ACTIONS(171),
+    [anon_sym_false] = ACTIONS(171),
+    [anon_sym_not] = ACTIONS(171),
+    [anon_sym_BANG] = ACTIONS(171),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(171),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(171),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(171),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(171),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(171),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(171),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(173),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(171),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(171),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(171),
+    [anon_sym_ip_DOTsrc] = ACTIONS(173),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(171),
+    [anon_sym_http_DOTcookie] = ACTIONS(171),
+    [anon_sym_http_DOThost] = ACTIONS(171),
+    [anon_sym_http_DOTreferer] = ACTIONS(171),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(171),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(171),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(173),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(171),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(171),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(171),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(171),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(171),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(171),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(171),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(171),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(171),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(171),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(171),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(171),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(171),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(171),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(171),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(173),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(171),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(171),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(171),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(171),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(171),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(171),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(173),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(171),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(171),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(171),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(171),
+    [anon_sym_ssl] = ACTIONS(171),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(171),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(171),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(171),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(171),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(171),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(171),
   },
   [34] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
+    [ts_builtin_sym_end] = ACTIONS(175),
+    [anon_sym_AMP_AMP] = ACTIONS(175),
+    [anon_sym_and] = ACTIONS(175),
+    [anon_sym_xor] = ACTIONS(175),
+    [anon_sym_CARET_CARET] = ACTIONS(175),
+    [anon_sym_or] = ACTIONS(175),
+    [anon_sym_PIPE_PIPE] = ACTIONS(175),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
+    [anon_sym_concat] = ACTIONS(175),
+    [anon_sym_LPAREN] = ACTIONS(175),
+    [anon_sym_RPAREN] = ACTIONS(175),
+    [anon_sym_lookup_json_string] = ACTIONS(175),
+    [anon_sym_lower] = ACTIONS(175),
+    [anon_sym_regex_replace] = ACTIONS(175),
+    [anon_sym_remove_bytes] = ACTIONS(175),
+    [anon_sym_to_string] = ACTIONS(175),
+    [anon_sym_upper] = ACTIONS(175),
+    [anon_sym_url_decode] = ACTIONS(175),
+    [anon_sym_uuidv4] = ACTIONS(175),
+    [anon_sym_len] = ACTIONS(175),
+    [anon_sym_ends_with] = ACTIONS(175),
+    [anon_sym_starts_with] = ACTIONS(175),
+    [anon_sym_true] = ACTIONS(175),
+    [anon_sym_false] = ACTIONS(175),
+    [anon_sym_not] = ACTIONS(175),
+    [anon_sym_BANG] = ACTIONS(175),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(175),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(175),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(175),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(175),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(175),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(175),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(177),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(175),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(175),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(175),
+    [anon_sym_ip_DOTsrc] = ACTIONS(177),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(175),
+    [anon_sym_http_DOTcookie] = ACTIONS(175),
+    [anon_sym_http_DOThost] = ACTIONS(175),
+    [anon_sym_http_DOTreferer] = ACTIONS(175),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(175),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(175),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(177),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(175),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(175),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(175),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(175),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(175),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(175),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(175),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(175),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(175),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(175),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(175),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(175),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(175),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(175),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(175),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(177),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(175),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(175),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(175),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(175),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(175),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(175),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(177),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(175),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(175),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(175),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(175),
+    [anon_sym_ssl] = ACTIONS(175),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(175),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(175),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(175),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(175),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(175),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(175),
   },
   [35] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
+    [ts_builtin_sym_end] = ACTIONS(179),
+    [anon_sym_AMP_AMP] = ACTIONS(179),
+    [anon_sym_and] = ACTIONS(179),
+    [anon_sym_xor] = ACTIONS(179),
+    [anon_sym_CARET_CARET] = ACTIONS(179),
+    [anon_sym_or] = ACTIONS(179),
+    [anon_sym_PIPE_PIPE] = ACTIONS(179),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
+    [anon_sym_concat] = ACTIONS(179),
+    [anon_sym_LPAREN] = ACTIONS(179),
+    [anon_sym_RPAREN] = ACTIONS(179),
+    [anon_sym_lookup_json_string] = ACTIONS(179),
+    [anon_sym_lower] = ACTIONS(179),
+    [anon_sym_regex_replace] = ACTIONS(179),
+    [anon_sym_remove_bytes] = ACTIONS(179),
+    [anon_sym_to_string] = ACTIONS(179),
+    [anon_sym_upper] = ACTIONS(179),
+    [anon_sym_url_decode] = ACTIONS(179),
+    [anon_sym_uuidv4] = ACTIONS(179),
+    [anon_sym_len] = ACTIONS(179),
+    [anon_sym_ends_with] = ACTIONS(179),
+    [anon_sym_starts_with] = ACTIONS(179),
+    [anon_sym_true] = ACTIONS(179),
+    [anon_sym_false] = ACTIONS(179),
+    [anon_sym_not] = ACTIONS(179),
+    [anon_sym_BANG] = ACTIONS(179),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(179),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(179),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(179),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(179),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(179),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(179),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(181),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(179),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(179),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(179),
+    [anon_sym_ip_DOTsrc] = ACTIONS(181),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(179),
+    [anon_sym_http_DOTcookie] = ACTIONS(179),
+    [anon_sym_http_DOThost] = ACTIONS(179),
+    [anon_sym_http_DOTreferer] = ACTIONS(179),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(179),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(179),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(181),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(179),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(179),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(179),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(179),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(179),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(179),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(179),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(179),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(179),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(179),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(179),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(179),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(179),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(179),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(179),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(181),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(179),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(179),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(179),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(179),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(179),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(179),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(181),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(179),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(179),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(179),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(179),
+    [anon_sym_ssl] = ACTIONS(179),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(179),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(179),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(179),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(179),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(179),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(179),
   },
   [36] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [37] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
+    [ts_builtin_sym_end] = ACTIONS(183),
+    [anon_sym_AMP_AMP] = ACTIONS(183),
+    [anon_sym_and] = ACTIONS(183),
+    [anon_sym_xor] = ACTIONS(183),
+    [anon_sym_CARET_CARET] = ACTIONS(183),
+    [anon_sym_or] = ACTIONS(183),
+    [anon_sym_PIPE_PIPE] = ACTIONS(183),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
+    [anon_sym_concat] = ACTIONS(183),
+    [anon_sym_LPAREN] = ACTIONS(183),
+    [anon_sym_RPAREN] = ACTIONS(183),
+    [anon_sym_lookup_json_string] = ACTIONS(183),
+    [anon_sym_lower] = ACTIONS(183),
+    [anon_sym_regex_replace] = ACTIONS(183),
+    [anon_sym_remove_bytes] = ACTIONS(183),
+    [anon_sym_to_string] = ACTIONS(183),
+    [anon_sym_upper] = ACTIONS(183),
+    [anon_sym_url_decode] = ACTIONS(183),
+    [anon_sym_uuidv4] = ACTIONS(183),
+    [anon_sym_len] = ACTIONS(183),
+    [anon_sym_ends_with] = ACTIONS(183),
+    [anon_sym_starts_with] = ACTIONS(183),
+    [anon_sym_true] = ACTIONS(183),
+    [anon_sym_false] = ACTIONS(183),
+    [anon_sym_not] = ACTIONS(183),
+    [anon_sym_BANG] = ACTIONS(183),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(183),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(183),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(183),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(183),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(183),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(183),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(185),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(183),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(183),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(183),
+    [anon_sym_ip_DOTsrc] = ACTIONS(185),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(183),
+    [anon_sym_http_DOTcookie] = ACTIONS(183),
+    [anon_sym_http_DOThost] = ACTIONS(183),
+    [anon_sym_http_DOTreferer] = ACTIONS(183),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(183),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(183),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(185),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(183),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(183),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(183),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(183),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(183),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(183),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(183),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(183),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(183),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(183),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(183),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(183),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(183),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(183),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(183),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(185),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(183),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(183),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(183),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(183),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(183),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(183),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(185),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(183),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(183),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(183),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(183),
+    [anon_sym_ssl] = ACTIONS(183),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(183),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(183),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(183),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(183),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(183),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(183),
   },
   [38] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
+    [ts_builtin_sym_end] = ACTIONS(139),
+    [anon_sym_AMP_AMP] = ACTIONS(139),
+    [anon_sym_and] = ACTIONS(139),
+    [anon_sym_xor] = ACTIONS(139),
+    [anon_sym_CARET_CARET] = ACTIONS(139),
+    [anon_sym_or] = ACTIONS(139),
+    [anon_sym_PIPE_PIPE] = ACTIONS(139),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
+    [anon_sym_concat] = ACTIONS(139),
+    [anon_sym_LPAREN] = ACTIONS(139),
+    [anon_sym_RPAREN] = ACTIONS(139),
+    [anon_sym_lookup_json_string] = ACTIONS(139),
+    [anon_sym_lower] = ACTIONS(139),
+    [anon_sym_regex_replace] = ACTIONS(139),
+    [anon_sym_remove_bytes] = ACTIONS(139),
+    [anon_sym_to_string] = ACTIONS(139),
+    [anon_sym_upper] = ACTIONS(139),
+    [anon_sym_url_decode] = ACTIONS(139),
+    [anon_sym_uuidv4] = ACTIONS(139),
+    [anon_sym_len] = ACTIONS(139),
+    [anon_sym_ends_with] = ACTIONS(139),
+    [anon_sym_starts_with] = ACTIONS(139),
+    [anon_sym_true] = ACTIONS(139),
+    [anon_sym_false] = ACTIONS(139),
+    [anon_sym_not] = ACTIONS(139),
+    [anon_sym_BANG] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(139),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(139),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(141),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(139),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc] = ACTIONS(141),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(139),
+    [anon_sym_http_DOTcookie] = ACTIONS(139),
+    [anon_sym_http_DOThost] = ACTIONS(139),
+    [anon_sym_http_DOTreferer] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(139),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(139),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(141),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(139),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(139),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(139),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(141),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(139),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(139),
+    [anon_sym_ssl] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(139),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(139),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(139),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(139),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(139),
   },
   [39] = {
-    [ts_builtin_sym_end] = ACTIONS(146),
-    [anon_sym_AMP_AMP] = ACTIONS(146),
-    [anon_sym_and] = ACTIONS(146),
-    [anon_sym_xor] = ACTIONS(146),
-    [anon_sym_CARET_CARET] = ACTIONS(146),
-    [anon_sym_or] = ACTIONS(146),
-    [anon_sym_PIPE_PIPE] = ACTIONS(146),
+    [ts_builtin_sym_end] = ACTIONS(147),
+    [anon_sym_AMP_AMP] = ACTIONS(159),
+    [anon_sym_and] = ACTIONS(159),
+    [anon_sym_xor] = ACTIONS(147),
+    [anon_sym_CARET_CARET] = ACTIONS(147),
+    [anon_sym_or] = ACTIONS(147),
+    [anon_sym_PIPE_PIPE] = ACTIONS(147),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(146),
-    [anon_sym_LPAREN] = ACTIONS(146),
-    [anon_sym_RPAREN] = ACTIONS(146),
-    [anon_sym_len] = ACTIONS(146),
-    [anon_sym_ends_with] = ACTIONS(146),
-    [anon_sym_lookup_json_string] = ACTIONS(146),
-    [anon_sym_lower] = ACTIONS(146),
-    [anon_sym_regex_replace] = ACTIONS(146),
-    [anon_sym_remove_bytes] = ACTIONS(146),
-    [anon_sym_starts_with] = ACTIONS(146),
-    [anon_sym_to_string] = ACTIONS(146),
-    [anon_sym_upper] = ACTIONS(146),
-    [anon_sym_url_decode] = ACTIONS(146),
-    [anon_sym_uuidv4] = ACTIONS(146),
-    [anon_sym_true] = ACTIONS(146),
-    [anon_sym_false] = ACTIONS(146),
-    [anon_sym_not] = ACTIONS(146),
-    [anon_sym_BANG] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(146),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(146),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(148),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(146),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc] = ACTIONS(148),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(146),
-    [anon_sym_http_DOTcookie] = ACTIONS(146),
-    [anon_sym_http_DOThost] = ACTIONS(146),
-    [anon_sym_http_DOTreferer] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(146),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(146),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(148),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(146),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(146),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(146),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(148),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(146),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(146),
-    [anon_sym_ssl] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(146),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(146),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(146),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(146),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(146),
+    [anon_sym_concat] = ACTIONS(147),
+    [anon_sym_LPAREN] = ACTIONS(147),
+    [anon_sym_RPAREN] = ACTIONS(147),
+    [anon_sym_lookup_json_string] = ACTIONS(147),
+    [anon_sym_lower] = ACTIONS(147),
+    [anon_sym_regex_replace] = ACTIONS(147),
+    [anon_sym_remove_bytes] = ACTIONS(147),
+    [anon_sym_to_string] = ACTIONS(147),
+    [anon_sym_upper] = ACTIONS(147),
+    [anon_sym_url_decode] = ACTIONS(147),
+    [anon_sym_uuidv4] = ACTIONS(147),
+    [anon_sym_len] = ACTIONS(147),
+    [anon_sym_ends_with] = ACTIONS(147),
+    [anon_sym_starts_with] = ACTIONS(147),
+    [anon_sym_true] = ACTIONS(147),
+    [anon_sym_false] = ACTIONS(147),
+    [anon_sym_not] = ACTIONS(147),
+    [anon_sym_BANG] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(147),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(147),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(147),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(147),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(149),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(147),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(147),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc] = ACTIONS(149),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(147),
+    [anon_sym_http_DOTcookie] = ACTIONS(147),
+    [anon_sym_http_DOThost] = ACTIONS(147),
+    [anon_sym_http_DOTreferer] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(149),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(147),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(147),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(147),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(147),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(147),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(149),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(147),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(147),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(147),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(147),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(149),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(147),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(147),
+    [anon_sym_ssl] = ACTIONS(147),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(147),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(147),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(147),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(147),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(147),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(147),
   },
   [40] = {
-    [ts_builtin_sym_end] = ACTIONS(202),
-    [anon_sym_AMP_AMP] = ACTIONS(202),
-    [anon_sym_and] = ACTIONS(202),
-    [anon_sym_xor] = ACTIONS(202),
-    [anon_sym_CARET_CARET] = ACTIONS(202),
-    [anon_sym_or] = ACTIONS(202),
-    [anon_sym_PIPE_PIPE] = ACTIONS(202),
+    [ts_builtin_sym_end] = ACTIONS(187),
+    [anon_sym_AMP_AMP] = ACTIONS(159),
+    [anon_sym_and] = ACTIONS(159),
+    [anon_sym_xor] = ACTIONS(161),
+    [anon_sym_CARET_CARET] = ACTIONS(161),
+    [anon_sym_or] = ACTIONS(189),
+    [anon_sym_PIPE_PIPE] = ACTIONS(189),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(202),
-    [anon_sym_LPAREN] = ACTIONS(202),
-    [anon_sym_RPAREN] = ACTIONS(202),
-    [anon_sym_len] = ACTIONS(202),
-    [anon_sym_ends_with] = ACTIONS(202),
-    [anon_sym_lookup_json_string] = ACTIONS(202),
-    [anon_sym_lower] = ACTIONS(202),
-    [anon_sym_regex_replace] = ACTIONS(202),
-    [anon_sym_remove_bytes] = ACTIONS(202),
-    [anon_sym_starts_with] = ACTIONS(202),
-    [anon_sym_to_string] = ACTIONS(202),
-    [anon_sym_upper] = ACTIONS(202),
-    [anon_sym_url_decode] = ACTIONS(202),
-    [anon_sym_uuidv4] = ACTIONS(202),
-    [anon_sym_true] = ACTIONS(202),
-    [anon_sym_false] = ACTIONS(202),
-    [anon_sym_not] = ACTIONS(202),
-    [anon_sym_BANG] = ACTIONS(202),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(202),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(202),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(202),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(202),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(202),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(202),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(204),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(202),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(202),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(202),
-    [anon_sym_ip_DOTsrc] = ACTIONS(204),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(202),
-    [anon_sym_http_DOTcookie] = ACTIONS(202),
-    [anon_sym_http_DOThost] = ACTIONS(202),
-    [anon_sym_http_DOTreferer] = ACTIONS(202),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(202),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(202),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(204),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(202),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(202),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(202),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(202),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(202),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(202),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(202),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(202),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(202),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(202),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(202),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(202),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(202),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(202),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(202),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(204),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(202),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(202),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(202),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(202),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(202),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(202),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(204),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(202),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(202),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(202),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(202),
-    [anon_sym_ssl] = ACTIONS(202),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(202),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(202),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(202),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(202),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(202),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(202),
+    [anon_sym_concat] = ACTIONS(187),
+    [anon_sym_LPAREN] = ACTIONS(187),
+    [anon_sym_lookup_json_string] = ACTIONS(187),
+    [anon_sym_lower] = ACTIONS(187),
+    [anon_sym_regex_replace] = ACTIONS(187),
+    [anon_sym_remove_bytes] = ACTIONS(187),
+    [anon_sym_to_string] = ACTIONS(187),
+    [anon_sym_upper] = ACTIONS(187),
+    [anon_sym_url_decode] = ACTIONS(187),
+    [anon_sym_uuidv4] = ACTIONS(187),
+    [anon_sym_len] = ACTIONS(187),
+    [anon_sym_ends_with] = ACTIONS(187),
+    [anon_sym_starts_with] = ACTIONS(187),
+    [anon_sym_true] = ACTIONS(187),
+    [anon_sym_false] = ACTIONS(187),
+    [anon_sym_not] = ACTIONS(187),
+    [anon_sym_BANG] = ACTIONS(187),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(187),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(187),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(187),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(187),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(187),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(187),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(191),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(187),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(187),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(187),
+    [anon_sym_ip_DOTsrc] = ACTIONS(191),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(187),
+    [anon_sym_http_DOTcookie] = ACTIONS(187),
+    [anon_sym_http_DOThost] = ACTIONS(187),
+    [anon_sym_http_DOTreferer] = ACTIONS(187),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(187),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(187),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(191),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(187),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(187),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(187),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(187),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(187),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(187),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(187),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(187),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(187),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(187),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(187),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(187),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(187),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(187),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(187),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(191),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(187),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(187),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(187),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(187),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(187),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(187),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(191),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(187),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(187),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(187),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(187),
+    [anon_sym_ssl] = ACTIONS(187),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(187),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(187),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(187),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(187),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(187),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(187),
   },
   [41] = {
-    [ts_builtin_sym_end] = ACTIONS(206),
-    [anon_sym_AMP_AMP] = ACTIONS(206),
-    [anon_sym_and] = ACTIONS(206),
-    [anon_sym_xor] = ACTIONS(206),
-    [anon_sym_CARET_CARET] = ACTIONS(206),
-    [anon_sym_or] = ACTIONS(206),
-    [anon_sym_PIPE_PIPE] = ACTIONS(206),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(206),
-    [anon_sym_LPAREN] = ACTIONS(206),
-    [anon_sym_RPAREN] = ACTIONS(206),
-    [anon_sym_len] = ACTIONS(206),
-    [anon_sym_ends_with] = ACTIONS(206),
-    [anon_sym_lookup_json_string] = ACTIONS(206),
-    [anon_sym_lower] = ACTIONS(206),
-    [anon_sym_regex_replace] = ACTIONS(206),
-    [anon_sym_remove_bytes] = ACTIONS(206),
-    [anon_sym_starts_with] = ACTIONS(206),
-    [anon_sym_to_string] = ACTIONS(206),
-    [anon_sym_upper] = ACTIONS(206),
-    [anon_sym_url_decode] = ACTIONS(206),
-    [anon_sym_uuidv4] = ACTIONS(206),
-    [anon_sym_true] = ACTIONS(206),
-    [anon_sym_false] = ACTIONS(206),
-    [anon_sym_not] = ACTIONS(206),
-    [anon_sym_BANG] = ACTIONS(206),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(206),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(206),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(206),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(206),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(206),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(206),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(208),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(206),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(206),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(206),
-    [anon_sym_ip_DOTsrc] = ACTIONS(208),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(206),
-    [anon_sym_http_DOTcookie] = ACTIONS(206),
-    [anon_sym_http_DOThost] = ACTIONS(206),
-    [anon_sym_http_DOTreferer] = ACTIONS(206),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(206),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(206),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(208),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(206),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(206),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(206),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(206),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(206),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(206),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(206),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(206),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(206),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(206),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(206),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(206),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(206),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(206),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(206),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(208),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(206),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(206),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(206),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(206),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(206),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(206),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(208),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(206),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(206),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(206),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(206),
-    [anon_sym_ssl] = ACTIONS(206),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(206),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(206),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(206),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(206),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(206),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(206),
+    [anon_sym_concat] = ACTIONS(193),
+    [anon_sym_LPAREN] = ACTIONS(193),
+    [anon_sym_lookup_json_string] = ACTIONS(193),
+    [anon_sym_lower] = ACTIONS(193),
+    [anon_sym_regex_replace] = ACTIONS(193),
+    [anon_sym_remove_bytes] = ACTIONS(193),
+    [anon_sym_to_string] = ACTIONS(193),
+    [anon_sym_upper] = ACTIONS(193),
+    [anon_sym_url_decode] = ACTIONS(193),
+    [anon_sym_uuidv4] = ACTIONS(193),
+    [anon_sym_len] = ACTIONS(193),
+    [anon_sym_ends_with] = ACTIONS(193),
+    [anon_sym_starts_with] = ACTIONS(193),
+    [anon_sym_true] = ACTIONS(193),
+    [anon_sym_false] = ACTIONS(193),
+    [anon_sym_not] = ACTIONS(193),
+    [anon_sym_BANG] = ACTIONS(193),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(193),
+    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(193),
+    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(193),
+    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(193),
+    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(193),
+    [anon_sym_cf_DOTthreat_score] = ACTIONS(193),
+    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(195),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(193),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(193),
+    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(193),
+    [anon_sym_ip_DOTsrc] = ACTIONS(195),
+    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(193),
+    [anon_sym_http_DOTcookie] = ACTIONS(193),
+    [anon_sym_http_DOThost] = ACTIONS(193),
+    [anon_sym_http_DOTreferer] = ACTIONS(193),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(193),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(193),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(195),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(193),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(193),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(193),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(193),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(193),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(193),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(193),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(193),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(193),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(193),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(193),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(193),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(193),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(193),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(193),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(195),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(193),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(193),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(193),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(193),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(193),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(193),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(195),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(193),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(193),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(193),
+    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(193),
+    [anon_sym_ssl] = ACTIONS(193),
+    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(193),
+    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(193),
+    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(193),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(193),
+    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(193),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(193),
   },
   [42] = {
-    [ts_builtin_sym_end] = ACTIONS(210),
-    [anon_sym_AMP_AMP] = ACTIONS(178),
-    [anon_sym_and] = ACTIONS(178),
-    [anon_sym_xor] = ACTIONS(180),
-    [anon_sym_CARET_CARET] = ACTIONS(180),
-    [anon_sym_or] = ACTIONS(212),
-    [anon_sym_PIPE_PIPE] = ACTIONS(212),
+    [anon_sym_in] = ACTIONS(197),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(210),
-    [anon_sym_LPAREN] = ACTIONS(210),
-    [anon_sym_len] = ACTIONS(210),
-    [anon_sym_ends_with] = ACTIONS(210),
-    [anon_sym_lookup_json_string] = ACTIONS(210),
-    [anon_sym_lower] = ACTIONS(210),
-    [anon_sym_regex_replace] = ACTIONS(210),
-    [anon_sym_remove_bytes] = ACTIONS(210),
-    [anon_sym_starts_with] = ACTIONS(210),
-    [anon_sym_to_string] = ACTIONS(210),
-    [anon_sym_upper] = ACTIONS(210),
-    [anon_sym_url_decode] = ACTIONS(210),
-    [anon_sym_uuidv4] = ACTIONS(210),
-    [anon_sym_true] = ACTIONS(210),
-    [anon_sym_false] = ACTIONS(210),
-    [anon_sym_not] = ACTIONS(210),
-    [anon_sym_BANG] = ACTIONS(210),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(210),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(210),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(210),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(210),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(210),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(210),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(214),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(210),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(210),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(210),
-    [anon_sym_ip_DOTsrc] = ACTIONS(214),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(210),
-    [anon_sym_http_DOTcookie] = ACTIONS(210),
-    [anon_sym_http_DOThost] = ACTIONS(210),
-    [anon_sym_http_DOTreferer] = ACTIONS(210),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(210),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(210),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(214),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(210),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(210),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(210),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(210),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(210),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(210),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(210),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(210),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(210),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(210),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(210),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(210),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(210),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(210),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(210),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(214),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(210),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(210),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(210),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(210),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(210),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(210),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(214),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(210),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(210),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(210),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(210),
-    [anon_sym_ssl] = ACTIONS(210),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(210),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(210),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(210),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(210),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(210),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(210),
+    [anon_sym_eq] = ACTIONS(197),
+    [anon_sym_ne] = ACTIONS(197),
+    [anon_sym_lt] = ACTIONS(197),
+    [anon_sym_le] = ACTIONS(199),
+    [anon_sym_gt] = ACTIONS(197),
+    [anon_sym_ge] = ACTIONS(197),
+    [anon_sym_EQ_EQ] = ACTIONS(197),
+    [anon_sym_BANG_EQ] = ACTIONS(197),
+    [anon_sym_LT] = ACTIONS(199),
+    [anon_sym_LT_EQ] = ACTIONS(197),
+    [anon_sym_GT] = ACTIONS(199),
+    [anon_sym_GT_EQ] = ACTIONS(197),
+    [anon_sym_contains] = ACTIONS(197),
+    [anon_sym_matches] = ACTIONS(197),
+    [anon_sym_TILDE] = ACTIONS(197),
+    [anon_sym_concat] = ACTIONS(197),
+    [anon_sym_COMMA] = ACTIONS(197),
+    [anon_sym_RPAREN] = ACTIONS(197),
+    [anon_sym_lookup_json_string] = ACTIONS(197),
+    [anon_sym_lower] = ACTIONS(197),
+    [anon_sym_regex_replace] = ACTIONS(197),
+    [anon_sym_remove_bytes] = ACTIONS(197),
+    [anon_sym_to_string] = ACTIONS(197),
+    [anon_sym_upper] = ACTIONS(197),
+    [anon_sym_url_decode] = ACTIONS(197),
+    [anon_sym_uuidv4] = ACTIONS(197),
+    [anon_sym_len] = ACTIONS(197),
+    [anon_sym_ends_with] = ACTIONS(197),
+    [anon_sym_starts_with] = ACTIONS(197),
+    [sym_number] = ACTIONS(197),
+    [sym_string] = ACTIONS(197),
+    [anon_sym_http_DOTcookie] = ACTIONS(197),
+    [anon_sym_http_DOThost] = ACTIONS(197),
+    [anon_sym_http_DOTreferer] = ACTIONS(197),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(197),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(197),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(199),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(197),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(197),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(197),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(197),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(197),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(197),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(197),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(197),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(197),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(197),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(197),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(197),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(197),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(197),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(197),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(199),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(197),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(197),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(197),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(197),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(197),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(197),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(199),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(197),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(197),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(197),
   },
   [43] = {
+    [anon_sym_in] = ACTIONS(201),
     [sym_comment] = ACTIONS(3),
-    [anon_sym_concat] = ACTIONS(216),
-    [anon_sym_LPAREN] = ACTIONS(216),
-    [anon_sym_len] = ACTIONS(216),
-    [anon_sym_ends_with] = ACTIONS(216),
-    [anon_sym_lookup_json_string] = ACTIONS(216),
-    [anon_sym_lower] = ACTIONS(216),
-    [anon_sym_regex_replace] = ACTIONS(216),
-    [anon_sym_remove_bytes] = ACTIONS(216),
-    [anon_sym_starts_with] = ACTIONS(216),
-    [anon_sym_to_string] = ACTIONS(216),
-    [anon_sym_upper] = ACTIONS(216),
-    [anon_sym_url_decode] = ACTIONS(216),
-    [anon_sym_uuidv4] = ACTIONS(216),
-    [anon_sym_true] = ACTIONS(216),
-    [anon_sym_false] = ACTIONS(216),
-    [anon_sym_not] = ACTIONS(216),
-    [anon_sym_BANG] = ACTIONS(216),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTsec] = ACTIONS(216),
-    [anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec] = ACTIONS(216),
-    [anon_sym_ip_DOTgeoip_DOTasnum] = ACTIONS(216),
-    [anon_sym_cf_DOTbot_management_DOTscore] = ACTIONS(216),
-    [anon_sym_cf_DOTedge_DOTserver_port] = ACTIONS(216),
-    [anon_sym_cf_DOTthreat_score] = ACTIONS(216),
-    [anon_sym_cf_DOTwaf_DOTscore] = ACTIONS(218),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTsqli] = ACTIONS(216),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTxss] = ACTIONS(216),
-    [anon_sym_cf_DOTwaf_DOTscore_DOTrce] = ACTIONS(216),
-    [anon_sym_ip_DOTsrc] = ACTIONS(218),
-    [anon_sym_cf_DOTedge_DOTserver_ip] = ACTIONS(216),
-    [anon_sym_http_DOTcookie] = ACTIONS(216),
-    [anon_sym_http_DOThost] = ACTIONS(216),
-    [anon_sym_http_DOTreferer] = ACTIONS(216),
-    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(216),
-    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(216),
-    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(218),
-    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(216),
-    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(216),
-    [anon_sym_http_DOTuser_agent] = ACTIONS(216),
-    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(216),
-    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(216),
-    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(216),
-    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(216),
-    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(216),
-    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(216),
-    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(216),
-    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(216),
-    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(216),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(216),
-    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(216),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(216),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(218),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(216),
-    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(216),
-    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(216),
-    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(216),
-    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(216),
-    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(216),
-    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(218),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(216),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(216),
-    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(216),
-    [anon_sym_ip_DOTgeoip_DOTis_in_european_union] = ACTIONS(216),
-    [anon_sym_ssl] = ACTIONS(216),
-    [anon_sym_cf_DOTbot_management_DOTverified_bot] = ACTIONS(216),
-    [anon_sym_cf_DOTbot_management_DOTjs_detection_DOTpassed] = ACTIONS(216),
-    [anon_sym_cf_DOTclient_DOTbot] = ACTIONS(216),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_revoked] = ACTIONS(216),
-    [anon_sym_cf_DOTtls_client_auth_DOTcert_verified] = ACTIONS(216),
-    [anon_sym_http_DOTrequest_DOTheaders_DOTtruncated] = ACTIONS(216),
+    [anon_sym_eq] = ACTIONS(201),
+    [anon_sym_ne] = ACTIONS(201),
+    [anon_sym_lt] = ACTIONS(201),
+    [anon_sym_le] = ACTIONS(203),
+    [anon_sym_gt] = ACTIONS(201),
+    [anon_sym_ge] = ACTIONS(201),
+    [anon_sym_EQ_EQ] = ACTIONS(201),
+    [anon_sym_BANG_EQ] = ACTIONS(201),
+    [anon_sym_LT] = ACTIONS(203),
+    [anon_sym_LT_EQ] = ACTIONS(201),
+    [anon_sym_GT] = ACTIONS(203),
+    [anon_sym_GT_EQ] = ACTIONS(201),
+    [anon_sym_contains] = ACTIONS(201),
+    [anon_sym_matches] = ACTIONS(201),
+    [anon_sym_TILDE] = ACTIONS(201),
+    [anon_sym_concat] = ACTIONS(201),
+    [anon_sym_COMMA] = ACTIONS(201),
+    [anon_sym_RPAREN] = ACTIONS(201),
+    [anon_sym_lookup_json_string] = ACTIONS(201),
+    [anon_sym_lower] = ACTIONS(201),
+    [anon_sym_regex_replace] = ACTIONS(201),
+    [anon_sym_remove_bytes] = ACTIONS(201),
+    [anon_sym_to_string] = ACTIONS(201),
+    [anon_sym_upper] = ACTIONS(201),
+    [anon_sym_url_decode] = ACTIONS(201),
+    [anon_sym_uuidv4] = ACTIONS(201),
+    [anon_sym_len] = ACTIONS(201),
+    [anon_sym_ends_with] = ACTIONS(201),
+    [anon_sym_starts_with] = ACTIONS(201),
+    [sym_number] = ACTIONS(201),
+    [sym_string] = ACTIONS(201),
+    [anon_sym_http_DOTcookie] = ACTIONS(201),
+    [anon_sym_http_DOThost] = ACTIONS(201),
+    [anon_sym_http_DOTreferer] = ACTIONS(201),
+    [anon_sym_http_DOTrequest_DOTfull_uri] = ACTIONS(201),
+    [anon_sym_http_DOTrequest_DOTmethod] = ACTIONS(201),
+    [anon_sym_http_DOTrequest_DOTuri] = ACTIONS(203),
+    [anon_sym_http_DOTrequest_DOTuri_DOTpath] = ACTIONS(201),
+    [anon_sym_http_DOTrequest_DOTuri_DOTquery] = ACTIONS(201),
+    [anon_sym_http_DOTuser_agent] = ACTIONS(201),
+    [anon_sym_http_DOTrequest_DOTversion] = ACTIONS(201),
+    [anon_sym_http_DOTx_forwarded_for] = ACTIONS(201),
+    [anon_sym_ip_DOTsrc_DOTlat] = ACTIONS(201),
+    [anon_sym_ip_DOTsrc_DOTlon] = ACTIONS(201),
+    [anon_sym_ip_DOTsrc_DOTcity] = ACTIONS(201),
+    [anon_sym_ip_DOTsrc_DOTpostal_code] = ACTIONS(201),
+    [anon_sym_ip_DOTsrc_DOTmetro_code] = ACTIONS(201),
+    [anon_sym_ip_DOTgeoip_DOTcontinent] = ACTIONS(201),
+    [anon_sym_ip_DOTgeoip_DOTcountry] = ACTIONS(201),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code] = ACTIONS(201),
+    [anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code] = ACTIONS(201),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri] = ACTIONS(201),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri] = ACTIONS(203),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath] = ACTIONS(201),
+    [anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery] = ACTIONS(201),
+    [anon_sym_cf_DOTbot_management_DOTja3_hash] = ACTIONS(201),
+    [anon_sym_cf_DOThostname_DOTmetadata] = ACTIONS(201),
+    [anon_sym_cf_DOTworker_DOTupstream_zone] = ACTIONS(201),
+    [anon_sym_http_DOTrequest_DOTcookies] = ACTIONS(201),
+    [anon_sym_http_DOTrequest_DOTheaders] = ACTIONS(203),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTnames] = ACTIONS(201),
+    [anon_sym_http_DOTrequest_DOTheaders_DOTvalues] = ACTIONS(201),
+    [anon_sym_http_DOTrequest_DOTaccepted_languages] = ACTIONS(201),
   },
 };
 
 static const uint16_t ts_small_parse_table[] = {
-  [0] = 3,
+  [0] = 19,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(222), 6,
-      anon_sym_le,
-      anon_sym_LT,
-      anon_sym_GT,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-      anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(220), 48,
-      anon_sym_in,
-      anon_sym_eq,
-      anon_sym_ne,
-      anon_sym_lt,
-      anon_sym_gt,
-      anon_sym_ge,
-      anon_sym_EQ_EQ,
-      anon_sym_BANG_EQ,
-      anon_sym_LT_EQ,
-      anon_sym_GT_EQ,
-      anon_sym_contains,
-      anon_sym_matches,
-      anon_sym_TILDE,
-      anon_sym_concat,
-      anon_sym_COMMA,
-      anon_sym_RPAREN,
-      anon_sym_len,
-      sym_number,
-      sym_string,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
+    ACTIONS(43), 1,
       anon_sym_http_DOTrequest_DOTcookies,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-  [62] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(226), 6,
-      anon_sym_le,
-      anon_sym_LT,
-      anon_sym_GT,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
+    ACTIONS(45), 1,
       anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(224), 48,
-      anon_sym_in,
-      anon_sym_eq,
-      anon_sym_ne,
-      anon_sym_lt,
-      anon_sym_gt,
-      anon_sym_ge,
-      anon_sym_EQ_EQ,
-      anon_sym_BANG_EQ,
-      anon_sym_LT_EQ,
-      anon_sym_GT_EQ,
-      anon_sym_contains,
-      anon_sym_matches,
-      anon_sym_TILDE,
+    ACTIONS(205), 1,
       anon_sym_concat,
-      anon_sym_COMMA,
-      anon_sym_RPAREN,
-      anon_sym_len,
-      sym_number,
-      sym_string,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
-      anon_sym_http_DOTrequest_DOTcookies,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-  [124] = 15,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(49), 1,
-      anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
-      anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
-      anon_sym_concat,
-    ACTIONS(230), 1,
-      anon_sym_len,
-    ACTIONS(232), 1,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    ACTIONS(219), 1,
       anon_sym_cf_DOTrandom_seed,
-    STATE(106), 1,
-      sym_array_string_field,
-    STATE(130), 1,
-      sym__array_lhs,
-    STATE(171), 1,
-      sym_bytes_field,
-    STATE(175), 1,
+    STATE(166), 1,
       sym_array_field_expansion,
-    STATE(177), 1,
+    STATE(206), 1,
+      sym_bytes_field,
+    STATE(209), 1,
       sym_map_string_array_field,
-    ACTIONS(47), 2,
+    ACTIONS(41), 2,
       anon_sym_http_DOTrequest_DOTuri,
       anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(173), 2,
-      sym__stringlike_field,
-      sym_string_field,
-    ACTIONS(234), 3,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
-  [198] = 14,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(49), 1,
-      anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
-      anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
-      anon_sym_concat,
-    ACTIONS(230), 1,
-      anon_sym_len,
-    ACTIONS(236), 1,
-      anon_sym_RPAREN,
-    ACTIONS(238), 1,
-      sym_string,
-    STATE(49), 1,
-      aux_sym_string_func_repeat1,
-    STATE(128), 1,
-      sym_map_string_array_field,
-    ACTIONS(47), 2,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(64), 2,
-      sym__stringlike_field,
-      sym_string_field,
-    STATE(130), 2,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(133), 2,
       sym__array_lhs,
       sym_array_string_field,
-    ACTIONS(53), 3,
+    STATE(207), 2,
+      sym__stringlike_field,
+      sym_string_field,
+    ACTIONS(221), 3,
       anon_sym_http_DOTrequest_DOTheaders_DOTnames,
       anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
       anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(39), 25,
       anon_sym_http_DOTcookie,
       anon_sym_http_DOThost,
       anon_sym_http_DOTreferer,
@@ -8452,97 +8301,54 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_cf_DOTbot_management_DOTja3_hash,
       anon_sym_cf_DOThostname_DOTmetadata,
       anon_sym_cf_DOTworker_DOTupstream_zone,
-  [270] = 14,
+  [92] = 19,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(49), 1,
-      anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
-      anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
+    ACTIONS(223), 1,
       anon_sym_concat,
-    ACTIONS(230), 1,
-      anon_sym_len,
-    ACTIONS(238), 1,
-      sym_string,
+    ACTIONS(226), 1,
+      anon_sym_RPAREN,
+    ACTIONS(228), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(234), 1,
+      anon_sym_regex_replace,
+    ACTIONS(237), 1,
+      anon_sym_remove_bytes,
     ACTIONS(240), 1,
-      anon_sym_RPAREN,
-    STATE(49), 1,
-      aux_sym_string_func_repeat1,
-    STATE(128), 1,
-      sym_map_string_array_field,
-    ACTIONS(47), 2,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(64), 2,
-      sym__stringlike_field,
-      sym_string_field,
-    STATE(130), 2,
-      sym__array_lhs,
-      sym_array_string_field,
-    ACTIONS(53), 3,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
-  [342] = 14,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(242), 1,
-      anon_sym_concat,
-    ACTIONS(245), 1,
-      anon_sym_RPAREN,
-    ACTIONS(247), 1,
-      anon_sym_len,
-    ACTIONS(250), 1,
+      anon_sym_uuidv4,
+    ACTIONS(246), 1,
       sym_string,
-    ACTIONS(259), 1,
+    ACTIONS(255), 1,
       anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(262), 1,
+    ACTIONS(258), 1,
       anon_sym_http_DOTrequest_DOTheaders,
-    STATE(49), 1,
+    STATE(45), 1,
       aux_sym_string_func_repeat1,
-    STATE(128), 1,
+    STATE(194), 1,
       sym_map_string_array_field,
-    ACTIONS(256), 2,
+    ACTIONS(243), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    ACTIONS(252), 2,
       anon_sym_http_DOTrequest_DOTuri,
       anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(64), 2,
+    STATE(61), 2,
       sym__stringlike_field,
       sym_string_field,
-    STATE(130), 2,
+    STATE(195), 2,
       sym__array_lhs,
       sym_array_string_field,
-    ACTIONS(265), 3,
+    ACTIONS(261), 3,
       anon_sym_http_DOTrequest_DOTheaders_DOTnames,
       anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
       anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(253), 25,
+    ACTIONS(231), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(249), 25,
       anon_sym_http_DOTcookie,
       anon_sym_http_DOThost,
       anon_sym_http_DOTreferer,
@@ -8568,152 +8374,54 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_cf_DOTbot_management_DOTja3_hash,
       anon_sym_cf_DOThostname_DOTmetadata,
       anon_sym_cf_DOTworker_DOTupstream_zone,
-  [414] = 14,
+  [184] = 19,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(49), 1,
+    ACTIONS(43), 1,
       anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
+    ACTIONS(45), 1,
       anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
+    ACTIONS(205), 1,
       anon_sym_concat,
-    ACTIONS(230), 1,
-      anon_sym_len,
-    ACTIONS(238), 1,
-      sym_string,
-    ACTIONS(268), 1,
-      anon_sym_RPAREN,
-    STATE(49), 1,
-      aux_sym_string_func_repeat1,
-    STATE(128), 1,
-      sym_map_string_array_field,
-    ACTIONS(47), 2,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(64), 2,
-      sym__stringlike_field,
-      sym_string_field,
-    STATE(130), 2,
-      sym__array_lhs,
-      sym_array_string_field,
-    ACTIONS(53), 3,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
-  [486] = 14,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(49), 1,
-      anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
-      anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
-      anon_sym_concat,
-    ACTIONS(230), 1,
-      anon_sym_len,
-    ACTIONS(270), 1,
-      sym_string,
-    STATE(106), 1,
-      sym_array_string_field,
-    STATE(130), 1,
-      sym__array_lhs,
-    STATE(177), 1,
-      sym_map_string_array_field,
-    STATE(183), 1,
-      sym_array_field_expansion,
-    ACTIONS(47), 2,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(180), 2,
-      sym__stringlike_field,
-      sym_string_field,
-    ACTIONS(234), 3,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
-  [557] = 13,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(49), 1,
-      anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
-      anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
-      anon_sym_concat,
-    ACTIONS(230), 1,
-      anon_sym_len,
-    ACTIONS(232), 1,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    ACTIONS(219), 1,
       anon_sym_cf_DOTrandom_seed,
-    STATE(128), 1,
-      sym_map_string_array_field,
-    STATE(156), 1,
+    STATE(178), 1,
+      sym_array_field_expansion,
+    STATE(181), 1,
       sym_bytes_field,
-    ACTIONS(47), 2,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    ACTIONS(41), 2,
       anon_sym_http_DOTrequest_DOTuri,
       anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(119), 2,
-      sym__stringlike_field,
-      sym_string_field,
-    STATE(130), 2,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(133), 2,
       sym__array_lhs,
       sym_array_string_field,
-    ACTIONS(53), 3,
+    STATE(168), 2,
+      sym__stringlike_field,
+      sym_string_field,
+    ACTIONS(221), 3,
       anon_sym_http_DOTrequest_DOTheaders_DOTnames,
       anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
       anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(39), 25,
       anon_sym_http_DOTcookie,
       anon_sym_http_DOThost,
       anon_sym_http_DOTreferer,
@@ -8739,37 +8447,415 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_cf_DOTbot_management_DOTja3_hash,
       anon_sym_cf_DOThostname_DOTmetadata,
       anon_sym_cf_DOTworker_DOTupstream_zone,
-  [626] = 13,
+  [276] = 19,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(49), 1,
+    ACTIONS(43), 1,
       anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
+    ACTIONS(45), 1,
       anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
+    ACTIONS(264), 1,
       anon_sym_concat,
-    ACTIONS(230), 1,
+    ACTIONS(266), 1,
+      anon_sym_RPAREN,
+    ACTIONS(268), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(272), 1,
+      anon_sym_regex_replace,
+    ACTIONS(274), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(276), 1,
+      anon_sym_uuidv4,
+    ACTIONS(280), 1,
+      sym_string,
+    STATE(45), 1,
+      aux_sym_string_func_repeat1,
+    STATE(194), 1,
+      sym_map_string_array_field,
+    ACTIONS(41), 2,
+      anon_sym_http_DOTrequest_DOTuri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
+    ACTIONS(278), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(61), 2,
+      sym__stringlike_field,
+      sym_string_field,
+    STATE(195), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(47), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(270), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
       anon_sym_len,
-    ACTIONS(238), 1,
+    ACTIONS(39), 25,
+      anon_sym_http_DOTcookie,
+      anon_sym_http_DOThost,
+      anon_sym_http_DOTreferer,
+      anon_sym_http_DOTrequest_DOTfull_uri,
+      anon_sym_http_DOTrequest_DOTmethod,
+      anon_sym_http_DOTrequest_DOTuri_DOTpath,
+      anon_sym_http_DOTrequest_DOTuri_DOTquery,
+      anon_sym_http_DOTuser_agent,
+      anon_sym_http_DOTrequest_DOTversion,
+      anon_sym_http_DOTx_forwarded_for,
+      anon_sym_ip_DOTsrc_DOTlat,
+      anon_sym_ip_DOTsrc_DOTlon,
+      anon_sym_ip_DOTsrc_DOTcity,
+      anon_sym_ip_DOTsrc_DOTpostal_code,
+      anon_sym_ip_DOTsrc_DOTmetro_code,
+      anon_sym_ip_DOTgeoip_DOTcontinent,
+      anon_sym_ip_DOTgeoip_DOTcountry,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
+      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
+      anon_sym_cf_DOTbot_management_DOTja3_hash,
+      anon_sym_cf_DOThostname_DOTmetadata,
+      anon_sym_cf_DOTworker_DOTupstream_zone,
+  [368] = 19,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(264), 1,
+      anon_sym_concat,
+    ACTIONS(268), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(272), 1,
+      anon_sym_regex_replace,
+    ACTIONS(274), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(276), 1,
+      anon_sym_uuidv4,
+    ACTIONS(280), 1,
+      sym_string,
+    ACTIONS(282), 1,
+      anon_sym_RPAREN,
+    STATE(45), 1,
+      aux_sym_string_func_repeat1,
+    STATE(194), 1,
+      sym_map_string_array_field,
+    ACTIONS(41), 2,
+      anon_sym_http_DOTrequest_DOTuri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
+    ACTIONS(278), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(61), 2,
+      sym__stringlike_field,
+      sym_string_field,
+    STATE(195), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(47), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(270), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(39), 25,
+      anon_sym_http_DOTcookie,
+      anon_sym_http_DOThost,
+      anon_sym_http_DOTreferer,
+      anon_sym_http_DOTrequest_DOTfull_uri,
+      anon_sym_http_DOTrequest_DOTmethod,
+      anon_sym_http_DOTrequest_DOTuri_DOTpath,
+      anon_sym_http_DOTrequest_DOTuri_DOTquery,
+      anon_sym_http_DOTuser_agent,
+      anon_sym_http_DOTrequest_DOTversion,
+      anon_sym_http_DOTx_forwarded_for,
+      anon_sym_ip_DOTsrc_DOTlat,
+      anon_sym_ip_DOTsrc_DOTlon,
+      anon_sym_ip_DOTsrc_DOTcity,
+      anon_sym_ip_DOTsrc_DOTpostal_code,
+      anon_sym_ip_DOTsrc_DOTmetro_code,
+      anon_sym_ip_DOTgeoip_DOTcontinent,
+      anon_sym_ip_DOTgeoip_DOTcountry,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
+      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
+      anon_sym_cf_DOTbot_management_DOTja3_hash,
+      anon_sym_cf_DOThostname_DOTmetadata,
+      anon_sym_cf_DOTworker_DOTupstream_zone,
+  [460] = 19,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(264), 1,
+      anon_sym_concat,
+    ACTIONS(268), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(272), 1,
+      anon_sym_regex_replace,
+    ACTIONS(274), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(276), 1,
+      anon_sym_uuidv4,
+    ACTIONS(280), 1,
+      sym_string,
+    ACTIONS(284), 1,
+      anon_sym_RPAREN,
+    STATE(45), 1,
+      aux_sym_string_func_repeat1,
+    STATE(194), 1,
+      sym_map_string_array_field,
+    ACTIONS(41), 2,
+      anon_sym_http_DOTrequest_DOTuri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
+    ACTIONS(278), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(61), 2,
+      sym__stringlike_field,
+      sym_string_field,
+    STATE(195), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(47), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(270), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(39), 25,
+      anon_sym_http_DOTcookie,
+      anon_sym_http_DOThost,
+      anon_sym_http_DOTreferer,
+      anon_sym_http_DOTrequest_DOTfull_uri,
+      anon_sym_http_DOTrequest_DOTmethod,
+      anon_sym_http_DOTrequest_DOTuri_DOTpath,
+      anon_sym_http_DOTrequest_DOTuri_DOTquery,
+      anon_sym_http_DOTuser_agent,
+      anon_sym_http_DOTrequest_DOTversion,
+      anon_sym_http_DOTx_forwarded_for,
+      anon_sym_ip_DOTsrc_DOTlat,
+      anon_sym_ip_DOTsrc_DOTlon,
+      anon_sym_ip_DOTsrc_DOTcity,
+      anon_sym_ip_DOTsrc_DOTpostal_code,
+      anon_sym_ip_DOTsrc_DOTmetro_code,
+      anon_sym_ip_DOTgeoip_DOTcontinent,
+      anon_sym_ip_DOTgeoip_DOTcountry,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
+      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
+      anon_sym_cf_DOTbot_management_DOTja3_hash,
+      anon_sym_cf_DOThostname_DOTmetadata,
+      anon_sym_cf_DOTworker_DOTupstream_zone,
+  [552] = 19,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(264), 1,
+      anon_sym_concat,
+    ACTIONS(268), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(272), 1,
+      anon_sym_regex_replace,
+    ACTIONS(274), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(276), 1,
+      anon_sym_uuidv4,
+    ACTIONS(280), 1,
+      sym_string,
+    ACTIONS(286), 1,
+      anon_sym_RPAREN,
+    STATE(45), 1,
+      aux_sym_string_func_repeat1,
+    STATE(194), 1,
+      sym_map_string_array_field,
+    ACTIONS(41), 2,
+      anon_sym_http_DOTrequest_DOTuri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
+    ACTIONS(278), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(61), 2,
+      sym__stringlike_field,
+      sym_string_field,
+    STATE(195), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(47), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(270), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(39), 25,
+      anon_sym_http_DOTcookie,
+      anon_sym_http_DOThost,
+      anon_sym_http_DOTreferer,
+      anon_sym_http_DOTrequest_DOTfull_uri,
+      anon_sym_http_DOTrequest_DOTmethod,
+      anon_sym_http_DOTrequest_DOTuri_DOTpath,
+      anon_sym_http_DOTrequest_DOTuri_DOTquery,
+      anon_sym_http_DOTuser_agent,
+      anon_sym_http_DOTrequest_DOTversion,
+      anon_sym_http_DOTx_forwarded_for,
+      anon_sym_ip_DOTsrc_DOTlat,
+      anon_sym_ip_DOTsrc_DOTlon,
+      anon_sym_ip_DOTsrc_DOTcity,
+      anon_sym_ip_DOTsrc_DOTpostal_code,
+      anon_sym_ip_DOTsrc_DOTmetro_code,
+      anon_sym_ip_DOTgeoip_DOTcontinent,
+      anon_sym_ip_DOTgeoip_DOTcountry,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
+      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
+      anon_sym_cf_DOTbot_management_DOTja3_hash,
+      anon_sym_cf_DOThostname_DOTmetadata,
+      anon_sym_cf_DOTworker_DOTupstream_zone,
+  [644] = 18,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    ACTIONS(288), 1,
+      sym_string,
+    STATE(136), 1,
+      sym_array_field_expansion,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    ACTIONS(41), 2,
+      anon_sym_http_DOTrequest_DOTuri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(133), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    STATE(189), 2,
+      sym__stringlike_field,
+      sym_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(39), 25,
+      anon_sym_http_DOTcookie,
+      anon_sym_http_DOThost,
+      anon_sym_http_DOTreferer,
+      anon_sym_http_DOTrequest_DOTfull_uri,
+      anon_sym_http_DOTrequest_DOTmethod,
+      anon_sym_http_DOTrequest_DOTuri_DOTpath,
+      anon_sym_http_DOTrequest_DOTuri_DOTquery,
+      anon_sym_http_DOTuser_agent,
+      anon_sym_http_DOTrequest_DOTversion,
+      anon_sym_http_DOTx_forwarded_for,
+      anon_sym_ip_DOTsrc_DOTlat,
+      anon_sym_ip_DOTsrc_DOTlon,
+      anon_sym_ip_DOTsrc_DOTcity,
+      anon_sym_ip_DOTsrc_DOTpostal_code,
+      anon_sym_ip_DOTsrc_DOTmetro_code,
+      anon_sym_ip_DOTgeoip_DOTcontinent,
+      anon_sym_ip_DOTgeoip_DOTcountry,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
+      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
+      anon_sym_cf_DOTbot_management_DOTja3_hash,
+      anon_sym_cf_DOThostname_DOTmetadata,
+      anon_sym_cf_DOTworker_DOTupstream_zone,
+  [733] = 18,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(264), 1,
+      anon_sym_concat,
+    ACTIONS(268), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(272), 1,
+      anon_sym_regex_replace,
+    ACTIONS(274), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(276), 1,
+      anon_sym_uuidv4,
+    ACTIONS(280), 1,
       sym_string,
     STATE(47), 1,
       aux_sym_string_func_repeat1,
-    STATE(128), 1,
+    STATE(194), 1,
       sym_map_string_array_field,
-    ACTIONS(47), 2,
+    ACTIONS(41), 2,
       anon_sym_http_DOTrequest_DOTuri,
       anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(64), 2,
+    ACTIONS(278), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(61), 2,
       sym__stringlike_field,
       sym_string_field,
-    STATE(130), 2,
+    STATE(195), 2,
       sym__array_lhs,
       sym_array_string_field,
-    ACTIONS(53), 3,
+    ACTIONS(47), 3,
       anon_sym_http_DOTrequest_DOTheaders_DOTnames,
       anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
       anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
+    ACTIONS(270), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(39), 25,
       anon_sym_http_DOTcookie,
       anon_sym_http_DOThost,
       anon_sym_http_DOTreferer,
@@ -8795,145 +8881,52 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_cf_DOTbot_management_DOTja3_hash,
       anon_sym_cf_DOThostname_DOTmetadata,
       anon_sym_cf_DOTworker_DOTupstream_zone,
-  [695] = 13,
+  [822] = 18,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(49), 1,
+    ACTIONS(43), 1,
       anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
+    ACTIONS(45), 1,
       anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
+    ACTIONS(264), 1,
       anon_sym_concat,
-    ACTIONS(230), 1,
-      anon_sym_len,
-    ACTIONS(238), 1,
-      sym_string,
-    STATE(48), 1,
-      aux_sym_string_func_repeat1,
-    STATE(128), 1,
-      sym_map_string_array_field,
-    ACTIONS(47), 2,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(64), 2,
-      sym__stringlike_field,
-      sym_string_field,
-    STATE(130), 2,
-      sym__array_lhs,
-      sym_array_string_field,
-    ACTIONS(53), 3,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
-  [764] = 13,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(49), 1,
-      anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
-      anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
-      anon_sym_concat,
-    ACTIONS(230), 1,
-      anon_sym_len,
-    ACTIONS(238), 1,
+    ACTIONS(268), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(272), 1,
+      anon_sym_regex_replace,
+    ACTIONS(274), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(276), 1,
+      anon_sym_uuidv4,
+    ACTIONS(280), 1,
       sym_string,
     STATE(50), 1,
       aux_sym_string_func_repeat1,
-    STATE(128), 1,
+    STATE(194), 1,
       sym_map_string_array_field,
-    ACTIONS(47), 2,
+    ACTIONS(41), 2,
       anon_sym_http_DOTrequest_DOTuri,
       anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(64), 2,
+    ACTIONS(278), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(61), 2,
       sym__stringlike_field,
       sym_string_field,
-    STATE(130), 2,
+    STATE(195), 2,
       sym__array_lhs,
       sym_array_string_field,
-    ACTIONS(53), 3,
+    ACTIONS(47), 3,
       anon_sym_http_DOTrequest_DOTheaders_DOTnames,
       anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
       anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
-  [833] = 11,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(49), 1,
-      anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
-      anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
-      anon_sym_concat,
-    ACTIONS(230), 1,
+    ACTIONS(270), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
       anon_sym_len,
-    STATE(128), 1,
-      sym_map_string_array_field,
-    ACTIONS(47), 2,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(130), 2,
-      sym__array_lhs,
-      sym_array_string_field,
-    STATE(164), 2,
-      sym__stringlike_field,
-      sym_string_field,
-    ACTIONS(53), 3,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
+    ACTIONS(39), 25,
       anon_sym_http_DOTcookie,
       anon_sym_http_DOThost,
       anon_sym_http_DOTreferer,
@@ -8959,374 +8952,516 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_cf_DOTbot_management_DOTja3_hash,
       anon_sym_cf_DOThostname_DOTmetadata,
       anon_sym_cf_DOTworker_DOTupstream_zone,
-  [896] = 11,
+  [911] = 18,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(49), 1,
+    ACTIONS(43), 1,
       anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
+    ACTIONS(45), 1,
       anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
+    ACTIONS(264), 1,
       anon_sym_concat,
-    ACTIONS(230), 1,
-      anon_sym_len,
-    STATE(128), 1,
-      sym_map_string_array_field,
-    ACTIONS(47), 2,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(130), 2,
-      sym__array_lhs,
-      sym_array_string_field,
-    STATE(150), 2,
-      sym__stringlike_field,
-      sym_string_field,
-    ACTIONS(53), 3,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
-  [959] = 11,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(49), 1,
-      anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
-      anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
-      anon_sym_concat,
-    ACTIONS(230), 1,
-      anon_sym_len,
-    STATE(128), 1,
-      sym_map_string_array_field,
-    ACTIONS(47), 2,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(130), 2,
-      sym__array_lhs,
-      sym_array_string_field,
-    STATE(165), 2,
-      sym__stringlike_field,
-      sym_string_field,
-    ACTIONS(53), 3,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
-  [1022] = 11,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(49), 1,
-      anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
-      anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
-      anon_sym_concat,
-    ACTIONS(230), 1,
-      anon_sym_len,
-    STATE(128), 1,
-      sym_map_string_array_field,
-    ACTIONS(47), 2,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(130), 2,
-      sym__array_lhs,
-      sym_array_string_field,
-    STATE(146), 2,
-      sym__stringlike_field,
-      sym_string_field,
-    ACTIONS(53), 3,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
-  [1085] = 11,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(49), 1,
-      anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
-      anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
-      anon_sym_concat,
-    ACTIONS(230), 1,
-      anon_sym_len,
-    STATE(128), 1,
-      sym_map_string_array_field,
-    ACTIONS(47), 2,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(130), 2,
-      sym__array_lhs,
-      sym_array_string_field,
-    STATE(147), 2,
-      sym__stringlike_field,
-      sym_string_field,
-    ACTIONS(53), 3,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
-  [1148] = 11,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(49), 1,
-      anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
-      anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
-      anon_sym_concat,
-    ACTIONS(230), 1,
-      anon_sym_len,
-    STATE(128), 1,
-      sym_map_string_array_field,
-    ACTIONS(47), 2,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(100), 2,
-      sym__stringlike_field,
-      sym_string_field,
-    STATE(130), 2,
-      sym__array_lhs,
-      sym_array_string_field,
-    ACTIONS(53), 3,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
-  [1211] = 11,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(49), 1,
-      anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
-      anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(228), 1,
-      anon_sym_concat,
-    ACTIONS(230), 1,
-      anon_sym_len,
-    STATE(128), 1,
-      sym_map_string_array_field,
-    ACTIONS(47), 2,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-    STATE(130), 2,
-      sym__array_lhs,
-      sym_array_string_field,
-    STATE(163), 2,
-      sym__stringlike_field,
-      sym_string_field,
-    ACTIONS(53), 3,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-    ACTIONS(45), 25,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
-  [1274] = 4,
-    ACTIONS(3), 1,
-      sym_comment,
+    ACTIONS(268), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(272), 1,
+      anon_sym_regex_replace,
     ACTIONS(274), 1,
-      anon_sym_COMMA,
-    ACTIONS(276), 3,
-      anon_sym_http_DOTrequest_DOTuri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
-      anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(272), 33,
-      anon_sym_concat,
-      anon_sym_RPAREN,
-      anon_sym_len,
-      sym_string,
-      anon_sym_http_DOTcookie,
-      anon_sym_http_DOThost,
-      anon_sym_http_DOTreferer,
-      anon_sym_http_DOTrequest_DOTfull_uri,
-      anon_sym_http_DOTrequest_DOTmethod,
-      anon_sym_http_DOTrequest_DOTuri_DOTpath,
-      anon_sym_http_DOTrequest_DOTuri_DOTquery,
-      anon_sym_http_DOTuser_agent,
-      anon_sym_http_DOTrequest_DOTversion,
-      anon_sym_http_DOTx_forwarded_for,
-      anon_sym_ip_DOTsrc_DOTlat,
-      anon_sym_ip_DOTsrc_DOTlon,
-      anon_sym_ip_DOTsrc_DOTcity,
-      anon_sym_ip_DOTsrc_DOTpostal_code,
-      anon_sym_ip_DOTsrc_DOTmetro_code,
-      anon_sym_ip_DOTgeoip_DOTcontinent,
-      anon_sym_ip_DOTgeoip_DOTcountry,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
-      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
-      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
-      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
-      anon_sym_cf_DOTbot_management_DOTja3_hash,
-      anon_sym_cf_DOThostname_DOTmetadata,
-      anon_sym_cf_DOTworker_DOTupstream_zone,
-      anon_sym_http_DOTrequest_DOTcookies,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-  [1321] = 4,
-    ACTIONS(3), 1,
-      sym_comment,
+      anon_sym_remove_bytes,
+    ACTIONS(276), 1,
+      anon_sym_uuidv4,
     ACTIONS(280), 1,
+      sym_string,
+    STATE(49), 1,
+      aux_sym_string_func_repeat1,
+    STATE(194), 1,
+      sym_map_string_array_field,
+    ACTIONS(41), 2,
+      anon_sym_http_DOTrequest_DOTuri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
+    ACTIONS(278), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(61), 2,
+      sym__stringlike_field,
+      sym_string_field,
+    STATE(195), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(47), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(270), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(39), 25,
+      anon_sym_http_DOTcookie,
+      anon_sym_http_DOThost,
+      anon_sym_http_DOTreferer,
+      anon_sym_http_DOTrequest_DOTfull_uri,
+      anon_sym_http_DOTrequest_DOTmethod,
+      anon_sym_http_DOTrequest_DOTuri_DOTpath,
+      anon_sym_http_DOTrequest_DOTuri_DOTquery,
+      anon_sym_http_DOTuser_agent,
+      anon_sym_http_DOTrequest_DOTversion,
+      anon_sym_http_DOTx_forwarded_for,
+      anon_sym_ip_DOTsrc_DOTlat,
+      anon_sym_ip_DOTsrc_DOTlon,
+      anon_sym_ip_DOTsrc_DOTcity,
+      anon_sym_ip_DOTsrc_DOTpostal_code,
+      anon_sym_ip_DOTsrc_DOTmetro_code,
+      anon_sym_ip_DOTgeoip_DOTcontinent,
+      anon_sym_ip_DOTgeoip_DOTcountry,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
+      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
+      anon_sym_cf_DOTbot_management_DOTja3_hash,
+      anon_sym_cf_DOThostname_DOTmetadata,
+      anon_sym_cf_DOTworker_DOTupstream_zone,
+  [1000] = 18,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(264), 1,
+      anon_sym_concat,
+    ACTIONS(268), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(272), 1,
+      anon_sym_regex_replace,
+    ACTIONS(274), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(276), 1,
+      anon_sym_uuidv4,
+    ACTIONS(280), 1,
+      sym_string,
+    STATE(48), 1,
+      aux_sym_string_func_repeat1,
+    STATE(194), 1,
+      sym_map_string_array_field,
+    ACTIONS(41), 2,
+      anon_sym_http_DOTrequest_DOTuri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
+    ACTIONS(278), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(61), 2,
+      sym__stringlike_field,
+      sym_string_field,
+    STATE(195), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(47), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(270), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(39), 25,
+      anon_sym_http_DOTcookie,
+      anon_sym_http_DOThost,
+      anon_sym_http_DOTreferer,
+      anon_sym_http_DOTrequest_DOTfull_uri,
+      anon_sym_http_DOTrequest_DOTmethod,
+      anon_sym_http_DOTrequest_DOTuri_DOTpath,
+      anon_sym_http_DOTrequest_DOTuri_DOTquery,
+      anon_sym_http_DOTuser_agent,
+      anon_sym_http_DOTrequest_DOTversion,
+      anon_sym_http_DOTx_forwarded_for,
+      anon_sym_ip_DOTsrc_DOTlat,
+      anon_sym_ip_DOTsrc_DOTlon,
+      anon_sym_ip_DOTsrc_DOTcity,
+      anon_sym_ip_DOTsrc_DOTpostal_code,
+      anon_sym_ip_DOTsrc_DOTmetro_code,
+      anon_sym_ip_DOTgeoip_DOTcontinent,
+      anon_sym_ip_DOTgeoip_DOTcountry,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
+      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
+      anon_sym_cf_DOTbot_management_DOTja3_hash,
+      anon_sym_cf_DOThostname_DOTmetadata,
+      anon_sym_cf_DOTworker_DOTupstream_zone,
+  [1089] = 17,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(109), 1,
+      sym_array_field_expansion,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    ACTIONS(41), 2,
+      anon_sym_http_DOTrequest_DOTuri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(110), 2,
+      sym__stringlike_field,
+      sym_string_field,
+    STATE(133), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(39), 25,
+      anon_sym_http_DOTcookie,
+      anon_sym_http_DOThost,
+      anon_sym_http_DOTreferer,
+      anon_sym_http_DOTrequest_DOTfull_uri,
+      anon_sym_http_DOTrequest_DOTmethod,
+      anon_sym_http_DOTrequest_DOTuri_DOTpath,
+      anon_sym_http_DOTrequest_DOTuri_DOTquery,
+      anon_sym_http_DOTuser_agent,
+      anon_sym_http_DOTrequest_DOTversion,
+      anon_sym_http_DOTx_forwarded_for,
+      anon_sym_ip_DOTsrc_DOTlat,
+      anon_sym_ip_DOTsrc_DOTlon,
+      anon_sym_ip_DOTsrc_DOTcity,
+      anon_sym_ip_DOTsrc_DOTpostal_code,
+      anon_sym_ip_DOTsrc_DOTmetro_code,
+      anon_sym_ip_DOTgeoip_DOTcontinent,
+      anon_sym_ip_DOTgeoip_DOTcountry,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
+      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
+      anon_sym_cf_DOTbot_management_DOTja3_hash,
+      anon_sym_cf_DOThostname_DOTmetadata,
+      anon_sym_cf_DOTworker_DOTupstream_zone,
+  [1175] = 17,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(205), 1,
+      sym_array_field_expansion,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    ACTIONS(41), 2,
+      anon_sym_http_DOTrequest_DOTuri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(133), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    STATE(204), 2,
+      sym__stringlike_field,
+      sym_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(39), 25,
+      anon_sym_http_DOTcookie,
+      anon_sym_http_DOThost,
+      anon_sym_http_DOTreferer,
+      anon_sym_http_DOTrequest_DOTfull_uri,
+      anon_sym_http_DOTrequest_DOTmethod,
+      anon_sym_http_DOTrequest_DOTuri_DOTpath,
+      anon_sym_http_DOTrequest_DOTuri_DOTquery,
+      anon_sym_http_DOTuser_agent,
+      anon_sym_http_DOTrequest_DOTversion,
+      anon_sym_http_DOTx_forwarded_for,
+      anon_sym_ip_DOTsrc_DOTlat,
+      anon_sym_ip_DOTsrc_DOTlon,
+      anon_sym_ip_DOTsrc_DOTcity,
+      anon_sym_ip_DOTsrc_DOTpostal_code,
+      anon_sym_ip_DOTsrc_DOTmetro_code,
+      anon_sym_ip_DOTgeoip_DOTcontinent,
+      anon_sym_ip_DOTgeoip_DOTcountry,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
+      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
+      anon_sym_cf_DOTbot_management_DOTja3_hash,
+      anon_sym_cf_DOThostname_DOTmetadata,
+      anon_sym_cf_DOTworker_DOTupstream_zone,
+  [1261] = 17,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    STATE(210), 1,
+      sym_array_field_expansion,
+    ACTIONS(41), 2,
+      anon_sym_http_DOTrequest_DOTuri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(133), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    STATE(208), 2,
+      sym__stringlike_field,
+      sym_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(39), 25,
+      anon_sym_http_DOTcookie,
+      anon_sym_http_DOThost,
+      anon_sym_http_DOTreferer,
+      anon_sym_http_DOTrequest_DOTfull_uri,
+      anon_sym_http_DOTrequest_DOTmethod,
+      anon_sym_http_DOTrequest_DOTuri_DOTpath,
+      anon_sym_http_DOTrequest_DOTuri_DOTquery,
+      anon_sym_http_DOTuser_agent,
+      anon_sym_http_DOTrequest_DOTversion,
+      anon_sym_http_DOTx_forwarded_for,
+      anon_sym_ip_DOTsrc_DOTlat,
+      anon_sym_ip_DOTsrc_DOTlon,
+      anon_sym_ip_DOTsrc_DOTcity,
+      anon_sym_ip_DOTsrc_DOTpostal_code,
+      anon_sym_ip_DOTsrc_DOTmetro_code,
+      anon_sym_ip_DOTgeoip_DOTcontinent,
+      anon_sym_ip_DOTgeoip_DOTcountry,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
+      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
+      anon_sym_cf_DOTbot_management_DOTja3_hash,
+      anon_sym_cf_DOThostname_DOTmetadata,
+      anon_sym_cf_DOTworker_DOTupstream_zone,
+  [1347] = 17,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(166), 1,
+      sym_array_field_expansion,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    ACTIONS(41), 2,
+      anon_sym_http_DOTrequest_DOTuri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(133), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    STATE(224), 2,
+      sym__stringlike_field,
+      sym_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(39), 25,
+      anon_sym_http_DOTcookie,
+      anon_sym_http_DOThost,
+      anon_sym_http_DOTreferer,
+      anon_sym_http_DOTrequest_DOTfull_uri,
+      anon_sym_http_DOTrequest_DOTmethod,
+      anon_sym_http_DOTrequest_DOTuri_DOTpath,
+      anon_sym_http_DOTrequest_DOTuri_DOTquery,
+      anon_sym_http_DOTuser_agent,
+      anon_sym_http_DOTrequest_DOTversion,
+      anon_sym_http_DOTx_forwarded_for,
+      anon_sym_ip_DOTsrc_DOTlat,
+      anon_sym_ip_DOTsrc_DOTlon,
+      anon_sym_ip_DOTsrc_DOTcity,
+      anon_sym_ip_DOTsrc_DOTpostal_code,
+      anon_sym_ip_DOTsrc_DOTmetro_code,
+      anon_sym_ip_DOTgeoip_DOTcontinent,
+      anon_sym_ip_DOTgeoip_DOTcountry,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
+      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
+      anon_sym_cf_DOTbot_management_DOTja3_hash,
+      anon_sym_cf_DOThostname_DOTmetadata,
+      anon_sym_cf_DOTworker_DOTupstream_zone,
+  [1433] = 17,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    STATE(217), 1,
+      sym_array_field_expansion,
+    ACTIONS(41), 2,
+      anon_sym_http_DOTrequest_DOTuri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(133), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    STATE(198), 2,
+      sym__stringlike_field,
+      sym_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(39), 25,
+      anon_sym_http_DOTcookie,
+      anon_sym_http_DOThost,
+      anon_sym_http_DOTreferer,
+      anon_sym_http_DOTrequest_DOTfull_uri,
+      anon_sym_http_DOTrequest_DOTmethod,
+      anon_sym_http_DOTrequest_DOTuri_DOTpath,
+      anon_sym_http_DOTrequest_DOTuri_DOTquery,
+      anon_sym_http_DOTuser_agent,
+      anon_sym_http_DOTrequest_DOTversion,
+      anon_sym_http_DOTx_forwarded_for,
+      anon_sym_ip_DOTsrc_DOTlat,
+      anon_sym_ip_DOTsrc_DOTlon,
+      anon_sym_ip_DOTsrc_DOTcity,
+      anon_sym_ip_DOTsrc_DOTpostal_code,
+      anon_sym_ip_DOTsrc_DOTmetro_code,
+      anon_sym_ip_DOTgeoip_DOTcontinent,
+      anon_sym_ip_DOTgeoip_DOTcountry,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
+      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
+      anon_sym_cf_DOTbot_management_DOTja3_hash,
+      anon_sym_cf_DOThostname_DOTmetadata,
+      anon_sym_cf_DOTworker_DOTupstream_zone,
+  [1519] = 4,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(292), 1,
       anon_sym_COMMA,
-    ACTIONS(282), 3,
+    ACTIONS(294), 3,
       anon_sym_http_DOTrequest_DOTuri,
       anon_sym_raw_DOThttp_DOTrequest_DOTuri,
       anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(278), 33,
+    ACTIONS(290), 43,
       anon_sym_concat,
       anon_sym_RPAREN,
+      anon_sym_lookup_json_string,
+      anon_sym_lower,
+      anon_sym_regex_replace,
+      anon_sym_remove_bytes,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_uuidv4,
       anon_sym_len,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
       sym_string,
       anon_sym_http_DOTcookie,
       anon_sym_http_DOThost,
@@ -9357,17 +9492,29 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_http_DOTrequest_DOTheaders_DOTnames,
       anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
       anon_sym_http_DOTrequest_DOTaccepted_languages,
-  [1368] = 3,
+  [1576] = 4,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(286), 3,
+    ACTIONS(298), 1,
+      anon_sym_COMMA,
+    ACTIONS(300), 3,
       anon_sym_http_DOTrequest_DOTuri,
       anon_sym_raw_DOThttp_DOTrequest_DOTuri,
       anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(284), 33,
+    ACTIONS(296), 43,
       anon_sym_concat,
       anon_sym_RPAREN,
+      anon_sym_lookup_json_string,
+      anon_sym_lower,
+      anon_sym_regex_replace,
+      anon_sym_remove_bytes,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_uuidv4,
       anon_sym_len,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
       sym_string,
       anon_sym_http_DOTcookie,
       anon_sym_http_DOThost,
@@ -9398,17 +9545,27 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_http_DOTrequest_DOTheaders_DOTnames,
       anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
       anon_sym_http_DOTrequest_DOTaccepted_languages,
-  [1412] = 3,
+  [1633] = 3,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(290), 3,
+    ACTIONS(304), 3,
       anon_sym_http_DOTrequest_DOTuri,
       anon_sym_raw_DOThttp_DOTrequest_DOTuri,
       anon_sym_http_DOTrequest_DOTheaders,
-    ACTIONS(288), 33,
+    ACTIONS(302), 43,
       anon_sym_concat,
       anon_sym_RPAREN,
+      anon_sym_lookup_json_string,
+      anon_sym_lower,
+      anon_sym_regex_replace,
+      anon_sym_remove_bytes,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_uuidv4,
       anon_sym_len,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
       sym_string,
       anon_sym_http_DOTcookie,
       anon_sym_http_DOThost,
@@ -9439,19 +9596,104 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_http_DOTrequest_DOTheaders_DOTnames,
       anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
       anon_sym_http_DOTrequest_DOTaccepted_languages,
-  [1456] = 6,
+  [1687] = 3,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(39), 1,
+    ACTIONS(308), 3,
+      anon_sym_http_DOTrequest_DOTuri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(306), 43,
+      anon_sym_concat,
+      anon_sym_RPAREN,
+      anon_sym_lookup_json_string,
+      anon_sym_lower,
+      anon_sym_regex_replace,
+      anon_sym_remove_bytes,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_uuidv4,
+      anon_sym_len,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+      sym_string,
+      anon_sym_http_DOTcookie,
+      anon_sym_http_DOThost,
+      anon_sym_http_DOTreferer,
+      anon_sym_http_DOTrequest_DOTfull_uri,
+      anon_sym_http_DOTrequest_DOTmethod,
+      anon_sym_http_DOTrequest_DOTuri_DOTpath,
+      anon_sym_http_DOTrequest_DOTuri_DOTquery,
+      anon_sym_http_DOTuser_agent,
+      anon_sym_http_DOTrequest_DOTversion,
+      anon_sym_http_DOTx_forwarded_for,
+      anon_sym_ip_DOTsrc_DOTlat,
+      anon_sym_ip_DOTsrc_DOTlon,
+      anon_sym_ip_DOTsrc_DOTcity,
+      anon_sym_ip_DOTsrc_DOTpostal_code,
+      anon_sym_ip_DOTsrc_DOTmetro_code,
+      anon_sym_ip_DOTgeoip_DOTcontinent,
+      anon_sym_ip_DOTgeoip_DOTcountry,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_1_iso_code,
+      anon_sym_ip_DOTgeoip_DOTsubdivision_2_iso_code,
+      anon_sym_raw_DOThttp_DOTrequest_DOTfull_uri,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTpath,
+      anon_sym_raw_DOThttp_DOTrequest_DOTuri_DOTquery,
+      anon_sym_cf_DOTbot_management_DOTja3_hash,
+      anon_sym_cf_DOThostname_DOTmetadata,
+      anon_sym_cf_DOTworker_DOTupstream_zone,
+      anon_sym_http_DOTrequest_DOTcookies,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+  [1741] = 19,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(33), 1,
       anon_sym_cf_DOTwaf_DOTscore,
-    ACTIONS(43), 2,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(166), 1,
+      sym_array_field_expansion,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    ACTIONS(37), 2,
       anon_sym_ip_DOTsrc,
       anon_sym_cf_DOTedge_DOTserver_ip,
-    STATE(148), 3,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    STATE(211), 3,
       sym_number_field,
       sym_ip_field,
       sym_bool_field,
-    ACTIONS(55), 8,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+    ACTIONS(49), 8,
       anon_sym_ip_DOTgeoip_DOTis_in_european_union,
       anon_sym_ssl,
       anon_sym_cf_DOTbot_management_DOTverified_bot,
@@ -9460,7 +9702,7 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_cf_DOTtls_client_auth_DOTcert_revoked,
       anon_sym_cf_DOTtls_client_auth_DOTcert_verified,
       anon_sym_http_DOTrequest_DOTheaders_DOTtruncated,
-    ACTIONS(37), 9,
+    ACTIONS(31), 9,
       anon_sym_http_DOTrequest_DOTtimestamp_DOTsec,
       anon_sym_http_DOTrequest_DOTtimestamp_DOTmsec,
       anon_sym_ip_DOTgeoip_DOTasnum,
@@ -9470,13 +9712,531 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_cf_DOTwaf_DOTscore_DOTsqli,
       anon_sym_cf_DOTwaf_DOTscore_DOTxss,
       anon_sym_cf_DOTwaf_DOTscore_DOTrce,
-  [1493] = 3,
+  [1825] = 14,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(294), 2,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(111), 1,
+      sym_array_field_expansion,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+  [1876] = 14,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    STATE(217), 1,
+      sym_array_field_expansion,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+  [1927] = 14,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(205), 1,
+      sym_array_field_expansion,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+  [1978] = 14,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(178), 1,
+      sym_array_field_expansion,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+  [2029] = 14,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    STATE(233), 1,
+      sym_array_field_expansion,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+  [2080] = 14,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    STATE(213), 1,
+      sym_array_field_expansion,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+  [2131] = 14,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    STATE(232), 1,
+      sym_array_field_expansion,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+  [2182] = 14,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    STATE(242), 1,
+      sym_array_field_expansion,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+  [2233] = 14,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    STATE(212), 1,
+      sym_array_field_expansion,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+  [2284] = 14,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(136), 1,
+      sym_array_field_expansion,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+  [2335] = 14,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    STATE(231), 1,
+      sym_array_field_expansion,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+  [2386] = 14,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(109), 1,
+      sym_array_field_expansion,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+  [2437] = 14,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    STATE(210), 1,
+      sym_array_field_expansion,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+  [2488] = 14,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(43), 1,
+      anon_sym_http_DOTrequest_DOTcookies,
+    ACTIONS(45), 1,
+      anon_sym_http_DOTrequest_DOTheaders,
+    ACTIONS(205), 1,
+      anon_sym_concat,
+    ACTIONS(207), 1,
+      anon_sym_lookup_json_string,
+    ACTIONS(211), 1,
+      anon_sym_regex_replace,
+    ACTIONS(213), 1,
+      anon_sym_remove_bytes,
+    ACTIONS(215), 1,
+      anon_sym_uuidv4,
+    STATE(166), 1,
+      sym_array_field_expansion,
+    STATE(209), 1,
+      sym_map_string_array_field,
+    ACTIONS(217), 2,
+      anon_sym_ends_with,
+      anon_sym_starts_with,
+    STATE(174), 2,
+      sym__array_lhs,
+      sym_array_string_field,
+    ACTIONS(221), 3,
+      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
+      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
+      anon_sym_http_DOTrequest_DOTaccepted_languages,
+    ACTIONS(209), 5,
+      anon_sym_lower,
+      anon_sym_to_string,
+      anon_sym_upper,
+      anon_sym_url_decode,
+      anon_sym_len,
+  [2539] = 3,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(312), 2,
       anon_sym_LT,
       anon_sym_GT,
-    ACTIONS(292), 14,
+    ACTIONS(310), 14,
       anon_sym_in,
       anon_sym_eq,
       anon_sym_ne,
@@ -9491,13 +10251,13 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_contains,
       anon_sym_matches,
       anon_sym_TILDE,
-  [1517] = 3,
+  [2563] = 3,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(298), 2,
+    ACTIONS(316), 2,
       anon_sym_LT,
       anon_sym_GT,
-    ACTIONS(296), 14,
+    ACTIONS(314), 14,
       anon_sym_in,
       anon_sym_eq,
       anon_sym_ne,
@@ -9512,13 +10272,13 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_contains,
       anon_sym_matches,
       anon_sym_TILDE,
-  [1541] = 3,
+  [2587] = 3,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(302), 2,
+    ACTIONS(320), 2,
       anon_sym_LT,
       anon_sym_GT,
-    ACTIONS(300), 14,
+    ACTIONS(318), 14,
       anon_sym_in,
       anon_sym_eq,
       anon_sym_ne,
@@ -9533,13 +10293,13 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_contains,
       anon_sym_matches,
       anon_sym_TILDE,
-  [1565] = 3,
+  [2611] = 3,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(306), 2,
+    ACTIONS(324), 2,
       anon_sym_LT,
       anon_sym_GT,
-    ACTIONS(304), 14,
+    ACTIONS(322), 14,
       anon_sym_in,
       anon_sym_eq,
       anon_sym_ne,
@@ -9554,13 +10314,13 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_contains,
       anon_sym_matches,
       anon_sym_TILDE,
-  [1589] = 3,
+  [2635] = 3,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(310), 2,
+    ACTIONS(328), 2,
       anon_sym_LT,
       anon_sym_GT,
-    ACTIONS(308), 14,
+    ACTIONS(326), 14,
       anon_sym_in,
       anon_sym_eq,
       anon_sym_ne,
@@ -9575,216 +10335,153 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_contains,
       anon_sym_matches,
       anon_sym_TILDE,
-  [1613] = 3,
+  [2659] = 17,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(314), 2,
-      anon_sym_LT,
-      anon_sym_GT,
-    ACTIONS(312), 14,
+    ACTIONS(330), 1,
       anon_sym_in,
+    ACTIONS(332), 1,
       anon_sym_eq,
+    ACTIONS(334), 1,
       anon_sym_ne,
+    ACTIONS(336), 1,
       anon_sym_lt,
+    ACTIONS(338), 1,
       anon_sym_le,
+    ACTIONS(340), 1,
       anon_sym_gt,
+    ACTIONS(342), 1,
       anon_sym_ge,
-      anon_sym_EQ_EQ,
-      anon_sym_BANG_EQ,
-      anon_sym_LT_EQ,
-      anon_sym_GT_EQ,
-      anon_sym_contains,
-      anon_sym_matches,
-      anon_sym_TILDE,
-  [1637] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(318), 2,
-      anon_sym_LT,
-      anon_sym_GT,
-    ACTIONS(316), 14,
-      anon_sym_in,
-      anon_sym_eq,
-      anon_sym_ne,
-      anon_sym_lt,
-      anon_sym_le,
-      anon_sym_gt,
-      anon_sym_ge,
-      anon_sym_EQ_EQ,
-      anon_sym_BANG_EQ,
-      anon_sym_LT_EQ,
-      anon_sym_GT_EQ,
-      anon_sym_contains,
-      anon_sym_matches,
-      anon_sym_TILDE,
-  [1661] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(322), 2,
-      anon_sym_LT,
-      anon_sym_GT,
-    ACTIONS(320), 14,
-      anon_sym_in,
-      anon_sym_eq,
-      anon_sym_ne,
-      anon_sym_lt,
-      anon_sym_le,
-      anon_sym_gt,
-      anon_sym_ge,
-      anon_sym_EQ_EQ,
-      anon_sym_BANG_EQ,
-      anon_sym_LT_EQ,
-      anon_sym_GT_EQ,
-      anon_sym_contains,
-      anon_sym_matches,
-      anon_sym_TILDE,
-  [1685] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(326), 2,
-      anon_sym_LT,
-      anon_sym_GT,
-    ACTIONS(324), 14,
-      anon_sym_in,
-      anon_sym_eq,
-      anon_sym_ne,
-      anon_sym_lt,
-      anon_sym_le,
-      anon_sym_gt,
-      anon_sym_ge,
-      anon_sym_EQ_EQ,
-      anon_sym_BANG_EQ,
-      anon_sym_LT_EQ,
-      anon_sym_GT_EQ,
-      anon_sym_contains,
-      anon_sym_matches,
-      anon_sym_TILDE,
-  [1709] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(330), 2,
-      anon_sym_LT,
-      anon_sym_GT,
-    ACTIONS(328), 14,
-      anon_sym_in,
-      anon_sym_eq,
-      anon_sym_ne,
-      anon_sym_lt,
-      anon_sym_le,
-      anon_sym_gt,
-      anon_sym_ge,
-      anon_sym_EQ_EQ,
-      anon_sym_BANG_EQ,
-      anon_sym_LT_EQ,
-      anon_sym_GT_EQ,
-      anon_sym_contains,
-      anon_sym_matches,
-      anon_sym_TILDE,
-  [1733] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(334), 2,
-      anon_sym_LT,
-      anon_sym_GT,
-    ACTIONS(332), 14,
-      anon_sym_in,
-      anon_sym_eq,
-      anon_sym_ne,
-      anon_sym_lt,
-      anon_sym_le,
-      anon_sym_gt,
-      anon_sym_ge,
-      anon_sym_EQ_EQ,
-      anon_sym_BANG_EQ,
-      anon_sym_LT_EQ,
-      anon_sym_GT_EQ,
-      anon_sym_contains,
-      anon_sym_matches,
-      anon_sym_TILDE,
-  [1757] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(338), 2,
-      anon_sym_LT,
-      anon_sym_GT,
-    ACTIONS(336), 14,
-      anon_sym_in,
-      anon_sym_eq,
-      anon_sym_ne,
-      anon_sym_lt,
-      anon_sym_le,
-      anon_sym_gt,
-      anon_sym_ge,
-      anon_sym_EQ_EQ,
-      anon_sym_BANG_EQ,
-      anon_sym_LT_EQ,
-      anon_sym_GT_EQ,
-      anon_sym_contains,
-      anon_sym_matches,
-      anon_sym_TILDE,
-  [1781] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(342), 2,
-      anon_sym_LT,
-      anon_sym_GT,
-    ACTIONS(340), 14,
-      anon_sym_in,
-      anon_sym_eq,
-      anon_sym_ne,
-      anon_sym_lt,
-      anon_sym_le,
-      anon_sym_gt,
-      anon_sym_ge,
-      anon_sym_EQ_EQ,
-      anon_sym_BANG_EQ,
-      anon_sym_LT_EQ,
-      anon_sym_GT_EQ,
-      anon_sym_contains,
-      anon_sym_matches,
-      anon_sym_TILDE,
-  [1805] = 17,
-    ACTIONS(3), 1,
-      sym_comment,
     ACTIONS(344), 1,
-      anon_sym_in,
+      anon_sym_EQ_EQ,
     ACTIONS(346), 1,
-      anon_sym_eq,
+      anon_sym_BANG_EQ,
     ACTIONS(348), 1,
-      anon_sym_ne,
+      anon_sym_LT,
     ACTIONS(350), 1,
-      anon_sym_lt,
+      anon_sym_LT_EQ,
     ACTIONS(352), 1,
-      anon_sym_le,
+      anon_sym_GT,
     ACTIONS(354), 1,
-      anon_sym_gt,
+      anon_sym_GT_EQ,
     ACTIONS(356), 1,
-      anon_sym_ge,
-    ACTIONS(358), 1,
-      anon_sym_EQ_EQ,
-    ACTIONS(360), 1,
-      anon_sym_BANG_EQ,
-    ACTIONS(362), 1,
-      anon_sym_LT,
-    ACTIONS(364), 1,
-      anon_sym_LT_EQ,
-    ACTIONS(366), 1,
-      anon_sym_GT,
-    ACTIONS(368), 1,
-      anon_sym_GT_EQ,
-    ACTIONS(370), 1,
       anon_sym_contains,
-    ACTIONS(372), 1,
+    ACTIONS(358), 1,
       anon_sym_matches,
-    ACTIONS(374), 1,
+    ACTIONS(360), 1,
       anon_sym_TILDE,
-  [1857] = 3,
+  [2711] = 3,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(378), 2,
+    ACTIONS(364), 2,
       anon_sym_LT,
       anon_sym_GT,
-    ACTIONS(376), 12,
+    ACTIONS(362), 14,
+      anon_sym_in,
+      anon_sym_eq,
+      anon_sym_ne,
+      anon_sym_lt,
+      anon_sym_le,
+      anon_sym_gt,
+      anon_sym_ge,
+      anon_sym_EQ_EQ,
+      anon_sym_BANG_EQ,
+      anon_sym_LT_EQ,
+      anon_sym_GT_EQ,
+      anon_sym_contains,
+      anon_sym_matches,
+      anon_sym_TILDE,
+  [2735] = 3,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(368), 2,
+      anon_sym_LT,
+      anon_sym_GT,
+    ACTIONS(366), 14,
+      anon_sym_in,
+      anon_sym_eq,
+      anon_sym_ne,
+      anon_sym_lt,
+      anon_sym_le,
+      anon_sym_gt,
+      anon_sym_ge,
+      anon_sym_EQ_EQ,
+      anon_sym_BANG_EQ,
+      anon_sym_LT_EQ,
+      anon_sym_GT_EQ,
+      anon_sym_contains,
+      anon_sym_matches,
+      anon_sym_TILDE,
+  [2759] = 3,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(372), 2,
+      anon_sym_LT,
+      anon_sym_GT,
+    ACTIONS(370), 14,
+      anon_sym_in,
+      anon_sym_eq,
+      anon_sym_ne,
+      anon_sym_lt,
+      anon_sym_le,
+      anon_sym_gt,
+      anon_sym_ge,
+      anon_sym_EQ_EQ,
+      anon_sym_BANG_EQ,
+      anon_sym_LT_EQ,
+      anon_sym_GT_EQ,
+      anon_sym_contains,
+      anon_sym_matches,
+      anon_sym_TILDE,
+  [2783] = 3,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(376), 2,
+      anon_sym_LT,
+      anon_sym_GT,
+    ACTIONS(374), 14,
+      anon_sym_in,
+      anon_sym_eq,
+      anon_sym_ne,
+      anon_sym_lt,
+      anon_sym_le,
+      anon_sym_gt,
+      anon_sym_ge,
+      anon_sym_EQ_EQ,
+      anon_sym_BANG_EQ,
+      anon_sym_LT_EQ,
+      anon_sym_GT_EQ,
+      anon_sym_contains,
+      anon_sym_matches,
+      anon_sym_TILDE,
+  [2807] = 3,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(380), 2,
+      anon_sym_LT,
+      anon_sym_GT,
+    ACTIONS(378), 14,
+      anon_sym_in,
+      anon_sym_eq,
+      anon_sym_ne,
+      anon_sym_lt,
+      anon_sym_le,
+      anon_sym_gt,
+      anon_sym_ge,
+      anon_sym_EQ_EQ,
+      anon_sym_BANG_EQ,
+      anon_sym_LT_EQ,
+      anon_sym_GT_EQ,
+      anon_sym_contains,
+      anon_sym_matches,
+      anon_sym_TILDE,
+  [2831] = 3,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(384), 2,
+      anon_sym_LT,
+      anon_sym_GT,
+    ACTIONS(382), 12,
       anon_sym_in,
       anon_sym_eq,
       anon_sym_ne,
@@ -9797,13 +10494,32 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_EQ,
       anon_sym_GT_EQ,
       anon_sym_RPAREN,
-  [1879] = 3,
+  [2853] = 4,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(382), 2,
+    ACTIONS(386), 1,
+      anon_sym_in,
+    ACTIONS(390), 2,
       anon_sym_LT,
       anon_sym_GT,
-    ACTIONS(380), 11,
+    ACTIONS(388), 10,
+      anon_sym_eq,
+      anon_sym_ne,
+      anon_sym_lt,
+      anon_sym_le,
+      anon_sym_gt,
+      anon_sym_ge,
+      anon_sym_EQ_EQ,
+      anon_sym_BANG_EQ,
+      anon_sym_LT_EQ,
+      anon_sym_GT_EQ,
+  [2876] = 3,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(394), 2,
+      anon_sym_LT,
+      anon_sym_GT,
+    ACTIONS(392), 11,
       anon_sym_in,
       anon_sym_eq,
       anon_sym_ne,
@@ -9815,13 +10531,13 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_BANG_EQ,
       anon_sym_LT_EQ,
       anon_sym_GT_EQ,
-  [1900] = 3,
+  [2897] = 3,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(386), 2,
+    ACTIONS(398), 2,
       anon_sym_LT,
       anon_sym_GT,
-    ACTIONS(384), 11,
+    ACTIONS(396), 11,
       anon_sym_in,
       anon_sym_eq,
       anon_sym_ne,
@@ -9833,847 +10549,1090 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_BANG_EQ,
       anon_sym_LT_EQ,
       anon_sym_GT_EQ,
-  [1921] = 4,
+  [2918] = 5,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(388), 1,
-      anon_sym_in,
-    ACTIONS(392), 2,
-      anon_sym_LT,
-      anon_sym_GT,
-    ACTIONS(390), 10,
-      anon_sym_eq,
-      anon_sym_ne,
-      anon_sym_lt,
-      anon_sym_le,
-      anon_sym_gt,
-      anon_sym_ge,
-      anon_sym_EQ_EQ,
-      anon_sym_BANG_EQ,
-      anon_sym_LT_EQ,
-      anon_sym_GT_EQ,
-  [1944] = 7,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(49), 1,
-      anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
-      anon_sym_http_DOTrequest_DOTheaders,
-    STATE(153), 1,
-      sym_map_string_array_field,
-    STATE(154), 1,
-      sym_array_string_field,
-    STATE(183), 1,
-      sym_array_field_expansion,
-    ACTIONS(234), 3,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-  [1968] = 7,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(49), 1,
-      anon_sym_http_DOTrequest_DOTcookies,
-    ACTIONS(51), 1,
-      anon_sym_http_DOTrequest_DOTheaders,
-    STATE(153), 1,
-      sym_map_string_array_field,
-    STATE(154), 1,
-      sym_array_string_field,
-    STATE(175), 1,
-      sym_array_field_expansion,
-    ACTIONS(234), 3,
-      anon_sym_http_DOTrequest_DOTheaders_DOTnames,
-      anon_sym_http_DOTrequest_DOTheaders_DOTvalues,
-      anon_sym_http_DOTrequest_DOTaccepted_languages,
-  [1992] = 5,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(394), 1,
+    ACTIONS(400), 1,
       anon_sym_RPAREN,
-    ACTIONS(178), 2,
+    ACTIONS(159), 2,
       anon_sym_AMP_AMP,
       anon_sym_and,
-    ACTIONS(180), 2,
+    ACTIONS(161), 2,
       anon_sym_xor,
       anon_sym_CARET_CARET,
-    ACTIONS(212), 2,
+    ACTIONS(189), 2,
       anon_sym_or,
       anon_sym_PIPE_PIPE,
-  [2011] = 2,
+  [2937] = 2,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(396), 6,
+    ACTIONS(402), 6,
       anon_sym_in,
       anon_sym_eq,
       anon_sym_ne,
       anon_sym_EQ_EQ,
       anon_sym_BANG_EQ,
       anon_sym_RPAREN,
-  [2023] = 3,
+  [2949] = 4,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(398), 1,
-      anon_sym_in,
-    ACTIONS(400), 4,
-      anon_sym_eq,
-      anon_sym_ne,
-      anon_sym_EQ_EQ,
-      anon_sym_BANG_EQ,
-  [2036] = 4,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(402), 1,
-      anon_sym_RBRACE,
     ACTIONS(404), 1,
-      sym_ipv4,
-    STATE(91), 3,
-      sym__ip,
-      sym_ip_range,
-      aux_sym_ip_set_repeat1,
-  [2051] = 4,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(407), 1,
       anon_sym_RBRACE,
-    ACTIONS(409), 1,
+    ACTIONS(406), 1,
       sym_ipv4,
-    STATE(91), 3,
+    STATE(97), 3,
       sym__ip,
       sym_ip_range,
       aux_sym_ip_set_repeat1,
-  [2066] = 4,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(411), 1,
-      anon_sym_RPAREN,
-    STATE(93), 1,
-      aux_sym_lookup_func_repeat1,
-    ACTIONS(413), 2,
-      sym_number,
-      sym_string,
-  [2080] = 4,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(416), 1,
-      anon_sym_RPAREN,
-    STATE(93), 1,
-      aux_sym_lookup_func_repeat1,
-    ACTIONS(418), 2,
-      sym_number,
-      sym_string,
-  [2094] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(420), 1,
-      anon_sym_COMMA,
-    ACTIONS(422), 3,
-      anon_sym_RPAREN,
-      sym_number,
-      sym_string,
-  [2106] = 3,
+  [2964] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(409), 1,
+      anon_sym_in,
+    ACTIONS(411), 4,
+      anon_sym_eq,
+      anon_sym_ne,
+      anon_sym_EQ_EQ,
+      anon_sym_BANG_EQ,
+  [2977] = 4,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(413), 1,
+      anon_sym_RBRACE,
+    ACTIONS(415), 1,
       sym_ipv4,
-    STATE(92), 3,
+    STATE(97), 3,
       sym__ip,
       sym_ip_range,
       aux_sym_ip_set_repeat1,
-  [2118] = 4,
+  [2992] = 3,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(424), 1,
-      anon_sym_RBRACE,
-    ACTIONS(426), 1,
-      sym_string,
+    ACTIONS(415), 1,
+      sym_ipv4,
+    STATE(99), 3,
+      sym__ip,
+      sym_ip_range,
+      aux_sym_ip_set_repeat1,
+  [3004] = 4,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(417), 1,
+      anon_sym_RPAREN,
     STATE(103), 1,
-      aux_sym_string_set_repeat1,
-  [2131] = 4,
+      aux_sym_string_func_repeat2,
+    ACTIONS(419), 2,
+      sym_number,
+      sym_string,
+  [3018] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(421), 4,
+      anon_sym_COMMA,
+      anon_sym_RPAREN,
+      sym_number,
+      sym_string,
+  [3028] = 4,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(423), 1,
+      anon_sym_RPAREN,
+    STATE(103), 1,
+      aux_sym_string_func_repeat2,
+    ACTIONS(425), 2,
+      sym_number,
+      sym_string,
+  [3042] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(428), 1,
-      anon_sym_RBRACE,
-    ACTIONS(430), 1,
+      anon_sym_COMMA,
+    ACTIONS(430), 3,
+      anon_sym_RPAREN,
       sym_number,
-    STATE(101), 1,
-      aux_sym_number_set_repeat1,
-  [2144] = 4,
+      sym_string,
+  [3054] = 4,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(432), 1,
-      anon_sym_LBRACE,
-    ACTIONS(434), 1,
-      sym_ip_list,
-    STATE(22), 1,
-      sym_ip_set,
-  [2157] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    STATE(94), 1,
-      aux_sym_lookup_func_repeat1,
-    ACTIONS(418), 2,
-      sym_number,
-      sym_string,
-  [2168] = 4,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(436), 1,
-      anon_sym_RBRACE,
-    ACTIONS(438), 1,
-      sym_number,
-    STATE(101), 1,
-      aux_sym_number_set_repeat1,
-  [2181] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(409), 1,
-      sym_ipv4,
-    STATE(23), 2,
-      sym__ip,
-      sym_ip_range,
-  [2192] = 4,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(441), 1,
-      anon_sym_RBRACE,
-    ACTIONS(443), 1,
-      sym_string,
-    STATE(103), 1,
-      aux_sym_string_set_repeat1,
-  [2205] = 2,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(411), 3,
       anon_sym_RPAREN,
+    STATE(103), 1,
+      aux_sym_string_func_repeat2,
+    ACTIONS(419), 2,
       sym_number,
       sym_string,
-  [2214] = 2,
+  [3068] = 4,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(446), 2,
+    ACTIONS(434), 1,
+      anon_sym_RPAREN,
+    STATE(103), 1,
+      aux_sym_string_func_repeat2,
+    ACTIONS(419), 2,
+      sym_number,
+      sym_string,
+  [3082] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(436), 4,
       anon_sym_COMMA,
       anon_sym_RPAREN,
-  [2222] = 3,
+      sym_number,
+      sym_string,
+  [3092] = 3,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(415), 1,
+      sym_ipv4,
+    STATE(37), 2,
+      sym__ip,
+      sym_ip_range,
+  [3103] = 3,
+    ACTIONS(3), 1,
+      sym_comment,
+    STATE(105), 1,
+      aux_sym_string_func_repeat2,
+    ACTIONS(419), 2,
+      sym_number,
+      sym_string,
+  [3114] = 3,
+    ACTIONS(3), 1,
+      sym_comment,
+    STATE(106), 1,
+      aux_sym_string_func_repeat2,
+    ACTIONS(419), 2,
+      sym_number,
+      sym_string,
+  [3125] = 3,
+    ACTIONS(3), 1,
+      sym_comment,
+    STATE(101), 1,
+      aux_sym_string_func_repeat2,
+    ACTIONS(419), 2,
+      sym_number,
+      sym_string,
+  [3136] = 4,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(438), 1,
+      anon_sym_RBRACE,
+    ACTIONS(440), 1,
+      sym_string,
+    STATE(112), 1,
+      aux_sym_string_set_repeat1,
+  [3149] = 4,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(443), 1,
+      anon_sym_RBRACE,
+    ACTIONS(445), 1,
+      sym_number,
+    STATE(113), 1,
+      aux_sym_number_set_repeat1,
+  [3162] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(423), 3,
+      anon_sym_RPAREN,
+      sym_number,
+      sym_string,
+  [3171] = 4,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(448), 1,
-      anon_sym_LBRACK,
+      anon_sym_LBRACE,
     ACTIONS(450), 1,
-      anon_sym_LBRACK_STAR_RBRACK,
-  [2232] = 2,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(452), 2,
-      sym_string,
-      anon_sym_STAR,
-  [2240] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(454), 1,
-      anon_sym_LBRACK,
-    ACTIONS(456), 1,
-      anon_sym_LBRACK_STAR_RBRACK,
-  [2250] = 3,
+      sym_ip_list,
+    STATE(11), 1,
+      sym_ip_set,
+  [3184] = 4,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(452), 1,
-      anon_sym_STAR,
-    ACTIONS(458), 1,
+      anon_sym_RBRACE,
+    ACTIONS(454), 1,
       sym_string,
-  [2260] = 2,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(460), 2,
-      anon_sym_COMMA,
-      anon_sym_RPAREN,
-  [2268] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(462), 1,
-      anon_sym_LBRACK,
-    ACTIONS(464), 1,
-      anon_sym_LBRACK_STAR_RBRACK,
-  [2278] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(466), 1,
-      sym_string,
-    STATE(97), 1,
+    STATE(112), 1,
       aux_sym_string_set_repeat1,
-  [2288] = 3,
+  [3197] = 4,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(456), 1,
+      anon_sym_RBRACE,
+    ACTIONS(458), 1,
+      sym_number,
+    STATE(113), 1,
+      aux_sym_number_set_repeat1,
+  [3210] = 3,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(460), 1,
+      anon_sym_LBRACK,
+    ACTIONS(462), 1,
+      anon_sym_LBRACK_STAR_RBRACK,
+  [3220] = 3,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(464), 1,
+      sym_string,
+    ACTIONS(466), 1,
+      anon_sym_STAR,
+  [3230] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(468), 1,
-      anon_sym_LBRACE,
-    STATE(24), 1,
-      sym_string_set,
-  [2298] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
+      anon_sym_LBRACK,
     ACTIONS(470), 1,
-      sym_number,
-    STATE(98), 1,
-      aux_sym_number_set_repeat1,
-  [2308] = 3,
+      anon_sym_LBRACK_STAR_RBRACK,
+  [3240] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(472), 1,
-      anon_sym_LBRACE,
-    STATE(22), 1,
-      sym_number_set,
-  [2318] = 3,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(232), 1,
-      anon_sym_cf_DOTrandom_seed,
-    STATE(145), 1,
-      sym_bytes_field,
-  [2328] = 2,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(474), 2,
-      anon_sym_COMMA,
-      anon_sym_RPAREN,
-  [2336] = 2,
+      anon_sym_LBRACK,
+    ACTIONS(474), 1,
+      anon_sym_LBRACK_STAR_RBRACK,
+  [3250] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(476), 1,
-      sym_string,
-  [2343] = 2,
-    ACTIONS(3), 1,
-      sym_comment,
+      anon_sym_LBRACK,
     ACTIONS(478), 1,
-      anon_sym_COMMA,
-  [2350] = 2,
+      anon_sym_LBRACK_STAR_RBRACK,
+  [3260] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(480), 1,
-      sym_string,
-  [2357] = 2,
-    ACTIONS(3), 1,
-      sym_comment,
+      anon_sym_LBRACK,
     ACTIONS(482), 1,
-      sym_string,
-  [2364] = 2,
+      anon_sym_LBRACK_STAR_RBRACK,
+  [3270] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(484), 1,
-      sym_string,
-  [2371] = 2,
-    ACTIONS(3), 1,
-      sym_comment,
+      anon_sym_LBRACK,
     ACTIONS(486), 1,
-      sym_string,
-  [2378] = 2,
+      anon_sym_LBRACK_STAR_RBRACK,
+  [3280] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(488), 1,
-      sym_string,
-  [2385] = 2,
-    ACTIONS(3), 1,
-      sym_comment,
+      anon_sym_LBRACK,
     ACTIONS(490), 1,
-      sym_string,
-  [2392] = 2,
+      anon_sym_LBRACK_STAR_RBRACK,
+  [3290] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(492), 1,
-      sym_string,
-  [2399] = 2,
-    ACTIONS(3), 1,
-      sym_comment,
+      anon_sym_LBRACK,
     ACTIONS(494), 1,
-      sym_number,
-  [2406] = 2,
+      anon_sym_LBRACK_STAR_RBRACK,
+  [3300] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(496), 1,
       anon_sym_LBRACK,
-  [2413] = 2,
-    ACTIONS(3), 1,
-      sym_comment,
     ACTIONS(498), 1,
-      anon_sym_RBRACK,
-  [2420] = 2,
+      anon_sym_LBRACK_STAR_RBRACK,
+  [3310] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(500), 1,
-      anon_sym_LBRACK,
-  [2427] = 2,
+      sym_number,
+    STATE(117), 1,
+      aux_sym_number_set_repeat1,
+  [3320] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(502), 1,
-      anon_sym_RBRACK,
-  [2434] = 2,
+      sym_string,
+    STATE(116), 1,
+      aux_sym_string_set_repeat1,
+  [3330] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(504), 1,
-      anon_sym_LBRACK,
-  [2441] = 2,
+      anon_sym_LBRACE,
+    STATE(11), 1,
+      sym_number_set,
+  [3340] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(506), 1,
-      sym_string,
-  [2448] = 2,
+      anon_sym_LBRACE,
+    STATE(30), 1,
+      sym_string_set,
+  [3350] = 2,
     ACTIONS(3), 1,
       sym_comment,
-    ACTIONS(508), 1,
-      sym_string,
-  [2455] = 2,
+    ACTIONS(508), 2,
+      anon_sym_COMMA,
+      anon_sym_RPAREN,
+  [3358] = 3,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(510), 1,
-      sym_string,
-  [2462] = 2,
-    ACTIONS(3), 1,
-      sym_comment,
+      anon_sym_LBRACK,
     ACTIONS(512), 1,
-      sym_string,
-  [2469] = 2,
+      anon_sym_LBRACK_STAR_RBRACK,
+  [3368] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(514), 1,
-      sym_string,
-  [2476] = 2,
+      anon_sym_RBRACK,
+  [3375] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(516), 1,
-      sym_string,
-  [2483] = 2,
+      anon_sym_LPAREN,
+  [3382] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(518), 1,
-      sym_string,
-  [2490] = 2,
+      anon_sym_COMMA,
+  [3389] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(520), 1,
       sym_string,
-  [2497] = 2,
+  [3396] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(522), 1,
-      sym_string,
-  [2504] = 2,
+      anon_sym_LPAREN,
+  [3403] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(524), 1,
-      sym_string,
-  [2511] = 2,
+      anon_sym_LPAREN,
+  [3410] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(526), 1,
       anon_sym_LPAREN,
-  [2518] = 2,
+  [3417] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(528), 1,
-      ts_builtin_sym_end,
-  [2525] = 2,
+      anon_sym_LPAREN,
+  [3424] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(530), 1,
-      anon_sym_RPAREN,
-  [2532] = 2,
+      anon_sym_LPAREN,
+  [3431] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(532), 1,
-      anon_sym_RPAREN,
-  [2539] = 2,
+      anon_sym_LPAREN,
+  [3438] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(494), 1,
+      anon_sym_LBRACK,
+  [3445] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(534), 1,
-      anon_sym_RPAREN,
-  [2546] = 2,
+      anon_sym_LPAREN,
+  [3452] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(536), 1,
-      anon_sym_RPAREN,
-  [2553] = 2,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(456), 1,
-      anon_sym_LBRACK,
-  [2560] = 2,
+      sym_string,
+  [3459] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(538), 1,
-      anon_sym_COMMA,
-  [2567] = 2,
+      sym_string,
+  [3466] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(540), 1,
-      aux_sym_ip_range_token1,
-  [2574] = 2,
+      sym_string,
+  [3473] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(542), 1,
-      anon_sym_LBRACK,
-  [2581] = 2,
+      sym_string,
+  [3480] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(544), 1,
-      anon_sym_LBRACK,
-  [2588] = 2,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(450), 1,
-      anon_sym_LBRACK_STAR_RBRACK,
-  [2595] = 2,
+      sym_string,
+  [3487] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(546), 1,
+      sym_string,
+  [3494] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(490), 1,
       anon_sym_LBRACK,
-  [2602] = 2,
+  [3501] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(548), 1,
-      anon_sym_COMMA,
-  [2609] = 2,
+      sym_number,
+  [3508] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(550), 1,
       sym_string,
-  [2616] = 2,
+  [3515] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(552), 1,
-      anon_sym_LPAREN,
-  [2623] = 2,
+      sym_string,
+  [3522] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(554), 1,
-      anon_sym_LPAREN,
-  [2630] = 2,
+      sym_string,
+  [3529] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(556), 1,
-      anon_sym_RBRACK,
-  [2637] = 2,
+      sym_string,
+  [3536] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(558), 1,
-      anon_sym_RBRACK,
-  [2644] = 2,
+      aux_sym_ip_range_token1,
+  [3543] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(486), 1,
+      anon_sym_LBRACK,
+  [3550] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(560), 1,
-      anon_sym_RPAREN,
-  [2651] = 2,
+      sym_string,
+  [3557] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(562), 1,
-      anon_sym_COMMA,
-  [2658] = 2,
+      sym_string,
+  [3564] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(564), 1,
-      anon_sym_RPAREN,
-  [2665] = 2,
+      sym_string,
+  [3571] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(566), 1,
-      anon_sym_COMMA,
-  [2672] = 2,
+      sym_string,
+  [3578] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(568), 1,
-      anon_sym_COMMA,
-  [2679] = 2,
+      sym_string,
+  [3585] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(570), 1,
-      anon_sym_RPAREN,
-  [2686] = 2,
+      anon_sym_RBRACK,
+  [3592] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(572), 1,
       anon_sym_RPAREN,
-  [2693] = 2,
+  [3599] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(482), 1,
+      anon_sym_LBRACK,
+  [3606] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(574), 1,
-      anon_sym_RPAREN,
-  [2700] = 2,
+      anon_sym_COMMA,
+  [3613] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(576), 1,
-      anon_sym_LPAREN,
-  [2707] = 2,
+      sym_string,
+  [3620] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(578), 1,
-      anon_sym_RPAREN,
-  [2714] = 2,
+      anon_sym_COMMA,
+  [3627] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(580), 1,
-      anon_sym_LPAREN,
-  [2721] = 2,
+      anon_sym_COMMA,
+  [3634] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(582), 1,
       anon_sym_RPAREN,
-  [2728] = 2,
+  [3641] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(584), 1,
-      anon_sym_LPAREN,
-  [2735] = 2,
+      anon_sym_RPAREN,
+  [3648] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(512), 1,
+      anon_sym_LBRACK_STAR_RBRACK,
+  [3655] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(586), 1,
       anon_sym_RPAREN,
-  [2742] = 2,
+  [3662] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(588), 1,
-      anon_sym_LPAREN,
-  [2749] = 2,
+      anon_sym_RPAREN,
+  [3669] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(590), 1,
-      anon_sym_LBRACK,
-  [2756] = 2,
+      sym_string,
+  [3676] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(592), 1,
-      anon_sym_LPAREN,
-  [2763] = 2,
+      anon_sym_COMMA,
+  [3683] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(594), 1,
-      anon_sym_LPAREN,
-  [2770] = 2,
+      sym_string,
+  [3690] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(596), 1,
-      anon_sym_COMMA,
-  [2777] = 2,
+      anon_sym_RPAREN,
+  [3697] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(598), 1,
-      anon_sym_LPAREN,
-  [2784] = 2,
+      anon_sym_COMMA,
+  [3704] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(600), 1,
-      anon_sym_LBRACK,
-  [2791] = 2,
+      anon_sym_COMMA,
+  [3711] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(602), 1,
-      anon_sym_COMMA,
-  [2798] = 2,
+      sym_string,
+  [3718] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(604), 1,
-      anon_sym_COMMA,
-  [2805] = 2,
-    ACTIONS(3), 1,
-      sym_comment,
-    ACTIONS(464), 1,
-      anon_sym_LBRACK_STAR_RBRACK,
-  [2812] = 2,
+      sym_string,
+  [3725] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(606), 1,
-      anon_sym_LPAREN,
-  [2819] = 2,
+      sym_string,
+  [3732] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(608), 1,
-      sym_string,
-  [2826] = 2,
+      anon_sym_RBRACK,
+  [3739] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(610), 1,
-      anon_sym_LPAREN,
-  [2833] = 2,
+      sym_number,
+  [3746] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(478), 1,
+      anon_sym_LBRACK,
+  [3753] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(612), 1,
-      anon_sym_LPAREN,
-  [2840] = 2,
+      anon_sym_COMMA,
+  [3760] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(614), 1,
-      anon_sym_LPAREN,
-  [2847] = 2,
+      anon_sym_LBRACK_STAR_RBRACK,
+  [3767] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(616), 1,
       sym_string,
-  [2854] = 2,
+  [3774] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(618), 1,
-      anon_sym_RPAREN,
-  [2861] = 2,
+      sym_string,
+  [3781] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(462), 1,
+      anon_sym_LBRACK,
+  [3788] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(620), 1,
-      sym_number,
-  [2868] = 2,
+      anon_sym_LBRACK,
+  [3795] = 2,
     ACTIONS(3), 1,
       sym_comment,
     ACTIONS(622), 1,
+      anon_sym_LBRACK,
+  [3802] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(474), 1,
+      anon_sym_LBRACK,
+  [3809] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(624), 1,
+      ts_builtin_sym_end,
+  [3816] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(626), 1,
+      anon_sym_COMMA,
+  [3823] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(628), 1,
+      anon_sym_RPAREN,
+  [3830] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(630), 1,
+      anon_sym_RPAREN,
+  [3837] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(470), 1,
+      anon_sym_LBRACK,
+  [3844] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(498), 1,
+      anon_sym_LBRACK,
+  [3851] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(632), 1,
+      anon_sym_RBRACK,
+  [3858] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(634), 1,
+      anon_sym_COMMA,
+  [3865] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(636), 1,
+      anon_sym_COMMA,
+  [3872] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(638), 1,
+      anon_sym_RPAREN,
+  [3879] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(640), 1,
+      anon_sym_RPAREN,
+  [3886] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(642), 1,
+      anon_sym_RPAREN,
+  [3893] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(644), 1,
+      anon_sym_LBRACK,
+  [3900] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(646), 1,
+      anon_sym_RPAREN,
+  [3907] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(648), 1,
+      anon_sym_RPAREN,
+  [3914] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(650), 1,
+      anon_sym_RPAREN,
+  [3921] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(652), 1,
+      anon_sym_RPAREN,
+  [3928] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(654), 1,
       sym_string,
+  [3935] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(656), 1,
+      anon_sym_LBRACK,
+  [3942] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(658), 1,
+      anon_sym_LPAREN,
+  [3949] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(660), 1,
+      anon_sym_COMMA,
+  [3956] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(662), 1,
+      anon_sym_LPAREN,
+  [3963] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(664), 1,
+      anon_sym_RPAREN,
+  [3970] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(666), 1,
+      anon_sym_RPAREN,
+  [3977] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(668), 1,
+      anon_sym_RPAREN,
+  [3984] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(670), 1,
+      anon_sym_LPAREN,
+  [3991] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(672), 1,
+      anon_sym_LPAREN,
+  [3998] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(674), 1,
+      anon_sym_RPAREN,
+  [4005] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(676), 1,
+      anon_sym_LPAREN,
+  [4012] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(678), 1,
+      anon_sym_LPAREN,
+  [4019] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(680), 1,
+      sym_string,
+  [4026] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(682), 1,
+      sym_string,
+  [4033] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(684), 1,
+      sym_string,
+  [4040] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(686), 1,
+      anon_sym_LPAREN,
+  [4047] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(688), 1,
+      anon_sym_COMMA,
+  [4054] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(690), 1,
+      anon_sym_COMMA,
+  [4061] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(692), 1,
+      anon_sym_COMMA,
+  [4068] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(694), 1,
+      anon_sym_LPAREN,
+  [4075] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(696), 1,
+      anon_sym_LPAREN,
+  [4082] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(698), 1,
+      anon_sym_LPAREN,
+  [4089] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(700), 1,
+      anon_sym_COMMA,
+  [4096] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(702), 1,
+      anon_sym_LPAREN,
+  [4103] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(704), 1,
+      anon_sym_LPAREN,
+  [4110] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(706), 1,
+      anon_sym_LPAREN,
+  [4117] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(708), 1,
+      sym_string,
+  [4124] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(710), 1,
+      anon_sym_COMMA,
+  [4131] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(712), 1,
+      anon_sym_LPAREN,
+  [4138] = 2,
+    ACTIONS(3), 1,
+      sym_comment,
+    ACTIONS(714), 1,
+      anon_sym_LPAREN,
 };
 
 static const uint32_t ts_small_parse_table_map[] = {
   [SMALL_STATE(44)] = 0,
-  [SMALL_STATE(45)] = 62,
-  [SMALL_STATE(46)] = 124,
-  [SMALL_STATE(47)] = 198,
-  [SMALL_STATE(48)] = 270,
-  [SMALL_STATE(49)] = 342,
-  [SMALL_STATE(50)] = 414,
-  [SMALL_STATE(51)] = 486,
-  [SMALL_STATE(52)] = 557,
-  [SMALL_STATE(53)] = 626,
-  [SMALL_STATE(54)] = 695,
-  [SMALL_STATE(55)] = 764,
-  [SMALL_STATE(56)] = 833,
-  [SMALL_STATE(57)] = 896,
-  [SMALL_STATE(58)] = 959,
-  [SMALL_STATE(59)] = 1022,
-  [SMALL_STATE(60)] = 1085,
-  [SMALL_STATE(61)] = 1148,
-  [SMALL_STATE(62)] = 1211,
-  [SMALL_STATE(63)] = 1274,
-  [SMALL_STATE(64)] = 1321,
-  [SMALL_STATE(65)] = 1368,
-  [SMALL_STATE(66)] = 1412,
-  [SMALL_STATE(67)] = 1456,
-  [SMALL_STATE(68)] = 1493,
-  [SMALL_STATE(69)] = 1517,
-  [SMALL_STATE(70)] = 1541,
-  [SMALL_STATE(71)] = 1565,
-  [SMALL_STATE(72)] = 1589,
-  [SMALL_STATE(73)] = 1613,
-  [SMALL_STATE(74)] = 1637,
-  [SMALL_STATE(75)] = 1661,
-  [SMALL_STATE(76)] = 1685,
-  [SMALL_STATE(77)] = 1709,
-  [SMALL_STATE(78)] = 1733,
-  [SMALL_STATE(79)] = 1757,
-  [SMALL_STATE(80)] = 1781,
-  [SMALL_STATE(81)] = 1805,
-  [SMALL_STATE(82)] = 1857,
-  [SMALL_STATE(83)] = 1879,
-  [SMALL_STATE(84)] = 1900,
-  [SMALL_STATE(85)] = 1921,
-  [SMALL_STATE(86)] = 1944,
-  [SMALL_STATE(87)] = 1968,
-  [SMALL_STATE(88)] = 1992,
-  [SMALL_STATE(89)] = 2011,
-  [SMALL_STATE(90)] = 2023,
-  [SMALL_STATE(91)] = 2036,
-  [SMALL_STATE(92)] = 2051,
-  [SMALL_STATE(93)] = 2066,
-  [SMALL_STATE(94)] = 2080,
-  [SMALL_STATE(95)] = 2094,
-  [SMALL_STATE(96)] = 2106,
-  [SMALL_STATE(97)] = 2118,
-  [SMALL_STATE(98)] = 2131,
-  [SMALL_STATE(99)] = 2144,
-  [SMALL_STATE(100)] = 2157,
-  [SMALL_STATE(101)] = 2168,
-  [SMALL_STATE(102)] = 2181,
-  [SMALL_STATE(103)] = 2192,
-  [SMALL_STATE(104)] = 2205,
-  [SMALL_STATE(105)] = 2214,
-  [SMALL_STATE(106)] = 2222,
-  [SMALL_STATE(107)] = 2232,
-  [SMALL_STATE(108)] = 2240,
-  [SMALL_STATE(109)] = 2250,
-  [SMALL_STATE(110)] = 2260,
-  [SMALL_STATE(111)] = 2268,
-  [SMALL_STATE(112)] = 2278,
-  [SMALL_STATE(113)] = 2288,
-  [SMALL_STATE(114)] = 2298,
-  [SMALL_STATE(115)] = 2308,
-  [SMALL_STATE(116)] = 2318,
-  [SMALL_STATE(117)] = 2328,
-  [SMALL_STATE(118)] = 2336,
-  [SMALL_STATE(119)] = 2343,
-  [SMALL_STATE(120)] = 2350,
-  [SMALL_STATE(121)] = 2357,
-  [SMALL_STATE(122)] = 2364,
-  [SMALL_STATE(123)] = 2371,
-  [SMALL_STATE(124)] = 2378,
-  [SMALL_STATE(125)] = 2385,
-  [SMALL_STATE(126)] = 2392,
-  [SMALL_STATE(127)] = 2399,
-  [SMALL_STATE(128)] = 2406,
-  [SMALL_STATE(129)] = 2413,
-  [SMALL_STATE(130)] = 2420,
-  [SMALL_STATE(131)] = 2427,
-  [SMALL_STATE(132)] = 2434,
-  [SMALL_STATE(133)] = 2441,
-  [SMALL_STATE(134)] = 2448,
-  [SMALL_STATE(135)] = 2455,
-  [SMALL_STATE(136)] = 2462,
-  [SMALL_STATE(137)] = 2469,
-  [SMALL_STATE(138)] = 2476,
-  [SMALL_STATE(139)] = 2483,
-  [SMALL_STATE(140)] = 2490,
-  [SMALL_STATE(141)] = 2497,
-  [SMALL_STATE(142)] = 2504,
-  [SMALL_STATE(143)] = 2511,
-  [SMALL_STATE(144)] = 2518,
-  [SMALL_STATE(145)] = 2525,
-  [SMALL_STATE(146)] = 2532,
-  [SMALL_STATE(147)] = 2539,
-  [SMALL_STATE(148)] = 2546,
-  [SMALL_STATE(149)] = 2553,
-  [SMALL_STATE(150)] = 2560,
-  [SMALL_STATE(151)] = 2567,
-  [SMALL_STATE(152)] = 2574,
-  [SMALL_STATE(153)] = 2581,
-  [SMALL_STATE(154)] = 2588,
-  [SMALL_STATE(155)] = 2595,
-  [SMALL_STATE(156)] = 2602,
-  [SMALL_STATE(157)] = 2609,
-  [SMALL_STATE(158)] = 2616,
-  [SMALL_STATE(159)] = 2623,
-  [SMALL_STATE(160)] = 2630,
-  [SMALL_STATE(161)] = 2637,
-  [SMALL_STATE(162)] = 2644,
-  [SMALL_STATE(163)] = 2651,
-  [SMALL_STATE(164)] = 2658,
-  [SMALL_STATE(165)] = 2665,
-  [SMALL_STATE(166)] = 2672,
-  [SMALL_STATE(167)] = 2679,
-  [SMALL_STATE(168)] = 2686,
-  [SMALL_STATE(169)] = 2693,
-  [SMALL_STATE(170)] = 2700,
-  [SMALL_STATE(171)] = 2707,
-  [SMALL_STATE(172)] = 2714,
-  [SMALL_STATE(173)] = 2721,
-  [SMALL_STATE(174)] = 2728,
-  [SMALL_STATE(175)] = 2735,
-  [SMALL_STATE(176)] = 2742,
-  [SMALL_STATE(177)] = 2749,
-  [SMALL_STATE(178)] = 2756,
-  [SMALL_STATE(179)] = 2763,
-  [SMALL_STATE(180)] = 2770,
-  [SMALL_STATE(181)] = 2777,
-  [SMALL_STATE(182)] = 2784,
-  [SMALL_STATE(183)] = 2791,
-  [SMALL_STATE(184)] = 2798,
-  [SMALL_STATE(185)] = 2805,
-  [SMALL_STATE(186)] = 2812,
-  [SMALL_STATE(187)] = 2819,
-  [SMALL_STATE(188)] = 2826,
-  [SMALL_STATE(189)] = 2833,
-  [SMALL_STATE(190)] = 2840,
-  [SMALL_STATE(191)] = 2847,
-  [SMALL_STATE(192)] = 2854,
-  [SMALL_STATE(193)] = 2861,
-  [SMALL_STATE(194)] = 2868,
+  [SMALL_STATE(45)] = 92,
+  [SMALL_STATE(46)] = 184,
+  [SMALL_STATE(47)] = 276,
+  [SMALL_STATE(48)] = 368,
+  [SMALL_STATE(49)] = 460,
+  [SMALL_STATE(50)] = 552,
+  [SMALL_STATE(51)] = 644,
+  [SMALL_STATE(52)] = 733,
+  [SMALL_STATE(53)] = 822,
+  [SMALL_STATE(54)] = 911,
+  [SMALL_STATE(55)] = 1000,
+  [SMALL_STATE(56)] = 1089,
+  [SMALL_STATE(57)] = 1175,
+  [SMALL_STATE(58)] = 1261,
+  [SMALL_STATE(59)] = 1347,
+  [SMALL_STATE(60)] = 1433,
+  [SMALL_STATE(61)] = 1519,
+  [SMALL_STATE(62)] = 1576,
+  [SMALL_STATE(63)] = 1633,
+  [SMALL_STATE(64)] = 1687,
+  [SMALL_STATE(65)] = 1741,
+  [SMALL_STATE(66)] = 1825,
+  [SMALL_STATE(67)] = 1876,
+  [SMALL_STATE(68)] = 1927,
+  [SMALL_STATE(69)] = 1978,
+  [SMALL_STATE(70)] = 2029,
+  [SMALL_STATE(71)] = 2080,
+  [SMALL_STATE(72)] = 2131,
+  [SMALL_STATE(73)] = 2182,
+  [SMALL_STATE(74)] = 2233,
+  [SMALL_STATE(75)] = 2284,
+  [SMALL_STATE(76)] = 2335,
+  [SMALL_STATE(77)] = 2386,
+  [SMALL_STATE(78)] = 2437,
+  [SMALL_STATE(79)] = 2488,
+  [SMALL_STATE(80)] = 2539,
+  [SMALL_STATE(81)] = 2563,
+  [SMALL_STATE(82)] = 2587,
+  [SMALL_STATE(83)] = 2611,
+  [SMALL_STATE(84)] = 2635,
+  [SMALL_STATE(85)] = 2659,
+  [SMALL_STATE(86)] = 2711,
+  [SMALL_STATE(87)] = 2735,
+  [SMALL_STATE(88)] = 2759,
+  [SMALL_STATE(89)] = 2783,
+  [SMALL_STATE(90)] = 2807,
+  [SMALL_STATE(91)] = 2831,
+  [SMALL_STATE(92)] = 2853,
+  [SMALL_STATE(93)] = 2876,
+  [SMALL_STATE(94)] = 2897,
+  [SMALL_STATE(95)] = 2918,
+  [SMALL_STATE(96)] = 2937,
+  [SMALL_STATE(97)] = 2949,
+  [SMALL_STATE(98)] = 2964,
+  [SMALL_STATE(99)] = 2977,
+  [SMALL_STATE(100)] = 2992,
+  [SMALL_STATE(101)] = 3004,
+  [SMALL_STATE(102)] = 3018,
+  [SMALL_STATE(103)] = 3028,
+  [SMALL_STATE(104)] = 3042,
+  [SMALL_STATE(105)] = 3054,
+  [SMALL_STATE(106)] = 3068,
+  [SMALL_STATE(107)] = 3082,
+  [SMALL_STATE(108)] = 3092,
+  [SMALL_STATE(109)] = 3103,
+  [SMALL_STATE(110)] = 3114,
+  [SMALL_STATE(111)] = 3125,
+  [SMALL_STATE(112)] = 3136,
+  [SMALL_STATE(113)] = 3149,
+  [SMALL_STATE(114)] = 3162,
+  [SMALL_STATE(115)] = 3171,
+  [SMALL_STATE(116)] = 3184,
+  [SMALL_STATE(117)] = 3197,
+  [SMALL_STATE(118)] = 3210,
+  [SMALL_STATE(119)] = 3220,
+  [SMALL_STATE(120)] = 3230,
+  [SMALL_STATE(121)] = 3240,
+  [SMALL_STATE(122)] = 3250,
+  [SMALL_STATE(123)] = 3260,
+  [SMALL_STATE(124)] = 3270,
+  [SMALL_STATE(125)] = 3280,
+  [SMALL_STATE(126)] = 3290,
+  [SMALL_STATE(127)] = 3300,
+  [SMALL_STATE(128)] = 3310,
+  [SMALL_STATE(129)] = 3320,
+  [SMALL_STATE(130)] = 3330,
+  [SMALL_STATE(131)] = 3340,
+  [SMALL_STATE(132)] = 3350,
+  [SMALL_STATE(133)] = 3358,
+  [SMALL_STATE(134)] = 3368,
+  [SMALL_STATE(135)] = 3375,
+  [SMALL_STATE(136)] = 3382,
+  [SMALL_STATE(137)] = 3389,
+  [SMALL_STATE(138)] = 3396,
+  [SMALL_STATE(139)] = 3403,
+  [SMALL_STATE(140)] = 3410,
+  [SMALL_STATE(141)] = 3417,
+  [SMALL_STATE(142)] = 3424,
+  [SMALL_STATE(143)] = 3431,
+  [SMALL_STATE(144)] = 3438,
+  [SMALL_STATE(145)] = 3445,
+  [SMALL_STATE(146)] = 3452,
+  [SMALL_STATE(147)] = 3459,
+  [SMALL_STATE(148)] = 3466,
+  [SMALL_STATE(149)] = 3473,
+  [SMALL_STATE(150)] = 3480,
+  [SMALL_STATE(151)] = 3487,
+  [SMALL_STATE(152)] = 3494,
+  [SMALL_STATE(153)] = 3501,
+  [SMALL_STATE(154)] = 3508,
+  [SMALL_STATE(155)] = 3515,
+  [SMALL_STATE(156)] = 3522,
+  [SMALL_STATE(157)] = 3529,
+  [SMALL_STATE(158)] = 3536,
+  [SMALL_STATE(159)] = 3543,
+  [SMALL_STATE(160)] = 3550,
+  [SMALL_STATE(161)] = 3557,
+  [SMALL_STATE(162)] = 3564,
+  [SMALL_STATE(163)] = 3571,
+  [SMALL_STATE(164)] = 3578,
+  [SMALL_STATE(165)] = 3585,
+  [SMALL_STATE(166)] = 3592,
+  [SMALL_STATE(167)] = 3599,
+  [SMALL_STATE(168)] = 3606,
+  [SMALL_STATE(169)] = 3613,
+  [SMALL_STATE(170)] = 3620,
+  [SMALL_STATE(171)] = 3627,
+  [SMALL_STATE(172)] = 3634,
+  [SMALL_STATE(173)] = 3641,
+  [SMALL_STATE(174)] = 3648,
+  [SMALL_STATE(175)] = 3655,
+  [SMALL_STATE(176)] = 3662,
+  [SMALL_STATE(177)] = 3669,
+  [SMALL_STATE(178)] = 3676,
+  [SMALL_STATE(179)] = 3683,
+  [SMALL_STATE(180)] = 3690,
+  [SMALL_STATE(181)] = 3697,
+  [SMALL_STATE(182)] = 3704,
+  [SMALL_STATE(183)] = 3711,
+  [SMALL_STATE(184)] = 3718,
+  [SMALL_STATE(185)] = 3725,
+  [SMALL_STATE(186)] = 3732,
+  [SMALL_STATE(187)] = 3739,
+  [SMALL_STATE(188)] = 3746,
+  [SMALL_STATE(189)] = 3753,
+  [SMALL_STATE(190)] = 3760,
+  [SMALL_STATE(191)] = 3767,
+  [SMALL_STATE(192)] = 3774,
+  [SMALL_STATE(193)] = 3781,
+  [SMALL_STATE(194)] = 3788,
+  [SMALL_STATE(195)] = 3795,
+  [SMALL_STATE(196)] = 3802,
+  [SMALL_STATE(197)] = 3809,
+  [SMALL_STATE(198)] = 3816,
+  [SMALL_STATE(199)] = 3823,
+  [SMALL_STATE(200)] = 3830,
+  [SMALL_STATE(201)] = 3837,
+  [SMALL_STATE(202)] = 3844,
+  [SMALL_STATE(203)] = 3851,
+  [SMALL_STATE(204)] = 3858,
+  [SMALL_STATE(205)] = 3865,
+  [SMALL_STATE(206)] = 3872,
+  [SMALL_STATE(207)] = 3879,
+  [SMALL_STATE(208)] = 3886,
+  [SMALL_STATE(209)] = 3893,
+  [SMALL_STATE(210)] = 3900,
+  [SMALL_STATE(211)] = 3907,
+  [SMALL_STATE(212)] = 3914,
+  [SMALL_STATE(213)] = 3921,
+  [SMALL_STATE(214)] = 3928,
+  [SMALL_STATE(215)] = 3935,
+  [SMALL_STATE(216)] = 3942,
+  [SMALL_STATE(217)] = 3949,
+  [SMALL_STATE(218)] = 3956,
+  [SMALL_STATE(219)] = 3963,
+  [SMALL_STATE(220)] = 3970,
+  [SMALL_STATE(221)] = 3977,
+  [SMALL_STATE(222)] = 3984,
+  [SMALL_STATE(223)] = 3991,
+  [SMALL_STATE(224)] = 3998,
+  [SMALL_STATE(225)] = 4005,
+  [SMALL_STATE(226)] = 4012,
+  [SMALL_STATE(227)] = 4019,
+  [SMALL_STATE(228)] = 4026,
+  [SMALL_STATE(229)] = 4033,
+  [SMALL_STATE(230)] = 4040,
+  [SMALL_STATE(231)] = 4047,
+  [SMALL_STATE(232)] = 4054,
+  [SMALL_STATE(233)] = 4061,
+  [SMALL_STATE(234)] = 4068,
+  [SMALL_STATE(235)] = 4075,
+  [SMALL_STATE(236)] = 4082,
+  [SMALL_STATE(237)] = 4089,
+  [SMALL_STATE(238)] = 4096,
+  [SMALL_STATE(239)] = 4103,
+  [SMALL_STATE(240)] = 4110,
+  [SMALL_STATE(241)] = 4117,
+  [SMALL_STATE(242)] = 4124,
+  [SMALL_STATE(243)] = 4131,
+  [SMALL_STATE(244)] = 4138,
 };
 
 static const TSParseActionEntry ts_parse_actions[] = {
@@ -10681,296 +11640,341 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [1] = {.entry = {.count = 1, .reusable = false}}, RECOVER(),
   [3] = {.entry = {.count = 1, .reusable = true}}, SHIFT_EXTRA(),
   [5] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 0),
-  [7] = {.entry = {.count = 1, .reusable = true}}, SHIFT(143),
-  [9] = {.entry = {.count = 1, .reusable = true}}, SHIFT(5),
-  [11] = {.entry = {.count = 1, .reusable = true}}, SHIFT(190),
-  [13] = {.entry = {.count = 1, .reusable = true}}, SHIFT(186),
-  [15] = {.entry = {.count = 1, .reusable = true}}, SHIFT(181),
-  [17] = {.entry = {.count = 1, .reusable = true}}, SHIFT(179),
-  [19] = {.entry = {.count = 1, .reusable = true}}, SHIFT(178),
-  [21] = {.entry = {.count = 1, .reusable = true}}, SHIFT(176),
-  [23] = {.entry = {.count = 1, .reusable = true}}, SHIFT(174),
-  [25] = {.entry = {.count = 1, .reusable = true}}, SHIFT(172),
-  [27] = {.entry = {.count = 1, .reusable = true}}, SHIFT(170),
-  [29] = {.entry = {.count = 1, .reusable = true}}, SHIFT(159),
-  [31] = {.entry = {.count = 1, .reusable = true}}, SHIFT(158),
-  [33] = {.entry = {.count = 1, .reusable = true}}, SHIFT(19),
-  [35] = {.entry = {.count = 1, .reusable = true}}, SHIFT(43),
-  [37] = {.entry = {.count = 1, .reusable = true}}, SHIFT(82),
-  [39] = {.entry = {.count = 1, .reusable = false}}, SHIFT(82),
-  [41] = {.entry = {.count = 1, .reusable = false}}, SHIFT(89),
-  [43] = {.entry = {.count = 1, .reusable = true}}, SHIFT(89),
-  [45] = {.entry = {.count = 1, .reusable = true}}, SHIFT(45),
-  [47] = {.entry = {.count = 1, .reusable = false}}, SHIFT(45),
-  [49] = {.entry = {.count = 1, .reusable = true}}, SHIFT(155),
-  [51] = {.entry = {.count = 1, .reusable = false}}, SHIFT(155),
-  [53] = {.entry = {.count = 1, .reusable = true}}, SHIFT(149),
-  [55] = {.entry = {.count = 1, .reusable = true}}, SHIFT(25),
-  [57] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2),
-  [59] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(143),
-  [62] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(5),
-  [65] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(190),
-  [68] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(186),
-  [71] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(181),
-  [74] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(179),
-  [77] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(178),
-  [80] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(176),
-  [83] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(174),
-  [86] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(172),
-  [89] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(170),
-  [92] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(159),
-  [95] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(158),
-  [98] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(19),
-  [101] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(43),
-  [104] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(82),
-  [107] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(82),
-  [110] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(89),
-  [113] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(89),
-  [116] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(45),
-  [119] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(45),
-  [122] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(155),
-  [125] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(155),
-  [128] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(149),
-  [131] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(25),
-  [134] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1),
-  [136] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__ip, 1),
-  [138] = {.entry = {.count = 1, .reusable = true}}, SHIFT(151),
-  [140] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__ip, 1),
-  [142] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_ip_range, 3, .production_id = 13),
-  [144] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_ip_range, 3, .production_id = 13),
-  [146] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_simple_expression, 3, .production_id = 4),
-  [148] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_simple_expression, 3, .production_id = 4),
-  [150] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_ip_set, 3),
-  [152] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_ip_set, 3),
-  [154] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_set, 3),
-  [156] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_set, 3),
-  [158] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_number_set, 3),
-  [160] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_number_set, 3),
-  [162] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_ends_with_func, 6, .production_id = 18),
-  [164] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_ends_with_func, 6, .production_id = 18),
-  [166] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_not_expression, 2),
-  [168] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_not_expression, 2),
-  [170] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_compound_expression, 3, .production_id = 3),
-  [172] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_compound_expression, 3, .production_id = 3),
-  [174] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_boolean, 1),
-  [176] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_boolean, 1),
-  [178] = {.entry = {.count = 1, .reusable = true}}, SHIFT(8),
-  [180] = {.entry = {.count = 1, .reusable = true}}, SHIFT(7),
-  [182] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_in_expression, 3, .production_id = 3),
-  [184] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_in_expression, 3, .production_id = 3),
-  [186] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_simple_expression, 3, .production_id = 3),
-  [188] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_simple_expression, 3, .production_id = 3),
-  [190] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_in_expression, 3, .production_id = 4),
-  [192] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_in_expression, 3, .production_id = 4),
-  [194] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_bool_field, 1),
-  [196] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_bool_field, 1),
-  [198] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_bool_func, 1),
-  [200] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_bool_func, 1),
-  [202] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_group, 3, .production_id = 2),
-  [204] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_group, 3, .production_id = 2),
-  [206] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_starts_with_func, 6, .production_id = 18),
-  [208] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_starts_with_func, 6, .production_id = 18),
-  [210] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 1),
-  [212] = {.entry = {.count = 1, .reusable = true}}, SHIFT(6),
-  [214] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 1),
-  [216] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_not_operator, 1),
-  [218] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_not_operator, 1),
-  [220] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__stringlike_field, 4, .production_id = 10),
-  [222] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__stringlike_field, 4, .production_id = 10),
-  [224] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_field, 1),
-  [226] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_field, 1),
-  [228] = {.entry = {.count = 1, .reusable = true}}, SHIFT(189),
-  [230] = {.entry = {.count = 1, .reusable = true}}, SHIFT(188),
-  [232] = {.entry = {.count = 1, .reusable = true}}, SHIFT(105),
-  [234] = {.entry = {.count = 1, .reusable = true}}, SHIFT(108),
-  [236] = {.entry = {.count = 1, .reusable = true}}, SHIFT(78),
-  [238] = {.entry = {.count = 1, .reusable = true}}, SHIFT(63),
-  [240] = {.entry = {.count = 1, .reusable = true}}, SHIFT(182),
-  [242] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(189),
-  [245] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15),
-  [247] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(188),
-  [250] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(63),
-  [253] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(45),
-  [256] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(45),
-  [259] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(155),
-  [262] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(155),
-  [265] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(149),
-  [268] = {.entry = {.count = 1, .reusable = true}}, SHIFT(79),
-  [270] = {.entry = {.count = 1, .reusable = true}}, SHIFT(184),
-  [272] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 1),
-  [274] = {.entry = {.count = 1, .reusable = true}}, SHIFT(66),
-  [276] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_string_func_repeat1, 1),
-  [278] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 1, .production_id = 1),
-  [280] = {.entry = {.count = 1, .reusable = true}}, SHIFT(65),
-  [282] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_string_func_repeat1, 1, .production_id = 1),
-  [284] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 1),
-  [286] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 1),
-  [288] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2),
-  [290] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_string_func_repeat1, 2),
-  [292] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_upper_func, 4, .production_id = 7),
-  [294] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_upper_func, 4, .production_id = 7),
-  [296] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_lower_func, 4, .production_id = 7),
-  [298] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_lower_func, 4, .production_id = 7),
-  [300] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_uuid_func, 4, .production_id = 9),
-  [302] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_uuid_func, 4, .production_id = 9),
-  [304] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_regex_replace_func, 8, .production_id = 21),
-  [306] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_regex_replace_func, 8, .production_id = 21),
-  [308] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_func, 1),
-  [310] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_func, 1),
-  [312] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_lookup_func, 5, .production_id = 12),
-  [314] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_lookup_func, 5, .production_id = 12),
-  [316] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_url_decode_func, 4, .production_id = 7),
-  [318] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_url_decode_func, 4, .production_id = 7),
-  [320] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_remove_bytes_func, 6, .production_id = 20),
-  [322] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_remove_bytes_func, 6, .production_id = 20),
-  [324] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_remove_bytes_func, 6, .production_id = 19),
-  [326] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_remove_bytes_func, 6, .production_id = 19),
-  [328] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_to_string_func, 4, .production_id = 8),
-  [330] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_to_string_func, 4, .production_id = 8),
-  [332] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_func, 6, .production_id = 17),
-  [334] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_func, 6, .production_id = 17),
-  [336] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_func, 6, .production_id = 14),
-  [338] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_func, 6, .production_id = 14),
-  [340] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__string_lhs, 1, .production_id = 1),
-  [342] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__string_lhs, 1, .production_id = 1),
-  [344] = {.entry = {.count = 1, .reusable = true}}, SHIFT(113),
-  [346] = {.entry = {.count = 1, .reusable = true}}, SHIFT(126),
-  [348] = {.entry = {.count = 1, .reusable = true}}, SHIFT(125),
-  [350] = {.entry = {.count = 1, .reusable = true}}, SHIFT(124),
-  [352] = {.entry = {.count = 1, .reusable = true}}, SHIFT(123),
-  [354] = {.entry = {.count = 1, .reusable = true}}, SHIFT(122),
-  [356] = {.entry = {.count = 1, .reusable = true}}, SHIFT(121),
-  [358] = {.entry = {.count = 1, .reusable = true}}, SHIFT(120),
-  [360] = {.entry = {.count = 1, .reusable = true}}, SHIFT(157),
-  [362] = {.entry = {.count = 1, .reusable = false}}, SHIFT(134),
-  [364] = {.entry = {.count = 1, .reusable = true}}, SHIFT(136),
-  [366] = {.entry = {.count = 1, .reusable = false}}, SHIFT(137),
-  [368] = {.entry = {.count = 1, .reusable = true}}, SHIFT(118),
-  [370] = {.entry = {.count = 1, .reusable = true}}, SHIFT(138),
-  [372] = {.entry = {.count = 1, .reusable = true}}, SHIFT(133),
-  [374] = {.entry = {.count = 1, .reusable = true}}, SHIFT(194),
-  [376] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_number_field, 1),
-  [378] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_number_field, 1),
-  [380] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_number_func, 4, .production_id = 6),
-  [382] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_number_func, 4, .production_id = 6),
-  [384] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_number_func, 4, .production_id = 5),
-  [386] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_number_func, 4, .production_id = 5),
-  [388] = {.entry = {.count = 1, .reusable = true}}, SHIFT(115),
-  [390] = {.entry = {.count = 1, .reusable = true}}, SHIFT(127),
-  [392] = {.entry = {.count = 1, .reusable = false}}, SHIFT(127),
-  [394] = {.entry = {.count = 1, .reusable = true}}, SHIFT(40),
-  [396] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_ip_field, 1),
-  [398] = {.entry = {.count = 1, .reusable = true}}, SHIFT(99),
-  [400] = {.entry = {.count = 1, .reusable = true}}, SHIFT(102),
-  [402] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_ip_set_repeat1, 2),
-  [404] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_ip_set_repeat1, 2), SHIFT_REPEAT(9),
-  [407] = {.entry = {.count = 1, .reusable = true}}, SHIFT(13),
-  [409] = {.entry = {.count = 1, .reusable = true}}, SHIFT(9),
-  [411] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_lookup_func_repeat1, 2),
-  [413] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_lookup_func_repeat1, 2), SHIFT_REPEAT(95),
-  [416] = {.entry = {.count = 1, .reusable = true}}, SHIFT(73),
-  [418] = {.entry = {.count = 1, .reusable = true}}, SHIFT(95),
-  [420] = {.entry = {.count = 1, .reusable = true}}, SHIFT(104),
-  [422] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_lookup_func_repeat1, 1),
-  [424] = {.entry = {.count = 1, .reusable = true}}, SHIFT(14),
-  [426] = {.entry = {.count = 1, .reusable = true}}, SHIFT(103),
-  [428] = {.entry = {.count = 1, .reusable = true}}, SHIFT(15),
-  [430] = {.entry = {.count = 1, .reusable = true}}, SHIFT(101),
-  [432] = {.entry = {.count = 1, .reusable = true}}, SHIFT(96),
-  [434] = {.entry = {.count = 1, .reusable = true}}, SHIFT(22),
-  [436] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_number_set_repeat1, 2),
-  [438] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_number_set_repeat1, 2), SHIFT_REPEAT(101),
-  [441] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_string_set_repeat1, 2),
-  [443] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_set_repeat1, 2), SHIFT_REPEAT(103),
-  [446] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_bytes_field, 1),
-  [448] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__array_lhs, 1),
-  [450] = {.entry = {.count = 1, .reusable = true}}, SHIFT(110),
-  [452] = {.entry = {.count = 1, .reusable = true}}, SHIFT(161),
-  [454] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_array_string_field, 1),
-  [456] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array_string_field, 1),
-  [458] = {.entry = {.count = 1, .reusable = true}}, SHIFT(160),
-  [460] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array_field_expansion, 2),
-  [462] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__array_lhs, 4, .production_id = 11),
-  [464] = {.entry = {.count = 1, .reusable = true}}, SHIFT(117),
-  [466] = {.entry = {.count = 1, .reusable = true}}, SHIFT(97),
-  [468] = {.entry = {.count = 1, .reusable = true}}, SHIFT(112),
-  [470] = {.entry = {.count = 1, .reusable = true}}, SHIFT(98),
-  [472] = {.entry = {.count = 1, .reusable = true}}, SHIFT(114),
-  [474] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array_field_expansion, 5, .production_id = 11),
-  [476] = {.entry = {.count = 1, .reusable = true}}, SHIFT(34),
-  [478] = {.entry = {.count = 1, .reusable = true}}, SHIFT(140),
-  [480] = {.entry = {.count = 1, .reusable = true}}, SHIFT(38),
-  [482] = {.entry = {.count = 1, .reusable = true}}, SHIFT(37),
-  [484] = {.entry = {.count = 1, .reusable = true}}, SHIFT(35),
-  [486] = {.entry = {.count = 1, .reusable = true}}, SHIFT(29),
-  [488] = {.entry = {.count = 1, .reusable = true}}, SHIFT(28),
-  [490] = {.entry = {.count = 1, .reusable = true}}, SHIFT(27),
-  [492] = {.entry = {.count = 1, .reusable = true}}, SHIFT(12),
-  [494] = {.entry = {.count = 1, .reusable = true}}, SHIFT(23),
-  [496] = {.entry = {.count = 1, .reusable = true}}, SHIFT(191),
-  [498] = {.entry = {.count = 1, .reusable = true}}, SHIFT(44),
-  [500] = {.entry = {.count = 1, .reusable = true}}, SHIFT(193),
-  [502] = {.entry = {.count = 1, .reusable = true}}, SHIFT(152),
-  [504] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__array_lhs, 4, .production_id = 5),
-  [506] = {.entry = {.count = 1, .reusable = true}}, SHIFT(32),
-  [508] = {.entry = {.count = 1, .reusable = true}}, SHIFT(11),
-  [510] = {.entry = {.count = 1, .reusable = true}}, SHIFT(162),
-  [512] = {.entry = {.count = 1, .reusable = true}}, SHIFT(26),
-  [514] = {.entry = {.count = 1, .reusable = true}}, SHIFT(36),
-  [516] = {.entry = {.count = 1, .reusable = true}}, SHIFT(33),
-  [518] = {.entry = {.count = 1, .reusable = true}}, SHIFT(166),
-  [520] = {.entry = {.count = 1, .reusable = true}}, SHIFT(167),
-  [522] = {.entry = {.count = 1, .reusable = true}}, SHIFT(168),
-  [524] = {.entry = {.count = 1, .reusable = true}}, SHIFT(169),
-  [526] = {.entry = {.count = 1, .reusable = true}}, SHIFT(51),
-  [528] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
-  [530] = {.entry = {.count = 1, .reusable = true}}, SHIFT(70),
-  [532] = {.entry = {.count = 1, .reusable = true}}, SHIFT(74),
-  [534] = {.entry = {.count = 1, .reusable = true}}, SHIFT(68),
-  [536] = {.entry = {.count = 1, .reusable = true}}, SHIFT(77),
-  [538] = {.entry = {.count = 1, .reusable = true}}, SHIFT(142),
-  [540] = {.entry = {.count = 1, .reusable = true}}, SHIFT(10),
-  [542] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__array_lhs, 4, .production_id = 11),
-  [544] = {.entry = {.count = 1, .reusable = true}}, SHIFT(107),
-  [546] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_map_string_array_field, 1),
-  [548] = {.entry = {.count = 1, .reusable = true}}, SHIFT(141),
-  [550] = {.entry = {.count = 1, .reusable = true}}, SHIFT(39),
-  [552] = {.entry = {.count = 1, .reusable = true}}, SHIFT(116),
-  [554] = {.entry = {.count = 1, .reusable = true}}, SHIFT(59),
-  [556] = {.entry = {.count = 1, .reusable = true}}, SHIFT(111),
-  [558] = {.entry = {.count = 1, .reusable = true}}, SHIFT(185),
-  [560] = {.entry = {.count = 1, .reusable = true}}, SHIFT(16),
-  [562] = {.entry = {.count = 1, .reusable = true}}, SHIFT(139),
-  [564] = {.entry = {.count = 1, .reusable = true}}, SHIFT(69),
-  [566] = {.entry = {.count = 1, .reusable = true}}, SHIFT(135),
-  [568] = {.entry = {.count = 1, .reusable = true}}, SHIFT(187),
-  [570] = {.entry = {.count = 1, .reusable = true}}, SHIFT(76),
-  [572] = {.entry = {.count = 1, .reusable = true}}, SHIFT(75),
-  [574] = {.entry = {.count = 1, .reusable = true}}, SHIFT(41),
-  [576] = {.entry = {.count = 1, .reusable = true}}, SHIFT(60),
-  [578] = {.entry = {.count = 1, .reusable = true}}, SHIFT(84),
-  [580] = {.entry = {.count = 1, .reusable = true}}, SHIFT(67),
-  [582] = {.entry = {.count = 1, .reusable = true}}, SHIFT(83),
-  [584] = {.entry = {.count = 1, .reusable = true}}, SHIFT(57),
-  [586] = {.entry = {.count = 1, .reusable = true}}, SHIFT(132),
-  [588] = {.entry = {.count = 1, .reusable = true}}, SHIFT(52),
-  [590] = {.entry = {.count = 1, .reusable = true}}, SHIFT(109),
-  [592] = {.entry = {.count = 1, .reusable = true}}, SHIFT(62),
-  [594] = {.entry = {.count = 1, .reusable = true}}, SHIFT(56),
-  [596] = {.entry = {.count = 1, .reusable = true}}, SHIFT(53),
-  [598] = {.entry = {.count = 1, .reusable = true}}, SHIFT(61),
-  [600] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__array_lhs, 6, .production_id = 16),
-  [602] = {.entry = {.count = 1, .reusable = true}}, SHIFT(54),
-  [604] = {.entry = {.count = 1, .reusable = true}}, SHIFT(55),
-  [606] = {.entry = {.count = 1, .reusable = true}}, SHIFT(58),
-  [608] = {.entry = {.count = 1, .reusable = true}}, SHIFT(192),
-  [610] = {.entry = {.count = 1, .reusable = true}}, SHIFT(87),
-  [612] = {.entry = {.count = 1, .reusable = true}}, SHIFT(86),
-  [614] = {.entry = {.count = 1, .reusable = true}}, SHIFT(46),
-  [616] = {.entry = {.count = 1, .reusable = true}}, SHIFT(131),
-  [618] = {.entry = {.count = 1, .reusable = true}}, SHIFT(71),
-  [620] = {.entry = {.count = 1, .reusable = true}}, SHIFT(129),
-  [622] = {.entry = {.count = 1, .reusable = true}}, SHIFT(31),
+  [7] = {.entry = {.count = 1, .reusable = true}}, SHIFT(135),
+  [9] = {.entry = {.count = 1, .reusable = true}}, SHIFT(4),
+  [11] = {.entry = {.count = 1, .reusable = true}}, SHIFT(243),
+  [13] = {.entry = {.count = 1, .reusable = true}}, SHIFT(236),
+  [15] = {.entry = {.count = 1, .reusable = true}}, SHIFT(235),
+  [17] = {.entry = {.count = 1, .reusable = true}}, SHIFT(234),
+  [19] = {.entry = {.count = 1, .reusable = true}}, SHIFT(226),
+  [21] = {.entry = {.count = 1, .reusable = true}}, SHIFT(225),
+  [23] = {.entry = {.count = 1, .reusable = true}}, SHIFT(218),
+  [25] = {.entry = {.count = 1, .reusable = true}}, SHIFT(216),
+  [27] = {.entry = {.count = 1, .reusable = true}}, SHIFT(15),
+  [29] = {.entry = {.count = 1, .reusable = true}}, SHIFT(41),
+  [31] = {.entry = {.count = 1, .reusable = true}}, SHIFT(91),
+  [33] = {.entry = {.count = 1, .reusable = false}}, SHIFT(91),
+  [35] = {.entry = {.count = 1, .reusable = false}}, SHIFT(96),
+  [37] = {.entry = {.count = 1, .reusable = true}}, SHIFT(96),
+  [39] = {.entry = {.count = 1, .reusable = true}}, SHIFT(42),
+  [41] = {.entry = {.count = 1, .reusable = false}}, SHIFT(42),
+  [43] = {.entry = {.count = 1, .reusable = true}}, SHIFT(215),
+  [45] = {.entry = {.count = 1, .reusable = false}}, SHIFT(215),
+  [47] = {.entry = {.count = 1, .reusable = true}}, SHIFT(202),
+  [49] = {.entry = {.count = 1, .reusable = true}}, SHIFT(22),
+  [51] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2),
+  [53] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(135),
+  [56] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(4),
+  [59] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(243),
+  [62] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(236),
+  [65] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(235),
+  [68] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(234),
+  [71] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(226),
+  [74] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(225),
+  [77] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(218),
+  [80] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(216),
+  [83] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(15),
+  [86] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(41),
+  [89] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(91),
+  [92] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(91),
+  [95] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(96),
+  [98] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(96),
+  [101] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(42),
+  [104] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(42),
+  [107] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(215),
+  [110] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(215),
+  [113] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(202),
+  [116] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 2), SHIFT_REPEAT(22),
+  [119] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_source_file, 1),
+  [121] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__ip, 1),
+  [123] = {.entry = {.count = 1, .reusable = true}}, SHIFT(158),
+  [125] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__ip, 1),
+  [127] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_ip_range, 3, .production_id = 13),
+  [129] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_ip_range, 3, .production_id = 13),
+  [131] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_in_expression, 3, .production_id = 3),
+  [133] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_in_expression, 3, .production_id = 3),
+  [135] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_number_set, 3),
+  [137] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_number_set, 3),
+  [139] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_simple_expression, 3, .production_id = 4),
+  [141] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_simple_expression, 3, .production_id = 4),
+  [143] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_boolean, 1),
+  [145] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_boolean, 1),
+  [147] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_compound_expression, 3, .production_id = 3),
+  [149] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_compound_expression, 3, .production_id = 3),
+  [151] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_bool_func, 6, .production_id = 20),
+  [153] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_bool_func, 6, .production_id = 20),
+  [155] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_bool_field, 1),
+  [157] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_bool_field, 1),
+  [159] = {.entry = {.count = 1, .reusable = true}}, SHIFT(7),
+  [161] = {.entry = {.count = 1, .reusable = true}}, SHIFT(6),
+  [163] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_in_expression, 3, .production_id = 4),
+  [165] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_in_expression, 3, .production_id = 4),
+  [167] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_not_expression, 2),
+  [169] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_not_expression, 2),
+  [171] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_set, 3),
+  [173] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_set, 3),
+  [175] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_ip_set, 3),
+  [177] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_ip_set, 3),
+  [179] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_group, 3, .production_id = 2),
+  [181] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_group, 3, .production_id = 2),
+  [183] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_simple_expression, 3, .production_id = 3),
+  [185] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_simple_expression, 3, .production_id = 3),
+  [187] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_source_file_repeat1, 1),
+  [189] = {.entry = {.count = 1, .reusable = true}}, SHIFT(5),
+  [191] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_source_file_repeat1, 1),
+  [193] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_not_operator, 1),
+  [195] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_not_operator, 1),
+  [197] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_field, 1),
+  [199] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_field, 1),
+  [201] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__stringlike_field, 4, .production_id = 9),
+  [203] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__stringlike_field, 4, .production_id = 9),
+  [205] = {.entry = {.count = 1, .reusable = true}}, SHIFT(145),
+  [207] = {.entry = {.count = 1, .reusable = true}}, SHIFT(143),
+  [209] = {.entry = {.count = 1, .reusable = true}}, SHIFT(142),
+  [211] = {.entry = {.count = 1, .reusable = true}}, SHIFT(141),
+  [213] = {.entry = {.count = 1, .reusable = true}}, SHIFT(140),
+  [215] = {.entry = {.count = 1, .reusable = true}}, SHIFT(139),
+  [217] = {.entry = {.count = 1, .reusable = true}}, SHIFT(138),
+  [219] = {.entry = {.count = 1, .reusable = true}}, SHIFT(132),
+  [221] = {.entry = {.count = 1, .reusable = true}}, SHIFT(127),
+  [223] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(238),
+  [226] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15),
+  [228] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(230),
+  [231] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(222),
+  [234] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(244),
+  [237] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(239),
+  [240] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(223),
+  [243] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(240),
+  [246] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(62),
+  [249] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(42),
+  [252] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(42),
+  [255] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(215),
+  [258] = {.entry = {.count = 2, .reusable = false}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(215),
+  [261] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 15), SHIFT_REPEAT(202),
+  [264] = {.entry = {.count = 1, .reusable = true}}, SHIFT(238),
+  [266] = {.entry = {.count = 1, .reusable = true}}, SHIFT(122),
+  [268] = {.entry = {.count = 1, .reusable = true}}, SHIFT(230),
+  [270] = {.entry = {.count = 1, .reusable = true}}, SHIFT(222),
+  [272] = {.entry = {.count = 1, .reusable = true}}, SHIFT(244),
+  [274] = {.entry = {.count = 1, .reusable = true}}, SHIFT(239),
+  [276] = {.entry = {.count = 1, .reusable = true}}, SHIFT(223),
+  [278] = {.entry = {.count = 1, .reusable = true}}, SHIFT(240),
+  [280] = {.entry = {.count = 1, .reusable = true}}, SHIFT(62),
+  [282] = {.entry = {.count = 1, .reusable = true}}, SHIFT(82),
+  [284] = {.entry = {.count = 1, .reusable = true}}, SHIFT(188),
+  [286] = {.entry = {.count = 1, .reusable = true}}, SHIFT(81),
+  [288] = {.entry = {.count = 1, .reusable = true}}, SHIFT(182),
+  [290] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 1, .production_id = 1),
+  [292] = {.entry = {.count = 1, .reusable = true}}, SHIFT(64),
+  [294] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_string_func_repeat1, 1, .production_id = 1),
+  [296] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 1),
+  [298] = {.entry = {.count = 1, .reusable = true}}, SHIFT(63),
+  [300] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_string_func_repeat1, 1),
+  [302] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2),
+  [304] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_string_func_repeat1, 2),
+  [306] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 1),
+  [308] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym_string_func_repeat1, 2, .production_id = 1),
+  [310] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_func, 8, .production_id = 22),
+  [312] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_func, 8, .production_id = 22),
+  [314] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_func, 6, .production_id = 14),
+  [316] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_func, 6, .production_id = 14),
+  [318] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_func, 6, .production_id = 16),
+  [320] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_func, 6, .production_id = 16),
+  [322] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__string_lhs, 1, .production_id = 1),
+  [324] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__string_lhs, 1, .production_id = 1),
+  [326] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_func, 6, .production_id = 18),
+  [328] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_func, 6, .production_id = 18),
+  [330] = {.entry = {.count = 1, .reusable = true}}, SHIFT(131),
+  [332] = {.entry = {.count = 1, .reusable = true}}, SHIFT(185),
+  [334] = {.entry = {.count = 1, .reusable = true}}, SHIFT(184),
+  [336] = {.entry = {.count = 1, .reusable = true}}, SHIFT(183),
+  [338] = {.entry = {.count = 1, .reusable = true}}, SHIFT(137),
+  [340] = {.entry = {.count = 1, .reusable = true}}, SHIFT(214),
+  [342] = {.entry = {.count = 1, .reusable = true}}, SHIFT(179),
+  [344] = {.entry = {.count = 1, .reusable = true}}, SHIFT(177),
+  [346] = {.entry = {.count = 1, .reusable = true}}, SHIFT(169),
+  [348] = {.entry = {.count = 1, .reusable = false}}, SHIFT(164),
+  [350] = {.entry = {.count = 1, .reusable = true}}, SHIFT(163),
+  [352] = {.entry = {.count = 1, .reusable = false}}, SHIFT(162),
+  [354] = {.entry = {.count = 1, .reusable = true}}, SHIFT(161),
+  [356] = {.entry = {.count = 1, .reusable = true}}, SHIFT(160),
+  [358] = {.entry = {.count = 1, .reusable = true}}, SHIFT(157),
+  [360] = {.entry = {.count = 1, .reusable = true}}, SHIFT(156),
+  [362] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_func, 6, .production_id = 17),
+  [364] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_func, 6, .production_id = 17),
+  [366] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_func, 5, .production_id = 12),
+  [368] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_func, 5, .production_id = 12),
+  [370] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_func, 4, .production_id = 6),
+  [372] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_func, 4, .production_id = 6),
+  [374] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_func, 4, .production_id = 5),
+  [376] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_func, 4, .production_id = 5),
+  [378] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_string_func, 4, .production_id = 8),
+  [380] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_string_func, 4, .production_id = 8),
+  [382] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_number_field, 1),
+  [384] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_number_field, 1),
+  [386] = {.entry = {.count = 1, .reusable = true}}, SHIFT(130),
+  [388] = {.entry = {.count = 1, .reusable = true}}, SHIFT(187),
+  [390] = {.entry = {.count = 1, .reusable = false}}, SHIFT(187),
+  [392] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_number_func, 4, .production_id = 5),
+  [394] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_number_func, 4, .production_id = 5),
+  [396] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_number_func, 4, .production_id = 6),
+  [398] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_number_func, 4, .production_id = 6),
+  [400] = {.entry = {.count = 1, .reusable = true}}, SHIFT(35),
+  [402] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_ip_field, 1),
+  [404] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_ip_set_repeat1, 2),
+  [406] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_ip_set_repeat1, 2), SHIFT_REPEAT(9),
+  [409] = {.entry = {.count = 1, .reusable = true}}, SHIFT(115),
+  [411] = {.entry = {.count = 1, .reusable = true}}, SHIFT(108),
+  [413] = {.entry = {.count = 1, .reusable = true}}, SHIFT(34),
+  [415] = {.entry = {.count = 1, .reusable = true}}, SHIFT(9),
+  [417] = {.entry = {.count = 1, .reusable = true}}, SHIFT(123),
+  [419] = {.entry = {.count = 1, .reusable = true}}, SHIFT(104),
+  [421] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array_field_expansion, 5, .production_id = 10),
+  [423] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_string_func_repeat2, 2),
+  [425] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_func_repeat2, 2), SHIFT_REPEAT(104),
+  [428] = {.entry = {.count = 1, .reusable = true}}, SHIFT(114),
+  [430] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_string_func_repeat2, 1),
+  [432] = {.entry = {.count = 1, .reusable = true}}, SHIFT(167),
+  [434] = {.entry = {.count = 1, .reusable = true}}, SHIFT(87),
+  [436] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array_field_expansion, 2, .production_id = 1),
+  [438] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_string_set_repeat1, 2),
+  [440] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_string_set_repeat1, 2), SHIFT_REPEAT(112),
+  [443] = {.entry = {.count = 1, .reusable = true}}, REDUCE(aux_sym_number_set_repeat1, 2),
+  [445] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym_number_set_repeat1, 2), SHIFT_REPEAT(113),
+  [448] = {.entry = {.count = 1, .reusable = true}}, SHIFT(100),
+  [450] = {.entry = {.count = 1, .reusable = true}}, SHIFT(11),
+  [452] = {.entry = {.count = 1, .reusable = true}}, SHIFT(33),
+  [454] = {.entry = {.count = 1, .reusable = true}}, SHIFT(112),
+  [456] = {.entry = {.count = 1, .reusable = true}}, SHIFT(12),
+  [458] = {.entry = {.count = 1, .reusable = true}}, SHIFT(113),
+  [460] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__array_lhs, 6, .production_id = 17),
+  [462] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__array_lhs, 6, .production_id = 17),
+  [464] = {.entry = {.count = 1, .reusable = true}}, SHIFT(134),
+  [466] = {.entry = {.count = 1, .reusable = true}}, SHIFT(165),
+  [468] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__array_lhs, 8, .production_id = 21),
+  [470] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__array_lhs, 8, .production_id = 21),
+  [472] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__array_lhs, 6, .production_id = 19),
+  [474] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__array_lhs, 6, .production_id = 19),
+  [476] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__array_lhs, 6, .production_id = 14),
+  [478] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__array_lhs, 6, .production_id = 14),
+  [480] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__array_lhs, 5, .production_id = 11),
+  [482] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__array_lhs, 5, .production_id = 11),
+  [484] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__array_lhs, 4, .production_id = 10),
+  [486] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__array_lhs, 4, .production_id = 10),
+  [488] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__array_lhs, 4, .production_id = 7),
+  [490] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__array_lhs, 4, .production_id = 7),
+  [492] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__array_lhs, 4, .production_id = 5),
+  [494] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym__array_lhs, 4, .production_id = 5),
+  [496] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_array_string_field, 1),
+  [498] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_array_string_field, 1),
+  [500] = {.entry = {.count = 1, .reusable = true}}, SHIFT(117),
+  [502] = {.entry = {.count = 1, .reusable = true}}, SHIFT(116),
+  [504] = {.entry = {.count = 1, .reusable = true}}, SHIFT(128),
+  [506] = {.entry = {.count = 1, .reusable = true}}, SHIFT(129),
+  [508] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_bytes_field, 1),
+  [510] = {.entry = {.count = 1, .reusable = false}}, SHIFT(153),
+  [512] = {.entry = {.count = 1, .reusable = true}}, SHIFT(107),
+  [514] = {.entry = {.count = 1, .reusable = true}}, SHIFT(124),
+  [516] = {.entry = {.count = 1, .reusable = true}}, SHIFT(51),
+  [518] = {.entry = {.count = 1, .reusable = true}}, SHIFT(54),
+  [520] = {.entry = {.count = 1, .reusable = true}}, SHIFT(26),
+  [522] = {.entry = {.count = 1, .reusable = true}}, SHIFT(70),
+  [524] = {.entry = {.count = 1, .reusable = true}}, SHIFT(71),
+  [526] = {.entry = {.count = 1, .reusable = true}}, SHIFT(72),
+  [528] = {.entry = {.count = 1, .reusable = true}}, SHIFT(73),
+  [530] = {.entry = {.count = 1, .reusable = true}}, SHIFT(74),
+  [532] = {.entry = {.count = 1, .reusable = true}}, SHIFT(66),
+  [534] = {.entry = {.count = 1, .reusable = true}}, SHIFT(76),
+  [536] = {.entry = {.count = 1, .reusable = true}}, SHIFT(170),
+  [538] = {.entry = {.count = 1, .reusable = true}}, SHIFT(171),
+  [540] = {.entry = {.count = 1, .reusable = true}}, SHIFT(172),
+  [542] = {.entry = {.count = 1, .reusable = true}}, SHIFT(173),
+  [544] = {.entry = {.count = 1, .reusable = true}}, SHIFT(180),
+  [546] = {.entry = {.count = 1, .reusable = true}}, SHIFT(186),
+  [548] = {.entry = {.count = 1, .reusable = true}}, SHIFT(203),
+  [550] = {.entry = {.count = 1, .reusable = true}}, SHIFT(175),
+  [552] = {.entry = {.count = 1, .reusable = true}}, SHIFT(176),
+  [554] = {.entry = {.count = 1, .reusable = true}}, SHIFT(16),
+  [556] = {.entry = {.count = 1, .reusable = true}}, SHIFT(31),
+  [558] = {.entry = {.count = 1, .reusable = true}}, SHIFT(10),
+  [560] = {.entry = {.count = 1, .reusable = true}}, SHIFT(36),
+  [562] = {.entry = {.count = 1, .reusable = true}}, SHIFT(38),
+  [564] = {.entry = {.count = 1, .reusable = true}}, SHIFT(13),
+  [566] = {.entry = {.count = 1, .reusable = true}}, SHIFT(14),
+  [568] = {.entry = {.count = 1, .reusable = true}}, SHIFT(17),
+  [570] = {.entry = {.count = 1, .reusable = true}}, SHIFT(190),
+  [572] = {.entry = {.count = 1, .reusable = true}}, SHIFT(144),
+  [574] = {.entry = {.count = 1, .reusable = true}}, SHIFT(149),
+  [576] = {.entry = {.count = 1, .reusable = true}}, SHIFT(18),
+  [578] = {.entry = {.count = 1, .reusable = true}}, SHIFT(191),
+  [580] = {.entry = {.count = 1, .reusable = true}}, SHIFT(192),
+  [582] = {.entry = {.count = 1, .reusable = true}}, SHIFT(193),
+  [584] = {.entry = {.count = 1, .reusable = true}}, SHIFT(84),
+  [586] = {.entry = {.count = 1, .reusable = true}}, SHIFT(196),
+  [588] = {.entry = {.count = 1, .reusable = true}}, SHIFT(21),
+  [590] = {.entry = {.count = 1, .reusable = true}}, SHIFT(20),
+  [592] = {.entry = {.count = 1, .reusable = true}}, SHIFT(148),
+  [594] = {.entry = {.count = 1, .reusable = true}}, SHIFT(23),
+  [596] = {.entry = {.count = 1, .reusable = true}}, SHIFT(86),
+  [598] = {.entry = {.count = 1, .reusable = true}}, SHIFT(150),
+  [600] = {.entry = {.count = 1, .reusable = true}}, SHIFT(53),
+  [602] = {.entry = {.count = 1, .reusable = true}}, SHIFT(27),
+  [604] = {.entry = {.count = 1, .reusable = true}}, SHIFT(28),
+  [606] = {.entry = {.count = 1, .reusable = true}}, SHIFT(29),
+  [608] = {.entry = {.count = 1, .reusable = true}}, SHIFT(159),
+  [610] = {.entry = {.count = 1, .reusable = true}}, SHIFT(37),
+  [612] = {.entry = {.count = 1, .reusable = true}}, SHIFT(55),
+  [614] = {.entry = {.count = 1, .reusable = true}}, SHIFT(102),
+  [616] = {.entry = {.count = 1, .reusable = true}}, SHIFT(199),
+  [618] = {.entry = {.count = 1, .reusable = true}}, SHIFT(200),
+  [620] = {.entry = {.count = 1, .reusable = true}}, SHIFT(151),
+  [622] = {.entry = {.count = 1, .reusable = true}}, SHIFT(153),
+  [624] = {.entry = {.count = 1, .reusable = true}},  ACCEPT_INPUT(),
+  [626] = {.entry = {.count = 1, .reusable = true}}, SHIFT(147),
+  [628] = {.entry = {.count = 1, .reusable = true}}, SHIFT(201),
+  [630] = {.entry = {.count = 1, .reusable = true}}, SHIFT(80),
+  [632] = {.entry = {.count = 1, .reusable = true}}, SHIFT(43),
+  [634] = {.entry = {.count = 1, .reusable = true}}, SHIFT(155),
+  [636] = {.entry = {.count = 1, .reusable = true}}, SHIFT(154),
+  [638] = {.entry = {.count = 1, .reusable = true}}, SHIFT(93),
+  [640] = {.entry = {.count = 1, .reusable = true}}, SHIFT(94),
+  [642] = {.entry = {.count = 1, .reusable = true}}, SHIFT(90),
+  [644] = {.entry = {.count = 1, .reusable = true}}, SHIFT(119),
+  [646] = {.entry = {.count = 1, .reusable = true}}, SHIFT(152),
+  [648] = {.entry = {.count = 1, .reusable = true}}, SHIFT(89),
+  [650] = {.entry = {.count = 1, .reusable = true}}, SHIFT(126),
+  [652] = {.entry = {.count = 1, .reusable = true}}, SHIFT(125),
+  [654] = {.entry = {.count = 1, .reusable = true}}, SHIFT(25),
+  [656] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_map_string_array_field, 1),
+  [658] = {.entry = {.count = 1, .reusable = true}}, SHIFT(57),
+  [660] = {.entry = {.count = 1, .reusable = true}}, SHIFT(146),
+  [662] = {.entry = {.count = 1, .reusable = true}}, SHIFT(44),
+  [664] = {.entry = {.count = 1, .reusable = true}}, SHIFT(118),
+  [666] = {.entry = {.count = 1, .reusable = true}}, SHIFT(121),
+  [668] = {.entry = {.count = 1, .reusable = true}}, SHIFT(120),
+  [670] = {.entry = {.count = 1, .reusable = true}}, SHIFT(79),
+  [672] = {.entry = {.count = 1, .reusable = true}}, SHIFT(78),
+  [674] = {.entry = {.count = 1, .reusable = true}}, SHIFT(88),
+  [676] = {.entry = {.count = 1, .reusable = true}}, SHIFT(58),
+  [678] = {.entry = {.count = 1, .reusable = true}}, SHIFT(65),
+  [680] = {.entry = {.count = 1, .reusable = true}}, SHIFT(219),
+  [682] = {.entry = {.count = 1, .reusable = true}}, SHIFT(220),
+  [684] = {.entry = {.count = 1, .reusable = true}}, SHIFT(221),
+  [686] = {.entry = {.count = 1, .reusable = true}}, SHIFT(77),
+  [688] = {.entry = {.count = 1, .reusable = true}}, SHIFT(52),
+  [690] = {.entry = {.count = 1, .reusable = true}}, SHIFT(227),
+  [692] = {.entry = {.count = 1, .reusable = true}}, SHIFT(228),
+  [694] = {.entry = {.count = 1, .reusable = true}}, SHIFT(46),
+  [696] = {.entry = {.count = 1, .reusable = true}}, SHIFT(60),
+  [698] = {.entry = {.count = 1, .reusable = true}}, SHIFT(59),
+  [700] = {.entry = {.count = 1, .reusable = true}}, SHIFT(229),
+  [702] = {.entry = {.count = 1, .reusable = true}}, SHIFT(75),
+  [704] = {.entry = {.count = 1, .reusable = true}}, SHIFT(69),
+  [706] = {.entry = {.count = 1, .reusable = true}}, SHIFT(68),
+  [708] = {.entry = {.count = 1, .reusable = true}}, SHIFT(237),
+  [710] = {.entry = {.count = 1, .reusable = true}}, SHIFT(241),
+  [712] = {.entry = {.count = 1, .reusable = true}}, SHIFT(56),
+  [714] = {.entry = {.count = 1, .reusable = true}}, SHIFT(67),
 };
 
 #ifdef __cplusplus

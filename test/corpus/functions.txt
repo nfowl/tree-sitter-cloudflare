@@ -9,8 +9,7 @@ to_string(cf.edge.server_port) eq "80"
 (source_file
   (simple_expression
     (string_func
-      (to_string_func
-        (number_field)))
+      (number_field))
     (string)))
 
 ================================================================================

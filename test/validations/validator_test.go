@@ -46,6 +46,15 @@ func TestConcat(t *testing.T) {
 	}
 }
 
+func TestUuidFunc(t *testing.T) {
+	t.Parallel()
+	expr := "uuidv4(http.request.headers[\"test\"][0]) == \"test\""
+	err := Validate(expr)
+	if err != nil {
+		t.Fatal(err)
+	}
+}
+
 func TestRegexFunc(t *testing.T) {
 	t.Parallel()
 	expr := "regex_replace(\"test\",/test/,\"1\") == \"test\""
