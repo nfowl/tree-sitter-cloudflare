@@ -2,7 +2,7 @@
 AND precedence test 1
 ================================================================================
 
-cf.edge.server_port eq 80 or cf.edge.server_port == 443 and ssl == true
+cf.edge.server_port eq 80 or cf.edge.server_port == 443 and ssl
 
 --------------------------------------------------------------------------------
 
@@ -15,15 +15,13 @@ cf.edge.server_port eq 80 or cf.edge.server_port == 443 and ssl == true
       (simple_expression
         (number_field)
         (number))
-      (simple_expression
-        (bool_field)
-        (boolean)))))
+      (bool_field))))
 
 ================================================================================
 AND precedence test 2
 ================================================================================
 
-cf.edge.server_port == 443 and ssl == true or cf.edge.server_port eq 80
+cf.edge.server_port == 443 and ssl or cf.edge.server_port eq 80
 
 --------------------------------------------------------------------------------
 
@@ -33,9 +31,7 @@ cf.edge.server_port == 443 and ssl == true or cf.edge.server_port eq 80
       (simple_expression
         (number_field)
         (number))
-      (simple_expression
-        (bool_field)
-        (boolean)))
+      (bool_field))
     (simple_expression
       (number_field)
       (number))))

@@ -96,9 +96,6 @@ module.exports = grammar({
           [[
             'eq','ne','==','!='
           ],$.ip_field,$._ip],
-          [[
-            'eq','ne','==','!='
-          ],$._bool_lhs,$.boolean],
         ];
 
       return choice(
@@ -112,6 +109,7 @@ module.exports = grammar({
     _bool_lhs: $ => choice(
       $.bool_field,
       $.bool_func,
+      $.boolean
     ),
 
     _number_lhs: $ => choice(
@@ -126,7 +124,8 @@ module.exports = grammar({
     
     // functions grouped by return type for use in expressions
     string_func: $ => choice(
-      $.concat_func,
+      field('concat',concatFunc(choice($.string,$._stringlike_field),choice($.string,$._stringlike_field))),
+      // $.concat_func(choice($.string,$._stringlike_field)),
       $.lookup_func,
       $.lower_func,
       $.regex_replace_func,
@@ -138,7 +137,8 @@ module.exports = grammar({
     ),
 
     number_func: $ => choice(
-      $.len_func
+      field('len',lenFunc(choice($._stringlike_field,$.bytes_field))),
+      // $.len_func
     ),
 
     bool_func: $ => choice(
@@ -161,44 +161,45 @@ module.exports = grammar({
     // Caveats discovered via validation:
     // - Concat takes minimum 2 args
     // - Concat does not support numbers (TODO: chase this up)
-    concat_func: $ => {
-      const arg_type = choice(
-        $.string,
-        $.string_field,
-        // $.number,
-        // $.number_field,
-      )
-
-      return seq(
-        "concat",
-        "(",
-        arg_type,
-        ',',
-        repeat1(seq(arg_type,optional(','))),
-        ")",
-      )
-    },
+    //
+    // concat_func: $ => {
+    //   const arg_type = choice(
+    //     $.string,
+    //     $._stringlike_field,
+    //     // $.number,
+    //     // $.number_field,
+    //   )
+    //
+    //   return seq(
+    //     "concat",
+    //     "(",
+    //     arg_type,
+    //     ',',
+    //     repeat1(seq(arg_type,optional(','))),
+    //     ")",
+    //   )
+    // },
 
     ends_with_func: $ => seq(
       "ends_with",
       "(",
-      field('field',$.string_field),
+      field('field',$._stringlike_field),
       ',',
       field('value',$.string),
       ')',
     ),
 
-    len_func: $ => seq(
-      "len",
-      "(",
-      field('field', choice($.string_field,$.bytes_field)),
-      ')',
-    ),
+    // len_func: $ => seq(
+    //   "len",
+    //   "(",
+    //   field('field', choice($._stringlike_field,$.bytes_field)),
+    //   ')',
+    // ),
 
     lookup_func: $ => seq(
       'lookup_json_string',
       '(',
-      field('field',$.string_field),
+      field('field',$._stringlike_field),
       field('keys',repeat1(seq(choice($.string,$.number),optional(',')))),
       ')',
     ),
@@ -206,14 +207,14 @@ module.exports = grammar({
     lower_func: $ => seq(
       'lower',
       '(',
-      field('field',$.string_field),
+      field('field',$._stringlike_field),
       ')'
     ),
 
     regex_replace_func: $ => seq(
       'regex_replace',
       '(',
-      field('source',choice($.string_field,$.string)),
+      field('source',$._stringlike_field),
       ',',
       field('regex',$.string),
       ',',
@@ -224,7 +225,7 @@ module.exports = grammar({
     remove_bytes_func: $ => seq(
       'remove_bytes',
       '(',
-      field('field',choice($.string_field,$.bytes_field)),
+      field('field',choice($._stringlike_field,$.bytes_field)),
       ',',
       field('replacement',$.string),
       ')',
@@ -233,7 +234,7 @@ module.exports = grammar({
     starts_with_func: $ => seq(
       "starts_with",
       "(",
-      field('field',$.string_field),
+      field('field',$._stringlike_field),
       ',',
       field('value',$.string),
       ')',
@@ -249,14 +250,14 @@ module.exports = grammar({
     upper_func: $ => seq(
       'upper',
       '(',
-      field('field',$.string_field),
+      field('field',$._stringlike_field),
       ')'
     ),
 
     url_decode_func: $ => seq(
       'url_decode',
       '(',
-      field('field',$.string_field),
+      field('field',$._stringlike_field),
       ')',
     ),
 
@@ -315,23 +316,44 @@ module.exports = grammar({
 
     not_operator: $ => choice('not','!'),
 
-    _stringlike_field: $ => choice(
-      $.string_field,
+    _array_lhs: $ => seq(choice(
+      $.array_string_field,
       seq(
         $.map_string_array_field,
         '[',
         field('key',$.string),
         ']',
-        '[',
-        field('index',$.number),
-        ']',
       ),
-      seq(
-        $.array_string_field,
-        '[',
-        field('index',$.number),
-        ']',
-      ),
+      concatFunc($.array_field_expansion,choice($.string,$._stringlike_field)),
+      lenFunc($.array_field_expansion),
+    ),
+    ),
+
+    array_field_expansion: $ => seq(choice(
+      $.array_string_field,
+      seq($.map_string_array_field,'[',field('key',choice($.string,'*')),']')
+    ),
+    '[*]'
+    ),
+
+    _stringlike_field: $ => choice(
+      $.string_field,
+      seq($._array_lhs,'[',field('index',$.number),']')
+      // seq(
+      //   $.map_string_array_field,
+      //   '[',
+      //   field('key',$.string),
+      //   ']',
+      //   '[',
+      //   field('index',$.number),
+      //   ']',
+      // ),
+      // seq(
+      //   $.array_string_field,
+      //   '[',
+      //   field('index',$.number),
+      //   ']',
+      // ),
     ),
 
 // Cloudflare Ruleset Fields
@@ -417,4 +439,24 @@ module.exports = grammar({
       'http.request.headers.truncated',
     ),
   }
-})
+});
+
+function concatFunc(rule,args) {
+    return seq(
+      field('name','concat'),
+      "(",
+      rule,
+      ',',
+      repeat1(seq(args,optional(','))),
+      ")",
+    )
+}
+
+function lenFunc(rule) {
+    return seq(
+      field('name','len'),
+      '(',
+      field('field', rule),
+      ')',
+    )
+}

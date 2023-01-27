@@ -2,7 +2,7 @@
 Simple expression
 ================================================================================
 
-cf.edge.server_port eq 80 or (cf.edge.server_port == 443 && ssl == true)
+cf.edge.server_port eq 80 or (cf.edge.server_port == 443 && ssl)
 
 --------------------------------------------------------------------------------
 
@@ -16,6 +16,4 @@ cf.edge.server_port eq 80 or (cf.edge.server_port == 443 && ssl == true)
         (simple_expression
           (number_field)
           (number))
-        (simple_expression
-          (bool_field)
-          (boolean))))))
+        (bool_field)))))

@@ -1,8 +1,8 @@
 ================================================================================
-Simple func
+Concat array func
 ================================================================================
 
-to_string(cf.edge.server_port) eq "80"
+concat(http.request.headers[*][*],"test")[0] eq "80"
 
 --------------------------------------------------------------------------------
 
@@ -14,18 +14,16 @@ to_string(cf.edge.server_port) eq "80"
     (string)))
 
 ================================================================================
-variable arg count func
+Concat array func 2
 ================================================================================
 
-concat("String1",http.host,"String","2") == "String1 String2"
+concat(http.request.headers["test"][*],"test")[0] eq "80"
 
 --------------------------------------------------------------------------------
 
 (source_file
   (simple_expression
     (string_func
-      (string)
-      (string_field)
-      (string)
-      (string))
+      (to_string_func
+        (number_field)))
     (string)))
