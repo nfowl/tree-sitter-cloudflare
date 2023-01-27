@@ -246,6 +246,20 @@
           }
         ]
       },
+      "func": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "concat",
+            "named": false
+          },
+          {
+            "type": "len",
+            "named": false
+          }
+        ]
+      },
       "index": {
         "multiple": true,
         "required": false,
@@ -263,20 +277,6 @@
           {
             "type": "string",
             "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
           }
         ]
       },
@@ -347,6 +347,20 @@
           {
             "type": "array_field_expansion",
             "named": true
+          }
+        ]
+      },
+      "func": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "concat",
+            "named": false
+          },
+          {
+            "type": "len",
+            "named": false
           }
         ]
       },
@@ -441,20 +455,6 @@
           {
             "type": "string_func",
             "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
           }
         ]
       },
@@ -594,6 +594,20 @@
           }
         ]
       },
+      "func": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "concat",
+            "named": false
+          },
+          {
+            "type": "len",
+            "named": false
+          }
+        ]
+      },
       "index": {
         "multiple": true,
         "required": false,
@@ -629,20 +643,6 @@
           {
             "type": "string",
             "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
           }
         ]
       }
@@ -710,6 +710,20 @@
           }
         ]
       },
+      "func": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "concat",
+            "named": false
+          },
+          {
+            "type": "len",
+            "named": false
+          }
+        ]
+      },
       "index": {
         "multiple": true,
         "required": false,
@@ -727,20 +741,6 @@
           {
             "type": "string",
             "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
           }
         ]
       }
@@ -874,6 +874,20 @@
           }
         ]
       },
+      "func": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "concat",
+            "named": false
+          },
+          {
+            "type": "len",
+            "named": false
+          }
+        ]
+      },
       "index": {
         "multiple": true,
         "required": false,
@@ -891,34 +905,6 @@
           {
             "type": "string",
             "named": true
-          }
-        ]
-      },
-      "len": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          }
-        ]
-      },
-      "name": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
           }
         ]
       }
@@ -953,6 +939,20 @@
           }
         ]
       },
+      "func": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "concat",
+            "named": false
+          },
+          {
+            "type": "len",
+            "named": false
+          }
+        ]
+      },
       "index": {
         "multiple": true,
         "required": false,
@@ -970,20 +970,6 @@
           {
             "type": "string",
             "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
           }
         ]
       },
@@ -1133,6 +1119,20 @@
           }
         ]
       },
+      "func": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "concat",
+            "named": false
+          },
+          {
+            "type": "len",
+            "named": false
+          }
+        ]
+      },
       "index": {
         "multiple": true,
         "required": false,
@@ -1150,20 +1150,6 @@
           {
             "type": "string",
             "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
           }
         ]
       },
@@ -1190,6 +1176,20 @@
           {
             "type": "array_field_expansion",
             "named": true
+          }
+        ]
+      },
+      "func": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "concat",
+            "named": false
+          },
+          {
+            "type": "len",
+            "named": false
           }
         ]
       },
@@ -1284,20 +1284,6 @@
           {
             "type": "string_func",
             "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
           }
         ]
       },
@@ -1496,6 +1482,20 @@
           }
         ]
       },
+      "func": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "concat",
+            "named": false
+          },
+          {
+            "type": "len",
+            "named": false
+          }
+        ]
+      },
       "index": {
         "multiple": true,
         "required": false,
@@ -1513,20 +1513,6 @@
           {
             "type": "string",
             "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
           }
         ]
       },
@@ -1619,6 +1605,20 @@
           }
         ]
       },
+      "func": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "concat",
+            "named": false
+          },
+          {
+            "type": "len",
+            "named": false
+          }
+        ]
+      },
       "index": {
         "multiple": true,
         "required": false,
@@ -1636,20 +1636,6 @@
           {
             "type": "string",
             "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
           }
         ]
       }
@@ -1794,6 +1780,20 @@
           }
         ]
       },
+      "func": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "concat",
+            "named": false
+          },
+          {
+            "type": "len",
+            "named": false
+          }
+        ]
+      },
       "index": {
         "multiple": true,
         "required": false,
@@ -1811,20 +1811,6 @@
           {
             "type": "string",
             "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
           }
         ]
       }
@@ -1892,6 +1878,20 @@
           }
         ]
       },
+      "func": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "concat",
+            "named": false
+          },
+          {
+            "type": "len",
+            "named": false
+          }
+        ]
+      },
       "index": {
         "multiple": true,
         "required": false,
@@ -1909,20 +1909,6 @@
           {
             "type": "string",
             "named": true
-          }
-        ]
-      },
-      "name": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
           }
         ]
       }

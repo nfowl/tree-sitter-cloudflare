@@ -707,7 +707,7 @@
             "members": [
               {
                 "type": "FIELD",
-                "name": "name",
+                "name": "func",
                 "content": {
                   "type": "STRING",
                   "value": "concat"
@@ -812,46 +812,42 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "FIELD",
-          "name": "len",
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "FIELD",
-                "name": "name",
-                "content": {
-                  "type": "STRING",
-                  "value": "len"
-                }
-              },
-              {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "func",
+              "content": {
                 "type": "STRING",
-                "value": "("
-              },
-              {
-                "type": "FIELD",
-                "name": "field",
-                "content": {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_stringlike_field"
-                    },
-                    {
-                      "type": "SYMBOL",
-                      "name": "bytes_field"
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "STRING",
-                "value": ")"
+                "value": "len"
               }
-            ]
-          }
+            },
+            {
+              "type": "STRING",
+              "value": "("
+            },
+            {
+              "type": "FIELD",
+              "name": "field",
+              "content": {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "_stringlike_field"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "bytes_field"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "STRING",
+              "value": ")"
+            }
+          ]
         }
       ]
     },
@@ -1415,7 +1411,7 @@
               "members": [
                 {
                   "type": "FIELD",
-                  "name": "name",
+                  "name": "func",
                   "content": {
                     "type": "STRING",
                     "value": "concat"
@@ -1477,7 +1473,7 @@
               "members": [
                 {
                   "type": "FIELD",
-                  "name": "name",
+                  "name": "func",
                   "content": {
                     "type": "STRING",
                     "value": "len"

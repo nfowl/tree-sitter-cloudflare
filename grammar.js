@@ -137,7 +137,7 @@ module.exports = grammar({
     ),
 
     number_func: $ => choice(
-      field('len',lenFunc(choice($._stringlike_field,$.bytes_field))),
+      lenFunc(choice($._stringlike_field,$.bytes_field)),
       // $.len_func
     ),
 
