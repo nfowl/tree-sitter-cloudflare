@@ -137,7 +137,7 @@ module.exports = grammar({
     ),
 
     number_func: $ => choice(
-      field('len',lenFunc(choice($._stringlike_field,$.bytes_field))),
+      lenFunc(choice($._stringlike_field,$.bytes_field)),
       // $.len_func
     ),
 
@@ -443,7 +443,7 @@ module.exports = grammar({
 
 function concatFunc(rule,args) {
     return seq(
-      field('name','concat'),
+      field('func','concat'),
       "(",
       rule,
       ',',
@@ -454,7 +454,7 @@ function concatFunc(rule,args) {
 
 function lenFunc(rule) {
     return seq(
-      field('name','len'),
+      field('func','len'),
       '(',
       field('field', rule),
       ')',
