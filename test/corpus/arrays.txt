@@ -8,8 +8,7 @@ concat(http.request.headers[*][*],"test")[0] eq "80"
 
 (source_file
   (simple_expression
-    (array_field_expansion
-      (map_string_array_field))
+    (map_string_array_field)
     (string)
     (number)
     (string)))
@@ -24,9 +23,8 @@ concat(http.request.headers["test"][*],"test")[0] eq "80"
 
 (source_file
   (simple_expression
-    (array_field_expansion
-      (map_string_array_field)
-      (string))
+    (map_string_array_field)
+    (string)
     (string)
     (number)
     (string)))

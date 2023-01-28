@@ -2,6 +2,22 @@ package main
 
 import "testing"
 
+func expectGood(t *testing.T, expr string) {
+	err := Validate(expr)
+	t.Log(err)
+	if err != nil {
+		t.Fatal(err)
+	}
+}
+
+func expectError(t *testing.T, expr string, e string) {
+	err := Validate(expr)
+	t.Log(err)
+	if err == nil {
+		t.Fatal(e)
+	}
+}
+
 func TestConcat(t *testing.T) {
 	t.Parallel()
 	expr := "concat(10,\"test\")==\"test\""
@@ -137,4 +153,19 @@ func TestArrayFieldInFunc(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
+}
+
+func TestAny(t *testing.T) {
+	t.Parallel()
+	//In expression works
+	expectGood(t, "any(http.request.headers[\"test\"][*] in { \"16\" \"test2\" })")
+	//Literal works
+	expectGood(t, "any(http.request.headers[\"test\"][*] == \"test\")")
+	//No compound on rhs
+	expectError(t, "any(starts_with(http.request.headers[\"test\"][*],\"test\")[*] == (http.host == \"test\"))", "Only supports literals on rhs")
+	//No functions on rhs of any
+	expectError(t, "any(starts_with(http.request.headers[\"test\"][*],\"test\")[*] == concat(http.host,\"test\"))", "RHS doesn't support functions")
+
+	//multi level
+	expectGood(t, "any(to_string(starts_with(http.request.headers[\"test\"][*],\"test\")[*])[*] == \"false\")")
 }
