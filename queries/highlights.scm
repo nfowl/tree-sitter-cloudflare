@@ -21,6 +21,8 @@
  (ip_field)
  (string_field)
  (bool_field)
+ (array_string_field)
+ (map_string_array_field)
 ] @type
 
 [
@@ -55,4 +57,6 @@
   "}"
   "("
   ")"
+  "["
+  "]"
 ] @punctuation.bracket
