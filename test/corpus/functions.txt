@@ -9,8 +9,7 @@ to_string(cf.edge.server_port) eq "80"
 (source_file
   (simple_expression
     (string_func
-      (to_string_func
-        (number_field)))
+      (number_field))
     (string)))
 
 ================================================================================
@@ -24,9 +23,8 @@ concat("String1",http.host,"String","2") == "String1 String2"
 (source_file
   (simple_expression
     (string_func
-      (concat_func
-        (string)
-        (string_field)
-        (string)
-        (string)))
+      (string)
+      (string_field)
+      (string)
+      (string))
     (string)))
