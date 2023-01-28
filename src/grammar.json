@@ -1146,6 +1146,10 @@
       "type": "CHOICE",
       "members": [
         {
+          "type": "SYMBOL",
+          "name": "array_func"
+        },
+        {
           "type": "SEQ",
           "members": [
             {

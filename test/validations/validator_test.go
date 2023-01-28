@@ -165,7 +165,8 @@ func TestAny(t *testing.T) {
 	expectError(t, "any(starts_with(http.request.headers[\"test\"][*],\"test\")[*] == (http.host == \"test\"))", "Only supports literals on rhs")
 	//No functions on rhs of any
 	expectError(t, "any(starts_with(http.request.headers[\"test\"][*],\"test\")[*] == concat(http.host,\"test\"))", "RHS doesn't support functions")
-
 	//multi level
 	expectGood(t, "any(to_string(starts_with(http.request.headers[\"test\"][*],\"test\")[*])[*] == \"false\")")
+	//corpus
+	expectGood(t, "any(len(http.request.headers[\"test\"][*])[*] eq 3)")
 }

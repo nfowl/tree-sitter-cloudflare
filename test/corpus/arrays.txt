@@ -28,3 +28,18 @@ concat(http.request.headers["test"][*],"test")[0] eq "80"
     (string)
     (number)
     (string)))
+
+================================================================================
+any array expansion
+================================================================================
+
+any(len(http.request.headers["test"][*])[*] eq 3)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (bool_func
+    (array_func
+      (map_string_array_field)
+      (string)
+      (number))))

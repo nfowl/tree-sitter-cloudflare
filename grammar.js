@@ -149,8 +149,7 @@ module.exports = grammar({
 
     bool_func: ($) =>
       choice(
-        // $.any_func,
-        // $.all_func
+        $.array_func,
         endsWithFunc($._stringlike_field, $.string),
         startsWithFunc($._stringlike_field, $.string)
       ),
