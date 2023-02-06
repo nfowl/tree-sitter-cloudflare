@@ -1,6 +1,8 @@
-{ 
-  pkgs ? import <nixpkgs> {} 
-}:
+{ pkgs ? import <nixpkgs> {
+  overlays = [
+    (import "${fetchTarball "https://github.com/nix-community/fenix/archive/main.tar.gz"}/overlay.nix")
+  ];
+} }:
 pkgs.mkShell {
   buildInputs = [
     pkgs.go
@@ -8,7 +10,12 @@ pkgs.mkShell {
     pkgs.tree-sitter
     pkgs.nodePackages.eslint
     pkgs.nodePackages.prettier
-    # keep this line if you use bash
-    # pkgs.bashInteractive
+    pkgs.rustc
+    pkgs.rustfmt
+    pkgs.clippy
+    pkgs.cargo
+    pkgs.rust-analyzer-nightly
   ];
+  # Needed for rust-analyzer and others to function
+  RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}"; 
 }

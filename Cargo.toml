@@ -24,3 +24,7 @@ tree-sitter = "~0.20.3"
 
 [build-dependencies]
 cc = "1.0"
+
+[dev-dependencies]
+anyhow = "1.0.69"
+reqwest = { version = "0.11.14", features = ["blocking"] }
