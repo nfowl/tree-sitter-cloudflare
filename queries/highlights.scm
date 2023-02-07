@@ -1,6 +1,6 @@
 (string) @string
 (number) @number
-(boolean) @constant.builtin
+(boolean) @boolean
 (comment) @comment
 (ERROR) @error
 
