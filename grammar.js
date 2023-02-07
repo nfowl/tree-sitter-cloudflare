@@ -276,7 +276,7 @@ module.exports = grammar({
     _boollike_field: ($) =>
       choice(
         $.bool_field,
-        seq($._bool_array, "[", field("index", $.number), "]")
+        seq($.bool_array, "[", field("index", $.number), "]")
       ),
 
     _numberlike_field: ($) =>
@@ -293,30 +293,54 @@ module.exports = grammar({
 
     // Cloudflare Ruleset Fields
     // see: https://developers.cloudflare.com/ruleset-engine/rules-language/fields/
-    // TODO(nfowl):
-    //    - Magic Firewall
-    //    - URI argument
-    //    - request body
-    //    - response
 
     number_field: ($) =>
       choice(
+        // Standard fields
         "http.request.timestamp.sec",
         "http.request.timestamp.msec",
         "ip.geoip.asnum",
+        // Dynamic fields
         "cf.bot_management.score",
         "cf.edge.server_port",
         "cf.threat_score",
         "cf.waf.score",
         "cf.waf.score.sqli",
         "cf.waf.score.xss",
-        "cf.waf.score.rce"
+        "cf.waf.score.rce",
+        // Magic Firewall fields
+        "icmp.type",
+        "icmp.code",
+        "ip.hdr_len",
+        "ip.len",
+        "ip.opt.type",
+        "ip.ttl",
+        "tcp.flags",
+        "tcp.srcport",
+        "tcp.dstport",
+        "udp.dstport",
+        "udp.srcport",
+        // HTTP request body fields
+        "http.request.body.size",
+        // HTTP response fields
+        "http.response.code",
+        "http.response.1xxx_code"
       ),
 
-    ip_field: ($) => choice("ip.src", "cf.edge.server_ip"),
+    ip_field: ($) =>
+      choice(
+        // Standard fields
+        "ip.src",
+        // Dyanmic fields
+        "cf.edge.server_ip",
+        // Magic Firewall fields
+        "ip.dst",
+        "ip.src"
+      ),
 
     string_field: ($) =>
       choice(
+        // Standard fields
         "http.cookie",
         "http.host",
         "http.referer",
@@ -341,33 +365,88 @@ module.exports = grammar({
         "raw.http.request.uri",
         "raw.http.request.uri.path",
         "raw.http.request.uri.query",
+        // Dyanmic fields
         "cf.bot_management.ja3_hash",
         "cf.hostname.metadata",
-        "cf.worker.upstream_zone"
+        "cf.worker.upstream_zone",
+        // Magic Firewall fields
+        "cf.colo.name",
+        "cf.colo.region",
+        "icmp",
+        "ip",
+        "ip.dst.country",
+        "ip.geoip.country",
+        "ip.src.country",
+        "tcp",
+        "udp",
+        // HTTP request body fields
+        "http.request.body.raw",
+        "http.request.body.mime",
+        // HTTP response fields
+        "cf.response.error_type"
       ),
 
     bytes_field: ($) => choice("cf.random_seed"),
 
     map_string_array_field: ($) =>
-      choice("http.request.cookies", "http.request.headers"),
+      choice(
+        // Standard fields
+        "http.request.cookies",
+        // URI argument fields
+        "http.request.uri.args",
+        "raw.http.request.uri.args",
+        // HTTP request header fields
+        "http.request.headers",
+        // HTTP request body fields
+        "http.request.body.form",
+        // HTTP response fields
+        "http.response.headers"
+      ),
 
     array_string_field: ($) =>
       choice(
+        // URI argument fields
+        "http.request.uri.args.names",
+        "http.request.uri.args.values",
+        "raw.http.request.uri.args.names",
+        "raw.http.request.uri.args.values",
+        // HTTP request header fields
         "http.request.headers.names",
         "http.request.headers.values",
-        "http.request.accepted_languages"
+        "http.request.accepted_languages",
+        // HTTP request body fields
+        "http.request.body.form.names",
+        "http.request.body.form.values",
+        // HTTP response fields
+        "http.response.headers.names",
+        "http.response.headers.values"
       ),
 
     bool_field: ($) =>
       choice(
+        // Standard fields
         "ip.geoip.is_in_european_union",
         "ssl",
+        // Dyanmic fields
         "cf.bot_management.verified_bot",
         "cf.bot_management.js_detection.passed",
         "cf.client.bot",
         "cf.tls_client_auth.cert_revoked",
         "cf.tls_client_auth.cert_verified",
-        "http.request.headers.truncated"
+        // Magic Firewall fields
+        "sip",
+        "tcp.flags.ack",
+        "tcp.flags.cwr",
+        "tcp.flags.ecn",
+        "tcp.flags.fin",
+        "tcp.flags.push",
+        "tcp.flags.reset",
+        "tcp.flags.syn",
+        "tcp.flags.urg",
+        // HTTP request header fields
+        "http.request.headers.truncated",
+        // HTTP request body fields
+        "http.request.body.truncated"
       ),
   },
 });
