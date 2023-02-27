@@ -1692,31 +1692,40 @@
       ]
     },
     "_number_array": {
-      "type": "SEQ",
+      "type": "CHOICE",
       "members": [
         {
-          "type": "FIELD",
-          "name": "func",
-          "content": {
-            "type": "STRING",
-            "value": "len"
-          }
+          "type": "SYMBOL",
+          "name": "array_number_field"
         },
         {
-          "type": "STRING",
-          "value": "("
-        },
-        {
-          "type": "FIELD",
-          "name": "field",
-          "content": {
-            "type": "SYMBOL",
-            "name": "_string_array_expansion"
-          }
-        },
-        {
-          "type": "STRING",
-          "value": ")"
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "func",
+              "content": {
+                "type": "STRING",
+                "value": "len"
+              }
+            },
+            {
+              "type": "STRING",
+              "value": "("
+            },
+            {
+              "type": "FIELD",
+              "name": "field",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_string_array_expansion"
+              }
+            },
+            {
+              "type": "STRING",
+              "value": ")"
+            }
+          ]
         }
       ]
     },
@@ -2413,6 +2422,62 @@
         {
           "type": "STRING",
           "value": "cf.waf.score.rce"
+        },
+        {
+          "type": "STRING",
+          "value": "icmp.type"
+        },
+        {
+          "type": "STRING",
+          "value": "icmp.code"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.hdr_len"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.len"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.opt.type"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.ttl"
+        },
+        {
+          "type": "STRING",
+          "value": "tcp.flags"
+        },
+        {
+          "type": "STRING",
+          "value": "tcp.srcport"
+        },
+        {
+          "type": "STRING",
+          "value": "tcp.dstport"
+        },
+        {
+          "type": "STRING",
+          "value": "udp.dstport"
+        },
+        {
+          "type": "STRING",
+          "value": "udp.srcport"
+        },
+        {
+          "type": "STRING",
+          "value": "http.request.body.size"
+        },
+        {
+          "type": "STRING",
+          "value": "http.response.code"
+        },
+        {
+          "type": "STRING",
+          "value": "http.response.1xxx_code"
         }
       ]
     },
@@ -2426,6 +2491,14 @@
         {
           "type": "STRING",
           "value": "cf.edge.server_ip"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.dst"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.src"
         }
       ]
     },
@@ -2539,6 +2612,54 @@
         {
           "type": "STRING",
           "value": "cf.worker.upstream_zone"
+        },
+        {
+          "type": "STRING",
+          "value": "cf.colo.name"
+        },
+        {
+          "type": "STRING",
+          "value": "cf.colo.region"
+        },
+        {
+          "type": "STRING",
+          "value": "icmp"
+        },
+        {
+          "type": "STRING",
+          "value": "ip"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.dst.country"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.geoip.country"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.src.country"
+        },
+        {
+          "type": "STRING",
+          "value": "tcp"
+        },
+        {
+          "type": "STRING",
+          "value": "udp"
+        },
+        {
+          "type": "STRING",
+          "value": "http.request.body.raw"
+        },
+        {
+          "type": "STRING",
+          "value": "http.request.body.mime"
+        },
+        {
+          "type": "STRING",
+          "value": "cf.response.error_type"
         }
       ]
     },
@@ -2560,13 +2681,45 @@
         },
         {
           "type": "STRING",
+          "value": "http.request.uri.args"
+        },
+        {
+          "type": "STRING",
+          "value": "raw.http.request.uri.args"
+        },
+        {
+          "type": "STRING",
           "value": "http.request.headers"
+        },
+        {
+          "type": "STRING",
+          "value": "http.request.body.form"
+        },
+        {
+          "type": "STRING",
+          "value": "http.response.headers"
         }
       ]
     },
     "array_string_field": {
       "type": "CHOICE",
       "members": [
+        {
+          "type": "STRING",
+          "value": "http.request.uri.args.names"
+        },
+        {
+          "type": "STRING",
+          "value": "http.request.uri.args.values"
+        },
+        {
+          "type": "STRING",
+          "value": "raw.http.request.uri.args.names"
+        },
+        {
+          "type": "STRING",
+          "value": "raw.http.request.uri.args.values"
+        },
         {
           "type": "STRING",
           "value": "http.request.headers.names"
@@ -2578,6 +2731,31 @@
         {
           "type": "STRING",
           "value": "http.request.accepted_languages"
+        },
+        {
+          "type": "STRING",
+          "value": "http.request.body.form.names"
+        },
+        {
+          "type": "STRING",
+          "value": "http.request.body.form.values"
+        },
+        {
+          "type": "STRING",
+          "value": "http.response.headers.names"
+        },
+        {
+          "type": "STRING",
+          "value": "http.response.headers.values"
+        }
+      ]
+    },
+    "array_number_field": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "cf.bot_management.detection_ids"
         }
       ]
     },
@@ -2614,7 +2792,47 @@
         },
         {
           "type": "STRING",
+          "value": "sip"
+        },
+        {
+          "type": "STRING",
+          "value": "tcp.flags.ack"
+        },
+        {
+          "type": "STRING",
+          "value": "tcp.flags.cwr"
+        },
+        {
+          "type": "STRING",
+          "value": "tcp.flags.ecn"
+        },
+        {
+          "type": "STRING",
+          "value": "tcp.flags.fin"
+        },
+        {
+          "type": "STRING",
+          "value": "tcp.flags.push"
+        },
+        {
+          "type": "STRING",
+          "value": "tcp.flags.reset"
+        },
+        {
+          "type": "STRING",
+          "value": "tcp.flags.syn"
+        },
+        {
+          "type": "STRING",
+          "value": "tcp.flags.urg"
+        },
+        {
+          "type": "STRING",
           "value": "http.request.headers.truncated"
+        },
+        {
+          "type": "STRING",
+          "value": "http.request.body.truncated"
         }
       ]
     }

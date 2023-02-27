@@ -36,6 +36,10 @@
             "named": false
           },
           {
+            "type": "array_number_field",
+            "named": true
+          },
+          {
             "type": "array_string_field",
             "named": true
           },
@@ -240,6 +244,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -456,6 +464,10 @@
             "named": false
           },
           {
+            "type": "array_number_field",
+            "named": true
+          },
+          {
             "type": "array_string_field",
             "named": true
           },
@@ -558,6 +570,10 @@
             "named": false
           },
           {
+            "type": "array_number_field",
+            "named": true
+          },
+          {
             "type": "array_string_field",
             "named": true
           },
@@ -640,6 +656,11 @@
     }
   },
   {
+    "type": "array_number_field",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "array_string_field",
     "named": true,
     "fields": {}
@@ -684,6 +705,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -904,6 +929,10 @@
             "named": false
           },
           {
+            "type": "array_number_field",
+            "named": true
+          },
+          {
             "type": "array_string_field",
             "named": true
           },
@@ -1004,6 +1033,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -1142,6 +1175,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -1340,6 +1377,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -1526,6 +1567,10 @@
             "named": false
           },
           {
+            "type": "array_number_field",
+            "named": true
+          },
+          {
             "type": "array_string_field",
             "named": true
           },
@@ -1660,6 +1705,10 @@
             "named": false
           },
           {
+            "type": "array_number_field",
+            "named": true
+          },
+          {
             "type": "array_string_field",
             "named": true
           },
@@ -1760,6 +1809,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -1878,6 +1931,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -2044,6 +2101,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -2232,6 +2293,10 @@
             "named": false
           },
           {
+            "type": "array_number_field",
+            "named": true
+          },
+          {
             "type": "array_string_field",
             "named": true
           },
@@ -2332,6 +2397,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -2450,6 +2519,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -2650,6 +2723,10 @@
             "named": false
           },
           {
+            "type": "array_number_field",
+            "named": true
+          },
+          {
             "type": "array_string_field",
             "named": true
           },
@@ -2820,6 +2897,10 @@
             "named": false
           },
           {
+            "type": "array_number_field",
+            "named": true
+          },
+          {
             "type": "array_string_field",
             "named": true
           },
@@ -2920,6 +3001,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -3083,6 +3168,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -3303,6 +3392,10 @@
             "named": false
           },
           {
+            "type": "array_number_field",
+            "named": true
+          },
+          {
             "type": "array_string_field",
             "named": true
           },
@@ -3403,6 +3496,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -3573,6 +3670,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -3797,6 +3898,10 @@
             "named": false
           },
           {
+            "type": "array_number_field",
+            "named": true
+          },
+          {
             "type": "array_string_field",
             "named": true
           },
@@ -3897,6 +4002,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -4030,6 +4139,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -4228,6 +4341,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -4456,6 +4573,10 @@
             "named": false
           },
           {
+            "type": "array_number_field",
+            "named": true
+          },
+          {
             "type": "array_string_field",
             "named": true
           },
@@ -4556,6 +4677,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -4674,6 +4799,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -4894,6 +5023,10 @@
             "named": false
           },
           {
+            "type": "array_number_field",
+            "named": true
+          },
+          {
             "type": "array_string_field",
             "named": true
           },
@@ -4994,6 +5127,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -5155,6 +5292,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -5391,6 +5532,10 @@
             "named": false
           },
           {
+            "type": "array_number_field",
+            "named": true
+          },
+          {
             "type": "array_string_field",
             "named": true
           },
@@ -5491,6 +5636,10 @@
           {
             "type": "]",
             "named": false
+          },
+          {
+            "type": "array_number_field",
+            "named": true
           },
           {
             "type": "array_string_field",
@@ -5692,6 +5841,10 @@
     "named": false
   },
   {
+    "type": "cf.bot_management.detection_ids",
+    "named": false
+  },
+  {
     "type": "cf.bot_management.ja3_hash",
     "named": false
   },
@@ -5712,6 +5865,14 @@
     "named": false
   },
   {
+    "type": "cf.colo.name",
+    "named": false
+  },
+  {
+    "type": "cf.colo.region",
+    "named": false
+  },
+  {
     "type": "cf.edge.server_ip",
     "named": false
   },
@@ -5725,6 +5886,10 @@
   },
   {
     "type": "cf.random_seed",
+    "named": false
+  },
+  {
+    "type": "cf.response.error_type",
     "named": false
   },
   {
@@ -5808,6 +5973,34 @@
     "named": false
   },
   {
+    "type": "http.request.body.form",
+    "named": false
+  },
+  {
+    "type": "http.request.body.form.names",
+    "named": false
+  },
+  {
+    "type": "http.request.body.form.values",
+    "named": false
+  },
+  {
+    "type": "http.request.body.mime",
+    "named": false
+  },
+  {
+    "type": "http.request.body.raw",
+    "named": false
+  },
+  {
+    "type": "http.request.body.size",
+    "named": false
+  },
+  {
+    "type": "http.request.body.truncated",
+    "named": false
+  },
+  {
     "type": "http.request.cookies",
     "named": false
   },
@@ -5848,6 +6041,18 @@
     "named": false
   },
   {
+    "type": "http.request.uri.args",
+    "named": false
+  },
+  {
+    "type": "http.request.uri.args.names",
+    "named": false
+  },
+  {
+    "type": "http.request.uri.args.values",
+    "named": false
+  },
+  {
     "type": "http.request.uri.path",
     "named": false
   },
@@ -5860,6 +6065,26 @@
     "named": false
   },
   {
+    "type": "http.response.1xxx_code",
+    "named": false
+  },
+  {
+    "type": "http.response.code",
+    "named": false
+  },
+  {
+    "type": "http.response.headers",
+    "named": false
+  },
+  {
+    "type": "http.response.headers.names",
+    "named": false
+  },
+  {
+    "type": "http.response.headers.values",
+    "named": false
+  },
+  {
     "type": "http.user_agent",
     "named": false
   },
@@ -5868,7 +6093,31 @@
     "named": false
   },
   {
+    "type": "icmp",
+    "named": false
+  },
+  {
+    "type": "icmp.code",
+    "named": false
+  },
+  {
+    "type": "icmp.type",
+    "named": false
+  },
+  {
     "type": "in",
+    "named": false
+  },
+  {
+    "type": "ip",
+    "named": false
+  },
+  {
+    "type": "ip.dst",
+    "named": false
+  },
+  {
+    "type": "ip.dst.country",
     "named": false
   },
   {
@@ -5896,11 +6145,27 @@
     "named": false
   },
   {
+    "type": "ip.hdr_len",
+    "named": false
+  },
+  {
+    "type": "ip.len",
+    "named": false
+  },
+  {
+    "type": "ip.opt.type",
+    "named": false
+  },
+  {
     "type": "ip.src",
     "named": false
   },
   {
     "type": "ip.src.city",
+    "named": false
+  },
+  {
+    "type": "ip.src.country",
     "named": false
   },
   {
@@ -5917,6 +6182,10 @@
   },
   {
     "type": "ip.src.postal_code",
+    "named": false
+  },
+  {
+    "type": "ip.ttl",
     "named": false
   },
   {
@@ -5976,6 +6245,18 @@
     "named": false
   },
   {
+    "type": "raw.http.request.uri.args",
+    "named": false
+  },
+  {
+    "type": "raw.http.request.uri.args.names",
+    "named": false
+  },
+  {
+    "type": "raw.http.request.uri.args.values",
+    "named": false
+  },
+  {
     "type": "raw.http.request.uri.path",
     "named": false
   },
@@ -5992,6 +6273,10 @@
     "named": false
   },
   {
+    "type": "sip",
+    "named": false
+  },
+  {
     "type": "ssl",
     "named": false
   },
@@ -6004,11 +6289,71 @@
     "named": true
   },
   {
+    "type": "tcp",
+    "named": false
+  },
+  {
+    "type": "tcp.dstport",
+    "named": false
+  },
+  {
+    "type": "tcp.flags",
+    "named": false
+  },
+  {
+    "type": "tcp.flags.ack",
+    "named": false
+  },
+  {
+    "type": "tcp.flags.cwr",
+    "named": false
+  },
+  {
+    "type": "tcp.flags.ecn",
+    "named": false
+  },
+  {
+    "type": "tcp.flags.fin",
+    "named": false
+  },
+  {
+    "type": "tcp.flags.push",
+    "named": false
+  },
+  {
+    "type": "tcp.flags.reset",
+    "named": false
+  },
+  {
+    "type": "tcp.flags.syn",
+    "named": false
+  },
+  {
+    "type": "tcp.flags.urg",
+    "named": false
+  },
+  {
+    "type": "tcp.srcport",
+    "named": false
+  },
+  {
     "type": "to_string",
     "named": false
   },
   {
     "type": "true",
+    "named": false
+  },
+  {
+    "type": "udp",
+    "named": false
+  },
+  {
+    "type": "udp.dstport",
+    "named": false
+  },
+  {
+    "type": "udp.srcport",
     "named": false
   },
   {

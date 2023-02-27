@@ -43,3 +43,17 @@ any(len(http.request.headers["test"][*])[*] eq 3)
       (map_string_array_field)
       (string)
       (number))))
+
+================================================================================
+Number array field
+================================================================================
+
+any(cf.bot_management.detection_ids[*] == 80)
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (bool_func
+    (array_func
+      (array_number_field)
+      (number))))

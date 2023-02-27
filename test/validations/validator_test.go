@@ -99,3 +99,8 @@ func TestGroupInComp(t *testing.T) {
 	//bool paren
 	expectError(t, "(ssl) == true", "parens not supported in expressions")
 }
+
+func TestMagicFirewall(t *testing.T) {
+	t.Parallel()
+	expectGood(t, "icmp == \"testing\"")
+}

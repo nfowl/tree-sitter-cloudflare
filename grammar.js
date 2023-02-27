@@ -240,7 +240,9 @@ module.exports = grammar({
 
     not_operator: ($) => choice("not", "!"),
 
-    _number_array: ($) => lenFunc($._string_array_expansion),
+    _number_array: ($) =>
+      choice($.array_number_field, lenFunc($._string_array_expansion)),
+
     _bool_array: ($) =>
       choice(
         endsWithFunc($._string_array_expansion, $.string),
@@ -276,7 +278,7 @@ module.exports = grammar({
     _boollike_field: ($) =>
       choice(
         $.bool_field,
-        seq($.bool_array, "[", field("index", $.number), "]")
+        seq($._bool_array, "[", field("index", $.number), "]")
       ),
 
     _numberlike_field: ($) =>
@@ -421,6 +423,8 @@ module.exports = grammar({
         "http.response.headers.names",
         "http.response.headers.values"
       ),
+
+    array_number_field: ($) => choice("cf.bot_management.detection_ids"),
 
     bool_field: ($) =>
       choice(
