@@ -229,27 +229,11 @@
     "named": true,
     "fields": {
       "field": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "string_array",
-            "named": true
-          },
-          {
-            "type": "string_field",
+            "type": "stringlike_field",
             "named": true
           }
         ]
@@ -265,16 +249,6 @@
           {
             "type": "starts_with",
             "named": false
-          }
-        ]
-      },
-      "index": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "number",
-            "named": true
           }
         ]
       },
@@ -306,6 +280,36 @@
     "fields": {}
   },
   {
+    "type": "boollike_field",
+    "named": true,
+    "fields": {
+      "index": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "bool_array",
+          "named": true
+        },
+        {
+          "type": "bool_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "bytes_field",
     "named": true,
     "fields": {}
@@ -314,42 +318,20 @@
     "type": "compound_expression",
     "named": true,
     "fields": {
-      "index": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "number",
-            "named": true
-          }
-        ]
-      },
       "lhs": {
-        "multiple": true,
+        "multiple": false,
         "required": true,
         "types": [
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "bool_array",
-            "named": true
-          },
-          {
-            "type": "bool_field",
-            "named": true
-          },
           {
             "type": "bool_func",
             "named": true
           },
           {
             "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "boollike_field",
             "named": true
           },
           {
@@ -366,10 +348,6 @@
           },
           {
             "type": "not_expression",
-            "named": true
-          },
-          {
-            "type": "number",
             "named": true
           },
           {
@@ -409,31 +387,19 @@
         ]
       },
       "rhs": {
-        "multiple": true,
+        "multiple": false,
         "required": true,
         "types": [
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "bool_array",
-            "named": true
-          },
-          {
-            "type": "bool_field",
-            "named": true
-          },
           {
             "type": "bool_func",
             "named": true
           },
           {
             "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "boollike_field",
             "named": true
           },
           {
@@ -450,10 +416,6 @@
           },
           {
             "type": "not_expression",
-            "named": true
-          },
-          {
-            "type": "number",
             "named": true
           },
           {
@@ -468,42 +430,20 @@
     "type": "group",
     "named": true,
     "fields": {
-      "index": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "number",
-            "named": true
-          }
-        ]
-      },
       "inner": {
-        "multiple": true,
+        "multiple": false,
         "required": true,
         "types": [
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "bool_array",
-            "named": true
-          },
-          {
-            "type": "bool_field",
-            "named": true
-          },
           {
             "type": "bool_func",
             "named": true
           },
           {
             "type": "boolean",
+            "named": true
+          },
+          {
+            "type": "boollike_field",
             "named": true
           },
           {
@@ -523,10 +463,6 @@
             "named": true
           },
           {
-            "type": "number",
-            "named": true
-          },
-          {
             "type": "simple_expression",
             "named": true
           }
@@ -538,42 +474,12 @@
     "type": "in_expression",
     "named": true,
     "fields": {
-      "index": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "number",
-            "named": true
-          }
-        ]
-      },
       "lhs": {
-        "multiple": true,
+        "multiple": false,
         "required": true,
         "types": [
           {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
             "type": "ip_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "number_array",
-            "named": true
-          },
-          {
-            "type": "number_field",
             "named": true
           },
           {
@@ -581,15 +487,15 @@
             "named": true
           },
           {
-            "type": "string_array",
-            "named": true
-          },
-          {
-            "type": "string_field",
+            "type": "numberlike_field",
             "named": true
           },
           {
             "type": "string_func",
+            "named": true
+          },
+          {
+            "type": "stringlike_field",
             "named": true
           }
         ]
@@ -676,36 +582,21 @@
   {
     "type": "not_expression",
     "named": true,
-    "fields": {
-      "index": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "number",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": true,
       "types": [
-        {
-          "type": "bool_array",
-          "named": true
-        },
-        {
-          "type": "bool_field",
-          "named": true
-        },
         {
           "type": "bool_func",
           "named": true
         },
         {
           "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "boollike_field",
           "named": true
         },
         {
@@ -816,31 +707,15 @@
     "named": true,
     "fields": {
       "field": {
-        "multiple": true,
+        "multiple": false,
         "required": true,
         "types": [
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
           {
             "type": "bytes_field",
             "named": true
           },
           {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "string_array",
-            "named": true
-          },
-          {
-            "type": "string_field",
+            "type": "stringlike_field",
             "named": true
           }
         ]
@@ -852,16 +727,6 @@
           {
             "type": "len",
             "named": false
-          }
-        ]
-      },
-      "index": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "number",
-            "named": true
           }
         ]
       }
@@ -883,7 +748,7 @@
     }
   },
   {
-    "type": "simple_expression",
+    "type": "numberlike_field",
     "named": true,
     "fields": {
       "index": {
@@ -895,33 +760,33 @@
             "named": true
           }
         ]
-      },
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "number_array",
+          "named": true
+        },
+        {
+          "type": "number_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "simple_expression",
+    "named": true,
+    "fields": {
       "lhs": {
-        "multiple": true,
+        "multiple": false,
         "required": true,
         "types": [
           {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
             "type": "ip_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "number_array",
-            "named": true
-          },
-          {
-            "type": "number_field",
             "named": true
           },
           {
@@ -929,15 +794,15 @@
             "named": true
           },
           {
-            "type": "string_array",
-            "named": true
-          },
-          {
-            "type": "string_field",
+            "type": "numberlike_field",
             "named": true
           },
           {
             "type": "string_func",
+            "named": true
+          },
+          {
+            "type": "stringlike_field",
             "named": true
           }
         ]
@@ -1035,36 +900,21 @@
   {
     "type": "source_file",
     "named": true,
-    "fields": {
-      "index": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "number",
-            "named": true
-          }
-        ]
-      }
-    },
+    "fields": {},
     "children": {
       "multiple": true,
       "required": false,
       "types": [
-        {
-          "type": "bool_array",
-          "named": true
-        },
-        {
-          "type": "bool_field",
-          "named": true
-        },
         {
           "type": "bool_func",
           "named": true
         },
         {
           "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "boollike_field",
           "named": true
         },
         {
@@ -1171,16 +1021,6 @@
           {
             "type": "uuidv4",
             "named": false
-          }
-        ]
-      },
-      "index": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "number",
-            "named": true
           }
         ]
       },
@@ -1318,7 +1158,7 @@
           "named": true
         },
         {
-          "type": "string_field",
+          "type": "stringlike_field",
           "named": true
         }
       ]
@@ -1334,23 +1174,11 @@
     "named": true,
     "fields": {
       "field": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "bool_array",
-            "named": true
-          },
-          {
-            "type": "bool_field",
+            "type": "boollike_field",
             "named": true
           },
           {
@@ -1362,23 +1190,11 @@
             "named": true
           },
           {
-            "type": "number",
+            "type": "numberlike_field",
             "named": true
           },
           {
-            "type": "number_array",
-            "named": true
-          },
-          {
-            "type": "number_field",
-            "named": true
-          },
-          {
-            "type": "string_array",
-            "named": true
-          },
-          {
-            "type": "string_field",
+            "type": "stringlike_field",
             "named": true
           }
         ]
@@ -1425,16 +1241,6 @@
           }
         ]
       },
-      "index": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "number",
-            "named": true
-          }
-        ]
-      },
       "keys": {
         "multiple": true,
         "required": false,
@@ -1474,53 +1280,21 @@
         ]
       },
       "seed": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "string_array",
-            "named": true
-          },
-          {
-            "type": "string_field",
+            "type": "stringlike_field",
             "named": true
           }
         ]
       },
       "source": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "string_array",
-            "named": true
-          },
-          {
-            "type": "string_field",
+            "type": "stringlike_field",
             "named": true
           }
         ]
@@ -1535,11 +1309,7 @@
           "named": true
         },
         {
-          "type": "string_array",
-          "named": true
-        },
-        {
-          "type": "string_field",
+          "type": "stringlike_field",
           "named": true
         }
       ]
@@ -1555,6 +1325,36 @@
       "types": [
         {
           "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stringlike_field",
+    "named": true,
+    "fields": {
+      "index": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "string_array",
+          "named": true
+        },
+        {
+          "type": "string_field",
           "named": true
         }
       ]

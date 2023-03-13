@@ -9,11 +9,14 @@ cf.edge.server_port eq 80 or (cf.edge.server_port == 443 && ssl)
 (source_file
   (compound_expression
     (simple_expression
-      (number_field)
+      (numberlike_field
+        (number_field))
       (number))
     (group
       (compound_expression
         (simple_expression
-          (number_field)
+          (numberlike_field
+            (number_field))
           (number))
-        (bool_field)))))
+        (boollike_field
+          (bool_field))))))

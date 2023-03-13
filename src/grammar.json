@@ -658,7 +658,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_boollike_field"
+          "name": "boollike_field"
         },
         {
           "type": "SYMBOL",
@@ -675,7 +675,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_numberlike_field"
+          "name": "numberlike_field"
         },
         {
           "type": "SYMBOL",
@@ -688,7 +688,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_stringlike_field"
+          "name": "stringlike_field"
         },
         {
           "type": "SYMBOL",
@@ -723,7 +723,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_stringlike_field"
+                  "name": "stringlike_field"
                 }
               ]
             },
@@ -745,7 +745,7 @@
                       },
                       {
                         "type": "SYMBOL",
-                        "name": "_stringlike_field"
+                        "name": "stringlike_field"
                       }
                     ]
                   },
@@ -790,7 +790,7 @@
               "name": "field",
               "content": {
                 "type": "SYMBOL",
-                "name": "_stringlike_field"
+                "name": "stringlike_field"
               }
             },
             {
@@ -856,7 +856,7 @@
               "name": "field",
               "content": {
                 "type": "SYMBOL",
-                "name": "_stringlike_field"
+                "name": "stringlike_field"
               }
             },
             {
@@ -885,7 +885,7 @@
               "name": "source",
               "content": {
                 "type": "SYMBOL",
-                "name": "_stringlike_field"
+                "name": "stringlike_field"
               }
             },
             {
@@ -941,7 +941,7 @@
                 "members": [
                   {
                     "type": "SYMBOL",
-                    "name": "_stringlike_field"
+                    "name": "stringlike_field"
                   },
                   {
                     "type": "SYMBOL",
@@ -991,7 +991,7 @@
                 "members": [
                   {
                     "type": "SYMBOL",
-                    "name": "_numberlike_field"
+                    "name": "numberlike_field"
                   },
                   {
                     "type": "SYMBOL",
@@ -999,7 +999,7 @@
                   },
                   {
                     "type": "SYMBOL",
-                    "name": "_boollike_field"
+                    "name": "boollike_field"
                   }
                 ]
               }
@@ -1030,7 +1030,7 @@
               "name": "field",
               "content": {
                 "type": "SYMBOL",
-                "name": "_stringlike_field"
+                "name": "stringlike_field"
               }
             },
             {
@@ -1059,7 +1059,7 @@
               "name": "field",
               "content": {
                 "type": "SYMBOL",
-                "name": "_stringlike_field"
+                "name": "stringlike_field"
               }
             },
             {
@@ -1088,7 +1088,7 @@
               "name": "seed",
               "content": {
                 "type": "SYMBOL",
-                "name": "_stringlike_field"
+                "name": "stringlike_field"
               }
             },
             {
@@ -1125,7 +1125,7 @@
                 "members": [
                   {
                     "type": "SYMBOL",
-                    "name": "_stringlike_field"
+                    "name": "stringlike_field"
                   },
                   {
                     "type": "SYMBOL",
@@ -1169,7 +1169,7 @@
               "name": "field",
               "content": {
                 "type": "SYMBOL",
-                "name": "_stringlike_field"
+                "name": "stringlike_field"
               }
             },
             {
@@ -1210,7 +1210,7 @@
               "name": "field",
               "content": {
                 "type": "SYMBOL",
-                "name": "_stringlike_field"
+                "name": "stringlike_field"
               }
             },
             {
@@ -1885,7 +1885,7 @@
                       },
                       {
                         "type": "SYMBOL",
-                        "name": "_stringlike_field"
+                        "name": "stringlike_field"
                       }
                     ]
                   },
@@ -2278,7 +2278,7 @@
         }
       ]
     },
-    "_boollike_field": {
+    "boollike_field": {
       "type": "CHOICE",
       "members": [
         {
@@ -2312,7 +2312,7 @@
         }
       ]
     },
-    "_numberlike_field": {
+    "numberlike_field": {
       "type": "CHOICE",
       "members": [
         {
@@ -2346,7 +2346,7 @@
         }
       ]
     },
-    "_stringlike_field": {
+    "stringlike_field": {
       "type": "CHOICE",
       "members": [
         {

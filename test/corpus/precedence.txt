@@ -9,13 +9,16 @@ cf.edge.server_port eq 80 or cf.edge.server_port == 443 and ssl
 (source_file
   (compound_expression
     (simple_expression
-      (number_field)
+      (numberlike_field
+        (number_field))
       (number))
     (compound_expression
       (simple_expression
-        (number_field)
+        (numberlike_field
+          (number_field))
         (number))
-      (bool_field))))
+      (boollike_field
+        (bool_field)))))
 
 ================================================================================
 AND precedence test 2
@@ -29,9 +32,12 @@ cf.edge.server_port == 443 and ssl or cf.edge.server_port eq 80
   (compound_expression
     (compound_expression
       (simple_expression
-        (number_field)
+        (numberlike_field
+          (number_field))
         (number))
-      (bool_field))
+      (boollike_field
+        (bool_field)))
     (simple_expression
-      (number_field)
+      (numberlike_field
+        (number_field))
       (number))))

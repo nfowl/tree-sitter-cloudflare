@@ -119,39 +119,37 @@ module.exports = grammar({
       );
     },
 
-    _bool_lhs: ($) => choice($._boollike_field, $.bool_func, $.boolean),
+    _bool_lhs: ($) => choice($.boollike_field, $.bool_func, $.boolean),
 
-    _number_lhs: ($) => choice($._numberlike_field, $.number_func),
+    _number_lhs: ($) => choice($.numberlike_field, $.number_func),
 
-    _string_lhs: ($) => choice($._stringlike_field, $.string_func),
+    _string_lhs: ($) => choice($.stringlike_field, $.string_func),
 
     // functions grouped by return type for use in expressions
     string_func: ($) =>
       choice(
         concatFunc(
-          choice($.string, $._stringlike_field),
-          choice($.string, $._stringlike_field)
+          choice($.string, $.stringlike_field),
+          choice($.string, $.stringlike_field)
         ),
-        lookupFunc($._stringlike_field, choice($.string, $.number)),
-        lowerFunc($._stringlike_field),
-        regexReplaceFunc($._stringlike_field, $.string),
-        removeBytesFunc(choice($._stringlike_field, $.bytes_field), $.string),
-        toStringFunc(
-          choice($._numberlike_field, $.ip_field, $._boollike_field)
-        ),
-        upperFunc($._stringlike_field),
-        urlDecodeFunc($._stringlike_field),
-        uuidv4Func($._stringlike_field)
+        lookupFunc($.stringlike_field, choice($.string, $.number)),
+        lowerFunc($.stringlike_field),
+        regexReplaceFunc($.stringlike_field, $.string),
+        removeBytesFunc(choice($.stringlike_field, $.bytes_field), $.string),
+        toStringFunc(choice($.numberlike_field, $.ip_field, $.boollike_field)),
+        upperFunc($.stringlike_field),
+        urlDecodeFunc($.stringlike_field),
+        uuidv4Func($.stringlike_field)
       ),
 
     number_func: ($) =>
-      choice(lenFunc(choice($._stringlike_field, $.bytes_field))),
+      choice(lenFunc(choice($.stringlike_field, $.bytes_field))),
 
     bool_func: ($) =>
       choice(
         $.array_func,
-        endsWithFunc($._stringlike_field, $.string),
-        startsWithFunc($._stringlike_field, $.string)
+        endsWithFunc($.stringlike_field, $.string),
+        startsWithFunc($.stringlike_field, $.string)
       ),
 
     array_func: ($) => {
@@ -255,7 +253,7 @@ module.exports = grammar({
         seq($.map_string_array_field, "[", field("key", $.string), "]"),
         concatFunc(
           $._string_array_expansion,
-          choice($.string, $._stringlike_field)
+          choice($.string, $.stringlike_field)
         ),
         lookupFunc($._string_array_expansion, choice($.string, $.number)),
         lowerFunc($._string_array_expansion),
@@ -275,19 +273,19 @@ module.exports = grammar({
         )
       ),
 
-    _boollike_field: ($) =>
+    boollike_field: ($) =>
       choice(
         $.bool_field,
         seq($.bool_array, "[", field("index", $.number), "]")
       ),
 
-    _numberlike_field: ($) =>
+    numberlike_field: ($) =>
       choice(
         $.number_field,
         seq($.number_array, "[", field("index", $.number), "]")
       ),
 
-    _stringlike_field: ($) =>
+    stringlike_field: ($) =>
       choice(
         $.string_field,
         seq($.string_array, "[", field("index", $.number), "]")

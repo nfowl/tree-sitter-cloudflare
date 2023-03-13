@@ -8,7 +8,8 @@ cf.edge.server_port == "test"
 
 (source_file
   (ERROR
-    (number_field)
+    (numberlike_field
+      (number_field))
     (string)))
 
 ================================================================================
@@ -21,5 +22,6 @@ cf.edge.server_port contains 100
 
 (source_file
   (ERROR
-    (number_field)
+    (numberlike_field
+      (number_field))
     (number)))

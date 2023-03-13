@@ -20,22 +20,27 @@ Complex expr
             (group
               (compound_expression
                 (simple_expression
-                  (string_field)
+                  (stringlike_field
+                    (string_field))
                   (string))
                 (simple_expression
-                  (string_field)
+                  (stringlike_field
+                    (string_field))
                   (string))))
             (comment)
             (group
               (compound_expression
                 (simple_expression
-                  (string_field)
+                  (stringlike_field
+                    (string_field))
                   (string))
                 (simple_expression
-                  (string_field)
+                  (stringlike_field
+                    (string_field))
                   (string)))))
           (in_expression
-            (string_field)
+            (stringlike_field
+              (string_field))
             (string_set
               (string)
               (string)
@@ -47,7 +52,8 @@ Complex expr
               (string)
               (string))))
         (in_expression
-          (number_field)
+          (numberlike_field
+            (number_field))
           (number_set
             (number)
             (number)

@@ -8,10 +8,11 @@ concat(http.request.headers[*][*],"test")[0] eq "80"
 
 (source_file
   (simple_expression
-    (string_array
-      (map_string_array_field)
-      (string))
-    (number)
+    (stringlike_field
+      (string_array
+        (map_string_array_field)
+        (string))
+      (number))
     (string)))
 
 ================================================================================
@@ -24,12 +25,13 @@ concat(http.request.headers["test"][*],"test")[0] eq "80"
 
 (source_file
   (simple_expression
-    (string_array
+    (stringlike_field
       (string_array
-        (map_string_array_field)
+        (string_array
+          (map_string_array_field)
+          (string))
         (string))
-      (string))
-    (number)
+      (number))
     (string)))
 
 ================================================================================
@@ -63,3 +65,18 @@ any(cf.bot_management.detection_ids[*] == 80)
       (number_array
         (array_number_field))
       (number))))
+
+================================================================================
+test
+================================================================================
+http.request.uri.args.names[2] == "ayo"
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (simple_expression
+    (stringlike_field
+      (string_array
+        (array_string_field))
+      (number))
+    (string)))
