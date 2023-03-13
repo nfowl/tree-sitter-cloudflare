@@ -8,8 +8,9 @@ concat(http.request.headers[*][*],"test")[0] eq "80"
 
 (source_file
   (simple_expression
-    (map_string_array_field)
-    (string)
+    (string_array
+      (map_string_array_field)
+      (string))
     (number)
     (string)))
 
@@ -23,9 +24,11 @@ concat(http.request.headers["test"][*],"test")[0] eq "80"
 
 (source_file
   (simple_expression
-    (map_string_array_field)
-    (string)
-    (string)
+    (string_array
+      (string_array
+        (map_string_array_field)
+        (string))
+      (string))
     (number)
     (string)))
 
@@ -40,8 +43,10 @@ any(len(http.request.headers["test"][*])[*] eq 3)
 (source_file
   (bool_func
     (array_func
-      (map_string_array_field)
-      (string)
+      (number_array
+        (string_array
+          (map_string_array_field)
+          (string)))
       (number))))
 
 ================================================================================
@@ -55,5 +60,6 @@ any(cf.bot_management.detection_ids[*] == 80)
 (source_file
   (bool_func
     (array_func
-      (array_number_field)
+      (number_array
+        (array_number_field))
       (number))))

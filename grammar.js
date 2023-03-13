@@ -157,8 +157,8 @@ module.exports = grammar({
     array_func: ($) => {
       // Needs to support simple expressions and in and bool
       const in_func = [
-        [arrayExpander($._number_array), $.number_set],
-        [arrayExpander($._string_array), $.string_set],
+        [arrayExpander($.number_array), $.number_set],
+        [arrayExpander($.string_array), $.string_set],
       ];
       const inOptions = choice(
         ...in_func.map(([field_type, target]) =>
@@ -171,8 +171,8 @@ module.exports = grammar({
       );
 
       const simple = [
-        [STRING_COMPARISON_OPS, arrayExpander($._string_array), $.string],
-        [NUMBER_COMPARISON_OPS, arrayExpander($._number_array), $.number],
+        [STRING_COMPARISON_OPS, arrayExpander($.string_array), $.string],
+        [NUMBER_COMPARISON_OPS, arrayExpander($.number_array), $.number],
       ];
 
       const simpleOptions = choice(
@@ -188,7 +188,7 @@ module.exports = grammar({
       return seq(
         field("func", choice("any", "all")),
         "(",
-        choice(simpleOptions, inOptions, arrayExpander($._bool_array)),
+        choice(simpleOptions, inOptions, arrayExpander($.bool_array)),
         ")"
       );
     },
@@ -240,16 +240,16 @@ module.exports = grammar({
 
     not_operator: ($) => choice("not", "!"),
 
-    _number_array: ($) =>
+    number_array: ($) =>
       choice($.array_number_field, lenFunc($._string_array_expansion)),
 
-    _bool_array: ($) =>
+    bool_array: ($) =>
       choice(
         endsWithFunc($._string_array_expansion, $.string),
         startsWithFunc($._string_array_expansion, $.string)
       ),
 
-    _string_array: ($) =>
+    string_array: ($) =>
       choice(
         $.array_string_field,
         seq($.map_string_array_field, "[", field("key", $.string), "]"),
@@ -261,7 +261,7 @@ module.exports = grammar({
         lowerFunc($._string_array_expansion),
         regexReplaceFunc($._string_array_expansion, $.string),
         removeBytesFunc($._string_array_expansion, $.string),
-        toStringFunc(arrayExpander(choice($._number_array, $._bool_array))),
+        toStringFunc(arrayExpander(choice($.number_array, $.bool_array))),
         upperFunc($._string_array_expansion),
         urlDecodeFunc($._string_array_expansion),
         uuidv4Func($._string_array_expansion)
@@ -271,26 +271,26 @@ module.exports = grammar({
       arrayExpander(
         choice(
           seq($.map_string_array_field, "[", field("key", "*"), "]"),
-          $._string_array
+          $.string_array
         )
       ),
 
     _boollike_field: ($) =>
       choice(
         $.bool_field,
-        seq($._bool_array, "[", field("index", $.number), "]")
+        seq($.bool_array, "[", field("index", $.number), "]")
       ),
 
     _numberlike_field: ($) =>
       choice(
         $.number_field,
-        seq($._number_array, "[", field("index", $.number), "]")
+        seq($.number_array, "[", field("index", $.number), "]")
       ),
 
     _stringlike_field: ($) =>
       choice(
         $.string_field,
-        seq($._string_array, "[", field("index", $.number), "]")
+        seq($.string_array, "[", field("index", $.number), "]")
       ),
 
     // Cloudflare Ruleset Fields

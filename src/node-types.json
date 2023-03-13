@@ -3,114 +3,8 @@
     "type": "array_func",
     "named": true,
     "fields": {
-      "field": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
       "func": {
-        "multiple": true,
+        "multiple": false,
         "required": true,
         "types": [
           {
@@ -120,96 +14,6 @@
           {
             "type": "any",
             "named": false
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "index": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "number",
-            "named": true
-          }
-        ]
-      },
-      "key": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "keys": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
           }
         ]
       },
@@ -218,104 +22,16 @@
         "required": false,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
             "type": "[*]",
             "named": false
           },
           {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
+            "type": "number_array",
             "named": true
           },
           {
-            "type": "array_string_field",
+            "type": "string_array",
             "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
           }
         ]
       },
@@ -389,26 +105,6 @@
           }
         ]
       },
-      "regex": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "replacement": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
       "rhs": {
         "multiple": false,
         "required": false,
@@ -430,229 +126,17 @@
             "named": true
           }
         ]
-      },
-      "seed": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "source": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "value": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "bool_array",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -664,6 +148,76 @@
     "type": "array_string_field",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "bool_array",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "[*]",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "map_string_array_field",
+            "named": true
+          },
+          {
+            "type": "string_array",
+            "named": true
+          }
+        ]
+      },
+      "func": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ends_with",
+            "named": false
+          },
+          {
+            "type": "starts_with",
+            "named": false
+          }
+        ]
+      },
+      "key": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "*",
+            "named": false
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
   },
   {
     "type": "bool_field",
@@ -679,27 +233,7 @@
         "required": false,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
             "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
             "named": false
           },
           {
@@ -707,409 +241,45 @@
             "named": false
           },
           {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
             "type": "number",
             "named": true
           },
           {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
+            "type": "string_array",
             "named": true
           },
           {
             "type": "string_field",
             "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
           }
         ]
       },
       "func": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
           {
             "type": "ends_with",
             "named": false
           },
           {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
             "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
             "named": false
           }
         ]
       },
       "index": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
             "type": "number",
             "named": true
-          }
-        ]
-      },
-      "key": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "keys": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "regex": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "replacement": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "seed": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "source": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
           }
         ]
       },
       "value": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
@@ -1144,166 +314,6 @@
     "type": "compound_expression",
     "named": true,
     "fields": {
-      "field": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "func": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
       "index": {
         "multiple": true,
         "required": false,
@@ -1314,64 +324,12 @@
           }
         ]
       },
-      "key": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "keys": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
       "lhs": {
         "multiple": true,
         "required": true,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
             "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
             "named": false
           },
           {
@@ -1379,11 +337,7 @@
             "named": false
           },
           {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
+            "type": "bool_array",
             "named": true
           },
           {
@@ -1403,35 +357,11 @@
             "named": true
           },
           {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
             "type": "group",
             "named": true
           },
           {
             "type": "in_expression",
-            "named": true
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
             "named": true
           },
           {
@@ -1443,44 +373,8 @@
             "named": true
           },
           {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
             "type": "simple_expression",
             "named": true
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
           }
         ]
       },
@@ -1514,52 +408,12 @@
           }
         ]
       },
-      "regex": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "replacement": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
       "rhs": {
         "multiple": true,
         "required": true,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
             "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
             "named": false
           },
           {
@@ -1567,11 +421,7 @@
             "named": false
           },
           {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
+            "type": "bool_array",
             "named": true
           },
           {
@@ -1591,35 +441,11 @@
             "named": true
           },
           {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
             "type": "group",
             "named": true
           },
           {
             "type": "in_expression",
-            "named": true
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
             "named": true
           },
           {
@@ -1631,265 +457,7 @@
             "named": true
           },
           {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
             "type": "simple_expression",
-            "named": true
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "seed": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "source": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "value": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
             "named": true
           }
         ]
@@ -1900,168 +468,8 @@
     "type": "group",
     "named": true,
     "fields": {
-      "field": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "func": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
       "index": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
@@ -2075,27 +483,7 @@
         "required": true,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
             "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
             "named": false
           },
           {
@@ -2103,11 +491,7 @@
             "named": false
           },
           {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
+            "type": "bool_array",
             "named": true
           },
           {
@@ -2127,35 +511,11 @@
             "named": true
           },
           {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
             "type": "group",
             "named": true
           },
           {
             "type": "in_expression",
-            "named": true
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
             "named": true
           },
           {
@@ -2167,317 +527,7 @@
             "named": true
           },
           {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
             "type": "simple_expression",
-            "named": true
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "key": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "keys": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "regex": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "replacement": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "seed": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "source": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "value": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
             "named": true
           }
         ]
@@ -2488,204 +538,12 @@
     "type": "in_expression",
     "named": true,
     "fields": {
-      "field": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "func": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
       "index": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
             "type": "number",
-            "named": true
-          }
-        ]
-      },
-      "key": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "keys": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "string",
             "named": true
           }
         ]
@@ -2695,27 +553,7 @@
         "required": true,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
             "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
             "named": false
           },
           {
@@ -2723,43 +561,15 @@
             "named": false
           },
           {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
             "type": "ip_field",
             "named": true
           },
           {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
+            "type": "number",
             "named": true
           },
           {
-            "type": "number",
+            "type": "number_array",
             "named": true
           },
           {
@@ -2771,19 +581,7 @@
             "named": true
           },
           {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
+            "type": "string_array",
             "named": true
           },
           {
@@ -2793,22 +591,6 @@
           {
             "type": "string_func",
             "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
           }
         ]
       },
@@ -2819,26 +601,6 @@
           {
             "type": "in",
             "named": false
-          }
-        ]
-      },
-      "regex": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "replacement": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
           }
         ]
       },
@@ -2860,228 +622,6 @@
           },
           {
             "type": "string_set",
-            "named": true
-          }
-        ]
-      },
-      "seed": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "source": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "value": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
             "named": true
           }
         ]
@@ -3137,446 +677,12 @@
     "type": "not_expression",
     "named": true,
     "fields": {
-      "field": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "func": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
       "index": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
             "type": "number",
-            "named": true
-          }
-        ]
-      },
-      "key": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "keys": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "regex": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "replacement": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "seed": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "source": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "value": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
             "named": true
           }
         ]
@@ -3586,6 +692,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "bool_array",
+          "named": true
+        },
         {
           "type": "bool_field",
           "named": true
@@ -3631,6 +741,72 @@
     "fields": {}
   },
   {
+    "type": "number_array",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "[*]",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "map_string_array_field",
+            "named": true
+          },
+          {
+            "type": "string_array",
+            "named": true
+          }
+        ]
+      },
+      "func": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "len",
+            "named": false
+          }
+        ]
+      },
+      "key": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "*",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "array_number_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "number_field",
     "named": true,
     "fields": {}
@@ -3644,445 +820,47 @@
         "required": true,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
             "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
             "named": false
           },
           {
             "type": "]",
             "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
           },
           {
             "type": "bytes_field",
             "named": true
           },
           {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
             "type": "number",
             "named": true
           },
           {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
+            "type": "string_array",
             "named": true
           },
           {
             "type": "string_field",
             "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
           }
         ]
       },
       "func": {
-        "multiple": true,
+        "multiple": false,
         "required": true,
         "types": [
           {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
             "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
             "named": false
           }
         ]
       },
       "index": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
             "type": "number",
-            "named": true
-          }
-        ]
-      },
-      "key": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "keys": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "regex": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "replacement": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "seed": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "source": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "value": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
             "named": true
           }
         ]
@@ -4108,204 +886,12 @@
     "type": "simple_expression",
     "named": true,
     "fields": {
-      "field": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "func": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
       "index": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
             "type": "number",
-            "named": true
-          }
-        ]
-      },
-      "key": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "keys": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "string",
             "named": true
           }
         ]
@@ -4315,27 +901,7 @@
         "required": true,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
             "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
             "named": false
           },
           {
@@ -4343,43 +909,15 @@
             "named": false
           },
           {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
             "type": "ip_field",
             "named": true
           },
           {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
+            "type": "number",
             "named": true
           },
           {
-            "type": "number",
+            "type": "number_array",
             "named": true
           },
           {
@@ -4391,19 +929,7 @@
             "named": true
           },
           {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
+            "type": "string_array",
             "named": true
           },
           {
@@ -4413,22 +939,6 @@
           {
             "type": "string_func",
             "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
           }
         ]
       },
@@ -4498,26 +1008,6 @@
           }
         ]
       },
-      "regex": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "replacement": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
       "rhs": {
         "multiple": false,
         "required": true,
@@ -4539,228 +1029,6 @@
             "named": true
           }
         ]
-      },
-      "seed": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "source": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "value": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
       }
     }
   },
@@ -4768,166 +1036,6 @@
     "type": "source_file",
     "named": true,
     "fields": {
-      "field": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "func": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
       "index": {
         "multiple": true,
         "required": false,
@@ -4937,286 +1045,16 @@
             "named": true
           }
         ]
-      },
-      "key": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "keys": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "regex": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "replacement": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      },
-      "seed": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "source": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "[",
-            "named": false
-          },
-          {
-            "type": "[*]",
-            "named": false
-          },
-          {
-            "type": "]",
-            "named": false
-          },
-          {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
-            "type": "map_string_array_field",
-            "named": true
-          },
-          {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "value": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
       }
     },
     "children": {
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "bool_array",
+          "named": true
+        },
         {
           "type": "bool_field",
           "named": true
@@ -5253,12 +1091,7 @@
     }
   },
   {
-    "type": "string_field",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "string_func",
+    "type": "string_array",
     "named": true,
     "fields": {
       "field": {
@@ -5266,19 +1099,7 @@
         "required": false,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
             "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
             "named": false
           },
           {
@@ -5294,109 +1115,29 @@
             "named": false
           },
           {
-            "type": "array_number_field",
+            "type": "bool_array",
             "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "bool_field",
-            "named": true
-          },
-          {
-            "type": "bytes_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "ip_field",
-            "named": true
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
           },
           {
             "type": "map_string_array_field",
             "named": true
           },
           {
-            "type": "number",
+            "type": "number_array",
             "named": true
           },
           {
-            "type": "number_field",
+            "type": "string_array",
             "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
           }
         ]
       },
       "func": {
-        "multiple": true,
-        "required": true,
+        "multiple": false,
+        "required": false,
         "types": [
           {
             "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
             "named": false
           },
           {
@@ -5413,10 +1154,6 @@
           },
           {
             "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
             "named": false
           },
           {
@@ -5448,7 +1185,7 @@
         ]
       },
       "key": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
@@ -5480,7 +1217,7 @@
         ]
       },
       "regex": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
@@ -5490,7 +1227,7 @@
         ]
       },
       "replacement": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
@@ -5504,19 +1241,7 @@
         "required": false,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
             "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
             "named": false
           },
           {
@@ -5532,76 +1257,12 @@
             "named": false
           },
           {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
             "type": "map_string_array_field",
             "named": true
           },
           {
-            "type": "number",
+            "type": "string_array",
             "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
           }
         ]
       },
@@ -5610,19 +1271,7 @@
         "required": false,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
             "type": "*",
-            "named": false
-          },
-          {
-            "type": ",",
             "named": false
           },
           {
@@ -5638,85 +1287,11 @@
             "named": false
           },
           {
-            "type": "array_number_field",
-            "named": true
-          },
-          {
-            "type": "array_string_field",
-            "named": true
-          },
-          {
-            "type": "concat",
-            "named": false
-          },
-          {
-            "type": "ends_with",
-            "named": false
-          },
-          {
-            "type": "len",
-            "named": false
-          },
-          {
-            "type": "lookup_json_string",
-            "named": false
-          },
-          {
-            "type": "lower",
-            "named": false
-          },
-          {
             "type": "map_string_array_field",
             "named": true
           },
           {
-            "type": "number",
-            "named": true
-          },
-          {
-            "type": "regex_replace",
-            "named": false
-          },
-          {
-            "type": "remove_bytes",
-            "named": false
-          },
-          {
-            "type": "starts_with",
-            "named": false
-          },
-          {
-            "type": "string",
-            "named": true
-          },
-          {
-            "type": "string_field",
-            "named": true
-          },
-          {
-            "type": "to_string",
-            "named": false
-          },
-          {
-            "type": "upper",
-            "named": false
-          },
-          {
-            "type": "url_decode",
-            "named": false
-          },
-          {
-            "type": "uuidv4",
-            "named": false
-          }
-        ]
-      },
-      "value": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "string",
+            "type": "string_array",
             "named": true
           }
         ]
@@ -5736,6 +1311,231 @@
         },
         {
           "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_array",
+          "named": true
+        },
+        {
+          "type": "string_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string_field",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "string_func",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "bool_array",
+            "named": true
+          },
+          {
+            "type": "bool_field",
+            "named": true
+          },
+          {
+            "type": "bytes_field",
+            "named": true
+          },
+          {
+            "type": "ip_field",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "number_array",
+            "named": true
+          },
+          {
+            "type": "number_field",
+            "named": true
+          },
+          {
+            "type": "string_array",
+            "named": true
+          },
+          {
+            "type": "string_field",
+            "named": true
+          }
+        ]
+      },
+      "func": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "concat",
+            "named": false
+          },
+          {
+            "type": "lookup_json_string",
+            "named": false
+          },
+          {
+            "type": "lower",
+            "named": false
+          },
+          {
+            "type": "regex_replace",
+            "named": false
+          },
+          {
+            "type": "remove_bytes",
+            "named": false
+          },
+          {
+            "type": "to_string",
+            "named": false
+          },
+          {
+            "type": "upper",
+            "named": false
+          },
+          {
+            "type": "url_decode",
+            "named": false
+          },
+          {
+            "type": "uuidv4",
+            "named": false
+          }
+        ]
+      },
+      "index": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "number",
+            "named": true
+          }
+        ]
+      },
+      "keys": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "regex": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "replacement": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "seed": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string_array",
+            "named": true
+          },
+          {
+            "type": "string_field",
+            "named": true
+          }
+        ]
+      },
+      "source": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "[",
+            "named": false
+          },
+          {
+            "type": "]",
+            "named": false
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "string_array",
+            "named": true
+          },
+          {
+            "type": "string_field",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "string_array",
           "named": true
         },
         {
