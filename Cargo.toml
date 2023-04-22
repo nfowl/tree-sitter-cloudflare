@@ -18,6 +18,7 @@ include = [
 
 [lib]
 path = "bindings/rust/lib.rs"
+crate-type = ["cdylib"]
 
 [features]
 default = ["dep:tree-sitter"]
