@@ -19,8 +19,13 @@ include = [
 [lib]
 path = "bindings/rust/lib.rs"
 
+[features]
+default = ["dep:tree-sitter"]
+c2rust = ["dep:tree-sitter-c2rust"]
+
 [dependencies]
-tree-sitter = "~0.20.3"
+tree-sitter = { version = "~0.20.3", optional = true } 
+tree-sitter-c2rust = { version = "0.20.10", optional = true }
 
 [build-dependencies]
 cc = "1.0"

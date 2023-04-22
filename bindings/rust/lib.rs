@@ -15,6 +15,12 @@
 //! [Parser]: https://docs.rs/tree-sitter/*/tree_sitter/struct.Parser.html
 //! [tree-sitter]: https://tree-sitter.github.io/
 
+#[cfg(feature = "c2rust")]
+use tree_sitter_c2rust as tree_sitter;
+
+#[cfg(features = "default")]
+use tree_sitter;
+
 use tree_sitter::Language;
 
 extern "C" {
