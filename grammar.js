@@ -432,6 +432,8 @@ module.exports = grammar({
         // Dyanmic fields
         "cf.bot_management.verified_bot",
         "cf.bot_management.js_detection.passed",
+        "cf.bot_management.corporate_proxy",
+        "cf.bot_management.static_resource",
         "cf.client.bot",
         "cf.tls_client_auth.cert_revoked",
         "cf.tls_client_auth.cert_verified",
