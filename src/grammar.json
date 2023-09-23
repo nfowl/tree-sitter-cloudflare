@@ -103,7 +103,7 @@
               "name": "lhs",
               "content": {
                 "type": "SYMBOL",
-                "name": "_string_lhs"
+                "name": "stringlike_field"
               }
             },
             {
@@ -445,7 +445,7 @@
               "name": "lhs",
               "content": {
                 "type": "SYMBOL",
-                "name": "_string_lhs"
+                "name": "stringlike_field"
               }
             },
             {
@@ -2377,6 +2377,10 @@
               "value": "]"
             }
           ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string_func"
         }
       ]
     },

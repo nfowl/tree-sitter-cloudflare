@@ -54,7 +54,7 @@ module.exports = grammar({
     in_expression: ($) => {
       const in_options = [
         [$.ip_field, choice($.ip_set, $.ip_list)],
-        [$._string_lhs, $.string_set],
+        [$.stringlike_field, $.string_set],
         [$._number_lhs, $.number_set],
       ];
 
@@ -103,7 +103,7 @@ module.exports = grammar({
 
     simple_expression: ($) => {
       const comps = [
-        [STRING_COMPARISON_OPS, $._string_lhs, $.string],
+        [STRING_COMPARISON_OPS, $.stringlike_field, $.string],
         [NUMBER_COMPARISON_OPS, $._number_lhs, $.number],
         [["eq", "ne", "==", "!="], $.ip_field, $._ip],
       ];
@@ -123,7 +123,7 @@ module.exports = grammar({
 
     _number_lhs: ($) => choice($.numberlike_field, $.number_func),
 
-    _string_lhs: ($) => choice($.stringlike_field, $.string_func),
+    // _string_lhs: ($) => choice($.stringlike_field, $.string_func),
 
     // functions grouped by return type for use in expressions
     string_func: ($) =>
@@ -288,7 +288,8 @@ module.exports = grammar({
     stringlike_field: ($) =>
       choice(
         $.string_field,
-        seq($.string_array, "[", field("index", $.number), "]")
+        seq($.string_array, "[", field("index", $.number), "]"),
+        $.string_func
       ),
 
     // Cloudflare Ruleset Fields

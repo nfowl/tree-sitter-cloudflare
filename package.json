@@ -26,6 +26,9 @@
       "scope": "source.cloudflare",
       "file-types": [
         "cfrule"
+      ],
+      "highlights": [
+        "queries/highlights.scm"
       ]
     }
   ]

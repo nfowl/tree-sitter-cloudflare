@@ -8,9 +8,10 @@ to_string(cf.edge.server_port) eq "80"
 
 (source_file
   (simple_expression
-    (string_func
-      (numberlike_field
-        (number_field)))
+    (stringlike_field
+      (string_func
+        (numberlike_field
+          (number_field))))
     (string)))
 
 ================================================================================
@@ -23,10 +24,29 @@ concat("String1",http.host,"String","2") == "String1 String2"
 
 (source_file
   (simple_expression
-    (string_func
-      (string)
-      (stringlike_field
-        (string_field))
-      (string)
-      (string))
+    (stringlike_field
+      (string_func
+        (string)
+        (stringlike_field
+          (string_field))
+        (string)
+        (string)))
+    (string)))
+
+================================================================================
+recursive func
+================================================================================
+
+lower(to_string(cf.edge.server_port)) eq "80"
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (simple_expression
+    (stringlike_field
+      (string_func
+        (stringlike_field
+          (string_func
+            (numberlike_field
+              (number_field))))))
     (string)))

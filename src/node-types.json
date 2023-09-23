@@ -491,10 +491,6 @@
             "named": true
           },
           {
-            "type": "string_func",
-            "named": true
-          },
-          {
             "type": "stringlike_field",
             "named": true
           }
@@ -795,10 +791,6 @@
           },
           {
             "type": "numberlike_field",
-            "named": true
-          },
-          {
-            "type": "string_func",
             "named": true
           },
           {
@@ -1355,6 +1347,10 @@
         },
         {
           "type": "string_field",
+          "named": true
+        },
+        {
+          "type": "string_func",
           "named": true
         }
       ]

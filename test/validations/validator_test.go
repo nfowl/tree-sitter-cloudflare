@@ -104,3 +104,9 @@ func TestMagicFirewall(t *testing.T) {
 	t.Parallel()
 	expectGood(t, "icmp == \"testing\"")
 }
+
+func TestFuncRecurse(t *testing.T) {
+	t.Parallel()
+	expectGood(t, "lower(upper(http.host)) == \"test\"")
+	expectGood(t, "concat(upper(http.host),\"test\") == \"test\"")
+}
