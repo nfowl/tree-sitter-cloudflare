@@ -53,3 +53,19 @@ ip.src in $cf.botnetcc or ip.src in $cf.open_proxies
     (in_expression
       (ip_field)
       (ip_list))))
+
+================================================================================
+corporate proxy
+================================================================================
+
+cf.bot_management.corporate_proxy or ip.src in $cf.open_proxies
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (compound_expression
+    (boollike_field
+      (bool_field))
+    (in_expression
+      (ip_field)
+      (ip_list))))

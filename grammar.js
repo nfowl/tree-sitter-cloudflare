@@ -46,7 +46,7 @@ module.exports = grammar({
         $.group,
         $.simple_expression,
         $._bool_lhs,
-        $.in_expression
+        $.in_expression,
       ),
 
     not_expression: ($) => prec(4, seq($.not_operator, $._expression)),
@@ -63,9 +63,9 @@ module.exports = grammar({
           seq(
             field("lhs", field_type),
             field("operator", "in"),
-            field("rhs", target)
-          )
-        )
+            field("rhs", target),
+          ),
+        ),
       );
     },
 
@@ -86,10 +86,10 @@ module.exports = grammar({
             seq(
               field("lhs", $._expression),
               field("operator", operator),
-              field("rhs", $._expression)
-            )
-          )
-        )
+              field("rhs", $._expression),
+            ),
+          ),
+        ),
       );
     },
 
@@ -113,13 +113,13 @@ module.exports = grammar({
           seq(
             field("lhs", f),
             field("operator", choice(...operators)),
-            field("rhs", type)
-          )
-        )
+            field("rhs", type),
+          ),
+        ),
       );
     },
 
-    _bool_lhs: ($) => choice($.boollike_field, $.bool_func, $.boolean),
+    _bool_lhs: ($) => choice($.boollike_field, $.boolean),
 
     _number_lhs: ($) => choice($.numberlike_field, $.number_func),
 
@@ -130,7 +130,7 @@ module.exports = grammar({
       choice(
         concatFunc(
           choice($.string, $.stringlike_field),
-          choice($.string, $.stringlike_field)
+          choice($.string, $.stringlike_field),
         ),
         lookupFunc($.stringlike_field, choice($.string, $.number)),
         lowerFunc($.stringlike_field),
@@ -139,7 +139,7 @@ module.exports = grammar({
         toStringFunc(choice($.numberlike_field, $.ip_field, $.boollike_field)),
         upperFunc($.stringlike_field),
         urlDecodeFunc($.stringlike_field),
-        uuidv4Func($.stringlike_field)
+        uuidv4Func($.stringlike_field),
       ),
 
     number_func: ($) =>
@@ -149,7 +149,7 @@ module.exports = grammar({
       choice(
         $.array_func,
         endsWithFunc($.stringlike_field, $.string),
-        startsWithFunc($.stringlike_field, $.string)
+        startsWithFunc($.stringlike_field, $.string),
       ),
 
     array_func: ($) => {
@@ -163,9 +163,9 @@ module.exports = grammar({
           seq(
             field("lhs", field_type),
             field("operator", "in"),
-            field("rhs", target)
-          )
-        )
+            field("rhs", target),
+          ),
+        ),
       );
 
       const simple = [
@@ -178,16 +178,16 @@ module.exports = grammar({
           seq(
             field("lhs", f),
             field("operator", choice(...operators)),
-            field("rhs", type)
-          )
-        )
+            field("rhs", type),
+          ),
+        ),
       );
 
       return seq(
         field("func", choice("any", "all")),
         "(",
         choice(simpleOptions, inOptions, arrayExpander($.bool_array)),
-        ")"
+        ")",
       );
     },
 
@@ -212,7 +212,7 @@ module.exports = grammar({
     _ip: ($) =>
       choice(
         $.ipv4,
-        $.ip_range
+        $.ip_range,
         //TODO(nfowl): Add ipv6
       ),
     ipv4: ($) =>
@@ -231,9 +231,9 @@ module.exports = grammar({
             "cf.anonymizer",
             "cf.vpn",
             "cf.malware",
-            "cf.botnetcc"
-          )
-        )
+            "cf.botnetcc",
+          ),
+        ),
       ),
 
     not_operator: ($) => choice("not", "!"),
@@ -244,7 +244,7 @@ module.exports = grammar({
     bool_array: ($) =>
       choice(
         endsWithFunc($._string_array_expansion, $.string),
-        startsWithFunc($._string_array_expansion, $.string)
+        startsWithFunc($._string_array_expansion, $.string),
       ),
 
     string_array: ($) =>
@@ -253,7 +253,7 @@ module.exports = grammar({
         seq($.map_string_array_field, "[", field("key", $.string), "]"),
         concatFunc(
           $._string_array_expansion,
-          choice($.string, $.stringlike_field)
+          choice($.string, $.stringlike_field),
         ),
         lookupFunc($._string_array_expansion, choice($.string, $.number)),
         lowerFunc($._string_array_expansion),
@@ -262,34 +262,35 @@ module.exports = grammar({
         toStringFunc(arrayExpander(choice($.number_array, $.bool_array))),
         upperFunc($._string_array_expansion),
         urlDecodeFunc($._string_array_expansion),
-        uuidv4Func($._string_array_expansion)
+        uuidv4Func($._string_array_expansion),
       ),
 
     _string_array_expansion: ($) =>
       arrayExpander(
         choice(
           seq($.map_string_array_field, "[", field("key", "*"), "]"),
-          $.string_array
-        )
+          $.string_array,
+        ),
       ),
 
     boollike_field: ($) =>
       choice(
         $.bool_field,
-        seq($.bool_array, "[", field("index", $.number), "]")
+        seq($.bool_array, "[", field("index", $.number), "]"),
+        $.bool_func,
       ),
 
     numberlike_field: ($) =>
       choice(
         $.number_field,
-        seq($.number_array, "[", field("index", $.number), "]")
+        seq($.number_array, "[", field("index", $.number), "]"),
       ),
 
     stringlike_field: ($) =>
       choice(
         $.string_field,
         seq($.string_array, "[", field("index", $.number), "]"),
-        $.string_func
+        $.string_func,
       ),
 
     // Cloudflare Ruleset Fields
@@ -325,7 +326,7 @@ module.exports = grammar({
         "http.request.body.size",
         // HTTP response fields
         "http.response.code",
-        "http.response.1xxx_code"
+        "http.response.1xxx_code",
       ),
 
     ip_field: ($) =>
@@ -336,7 +337,7 @@ module.exports = grammar({
         "cf.edge.server_ip",
         // Magic Firewall fields
         "ip.dst",
-        "ip.src"
+        "ip.src",
       ),
 
     string_field: ($) =>
@@ -349,6 +350,7 @@ module.exports = grammar({
         "http.request.method",
         "http.request.uri",
         "http.request.uri.path",
+        "http.request.uri.path.extension",
         "http.request.uri.query",
         "http.user_agent",
         "http.request.version",
@@ -358,6 +360,9 @@ module.exports = grammar({
         "ip.src.city",
         "ip.src.postal_code",
         "ip.src.metro_code",
+        "ip.src.region",
+        "ip.src.region_code",
+        "ip.src.timezone.name",
         "ip.geoip.continent",
         "ip.geoip.country",
         "ip.geoip.subdivision_1_iso_code",
@@ -368,6 +373,7 @@ module.exports = grammar({
         "raw.http.request.uri.query",
         // Dyanmic fields
         "cf.bot_management.ja3_hash",
+        "cf.verified_bot_category",
         "cf.hostname.metadata",
         "cf.worker.upstream_zone",
         // Magic Firewall fields
@@ -384,7 +390,7 @@ module.exports = grammar({
         "http.request.body.raw",
         "http.request.body.mime",
         // HTTP response fields
-        "cf.response.error_type"
+        "cf.response.error_type",
       ),
 
     bytes_field: ($) => choice("cf.random_seed"),
@@ -401,7 +407,7 @@ module.exports = grammar({
         // HTTP request body fields
         "http.request.body.form",
         // HTTP response fields
-        "http.response.headers"
+        "http.response.headers",
       ),
 
     array_string_field: ($) =>
@@ -420,7 +426,7 @@ module.exports = grammar({
         "http.request.body.form.values",
         // HTTP response fields
         "http.response.headers.names",
-        "http.response.headers.values"
+        "http.response.headers.values",
       ),
 
     array_number_field: ($) => choice("cf.bot_management.detection_ids"),
@@ -451,7 +457,7 @@ module.exports = grammar({
         // HTTP request header fields
         "http.request.headers.truncated",
         // HTTP request body fields
-        "http.request.body.truncated"
+        "http.request.body.truncated",
       ),
   },
 });
@@ -470,7 +476,7 @@ function concatFunc(rule, args) {
     rule,
     ",",
     repeat1(seq(args, optional(","))),
-    ")"
+    ")",
   );
 }
 
@@ -481,7 +487,7 @@ function endsWithFunc(rule, value) {
     field("field", rule),
     ",",
     field("value", value),
-    ")"
+    ")",
   );
 }
 
@@ -495,7 +501,7 @@ function lookupFunc(rule, args) {
     "(",
     field("field", rule),
     field("keys", repeat1(seq(args, optional(",")))),
-    ")"
+    ")",
   );
 }
 
@@ -512,7 +518,7 @@ function regexReplaceFunc(rule, value) {
     field("regex", value),
     ",",
     field("replacement", value),
-    ")"
+    ")",
   );
 }
 
@@ -523,7 +529,7 @@ function removeBytesFunc(rule, value) {
     field("field", rule),
     ",",
     field("replacement", value),
-    ")"
+    ")",
   );
 }
 
@@ -534,7 +540,7 @@ function startsWithFunc(rule, value) {
     field("field", rule),
     ",",
     field("value", value),
-    ")"
+    ")",
   );
 }
 

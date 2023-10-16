@@ -662,10 +662,6 @@
         },
         {
           "type": "SYMBOL",
-          "name": "bool_func"
-        },
-        {
-          "type": "SYMBOL",
           "name": "boolean"
         }
       ]
@@ -680,19 +676,6 @@
         {
           "type": "SYMBOL",
           "name": "number_func"
-        }
-      ]
-    },
-    "_string_lhs": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "stringlike_field"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "string_func"
         }
       ]
     },
@@ -2309,6 +2292,10 @@
               "value": "]"
             }
           ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "bool_func"
         }
       ]
     },
@@ -2539,6 +2526,10 @@
         },
         {
           "type": "STRING",
+          "value": "http.request.uri.path.extension"
+        },
+        {
+          "type": "STRING",
           "value": "http.request.uri.query"
         },
         {
@@ -2575,6 +2566,18 @@
         },
         {
           "type": "STRING",
+          "value": "ip.src.region"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.src.region_code"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.src.timezone.name"
+        },
+        {
+          "type": "STRING",
           "value": "ip.geoip.continent"
         },
         {
@@ -2608,6 +2611,10 @@
         {
           "type": "STRING",
           "value": "cf.bot_management.ja3_hash"
+        },
+        {
+          "type": "STRING",
+          "value": "cf.verified_bot_category"
         },
         {
           "type": "STRING",
@@ -2781,6 +2788,14 @@
         {
           "type": "STRING",
           "value": "cf.bot_management.js_detection.passed"
+        },
+        {
+          "type": "STRING",
+          "value": "cf.bot_management.corporate_proxy"
+        },
+        {
+          "type": "STRING",
+          "value": "cf.bot_management.static_resource"
         },
         {
           "type": "STRING",
