@@ -43,13 +43,14 @@ any(len(http.request.headers["test"][*])[*] eq 3)
 --------------------------------------------------------------------------------
 
 (source_file
-  (bool_func
-    (array_func
-      (number_array
-        (string_array
-          (map_string_array_field)
-          (string)))
-      (number))))
+  (boollike_field
+    (bool_func
+      (array_func
+        (number_array
+          (string_array
+            (map_string_array_field)
+            (string)))
+        (number)))))
 
 ================================================================================
 Number array field
@@ -60,11 +61,12 @@ any(cf.bot_management.detection_ids[*] == 80)
 --------------------------------------------------------------------------------
 
 (source_file
-  (bool_func
-    (array_func
-      (number_array
-        (array_number_field))
-      (number))))
+  (boollike_field
+    (bool_func
+      (array_func
+        (number_array
+          (array_number_field))
+        (number)))))
 
 ================================================================================
 test
