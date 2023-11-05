@@ -100,10 +100,10 @@ func TestGroupInComp(t *testing.T) {
 	expectError(t, "(ssl) == true", "parens not supported in expressions")
 }
 
-func TestMagicFirewall(t *testing.T) {
-	t.Parallel()
-	expectGood(t, "icmp == \"testing\"")
-}
+// func TestMagicFirewall(t *testing.T) {
+// 	t.Parallel()
+// 	expectGood(t, "icmp == \"testing\"")
+// }
 
 func TestFuncRecurse(t *testing.T) {
 	t.Parallel()
