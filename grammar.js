@@ -302,6 +302,7 @@ module.exports = grammar({
         "http.request.timestamp.sec",
         "http.request.timestamp.msec",
         "ip.geoip.asnum",
+        "ip.src.asnum",
         // Dynamic fields
         "cf.bot_management.score",
         "cf.edge.server_port",
@@ -367,6 +368,10 @@ module.exports = grammar({
         "ip.geoip.country",
         "ip.geoip.subdivision_1_iso_code",
         "ip.geoip.subdivision_2_iso_code",
+        "ip.src.continent",
+        "ip.src.country",
+        "ip.src.subdivision_1_iso_code",
+        "ip.src.subdivision_2_iso_code",
         "raw.http.request.full_uri",
         "raw.http.request.uri",
         "raw.http.request.uri.path",
@@ -435,6 +440,7 @@ module.exports = grammar({
       choice(
         // Standard fields
         "ip.geoip.is_in_european_union",
+        "ip.src.is_in_european_union",
         "ssl",
         // Dyanmic fields
         "cf.bot_management.verified_bot",
