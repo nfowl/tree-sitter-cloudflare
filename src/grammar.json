@@ -2388,6 +2388,10 @@
         },
         {
           "type": "STRING",
+          "value": "ip.src.asnum"
+        },
+        {
+          "type": "STRING",
           "value": "cf.bot_management.score"
         },
         {
@@ -2594,6 +2598,22 @@
         },
         {
           "type": "STRING",
+          "value": "ip.src.continent"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.src.country"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.src.subdivision_1_iso_code"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.src.subdivision_2_iso_code"
+        },
+        {
+          "type": "STRING",
           "value": "raw.http.request.full_uri"
         },
         {
@@ -2776,6 +2796,10 @@
         {
           "type": "STRING",
           "value": "ip.geoip.is_in_european_union"
+        },
+        {
+          "type": "STRING",
+          "value": "ip.src.is_in_european_union"
         },
         {
           "type": "STRING",

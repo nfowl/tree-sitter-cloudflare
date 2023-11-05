@@ -1757,11 +1757,23 @@
     "named": false
   },
   {
+    "type": "ip.src.asnum",
+    "named": false
+  },
+  {
     "type": "ip.src.city",
     "named": false
   },
   {
+    "type": "ip.src.continent",
+    "named": false
+  },
+  {
     "type": "ip.src.country",
+    "named": false
+  },
+  {
+    "type": "ip.src.is_in_european_union",
     "named": false
   },
   {
@@ -1786,6 +1798,14 @@
   },
   {
     "type": "ip.src.region_code",
+    "named": false
+  },
+  {
+    "type": "ip.src.subdivision_1_iso_code",
+    "named": false
+  },
+  {
+    "type": "ip.src.subdivision_2_iso_code",
     "named": false
   },
   {
