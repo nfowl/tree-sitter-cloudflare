@@ -512,6 +512,14 @@
                   },
                   {
                     "type": "STRING",
+                    "value": "strict wildcard"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": "wildcard"
+                  },
+                  {
+                    "type": "STRING",
                     "value": "~"
                   }
                 ]
@@ -1327,6 +1335,14 @@
                           {
                             "type": "STRING",
                             "value": "matches"
+                          },
+                          {
+                            "type": "STRING",
+                            "value": "strict wildcard"
+                          },
+                          {
+                            "type": "STRING",
+                            "value": "wildcard"
                           },
                           {
                             "type": "STRING",

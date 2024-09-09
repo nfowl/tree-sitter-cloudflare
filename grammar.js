@@ -28,6 +28,8 @@ const STRING_COMPARISON_OPS = [
   ">=",
   "contains",
   "matches",
+  "strict wildcard",
+  "wildcard",
   "~",
 ];
 

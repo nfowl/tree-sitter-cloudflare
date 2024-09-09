@@ -100,6 +100,14 @@
             "named": false
           },
           {
+            "type": "strict wildcard",
+            "named": false
+          },
+          {
+            "type": "wildcard",
+            "named": false
+          },
+          {
             "type": "~",
             "named": false
           }
@@ -845,6 +853,14 @@
           },
           {
             "type": "ne",
+            "named": false
+          },
+          {
+            "type": "strict wildcard",
+            "named": false
+          },
+          {
+            "type": "wildcard",
             "named": false
           },
           {
@@ -1913,6 +1929,10 @@
     "named": false
   },
   {
+    "type": "strict wildcard",
+    "named": false
+  },
+  {
     "type": "string",
     "named": true
   },
@@ -1994,6 +2014,10 @@
   },
   {
     "type": "uuidv4",
+    "named": false
+  },
+  {
+    "type": "wildcard",
     "named": false
   },
   {
